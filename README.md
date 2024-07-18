@@ -56,5 +56,5 @@ perl
 Run the training script:
     
 ```bash
-    python src/train.py
-    ```
+python src/train.py
+

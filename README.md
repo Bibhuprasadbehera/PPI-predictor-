@@ -28,4 +28,8 @@ perl
 Run the training script:
 ```bash
 python src/train.py
-    
+```   
+
+```bash
+import torch
+print(torch.cuda.is_available())

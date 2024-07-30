@@ -1,15 +1,14 @@
-# Configuration file 
-# config.yaml
+# Description: Configuration file for the model training
+
 data:
-  train_path: "data/train.csv"
-  test_path: "data/test.csv"
-  val_path: "data/validation.csv"
+  train_path: "data/"
+  test_path: "data/"
   batch_size: 32
   num_workers: 4
 
 model:
-  input_size: 21  # One-hot encoding of 20 amino acids + 1 padding
-  hidden_size: 128
+  input_size: 21  # 20 for one-hot encoded amino acid + 1 for RSA
+  hidden_size: 64
   num_layers: 2
   output_size: 1  # Binary classification
 

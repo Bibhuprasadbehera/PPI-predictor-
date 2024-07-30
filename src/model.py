@@ -1,6 +1,6 @@
 # src/model.py
 import torch.nn as nn
-import torch 
+import torch
 
 class ProteinInteractionModel(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, output_size):
@@ -10,9 +10,7 @@ class ProteinInteractionModel(nn.Module):
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
-        h0 = torch.zeros(self.lstm.num_layers, x.size(0), self.lstm.hidden_size).to(x.device)
-        c0 = torch.zeros(self.lstm.num_layers, x.size(0), self.lstm.hidden_size).to(x.device)
-        out, _ = self.lstm(x, (h0, c0))
-        out = self.fc(out[:, -1, :])
+        _, (h_n, _) = self.lstm(x)
+        out = self.fc(h_n[-1])
         out = self.sigmoid(out)
-        return out
+        return out.squeeze(-1)  # Remove the last dimension if it's 1

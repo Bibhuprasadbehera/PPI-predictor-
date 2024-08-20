@@ -3,69 +3,65 @@ import torch
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from model import ProteinInteractionModel
-from data_loader import ProteinDataset
 import yaml
 import pandas as pd
 import numpy as np
+import os
 
-class SingleFileDataset(ProteinDataset):
-    def __init__(self, file_path):
-        self.data = pd.read_csv(file_path)
-        print(f"Columns in the dataset: {self.data.columns.tolist()}")
-        
-        aa_column = self._find_column(['aa', 'amino_acid', 'sequence'])
-        rsa_column = self._find_column(['rsa', 'relative_solvent_accessibility'])
-        
-        if aa_column is None:
-            raise KeyError(f"Could not find a column representing amino acid sequences. Available columns: {self.data.columns.tolist()}")
-        if rsa_column is None:
-            raise KeyError(f"Could not find a column representing RSA values. Available columns: {self.data.columns.tolist()}")
-        
-        print(f"Using '{aa_column}' for amino acid sequences and '{rsa_column}' for RSA values.")
-        
-        self.sequences = self.data[aa_column].apply(self.one_hot_encode).values
-        self.rsa = self.data[rsa_column].values.astype(float)
+class DSSPDataset(torch.utils.data.Dataset):
+    def __init__(self, data_dir):
+        self.data = self.load_dssp_files(data_dir)
+        self.sequences = self.data.groupby('Protein_id')['aa'].apply(list).values
+        self.rsa = self.data.groupby('Protein_id')['rsa'].apply(list).values
         self.labels = self.calculate_labels()
 
-    def _find_column(self, possible_names):
-        for name in possible_names:
-            matching_columns = [col for col in self.data.columns if name.lower() in col.lower()]
-            if matching_columns:
-                return matching_columns[0]
-        return None
+    def load_dssp_files(self, data_dir):
+        all_data = []
+        for file in os.listdir(data_dir):
+            if file.endswith('_dssp.csv'):
+                file_path = os.path.join(data_dir, file)
+                df = pd.read_csv(file_path)
+                all_data.append(df)
+        return pd.concat(all_data, ignore_index=True)
 
     def calculate_labels(self):
-        rsa_threshold = np.percentile(self.rsa, 90)
-        return (self.rsa > rsa_threshold).astype(int)
+        all_rsa = np.concatenate(self.rsa)
+        rsa_threshold = np.nanpercentile(all_rsa, 90)
+        return [np.array(seq_rsa) > rsa_threshold for seq_rsa in self.rsa]
 
-    def one_hot_encode(self, sequence):
+    def one_hot_encode(self, aa):
         amino_acids = 'ACDEFGHIKLMNPQRSTVWY'
-        encoding = np.zeros((len(sequence), len(amino_acids)))
-        for i, aa in enumerate(sequence):
-            if aa in amino_acids:
-                encoding[i, amino_acids.index(aa)] = 1
-        return encoding.flatten()
+        encoding = np.zeros(20)
+        if aa in amino_acids:
+            encoding[amino_acids.index(aa)] = 1
+        return encoding
 
-def evaluate(model_path, test_data_path, config):
+    def __len__(self):
+        return sum(len(seq) for seq in self.sequences)
+
+    def __getitem__(self, idx):
+        for seq_idx, seq_len in enumerate(map(len, self.sequences)):
+            if idx < seq_len:
+                break
+            idx -= seq_len
+
+        sequence = torch.tensor(self.one_hot_encode(self.sequences[seq_idx][idx]), dtype=torch.float32)
+        rsa = torch.tensor([self.rsa[seq_idx][idx]], dtype=torch.float32)
+        feature = torch.cat([sequence, rsa])
+        label = torch.tensor(self.labels[seq_idx][idx], dtype=torch.float32)
+        return feature, label
+
+def evaluate(model_path, test_data_dir, config):
     with open(config, 'r') as file:
         cfg = yaml.safe_load(file)
     
-    print(f"Loading test data from: {test_data_path}")
-    test_data = pd.read_csv(test_data_path)
-    print(f"Test data shape: {test_data.shape}")
-    print(f"Test data columns: {test_data.columns.tolist()}")
+    print(f"Loading test data from: {test_data_dir}")
     
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'], cfg['model']['num_layers'], cfg['model']['output_size'])
     model.load_state_dict(torch.load(model_path))
     model.eval()
     
-    try:
-        test_dataset = SingleFileDataset(test_data_path)
-    except KeyError as e:
-        print(f"Error loading test dataset: {e}")
-        print("Please ensure that your test data file contains columns for amino acid sequences and RSA values.")
-        return
-    
+    test_dataset = DSSPDataset(test_data_dir)
     test_loader = DataLoader(test_dataset, batch_size=cfg['data']['batch_size'], shuffle=False, num_workers=cfg['data']['num_workers'])
     
     all_labels = []
@@ -89,4 +85,4 @@ def evaluate(model_path, test_data_path, config):
     print(f'Accuracy: {accuracy:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1 Score: {f1:.4f}')
 
 if __name__ == '__main__':
-    evaluate('checkpoints/model_epoch_10.pth', 'data/test.csv', 'config.yaml')
+    evaluate('checkpoints/model_epoch_10.pth', 'data', 'config.yaml')

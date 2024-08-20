@@ -1,59 +1,94 @@
 # Protein Interaction Prediction
 
+
 This project aims to predict intra-protein interactions using amino acid sequences. The model uses an LSTM neural network implemented in PyTorch.
-
-## Project Structure
-
-protein_interaction_prediction/
-├── data/
-│ ├── train.csv
-│ ├── test.csv
-│ └── validation.csv
-├── checkpoints/
-│ └── model_epoch_10.pth
-├── logs/
-│ └── training.log
-├── outputs/
-│ └── predictions.csv
-├── notebooks/
-│ └── eda.ipynb
-├── src/
-│ ├── main.py
-│ ├── data_loader.py
-│ ├── model.py
-│ ├── train.py
-│ ├── evaluate.py
-│ ├── predict.py
-│ └── utils.py
-├── tests/
-│ └── test_data_loader.py
-├── config.yaml
-├── requirements.txt
-└── README.md
-
-perl
 
 
 ## Setup
 
+
 1. Clone the repository:
-    ```bash
-    git clone <repository-url>
-    cd protein_interaction_prediction
-    ```
+
+   ```bash
+
+   git clone https://github.com/Bibhuprasadbehera/PPI-predictor-.git
+
+   cd protein_interaction_prediction
+
+   ```
+
 
 2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
-3. Prepare your data in the `data/` directory.
+   ```bash
 
-4. Adjust the configuration file `config.yaml` as needed.
+   pip install -r requirements.txt
+
+   ```
+
+
+3. Check if CUDA is available:
+
+   ```python
+
+   import torch
+
+   print(torch.cuda.is_available())
+
+   ```
+
+
+4. Prepare your data in the `data/` directory.
+
+
+5. Adjust the configuration file `config.yaml` as needed.
+
 
 ## Training
 
+
 Run the training script:
-    ```bash
-    python src/train.py
-    ```
+
+```bash
+
+python src/train.py
+
+```
+
+
+## Evaluation
+
+
+Evaluate the model:
+
+```bash
+
+python src/evaluate.py
+
+```
+
+
+## Prediction
+
+
+Make predictions on new sequences:
+
+```bash
+
+python src/predict.py
+
+```
+
+
+## Testing
+
+
+Run unit tests:
+
+```bash
+
+python -m unittest discover tests
+
+```
+
+

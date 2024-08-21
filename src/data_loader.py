@@ -10,7 +10,8 @@ class ProteinDataset(Dataset):
         self.data = self.load_dssp_files(data_dir)
         self.sequences = self.data['aa'].apply(list).values
         self.rsa = self.process_rsa(self.data['rsa'])
-        self.labels = self.calculate_labels()
+        self.interaction_scores = self.data['test_interaction_score'].values
+        self.labels = self.interaction_scores  # Now using interaction_scores as labels
 
     def load_dssp_files(self, data_dir):
         all_data = []
@@ -18,7 +19,7 @@ class ProteinDataset(Dataset):
             if file.endswith('_dssp.csv'):
                 file_path = os.path.join(data_dir, file)
                 df = pd.read_csv(file_path)
-                all_data.append(df[['aa', 'rsa']])
+                all_data.append(df[['aa', 'rsa', 'test_interaction_score']])
         return pd.concat(all_data, ignore_index=True)
 
     def process_rsa(self, rsa_series):
@@ -42,11 +43,6 @@ class ProteinDataset(Dataset):
             encoding[amino_acids.index(aa)] = 1
         return encoding
 
-    def calculate_labels(self):
-        all_rsa = np.concatenate([np.repeat(rsa, len(seq)) for rsa, seq in zip(self.rsa, self.sequences)])
-        rsa_threshold = np.nanpercentile(all_rsa, 90)
-        return [np.array(seq_rsa) > rsa_threshold for seq_rsa in self.rsa]
-
     def __len__(self):
         return sum(len(seq) for seq in self.sequences)
 
@@ -55,11 +51,10 @@ class ProteinDataset(Dataset):
             if idx < seq_len:
                 break
             idx -= seq_len
-
         sequence = torch.tensor(self.one_hot_encode(self.sequences[seq_idx][idx]), dtype=torch.float32)
         rsa = torch.tensor([self.rsa[seq_idx][0]], dtype=torch.float32)  # Always use the first (and possibly only) RSA value
         feature = torch.cat([sequence, rsa])
-        label = torch.tensor(self.labels[seq_idx][0], dtype=torch.float32)  # Use the corresponding label
+        label = torch.tensor(self.interaction_scores[seq_idx], dtype=torch.float32)  # Use the interaction score as the label
         return feature, label
 
 def get_data_loader(data_dir, batch_size, num_workers):

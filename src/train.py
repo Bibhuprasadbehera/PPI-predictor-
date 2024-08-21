@@ -25,11 +25,13 @@ def train(config_path):
     val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=cfg['data']['batch_size'], shuffle=False, num_workers=cfg['data']['num_workers'])
 
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'], cfg['model']['num_layers'], cfg['model']['output_size'])
-    criterion = nn.BCELoss()
+    
+    # Change to MSE Loss for regression
+    criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
 
     num_epochs = cfg['training']['num_epochs']
-   
+    
     for epoch in range(num_epochs):
         model.train()
         for batch_idx, (data, target) in enumerate(train_loader):
@@ -38,24 +40,18 @@ def train(config_path):
             loss = criterion(output, target)
             loss.backward()
             optimizer.step()
-
             if batch_idx % 100 == 0:
                 print(f'Epoch {epoch}/{num_epochs}, Batch {batch_idx}/{len(train_loader)}, Loss: {loss.item():.4f}')
 
         # Validation
         model.eval()
         val_loss = 0
-        correct = 0
         with torch.no_grad():
             for data, target in val_loader:
                 output = model(data)
                 val_loss += criterion(output, target).item()
-                pred = (output > 0.5).float()
-                correct += pred.eq(target).sum().item()
-
         val_loss /= len(val_loader)
-        accuracy = 100. * correct / len(val_dataset)
-        print(f'Validation Loss: {val_loss:.4f}, Accuracy: {accuracy:.2f}%')
+        print(f'Validation Loss: {val_loss:.4f}')
 
         # Save checkpoint
         checkpoint_path = os.path.join(cfg['training']['checkpoint_dir'], f'model_epoch_{epoch}.pth')

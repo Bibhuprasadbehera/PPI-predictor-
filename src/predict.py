@@ -20,11 +20,11 @@ def predict(model_path, sequence, rsa, config):
 
     with torch.no_grad():
         output = model(feature)
-        prediction = (output > 0.5).float().item()
+        prediction = output.item()  # Get the raw prediction value
         return prediction
 
 if __name__ == '__main__':
     sequence = "A"  # Example amino acid
     rsa = 0.95  # Example RSA value
     prediction = predict('checkpoints/model_epoch_10.pth', sequence, rsa, 'config.yaml')
-    print(f'Sequence: {sequence}, RSA: {rsa}, Prediction: {prediction}')
+    print(f'Sequence: {sequence}, RSA: {rsa}, Predicted Interaction Score: {prediction:.4f}')

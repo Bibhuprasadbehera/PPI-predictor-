@@ -8,11 +8,10 @@ class ProteinInteractionModel(nn.Module):
         self.fc1 = nn.Linear(input_size, hidden_size)
         self.relu = nn.ReLU()
         self.fc2 = nn.Linear(hidden_size, output_size)
-        self.sigmoid = nn.Sigmoid()
+        # Removed sigmoid activation as we're now doing regression
 
     def forward(self, x):
         x = self.fc1(x)
         x = self.relu(x)
         x = self.fc2(x)
-        x = self.sigmoid(x)
-        return x.squeeze(-1)
+        return x.squeeze(-1)  # Output a single value per input

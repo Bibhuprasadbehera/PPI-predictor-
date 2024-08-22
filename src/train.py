@@ -3,7 +3,7 @@ import yaml
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from data_loader import get_data_loader
+from data_loader import get_data_loader, ProteinDataset
 from model import ProteinInteractionModel
 import os
 from sklearn.model_selection import train_test_split
@@ -21,23 +21,26 @@ def train(config_path):
     train_dataset, val_dataset = torch.utils.data.random_split(full_dataset.dataset, [train_size, val_size])
 
     # Create data loaders
-    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=cfg['data']['batch_size'], shuffle=True, num_workers=cfg['data']['num_workers'])
-    val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=cfg['data']['batch_size'], shuffle=False, num_workers=cfg['data']['num_workers'])
+    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=cfg['data']['batch_size'], 
+                                               shuffle=True, num_workers=cfg['data']['num_workers'], 
+                                               collate_fn=ProteinDataset.collate_fn)
+    val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=cfg['data']['batch_size'], 
+                                             shuffle=False, num_workers=cfg['data']['num_workers'], 
+                                             collate_fn=ProteinDataset.collate_fn)
 
-    model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'], cfg['model']['num_layers'], cfg['model']['output_size'])
-    
-    # Change to MSE Loss for regression
+    model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'], 
+                                    cfg['model']['num_layers'], cfg['model']['output_size'])
+
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
-
     num_epochs = cfg['training']['num_epochs']
-    
+
     for epoch in range(num_epochs):
         model.train()
-        for batch_idx, (data, target) in enumerate(train_loader):
+        for batch_idx, (sequences, rsas, targets) in enumerate(train_loader):
             optimizer.zero_grad()
-            output = model(data)
-            loss = criterion(output, target)
+            output = model(sequences, rsas)
+            loss = criterion(output, targets)
             loss.backward()
             optimizer.step()
             if batch_idx % 100 == 0:
@@ -47,9 +50,9 @@ def train(config_path):
         model.eval()
         val_loss = 0
         with torch.no_grad():
-            for data, target in val_loader:
-                output = model(data)
-                val_loss += criterion(output, target).item()
+            for sequences, rsas, targets in val_loader:
+                output = model(sequences, rsas)
+                val_loss += criterion(output, targets).item()
         val_loss /= len(val_loader)
         print(f'Validation Loss: {val_loss:.4f}')
 
@@ -59,7 +62,4 @@ def train(config_path):
         print(f'Checkpoint saved to {checkpoint_path}')
 
 if __name__ == '__main__':
-    import sys
-    import os
-    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     train('config.yaml')

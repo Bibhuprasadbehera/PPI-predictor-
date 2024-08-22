@@ -1,8 +1,8 @@
 # Main script 
 import argparse
-from train import train
-from evaluate import evaluate
-from predict import predict
+from src.train import train
+from src.evaluate import evaluate
+from src.predict import predict
 
 def main():
     parser = argparse.ArgumentParser(description="Protein Interaction Prediction")
@@ -10,7 +10,6 @@ def main():
     parser.add_argument('--config', default='config.yaml', help='Path to config file')
     parser.add_argument('--model', help='Path to model file (for evaluate and predict)')
     parser.add_argument('--sequence', help='Amino acid sequence (for predict)')
-    parser.add_argument('--rsa', type=float, help='RSA value (for predict)')
     args = parser.parse_args()
 
     if args.action == 'train':
@@ -21,10 +20,10 @@ def main():
             return
         evaluate(args.model, 'data/test', args.config)
     elif args.action == 'predict':
-        if not all([args.model, args.sequence, args.rsa]):
-            print("Please provide a model path, sequence, and RSA value for prediction")
+        if not all([args.model, args.sequence]):
+            print("Please provide a model path and sequence for prediction")
             return
-        prediction = predict(args.model, args.sequence, args.rsa, args.config)
+        prediction = predict(args.model, args.sequence, args.config)
         print(f"Prediction: {prediction}")
 
 if __name__ == "__main__":

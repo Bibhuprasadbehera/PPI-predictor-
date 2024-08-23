@@ -6,6 +6,7 @@ from model import ProteinInteractionModel
 from data_loader import ProteinDataset
 import yaml
 import numpy as np
+import sys
 
 def evaluate(model_path, test_data_dir, config):
     with open(config, 'r') as file:
@@ -40,4 +41,6 @@ def evaluate(model_path, test_data_dir, config):
     print(f'R2 Score: {r2:.4f}')
 
 if __name__ == '__main__':
+    print("Starting evaluation...")
     evaluate('checkpoints/model_epoch_10.pth', 'data/', 'config.yaml')
+    print("Evaluation complete.")

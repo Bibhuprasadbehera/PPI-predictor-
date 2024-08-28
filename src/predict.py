@@ -1,3 +1,5 @@
+#swc/ predict.py
+
 import torch
 import yaml
 from model import ProteinInteractionModel

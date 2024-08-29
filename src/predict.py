@@ -19,9 +19,9 @@ def predict(model_path, sequence, config):
 
     # Convert the input sequence to a tensor
     sequence_tensor = torch.tensor([aa_to_index.get(aa, 20) for aa in sequence], dtype=torch.long).unsqueeze(0)
-
+    
     with torch.no_grad():
-        prediction = model.predict(sequence_tensor)
+        prediction = model(sequence_tensor)
         return prediction.item()
 
 if __name__ == '__main__':

@@ -20,21 +20,18 @@ class ProteinInteractionModel(nn.Module):
         # x shape: (batch_size, seq_length)
         x = self.embedding(x)  # (batch_size, seq_length, input_size)
         
-        if rsa is not None:
-            # During training, concatenate RSA to each amino acid embedding
-            rsa = rsa.unsqueeze(-1)
-            x = torch.cat([x, rsa], dim=-1)
+        if rsa is None:
+            # For prediction, create a dummy RSA tensor
+            rsa = torch.zeros(x.size(0), x.size(1), 1, device=x.device)
+        else:
+            # Ensure RSA has the correct shape
+            rsa = rsa.view(x.size(0), x.size(1), 1)
+        
+        # Concatenate RSA to each amino acid embedding
+        x = torch.cat([x, rsa], dim=-1)
         
         lstm_out, _ = self.lstm(x)
         # Use the last output of the LSTM
-        last_output = lstm_out[:, -1, :]
-        output = self.fc(last_output)
-        return output.squeeze(-1)
-    
-    def predict(self, x):
-        # For prediction, we only use the AA sequence
-        x = self.embedding(x)
-        lstm_out, _ = self.lstm(x)
         last_output = lstm_out[:, -1, :]
         output = self.fc(last_output)
         return output.squeeze(-1)

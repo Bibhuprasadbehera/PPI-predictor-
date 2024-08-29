@@ -47,7 +47,7 @@ This project aims to predict intra-protein interactions using amino acid sequenc
 
 4. **Make Predictions**
    ```bash
-   python src/predict.py --model checkpoints/model_epoch_best.pth --sequence YOURSEQUENCE
+   python src/predict.py --model checkpoints/model_epoch_20.pth --sequence NKVQMHRSEMRPKFFSEHIISILNPHCVV --config config.yaml
    ```
    - Use for individual sequences or batch processing
 

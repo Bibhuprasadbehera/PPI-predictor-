@@ -35,21 +35,34 @@ class ProteinDataset(Dataset):
 
     def __getitem__(self, idx):
         row = self.data.iloc[idx]
-        sequence = torch.tensor([self.aa_to_index.get(aa, 20) for aa in str(row['aa'])], dtype=torch.long)
-        rsa = torch.tensor(float(row['rsa']), dtype=torch.float32).unsqueeze(0)
-        label = torch.tensor(float(row['test_interaction_score']), dtype=torch.float32)
-        return sequence, rsa, label
+        sequence = str(row['aa'])
+        padded_sequence = '<PAD>' * 3 + sequence + '<PAD>' * 3
+        
+        sequences = []
+        rsas = []
+        labels = []
+        
+        for i in range(3, len(padded_sequence) - 3):
+            window = padded_sequence[i-3:i+4]
+            sequences.append(torch.tensor([self.aa_to_index.get(aa, 20) for aa in window], dtype=torch.long))
+            rsas.append(torch.tensor(float(row['rsa']), dtype=torch.float32))
+            labels.append(torch.tensor(float(row['test_interaction_score']), dtype=torch.float32))
+        
+        return sequences, rsas, labels
 
     def __len__(self):
         return len(self.data)
 
     @staticmethod
     def collate_fn(batch):
-        sequences, rsas, labels = zip(*batch)
-        sequences_padded = nn.utils.rnn.pad_sequence(sequences, batch_first=True, padding_value=20)
-        rsas_padded = nn.utils.rnn.pad_sequence(rsas, batch_first=True, padding_value=0)
-        return sequences_padded, rsas_padded, torch.tensor(labels)
-
+        sequences, rsas, labels = [], [], []
+        for seq_batch, rsa_batch, label_batch in batch:
+            sequences.extend(seq_batch)
+            rsas.extend(rsa_batch)
+            labels.extend(label_batch)
+        return torch.stack(sequences), torch.stack(rsas), torch.stack(labels)
+    
+    
     def visualize_data_distribution(self):
         plt.figure(figsize=(12, 6))
         sns.histplot(self.data['test_interaction_score'], kde=True)

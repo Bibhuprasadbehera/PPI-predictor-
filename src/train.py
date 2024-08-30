@@ -14,15 +14,15 @@ import matplotlib.pyplot as plt
 def train(config_path):
     with open(config_path, 'r') as f:
         cfg = yaml.safe_load(f)
-    
+
     print("Loading data...")
-    full_dataset = get_data_loader(cfg['data']['train_path'], cfg['data']['batch_size'], cfg['data']['num_workers'])
-    
+    full_dataset = ProteinDataset(cfg['data']['train_path'])
+
     print("Splitting dataset...")
-    train_size = int(0.8 * len(full_dataset.dataset))
-    val_size = len(full_dataset.dataset) - train_size
-    train_dataset, val_dataset = torch.utils.data.random_split(full_dataset.dataset, [train_size, val_size])
-    
+    train_size = int(0.8 * len(full_dataset))
+    val_size = len(full_dataset) - train_size
+    train_dataset, val_dataset = torch.utils.data.random_split(full_dataset, [train_size, val_size])
+
     print("Creating data loaders...")
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=cfg['data']['batch_size'],
                                                shuffle=True, num_workers=cfg['data']['num_workers'],
@@ -30,24 +30,19 @@ def train(config_path):
     val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=cfg['data']['batch_size'],
                                              shuffle=False, num_workers=cfg['data']['num_workers'],
                                              collate_fn=ProteinDataset.collate_fn)
-    
-    print("Visualizing a batch...")
-    for batch in train_loader:
-        visualize_batch(batch)
-        break
-    
+
     print("Initializing model...")
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'],
                                     cfg['model']['num_layers'], cfg['model']['output_size'])
     print(model)
-    
+
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
-    
+
     num_epochs = cfg['training']['num_epochs']
     train_losses = []
     val_losses = []
-    
+
     print("Starting training...")
     for epoch in range(num_epochs):
         model.train()
@@ -59,13 +54,10 @@ def train(config_path):
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
-            
-            if batch_idx % 100 == 0:
-                print(f'Epoch {epoch+1}/{num_epochs}, Batch {batch_idx}/{len(train_loader)}, Loss: {loss.item():.4f}')
-        
+
         epoch_loss /= len(train_loader)
         train_losses.append(epoch_loss)
-        
+
         print("Running validation...")
         model.eval()
         val_loss = 0
@@ -75,13 +67,13 @@ def train(config_path):
                 val_loss += criterion(output, targets).item()
         val_loss /= len(val_loader)
         val_losses.append(val_loss)
-        
+
         print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {epoch_loss:.4f}, Validation Loss: {val_loss:.4f}')
-        
+
         checkpoint_path = os.path.join(cfg['training']['checkpoint_dir'], f'model_epoch_{epoch+1}.pth')
         torch.save(model.state_dict(), checkpoint_path)
         print(f'Checkpoint saved to {checkpoint_path}')
-    
+
     print("Training complete. Plotting loss...")
     plt.figure(figsize=(10, 5))
     plt.plot(train_losses, label='Training Loss')

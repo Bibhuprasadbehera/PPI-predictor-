@@ -75,5 +75,5 @@ def evaluate(model_path, test_data_dir, config):
 
 if __name__ == '__main__':
     print("Starting evaluation...")
-    evaluate('checkpoints/model_epoch_10.pth', 'data/', 'config.yaml')
+    evaluate('checkpoints/model_epoch_20.pth', 'data/', 'config.yaml')
     print("Evaluation complete.")

@@ -30,7 +30,7 @@
 5. Model Checkpoints
 
     checkpoints/ Directory: Stores model checkpoints, allowing for saving and loading model states.
-        model_epoch_10.pth: Example of a PyTorch model checkpoint file.
+        model_epoch_20.pth: Example of a PyTorch model checkpoint file.
     Source: Generated during the training process to save the state of the model at different stages.
 
 6. Logs and Outputs

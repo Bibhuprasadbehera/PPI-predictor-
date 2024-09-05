@@ -4,7 +4,7 @@ data:
   train_path: "data/"  # Directory containing training data files
   test_path: "data/"   # Directory containing test data files
   batch_size: 32       # Number of samples per batch for training
-  num_workers: 4       # Number of subprocesses to use for data loading
+  num_workers: 4       # Number of subprocesses to use for data loading.
 
 model:
   input_size: 64       # Size of the embedding for each amino acid

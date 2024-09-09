@@ -38,8 +38,8 @@ def train(config_path):
 
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
-
     num_epochs = cfg['training']['num_epochs']
+
     train_losses = []
     val_losses = []
 
@@ -47,9 +47,9 @@ def train(config_path):
     for epoch in range(num_epochs):
         model.train()
         epoch_loss = 0
-        for batch_idx, (sequences, rsas, targets) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
+        for batch_idx, (sequences, rsas, secondary_structures, targets) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
             optimizer.zero_grad()
-            output = model(sequences, rsas)
+            output = model(sequences, rsas, secondary_structures)
             loss = criterion(output, targets)
             loss.backward()
             optimizer.step()
@@ -62,9 +62,10 @@ def train(config_path):
         model.eval()
         val_loss = 0
         with torch.no_grad():
-            for sequences, rsas, targets in tqdm(val_loader, desc='Validation'):
-                output = model(sequences, rsas)
+            for sequences, rsas, secondary_structures, targets in tqdm(val_loader, desc='Validation'):
+                output = model(sequences, rsas, secondary_structures)
                 val_loss += criterion(output, targets).item()
+
         val_loss /= len(val_loader)
         val_losses.append(val_loss)
 

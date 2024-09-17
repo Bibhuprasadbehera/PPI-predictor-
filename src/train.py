@@ -4,12 +4,12 @@ import yaml
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from data_loader import get_data_loader, ProteinDataset, visualize_batch
+from data_loader import get_data_loader, ProteinDataset
 from model import ProteinInteractionModel
 import os
-from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+from torch.utils.data import random_split
 
 def train(config_path):
     with open(config_path, 'r') as f:
@@ -17,13 +17,12 @@ def train(config_path):
 
     print("Loading data...")
     full_dataset = ProteinDataset(cfg['data']['train_path'])
-
-    print("Splitting dataset...")
+    
+    # Split the dataset into training and validation
     train_size = int(0.8 * len(full_dataset))
     val_size = len(full_dataset) - train_size
-    train_dataset, val_dataset = torch.utils.data.random_split(full_dataset, [train_size, val_size])
+    train_dataset, val_dataset = random_split(full_dataset, [train_size, val_size])
 
-    print("Creating data loaders...")
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=cfg['data']['batch_size'],
                                                shuffle=True, num_workers=cfg['data']['num_workers'],
                                                collate_fn=ProteinDataset.collate_fn)
@@ -38,8 +37,8 @@ def train(config_path):
 
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
-    num_epochs = cfg['training']['num_epochs']
 
+    num_epochs = cfg['training']['num_epochs']
     train_losses = []
     val_losses = []
 
@@ -54,7 +53,7 @@ def train(config_path):
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
-
+        
         epoch_loss /= len(train_loader)
         train_losses.append(epoch_loss)
 
@@ -65,13 +64,12 @@ def train(config_path):
             for sequences, rsas, secondary_structures, targets in tqdm(val_loader, desc='Validation'):
                 output = model(sequences, rsas, secondary_structures)
                 val_loss += criterion(output, targets).item()
-
         val_loss /= len(val_loader)
         val_losses.append(val_loss)
 
         print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {epoch_loss:.4f}, Validation Loss: {val_loss:.4f}')
 
-        checkpoint_path = os.path.join(cfg['training']['checkpoint_dir'], f'model_epoch_{epoch+1}.pth')
+        checkpoint_path = os.path.join(cfg['training']['checkpoint_dir'], f'model_epoch{epoch+1}.pth')
         torch.save(model.state_dict(), checkpoint_path)
         print(f'Checkpoint saved to {checkpoint_path}')
 

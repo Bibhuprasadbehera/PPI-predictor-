@@ -20,7 +20,20 @@ def evaluate(model_path, test_data_dir, config):
     print("Initializing model...")
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'],
                                     cfg['model']['num_layers'], cfg['model']['output_size'])
-    model.load_state_dict(torch.load(model_path))
+    
+    # Load the state dict
+    state_dict = torch.load(model_path)
+    
+    # Filter out keys that are not in the current model
+    model_dict = model.state_dict()
+    state_dict = {k: v for k, v in state_dict.items() if k in model_dict}
+    
+    # Update the current model state dict
+    model_dict.update(state_dict)
+    
+    # Load the updated state dict
+    model.load_state_dict(model_dict)
+    
     model.eval()
     print(model)
 

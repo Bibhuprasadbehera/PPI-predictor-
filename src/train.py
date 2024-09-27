@@ -17,7 +17,7 @@ def train(config_path):
 
     print("Loading data...")
     full_dataset = ProteinDataset(cfg['data']['train_path'])
-    
+
     # Split the dataset into training and validation
     train_size = int(0.8 * len(full_dataset))
     val_size = len(full_dataset) - train_size
@@ -53,7 +53,7 @@ def train(config_path):
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
-        
+
         epoch_loss /= len(train_loader)
         train_losses.append(epoch_loss)
 
@@ -69,7 +69,7 @@ def train(config_path):
 
         print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {epoch_loss:.4f}, Validation Loss: {val_loss:.4f}')
 
-        checkpoint_path = os.path.join(cfg['training']['checkpoint_dir'], f'model_epoch{epoch+1}.pth')
+        checkpoint_path = os.path.join(cfg['training']['checkpoint_dir'], f'model_epoch_{epoch+1}.pth')
         torch.save(model.state_dict(), checkpoint_path)
         print(f'Checkpoint saved to {checkpoint_path}')
 

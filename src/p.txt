@@ -1,0 +1,24 @@
+# Changes to data_loader.py
+1. Update ProteinDataset.__init__() to load physicochemical properties
+2. Modify __getitem__() to include physicochemical properties
+3. Update collate_fn to handle the new data structure
+4. Add a method to visualize physicochemical properties distribution
+
+# Changes to model.py
+1. Modify ProteinInteractionModel.__init__() to include embeddings for physicochemical properties
+2. Update the forward() method to handle both training and prediction modes
+3. Add a method to predict using only amino acid sequences
+
+# Changes to train.py
+1. Update the training loop to handle the new data structure
+2. Modify the validation loop accordingly
+
+# Changes to evaluate.py
+1. Update the evaluation process to handle the new model structure
+
+# Changes to predict.py
+1. Modify the prediction function to work with only amino acid sequences
+
+# New utility functions (in utils.py or data_loader.py)
+1. Add functions to load and preprocess physicochemical properties
+2. Create functions to visualize physicochemical properties distributions

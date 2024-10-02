@@ -78,3 +78,17 @@ python -m unittest discover tests
 ```
 
 For more detailed information on each step, refer to the documentation in the `docs/` directory.
+
+
+
+
+# if facing environment related issue please use this 
+
+1.
+/mnt/myssd/anaconda3/envs/ml/bin/python "/home/bibhuprasad/Documents/PPI prediction model/PPI-predictor-/src/train.py"
+
+2.
+/mnt/myssd/anaconda3/envs/ml/bin/python "/home/bibhuprasad/Documents/PPI prediction model/PPI-predictor-/src/evaluate.py"
+
+3. 
+/mnt/myssd/anaconda3/envs/ml/bin/python /home/bibhuprasad/Documents/PPI\ prediction\ model/PPI-predictor-/src/predict.py --model checkpoints/model_epoch_20.pth --sequence NKVQMHRSEMRPKFFSEHIISILNPHCVV --config config.yaml

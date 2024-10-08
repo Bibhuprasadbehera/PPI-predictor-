@@ -19,7 +19,7 @@ def main():
         if not args.model:
             print("Please provide a model path for evaluation")
             return
-        evaluate(args.model, 'data/test', args.config)
+        evaluate(args.model, args.config)
     elif args.action == 'predict':
         if not all([args.model, args.sequence]):
             print("Please provide a model path and sequence for prediction")

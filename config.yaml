@@ -1,19 +1,21 @@
 # Description: Configuration file for the model training
 
 data:
-  train_path: "data/"  # Directory containing training data files
-  test_path: "data/"   # Directory containing test data files
-  batch_size: 32       # Number of samples per batch for training
-  num_workers: 4       # Number of subprocesses to use for data loading.
+  train_path: "data/" # Directory containing training data files
+  test_path: "data/" # Directory containing test data files
+  phys_prop_file: "data/transformed_physicochemical_properties.csv" # Path to the physicochemical properties file
+  batch_size: 32 # Number of samples per batch for training
+  num_workers: 4 # Number of subprocesses to use for data loading.
 
 model:
-  input_size: 64       # Size of the embedding for each amino acid
-  hidden_size: 128     # Number of features in the hidden state of the LSTM
-  num_layers: 2        # Number of recurrent layers in the LSTM
-  output_size: 1       # Size of the model output (1 for regression)
+  input_size: 64  # Size of the embedding for each amino acid
+  hidden_size: 128  # Number of features in the hidden state of the LSTM
+  num_layers: 2  # Number of recurrent layers in the LSTM
+  output_size: 1  # Size of the model output (1 for regression)
+  phys_prop_size: 10  # Number of physicochemical properties
 
 training:
-  num_epochs: 20       # Number of times to iterate over the entire dataset
+  num_epochs: 20 # Number of times to iterate over the entire dataset
   learning_rate: 0.001 # Step size at each iteration while moving toward a minimum of the loss
-  checkpoint_dir: "checkpoints/"  # Directory to save model checkpoints
-  log_dir: "logs/"     # Directory to save training logs
+  checkpoint_dir: "checkpoints/" # Directory to save model checkpoints
+  log_dir: "logs/" # Directory to save training logs

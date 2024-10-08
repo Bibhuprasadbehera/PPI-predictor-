@@ -10,8 +10,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 class ProteinDataset(Dataset):
-    def __init__(self, data_dir):
+    def __init__(self, data_dir, phys_prop_file):
         self.data = self.load_dssp_files(data_dir)
+        self.phys_props = self.load_phys_props(phys_prop_file)
         self.aa_to_index = {aa: idx for idx, aa in enumerate('ACDEFGHIKLMNPQRSTVWY')}
         self.ss_to_index = {'C': 0, 'H': 1, 'E': 2, 'P': 3}
         print(f"Loaded {len(self.data)} samples")
@@ -34,25 +35,52 @@ class ProteinDataset(Dataset):
             raise ValueError(f"No valid data files found in {data_dir}. Please check your data files and ensure they contain the required columns.")
         return pd.concat(all_data, ignore_index=True)
 
+    def load_phys_props(self, phys_prop_file):
+        return pd.read_csv(phys_prop_file, index_col='amino acid')
+
     def __getitem__(self, idx):
         row = self.data.iloc[idx]
-        sequence = str(row['aa'])
-        ss = str(row['three_hot_ss'])
+        sequence = str(row['aa'])  # Amino acid sequence
         
+        # Ensure we are loading 10 physicochemical properties per amino acid
+        phys_prop_list = [self.phys_props.loc[aa].values for aa in sequence]
+        phys_prop_array = np.array(phys_prop_list, dtype=np.float32)
+        phys_prop_tensor = torch.tensor(phys_prop_array, dtype=torch.float32)
+        
+        # Fix: Ensure that the phys_prop_tensor has exactly 10 columns
+        if phys_prop_tensor.size(1) != 10:
+            # In case a column is missing, pad with zeros or handle the missing property appropriately
+            missing_props = 10 - phys_prop_tensor.size(1)
+            phys_prop_tensor = torch.nn.functional.pad(phys_prop_tensor, (0, missing_props), "constant", 0)
+
+        # Return tensors as before
         sequence_tensor = torch.tensor([self.aa_to_index[aa] for aa in sequence], dtype=torch.long)
-        ss_tensor = torch.tensor([self.ss_to_index[s] for s in ss], dtype=torch.long)
-        rsa_tensor = torch.tensor(float(row['rsa']), dtype=torch.float32)
+        ss_tensor = torch.tensor([self.ss_to_index[s] for s in str(row['three_hot_ss'])], dtype=torch.long)
+        rsa_tensor = torch.tensor([float(row['rsa'])] * len(sequence), dtype=torch.float32)
         label_tensor = torch.tensor(float(row['test_interaction_score']), dtype=torch.float32)
         
-        return sequence_tensor, rsa_tensor, ss_tensor, label_tensor
+        return sequence_tensor, rsa_tensor, ss_tensor, phys_prop_tensor, label_tensor
 
     def __len__(self):
         return len(self.data)
 
     @staticmethod
     def collate_fn(batch):
-        sequences, rsas, secondary_structures, labels = zip(*batch)
-        return torch.stack(sequences), torch.stack(rsas), torch.stack(secondary_structures), torch.stack(labels)
+        sequences, rsas, secondary_structures, phys_props, labels = zip(*batch)
+        max_len = max(seq.size(0) for seq in sequences)
+        
+        # Pad sequences, secondary structures, and physicochemical properties
+        padded_sequences = torch.stack([torch.nn.functional.pad(seq, (0, max_len - seq.size(0))) for seq in sequences])
+        padded_ss = torch.stack([torch.nn.functional.pad(ss, (0, max_len - ss.size(0))) for ss in secondary_structures])
+        padded_phys_props = torch.stack([torch.nn.functional.pad(pp, (0, 0, 0, max_len - pp.size(0))) for pp in phys_props])
+        
+        # Ensure RSA tensors are padded correctly
+        padded_rsas = torch.stack([torch.nn.functional.pad(rsa, (0, max_len - rsa.size(0))) for rsa in rsas])
+        
+        # Stack labels
+        labels = torch.stack(labels)
+        
+        return padded_sequences, padded_rsas, padded_ss, padded_phys_props, labels
     
     def visualize_data_distribution(self):
         plt.figure(figsize=(12, 6))
@@ -88,12 +116,12 @@ class ProteinDataset(Dataset):
         print("\nData statistics:")
         print(self.data.describe())
 
-def get_data_loader(data_dir, batch_size, num_workers):
-    dataset = ProteinDataset(data_dir)
+def get_data_loader(data_dir, phys_prop_file, batch_size, num_workers):
+    dataset = ProteinDataset(data_dir, phys_prop_file)
     return DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers, collate_fn=ProteinDataset.collate_fn)
 
 def visualize_batch(batch, num_samples=5):
-    sequences, rsas, secondary_structures, labels = batch
+    sequences, rsas, secondary_structures, phys_props, labels = batch
     fig, axs = plt.subplots(num_samples, 3, figsize=(20, 5*num_samples))
     for i in range(num_samples):
         seq = sequences[i].numpy()
@@ -118,5 +146,5 @@ def visualize_batch(batch, num_samples=5):
     plt.tight_layout()
     plt.savefig('batch_visualization.png')
     plt.close()
-    print(f"Batch shape - Sequences: {sequences.shape}, RSAs: {rsas.shape}, Secondary Structures: {secondary_structures.shape}, Labels: {labels.shape}")
+    print(f"Batch shape - Sequences: {sequences.shape}, RSAs: {rsas.shape}, Secondary Structures: {secondary_structures.shape}, Physicochemical Properties: {phys_props.shape}, Labels: {labels.shape}")
     print(f"Label values: {labels[:num_samples]}")

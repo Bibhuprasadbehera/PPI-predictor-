@@ -40,25 +40,21 @@ class ProteinDataset(Dataset):
 
     def __getitem__(self, idx):
         row = self.data.iloc[idx]
-        sequence = str(row['aa'])  # Amino acid sequence
-        
-        # Ensure we are loading 10 physicochemical properties per amino acid
+        sequence = str(row['aa'])
+
         phys_prop_list = [self.phys_props.loc[aa].values for aa in sequence]
         phys_prop_array = np.array(phys_prop_list, dtype=np.float32)
         phys_prop_tensor = torch.tensor(phys_prop_array, dtype=torch.float32)
-        
-        # Fix: Ensure that the phys_prop_tensor has exactly 10 columns
+
         if phys_prop_tensor.size(1) != 10:
-            # In case a column is missing, pad with zeros or handle the missing property appropriately
             missing_props = 10 - phys_prop_tensor.size(1)
             phys_prop_tensor = torch.nn.functional.pad(phys_prop_tensor, (0, missing_props), "constant", 0)
 
-        # Return tensors as before
         sequence_tensor = torch.tensor([self.aa_to_index[aa] for aa in sequence], dtype=torch.long)
         ss_tensor = torch.tensor([self.ss_to_index[s] for s in str(row['three_hot_ss'])], dtype=torch.long)
         rsa_tensor = torch.tensor([float(row['rsa'])] * len(sequence), dtype=torch.float32)
         label_tensor = torch.tensor(float(row['test_interaction_score']), dtype=torch.float32)
-        
+
         return sequence_tensor, rsa_tensor, ss_tensor, phys_prop_tensor, label_tensor
 
     def __len__(self):
@@ -68,20 +64,16 @@ class ProteinDataset(Dataset):
     def collate_fn(batch):
         sequences, rsas, secondary_structures, phys_props, labels = zip(*batch)
         max_len = max(seq.size(0) for seq in sequences)
-        
-        # Pad sequences, secondary structures, and physicochemical properties
+
         padded_sequences = torch.stack([torch.nn.functional.pad(seq, (0, max_len - seq.size(0))) for seq in sequences])
         padded_ss = torch.stack([torch.nn.functional.pad(ss, (0, max_len - ss.size(0))) for ss in secondary_structures])
         padded_phys_props = torch.stack([torch.nn.functional.pad(pp, (0, 0, 0, max_len - pp.size(0))) for pp in phys_props])
-        
-        # Ensure RSA tensors are padded correctly
         padded_rsas = torch.stack([torch.nn.functional.pad(rsa, (0, max_len - rsa.size(0))) for rsa in rsas])
-        
-        # Stack labels
+
         labels = torch.stack(labels)
-        
+
         return padded_sequences, padded_rsas, padded_ss, padded_phys_props, labels
-    
+
     def visualize_data_distribution(self):
         plt.figure(figsize=(12, 6))
         sns.histplot(self.data['test_interaction_score'], kde=True)
@@ -127,22 +119,22 @@ def visualize_batch(batch, num_samples=5):
         seq = sequences[i].numpy()
         rsa = rsas[i].numpy()
         ss = secondary_structures[i].numpy()
-        
+
         axs[i, 0].imshow(np.eye(20)[seq], aspect='auto', cmap='viridis')
         axs[i, 0].set_title(f'Sample {i+1} - Sequence (One-hot encoded)')
         axs[i, 0].set_ylabel('AA Index')
         axs[i, 0].set_xlabel('Position')
-        
+
         axs[i, 1].plot(rsa.repeat(len(seq)))
         axs[i, 1].set_title(f'Sample {i+1} - RSA Value')
         axs[i, 1].set_ylabel('RSA')
         axs[i, 1].set_xlabel('Position')
-        
+
         axs[i, 2].imshow(np.eye(4)[ss], aspect='auto', cmap='viridis')
         axs[i, 2].set_title(f'Sample {i+1} - Secondary Structure')
         axs[i, 2].set_ylabel('SS Index')
         axs[i, 2].set_xlabel('Position')
-   
+
     plt.tight_layout()
     plt.savefig('batch_visualization.png')
     plt.close()

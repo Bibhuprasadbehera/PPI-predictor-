@@ -46,10 +46,6 @@ class ProteinDataset(Dataset):
         phys_prop_array = np.array(phys_prop_list, dtype=np.float32)
         phys_prop_tensor = torch.tensor(phys_prop_array, dtype=torch.float32)
 
-        if phys_prop_tensor.size(1) != 10:
-            missing_props = 10 - phys_prop_tensor.size(1)
-            phys_prop_tensor = torch.nn.functional.pad(phys_prop_tensor, (0, missing_props), "constant", 0)
-
         sequence_tensor = torch.tensor([self.aa_to_index[aa] for aa in sequence], dtype=torch.long)
         ss_tensor = torch.tensor([self.ss_to_index[s] for s in str(row['three_hot_ss'])], dtype=torch.long)
         rsa_tensor = torch.tensor([float(row['rsa'])] * len(sequence), dtype=torch.float32)

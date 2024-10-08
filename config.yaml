@@ -12,7 +12,7 @@ model:
   hidden_size: 128  # Number of features in the hidden state of the LSTM
   num_layers: 2  # Number of recurrent layers in the LSTM
   output_size: 1  # Size of the model output (1 for regression)
-  phys_prop_size: 10  # Number of physicochemical properties
+  phys_prop_size: 9  # Number of physicochemical properties
 
 training:
   num_epochs: 20 # Number of times to iterate over the entire dataset

@@ -18,6 +18,7 @@ class ProteinDataset(Dataset):
         print(f"Loaded {len(self.data)} samples")
         self.visualize_data_distribution()
         self.print_sample_data()
+        self.plot_physicochemical_properties_distribution(phys_prop_file)
 
     def load_dssp_files(self, data_dir):
         all_data = []
@@ -96,6 +97,9 @@ class ProteinDataset(Dataset):
         plt.savefig('secondary_structure_distribution.png')
         plt.close()
 
+        self.plot_amino_acid_frequency()
+        self.plot_sequence_length_distribution()
+
     def print_sample_data(self):
         print("\nSample data:")
         print(self.data.head())
@@ -103,6 +107,42 @@ class ProteinDataset(Dataset):
         print(self.data.dtypes)
         print("\nData statistics:")
         print(self.data.describe())
+
+    def plot_physicochemical_properties_distribution(self, phys_prop_file):
+        # Load the physicochemical properties data
+        data = pd.read_csv(phys_prop_file)
+
+        # Create distribution plots for each property
+        for property in data.columns[1:]:  # Skip the first column (amino acid)
+            plt.figure(figsize=(8, 6))
+            sns.histplot(data[property], kde=True)
+            plt.title(f'Distribution of {property}')
+            plt.xlabel(property)
+            plt.ylabel('Frequency')
+            plt.savefig(f'physicochemical_properties_distribution/{property}_distribution.png')
+            plt.close()
+
+        print("Distribution plots for physicochemical properties generated successfully.")
+
+    def plot_amino_acid_frequency(self):
+        plt.figure(figsize=(12, 6))
+        amino_acid_counts = self.data['aa'].value_counts()
+        sns.barplot(x=amino_acid_counts.index, y=amino_acid_counts.values)
+        plt.title('Amino Acid Frequency')
+        plt.xlabel('Amino Acid')
+        plt.ylabel('Count')
+        plt.savefig('amino_acid_frequency.png')
+        plt.close()
+
+    def plot_sequence_length_distribution(self):
+        plt.figure(figsize=(12, 6))
+        sequence_lengths = self.data['aa'].str.len()
+        sns.histplot(sequence_lengths, kde=True)
+        plt.title('Sequence Length Distribution')
+        plt.xlabel('Sequence Length')
+        plt.ylabel('Count')
+        plt.savefig('sequence_length_distribution.png')
+        plt.close()
 
 def get_data_loader(data_dir, phys_prop_file, batch_size, num_workers):
     dataset = ProteinDataset(data_dir, phys_prop_file)

@@ -7,6 +7,7 @@ import warnings
 import numpy as np
 from model import ProteinInteractionModel
 from data_loader import ProteinDataset
+import matplotlib.pyplot as plt
 
 # Suppress the FutureWarning
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -43,7 +44,19 @@ def predict(model_path, sequence, config, phys_prop_file):
     with torch.no_grad():
         predictions = model(sequence_tensor, rsa_tensor, ss_tensor, phys_props_tensor)
 
-    return predictions.squeeze(0).cpu().numpy().tolist()
+    predictions = predictions.squeeze(0).cpu().numpy().tolist()
+
+    # Plot predicted interaction scores along the sequence
+    plt.figure(figsize=(12, 6))
+    plt.plot(predictions)
+    plt.title('Predicted Interaction Scores Along the Sequence')
+    plt.xlabel('Amino Acid Position')
+    plt.ylabel('Interaction Score')
+    plt.xticks(range(len(sequence)), list(sequence))
+    plt.savefig('predicted_interaction_scores.png')
+    plt.close()
+
+    return predictions
 
 if __name__ == '__main__':
     import argparse

@@ -175,3 +175,4 @@ if __name__ == '__main__':
     print("Summary of metrics:")
     for metric, value in metrics.items():
         print(f"{metric}: {value:.4f}")
+

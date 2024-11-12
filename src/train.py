@@ -1,5 +1,3 @@
-# src/train.py
-
 import os
 import yaml
 import torch

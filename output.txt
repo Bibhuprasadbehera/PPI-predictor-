@@ -1,0 +1,22 @@
+import pickle
+import os
+
+# Path to the pickle file
+pickle_path = '/home/bibhuprasad/Documents/PPI prediction model/PPI-predictor-/data/pssm_matrix/1FYT_1_4.pssm.pkl'
+
+# Load the data from the pickle file
+with open(pickle_path, 'rb') as f:
+    sequences, pssm_arrays = pickle.load(f)
+
+# Output the results to a file
+output_file_path = 'output.txt'
+with open(output_file_path, 'w') as output_file:
+    output_file.write("Sequences:\n")
+    for seq in sequences:
+        output_file.write(str(seq) + "\n")
+
+    output_file.write("\nPSSM Arrays:\n")
+    for pssm_array in pssm_arrays:
+        output_file.write(str(pssm_array) + "\n")
+
+print(f"Sequences and PSSM arrays written to {output_file_path}")

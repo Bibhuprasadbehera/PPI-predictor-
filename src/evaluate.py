@@ -1,16 +1,16 @@
 # src/evaluate.py
 
-import torch
-from torch.utils.data import DataLoader
-from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
-from scipy.stats import pearsonr, spearmanr
-from model import ProteinInteractionModel
-from data_loader import ProteinDataset, visualize_batch
 import yaml
+import torch
 import numpy as np
+import seaborn as sns
 from tqdm import tqdm
 import matplotlib.pyplot as plt
-import seaborn as sns
+from torch.utils.data import DataLoader
+from model import ProteinInteractionModel
+from scipy.stats import pearsonr, spearmanr
+from data_loader import ProteinDataset, visualize_batch
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 def evaluate(model_path, test_data_dir, phys_prop_file, config):
     print("Loading configuration...")

@@ -1,13 +1,13 @@
 # src/data_loader.py
 
-import pandas as pd
-import numpy as np
-from torch.utils.data import Dataset, DataLoader
-import torch
 import os
+import torch
+import numpy as np
+import pandas as pd
+import seaborn as sns
 from tqdm import tqdm
 import matplotlib.pyplot as plt
-import seaborn as sns
+from torch.utils.data import Dataset, DataLoader
 
 class ProteinDataset(Dataset):
     def __init__(self, data_dir, phys_prop_file):

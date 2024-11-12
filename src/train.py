@@ -1,15 +1,15 @@
 # src/train.py
 
+import os
 import yaml
 import torch
+from tqdm import tqdm
 import torch.nn as nn
 import torch.optim as optim
-from data_loader import get_data_loader, ProteinDataset
-from model import ProteinInteractionModel
-import os
-from tqdm import tqdm
 import matplotlib.pyplot as plt
+from model import ProteinInteractionModel
 from torch.utils.data import random_split
+from data_loader import get_data_loader, ProteinDataset
 
 def train(config_path):
     with open(config_path, 'r') as f:

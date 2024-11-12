@@ -5,9 +5,9 @@ import yaml
 import pandas as pd
 import warnings
 import numpy as np
-from model import ProteinInteractionModel
-from data_loader import ProteinDataset
 import matplotlib.pyplot as plt
+from data_loader import ProteinDataset
+from model import ProteinInteractionModel
 
 # Suppress the FutureWarning
 warnings.filterwarnings("ignore", category=FutureWarning)

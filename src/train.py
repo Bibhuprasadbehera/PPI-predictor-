@@ -8,10 +8,14 @@ import matplotlib.pyplot as plt
 from model import ProteinInteractionModel
 from torch.utils.data import random_split
 from data_loader import get_data_loader, ProteinDataset
+from utils import setup_logger  # Import setup_logger from utils.py
 
 def train(config_path):
     with open(config_path, 'r') as f:
         cfg = yaml.safe_load(f)
+
+    # Set up logger
+    logger = setup_logger(cfg['training']['log_dir'] + 'training.log')
 
     print("Loading data...")
     full_dataset = ProteinDataset(cfg['data']['train_path'], cfg['data']['phys_prop_file'])
@@ -55,6 +59,9 @@ def train(config_path):
         
         epoch_loss /= len(train_loader)
         train_losses.append(epoch_loss)
+
+        # Log epoch training loss
+        logger.info(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {epoch_loss:.4f}')
         
         print("Running validation...")
         model.eval()
@@ -68,6 +75,9 @@ def train(config_path):
         val_losses.append(val_loss)
         
         print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {epoch_loss:.4f}, Validation Loss: {val_loss:.4f}')
+
+        # Log epoch validation loss
+        logger.info(f'Epoch {epoch+1}/{num_epochs}, Validation Loss: {val_loss:.4f}')
         
         checkpoint_path = os.path.join(cfg['training']['checkpoint_dir'], f'model_epoch_{epoch+1}.pth')
         torch.save(model.state_dict(), checkpoint_path)

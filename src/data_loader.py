@@ -25,7 +25,13 @@ class ProteinDataset(Dataset):
                 df = pd.read_csv(file_path)
                 required_columns = ['aa', 'rsa', 'three_hot_ss', 'test_interaction_score', 'chain']
                 if all(col in df.columns for col in required_columns):
-                    all_data.append(df[required_columns])
+                    # Check if 'rsa' and 'test_interaction_score' can be converted to float
+                    try:
+                        df['rsa'] = df['rsa'].astype(float)
+                        df['test_interaction_score'] = df['test_interaction_score'].astype(float)
+                        all_data.append(df[required_columns])
+                    except TypeError:
+                        print(f"Error: Invalid data type in file {file}. 'rsa' and 'test_interaction_score' must be numeric. Skipping.")
                 else:
                     missing_columns = [col for col in required_columns if col not in df.columns]
                     print(f"Warning: File {file} is missing these required columns: {missing_columns}. Skipping.")
@@ -34,7 +40,10 @@ class ProteinDataset(Dataset):
         return pd.concat(all_data, ignore_index=True)
 
     def load_phys_props(self, phys_prop_file):
-        return pd.read_csv(phys_prop_file, index_col='amino acid')
+        try:
+            return pd.read_csv(phys_prop_file, index_col='amino acid')
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Error: Physicochemical properties file not found: {phys_prop_file}")
 
     def __getitem__(self, idx):
         row = self.data.iloc[idx]

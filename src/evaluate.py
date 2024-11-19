@@ -6,10 +6,9 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 from model import ProteinInteractionModel
-from scipy.stats import pearsonr, spearmanr
 from data_loader import ProteinDataset, visualize_batch
-from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from plots_evaluate import create_evaluation_plots
+from utils import calculate_metrics  # Import calculate_metrics from utils.py
 
 def evaluate(model_path, test_data_dir, phys_prop_file, config):
     print("Loading configuration...")
@@ -72,42 +71,20 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
     print(f"Sample of all_labels: {all_labels[:5]}")
     print(f"Sample of all_preds: {all_preds[:5]}")
 
-    # Calculate metrics
-    mse = mean_squared_error(all_labels, all_preds)
-    rmse = np.sqrt(mse)
-    mae = mean_absolute_error(all_labels, all_preds)
-    r2 = r2_score(all_labels, all_preds)
-    
-    try:
-        pearson_corr, _ = pearsonr(all_labels, all_preds)
-    except:
-        print("Warning: Could not calculate Pearson correlation. Setting to NaN.")
-        pearson_corr = np.nan
+    # Calculate metrics using the function from utils.py
+    metrics = calculate_metrics(all_labels, all_preds)
 
-    try:
-        spearman_corr, _ = spearmanr(all_labels, all_preds)
-    except:
-        print("Warning: Could not calculate Spearman correlation. Setting to NaN.")
-        spearman_corr = np.nan
-
-    print(f'Mean Squared Error: {mse:.4f}')
-    print(f'Root Mean Squared Error: {rmse:.4f}')
-    print(f'Mean Absolute Error: {mae:.4f}')
-    print(f'R2 Score: {r2:.4f}')
-    print(f'Pearson Correlation Coefficient: {pearson_corr:.4f}')
-    print(f'Spearman Correlation Coefficient: {spearman_corr:.4f}')
+    print(f'Mean Squared Error: {metrics["mse"]:.4f}')
+    print(f'Root Mean Squared Error: {metrics["rmse"]:.4f}')
+    print(f'Mean Absolute Error: {metrics["mae"]:.4f}')
+    print(f'R2 Score: {metrics["r2"]:.4f}')
+    print(f'Pearson Correlation Coefficient: {metrics["pearson_corr"]:.4f}')
+    print(f'Spearman Correlation Coefficient: {metrics["spearman_corr"]:.4f}')
 
     create_evaluation_plots(all_labels, all_preds)
 
     # Return metrics for potential further use
-    return {
-        'mse': mse,
-        'rmse': rmse,
-        'mae': mae,
-        'r2': r2,
-        'pearson_corr': pearson_corr,
-        'spearman_corr': spearman_corr
-    }
+    return metrics
 
 if __name__ == '__main__':
     print("Starting evaluation...")

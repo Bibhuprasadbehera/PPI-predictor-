@@ -31,7 +31,7 @@ def train(config_path):
     print("Initializing model...")
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'],
                                     cfg['model']['num_layers'], cfg['model']['output_size'],
-                                    cfg['model']['phys_prop_size'])
+                                    cfg['model']['phys_prop_size'], cfg['model']['num_chains'])  # Include num_chains
     print(model)
 
     criterion = nn.MSELoss()
@@ -45,9 +45,9 @@ def train(config_path):
     for epoch in range(num_epochs):
         model.train()
         epoch_loss = 0
-        for batch_idx, (sequences, rsas, secondary_structures, phys_props, targets) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
+        for batch_idx, (sequences, rsas, secondary_structures, phys_props, chains, targets) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):  # Unpack chains
             optimizer.zero_grad()
-            output = model(sequences, rsas, secondary_structures, phys_props)
+            output = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to model
             loss = criterion(output, targets)
             loss.backward()
             optimizer.step()
@@ -60,8 +60,8 @@ def train(config_path):
         model.eval()
         val_loss = 0
         with torch.no_grad():
-            for sequences, rsas, secondary_structures, phys_props, targets in tqdm(val_loader, desc='Validation'):
-                output = model(sequences, rsas, secondary_structures, phys_props)
+            for sequences, rsas, secondary_structures, phys_props, chains, targets in tqdm(val_loader, desc='Validation'):  # Unpack chains
+                output = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to model
                 val_loss += criterion(output, targets).item()
         
         val_loss /= len(val_loader)

@@ -67,12 +67,13 @@ def create_physicochemical_properties_distribution_plots(phys_prop_file):
     print("Distribution plots for physicochemical properties generated successfully.")
 
 def create_batch_visualization(batch, num_samples=5):
-    sequences, rsas, secondary_structures, phys_props, labels = batch
-    fig, axs = plt.subplots(num_samples, 3, figsize=(20, 5*num_samples))
+    sequences, rsas, secondary_structures, phys_props, chains, labels = batch  # Unpack chains
+    fig, axs = plt.subplots(num_samples, 4, figsize=(20, 5*num_samples))  # Add a column for chains
     for i in range(num_samples):
         seq = sequences[i].numpy()
         rsa = rsas[i].numpy()
         ss = secondary_structures[i].numpy()
+        chain = chains[i].numpy()
 
         axs[i, 0].imshow(np.eye(20)[seq], aspect='auto', cmap='viridis')
         axs[i, 0].set_title(f'Sample {i+1} - Sequence (One-hot encoded)')
@@ -89,8 +90,13 @@ def create_batch_visualization(batch, num_samples=5):
         axs[i, 2].set_ylabel('SS Index')
         axs[i, 2].set_xlabel('Position')
 
+        axs[i, 3].plot(chain.repeat(len(seq)))  # Visualize chain IDs
+        axs[i, 3].set_title(f'Sample {i+1} - Chain ID')
+        axs[i, 3].set_ylabel('Chain ID')
+        axs[i, 3].set_xlabel('Position')
+
     plt.tight_layout()
     plt.savefig('batch_visualization.png')
     plt.close()
-    print(f"Batch shape - Sequences: {sequences.shape}, RSAs: {rsas.shape}, Secondary Structures: {secondary_structures.shape}, Physicochemical Properties: {phys_props.shape}, Labels: {labels.shape}")
+    print(f"Batch shape - Sequences: {sequences.shape}, RSAs: {rsas.shape}, Secondary Structures: {secondary_structures.shape}, Physicochemical Properties: {phys_props.shape}, Chains: {chains.shape}, Labels: {labels.shape}")  # Include chains
     print(f"Label values: {labels[:num_samples]}")

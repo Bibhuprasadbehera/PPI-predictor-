@@ -19,7 +19,7 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
     print("Initializing model...")
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'],
                                     cfg['model']['num_layers'], cfg['model']['output_size'],
-                                    cfg['model']['phys_prop_size'])
+                                    cfg['model']['phys_prop_size'], cfg['model']['num_chains'])
 
     # Load the state dict
     state_dict = torch.load(model_path)
@@ -53,8 +53,8 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
 
     print("Running evaluation...")
     with torch.no_grad():
-        for sequences, rsas, secondary_structures, phys_props, labels in tqdm(test_loader, desc='Evaluating'):
-            outputs = model(sequences, rsas, secondary_structures, phys_props)
+        for sequences, rsas, secondary_structures, phys_props, chains, labels in tqdm(test_loader, desc='Evaluating'):  # Unpack chains
+            outputs = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to the model
             all_labels.extend(labels.numpy().flatten())
             all_preds.extend(outputs.cpu().numpy().flatten())
 

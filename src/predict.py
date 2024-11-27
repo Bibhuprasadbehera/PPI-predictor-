@@ -12,7 +12,7 @@ from model import ProteinInteractionModel
 # Suppress the FutureWarning
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-def predict(model_path, sequence, config, phys_prop_file):
+def predict(model_path, sequence1, sequence2, config, phys_prop_file):
     with open(config, 'r') as file:
         cfg = yaml.safe_load(file)
 
@@ -31,48 +31,76 @@ def predict(model_path, sequence, config, phys_prop_file):
     aa_to_index = {aa: idx for idx, aa in enumerate('ACDEFGHIKLMNPQRSTVWY')}
     chain_to_index = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8, 'J': 9, 'K': 10, 'L': 11, 'M': 12, 'N': 13, 'O': 14, 'P': 15, 'Q': 16, 'R': 17, 'S': 18, 'T': 19, 'U': 20, 'V': 21, 'W': 22, 'X': 23, 'Y': 24, 'Z': 25}  # Add more as needed
 
-    sequence_tensor = torch.tensor([aa_to_index[aa] for aa in sequence], dtype=torch.long).unsqueeze(0)
-    rsa_tensor = torch.tensor([0.5] * len(sequence), dtype=torch.float32).unsqueeze(0)  # Replace with actual RSA data
-    ss_tensor = torch.tensor([0] * len(sequence), dtype=torch.long).unsqueeze(0)  # Replace with actual secondary structure data
-    chain_tensor = torch.tensor([chain_to_index['A']] * len(sequence), dtype=torch.long).unsqueeze(0)  # Assuming chain ID is 'A'
-    phys_props_list = [phys_props_df.loc[aa].values for aa in sequence]
-    phys_props_array = np.array(phys_props_list)
-    phys_props_tensor = torch.tensor(phys_props_array, dtype=torch.float32).unsqueeze(0)
+    # Pad sequences to the same length
+    max_len = max(len(sequence1), len(sequence2))
+    sequence1_padded = sequence1 + '-' * (max_len - len(sequence1))
+    sequence2_padded = sequence2 + '-' * (max_len - len(sequence2))
 
-    print(f"Sequence tensor shape: {sequence_tensor.shape}")
-    print(f"RSA tensor shape: {rsa_tensor.shape}")
-    print(f"Secondary structure tensor shape: {ss_tensor.shape}")
-    print(f"Chain tensor shape: {chain_tensor.shape}")  # Print chain tensor shape
-    print(f"Physicochemical properties tensor shape: {phys_props_tensor.shape}")
+    # Create tensors for sequence1
+    sequence1_tensor = torch.tensor([aa_to_index.get(aa, 0) for aa in sequence1_padded], dtype=torch.long).unsqueeze(0)
+    rsa1_tensor = torch.tensor([0.5] * max_len, dtype=torch.float32).unsqueeze(0)  # Replace with actual RSA data if available
+    ss1_tensor = torch.tensor([0] * max_len, dtype=torch.long).unsqueeze(0)  # Replace with actual secondary structure data if available
+    chain1_tensor = torch.tensor([chain_to_index['A']] * max_len, dtype=torch.long).unsqueeze(0)  # Assuming chain ID is 'A'
+    phys_props1_list = [phys_props_df.loc[aa].values if aa != '-' else np.zeros(phys_props_df.shape[1]) for aa in sequence1_padded]
+    phys_props1_array = np.array(phys_props1_list)
+    phys_props1_tensor = torch.tensor(phys_props1_array, dtype=torch.float32).unsqueeze(0)
+
+    # Create tensors for sequence2
+    sequence2_tensor = torch.tensor([aa_to_index.get(aa, 0) for aa in sequence2_padded], dtype=torch.long).unsqueeze(0)
+    rsa2_tensor = torch.tensor([0.5] * max_len, dtype=torch.float32).unsqueeze(0)  # Replace with actual RSA data if available
+    ss2_tensor = torch.tensor([0] * max_len, dtype=torch.long).unsqueeze(0)  # Replace with actual secondary structure data if available
+    chain2_tensor = torch.tensor([chain_to_index['B']] * max_len, dtype=torch.long).unsqueeze(0)  # Assuming chain ID is 'B'
+    phys_props2_list = [phys_props_df.loc[aa].values if aa != '-' else np.zeros(phys_props_df.shape[1]) for aa in sequence2_padded]
+    phys_props2_array = np.array(phys_props2_list)
+    phys_props2_tensor = torch.tensor(phys_props2_array, dtype=torch.float32).unsqueeze(0)
+
 
     with torch.no_grad():
-        predictions = model(sequence_tensor, rsa_tensor, ss_tensor, phys_props_tensor, chain_tensor)  # Pass chain tensor to the model
+        predictions, predictions2, interaction_matrix = model(sequence1_tensor, rsa1_tensor, ss1_tensor, phys_props1_tensor, chain1_tensor,
+                           sequence2_tensor, rsa2_tensor, ss2_tensor, phys_props2_tensor, chain2_tensor)
 
     predictions = predictions.squeeze(0).cpu().numpy().tolist()
+    predictions2 = predictions2.squeeze(0).cpu().numpy().tolist()
+    interaction_matrix = interaction_matrix.squeeze(0).cpu().numpy()
 
-    # Plot predicted interaction scores along the sequence
+    # Plot predicted interaction scores along the sequence1
     plt.figure(figsize=(12, 6))
-    plt.plot(predictions)
-    plt.title('Predicted Interaction Scores Along the Sequence')
+    plt.plot(predictions[:len(sequence1)])  # Plot only for the original sequence length
+    plt.title('Predicted Interaction Scores Along the Sequence 1')
     plt.xlabel('Amino Acid Position')
     plt.ylabel('Interaction Score')
-    plt.xticks(range(len(sequence)), list(sequence))
-    plt.savefig('predicted_interaction_scores.png')
+    plt.xticks(range(len(sequence1)), list(sequence1))
+    plt.savefig('predicted_interaction_scores_sequence1.png')
     plt.close()
 
-    return predictions
+    # Plot predicted interaction scores along the sequence2
+    plt.figure(figsize=(12, 6))
+    plt.plot(predictions2[:len(sequence2)])  # Plot only for the original sequence length
+    plt.title('Predicted Interaction Scores Along the Sequence 2')
+    plt.xlabel('Amino Acid Position')
+    plt.ylabel('Interaction Score')
+    plt.xticks(range(len(sequence2)), list(sequence2))
+    plt.savefig('predicted_interaction_scores_sequence2.png')
+    plt.close()
+
+    # Save the interaction matrix to a CSV file
+    df = pd.DataFrame(interaction_matrix)
+    df.to_csv('predicted_interaction_matrix.csv', index=False, header=False)
+
+    return interaction_matrix
 
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description="Predict protein interaction scores")
     parser.add_argument('--model', required=True, help='Path to the trained model')
-    parser.add_argument('--sequence', required=True, help='Amino acid sequence to predict')
+    parser.add_argument('--sequence1', required=True, help='First amino acid sequence to predict')
+    parser.add_argument('--sequence2', required=True, help='Second amino acid sequence to predict')
     parser.add_argument('--config', default='config.yaml', help='Path to config file')
     parser.add_argument('--phys_prop_file', default='data/transformed_physicochemical_properties.csv', help='Path to physicochemical properties file')
     args = parser.parse_args()
 
-    predictions = predict(args.model, args.sequence, args.config, args.phys_prop_file)
-    print(f'Sequence: {args.sequence}')
-    print('Predicted Interaction Scores:')
-    for i, (aa, score) in enumerate(zip(args.sequence, predictions)):
-        print(f'Position {i+1} ({aa}): {score:.4f}')
+    interaction_matrix = predict(args.model, args.sequence1, args.sequence2, args.config, args.phys_prop_file)
+    print(f'Sequence 1: {args.sequence1}')
+    print(f'Sequence 2: {args.sequence2}')
+    print('Predicted Interaction Matrix:')
+    print(interaction_matrix)

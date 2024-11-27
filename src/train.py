@@ -38,7 +38,7 @@ def train(config_path):
                                     cfg['model']['phys_prop_size'], cfg['model']['num_chains'])  # Include num_chains
     print(model)
 
-    criterion = nn.MSELoss()
+    criterion = nn.MSELoss()  # Use MSE loss for interaction matrix
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
     
     num_epochs = cfg['training']['num_epochs']
@@ -51,8 +51,33 @@ def train(config_path):
         epoch_loss = 0
         for batch_idx, (sequences, rsas, secondary_structures, phys_props, chains, targets) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):  # Unpack chains
             optimizer.zero_grad()
-            output = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to model
-            loss = criterion(output, targets)
+
+            # Separate sequences and features based on chain IDs
+            chain_a_indices = (chains == 0).nonzero(as_tuple=True)[0]
+            chain_b_indices = (chains == 1).nonzero(as_tuple=True)[0]
+
+            sequences_a = sequences[chain_a_indices]
+            rsas_a = rsas[chain_a_indices]
+            secondary_structures_a = secondary_structures[chain_a_indices]
+            phys_props_a = phys_props[chain_a_indices]
+            chains_a = chains[chain_a_indices]
+
+            sequences_b = sequences[chain_b_indices]
+            rsas_b = rsas[chain_b_indices]
+            secondary_structures_b = secondary_structures[chain_b_indices]
+            phys_props_b = phys_props[chain_b_indices]
+            chains_b = chains[chain_b_indices]
+
+            # Pass the separated sequences and features to the model
+            _, _, output = model(sequences_a, rsas_a, secondary_structures_a, phys_props_a, chains_a,
+                                sequences_b, rsas_b, secondary_structures_b, phys_props_b, chains_b)
+
+            # Flatten the target interaction matrix
+            targets = targets.view(-1)
+
+            # Calculate the loss
+            loss = criterion(output.view(-1), targets)
+
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
@@ -68,8 +93,32 @@ def train(config_path):
         val_loss = 0
         with torch.no_grad():
             for sequences, rsas, secondary_structures, phys_props, chains, targets in tqdm(val_loader, desc='Validation'):  # Unpack chains
-                output = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to model
-                val_loss += criterion(output, targets).item()
+
+                # Separate sequences and features based on chain IDs
+                chain_a_indices = (chains == 0).nonzero(as_tuple=True)[0]
+                chain_b_indices = (chains == 1).nonzero(as_tuple=True)[0]
+
+                sequences_a = sequences[chain_a_indices]
+                rsas_a = rsas[chain_a_indices]
+                secondary_structures_a = secondary_structures[chain_a_indices]
+                phys_props_a = phys_props[chain_a_indices]
+                chains_a = chains[chain_a_indices]
+
+                sequences_b = sequences[chain_b_indices]
+                rsas_b = rsas[chain_b_indices]
+                secondary_structures_b = secondary_structures[chain_b_indices]
+                phys_props_b = phys_props[chain_b_indices]
+                chains_b = chains[chain_b_indices]
+
+                # Pass the separated sequences and features to the model
+                _, _, output = model(sequences_a, rsas_a, secondary_structures_a, phys_props_a, chains_a,
+                                    sequences_b, rsas_b, secondary_structures_b, phys_props_b, chains_b)
+
+                # Flatten the target interaction matrix
+                targets = targets.view(-1)
+
+                # Calculate the loss
+                val_loss += criterion(output.view(-1), targets).item()
         
         val_loss /= len(val_loader)
         val_losses.append(val_loss)

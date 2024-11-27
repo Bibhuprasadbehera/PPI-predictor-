@@ -79,3 +79,7 @@
 2024-11-19 22:05:22,982 - INFO - Epoch 19/20, Validation Loss: 0.0932
 2024-11-19 22:05:27,310 - INFO - Epoch 20/20, Train Loss: 0.0966
 2024-11-19 22:05:27,701 - INFO - Epoch 20/20, Validation Loss: 0.0935
+2024-11-26 17:57:55,169 - INFO - Epoch 1/20, Train Loss: 0.0983
+2024-11-26 17:57:55,638 - INFO - Epoch 1/20, Validation Loss: 0.0952
+2024-11-26 17:58:00,888 - INFO - Epoch 2/20, Train Loss: 0.0965
+2024-11-26 17:58:01,368 - INFO - Epoch 2/20, Validation Loss: 0.0970

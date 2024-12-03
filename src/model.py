@@ -20,7 +20,7 @@ class SelfAttention(nn.Module):
         return context_vector
 
 class ProteinInteractionModel(nn.Module):
-    def __init__(self, input_size, hidden_size, num_layers, output_size, phys_prop_size, num_chains=26):  # Add num_chains parameter
+    def __init__(self, input_size, hidden_size, num_layers, output_size, phys_prop_size, num_chains=54):  # Add num_chains parameter
         super(ProteinInteractionModel, self).__init__()
         self.embedding = nn.Embedding(20, input_size)
         self.ss_embedding = nn.Embedding(4, input_size)

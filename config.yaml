@@ -13,7 +13,7 @@ model:
   num_layers: 2  # Number of recurrent layers in the LSTM
   output_size: 1  # Size of the model output (1 for regression)
   phys_prop_size: 9  # Number of physicochemical properties
-  num_chains: 26  # Maximum number of different chain IDs
+  num_chains: 54  # Maximum number of different chain IDs
 
 training:
   num_epochs: 20 # Number of times to iterate over the entire dataset

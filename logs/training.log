@@ -222,3 +222,62 @@
 2024-12-03 16:16:41,305 - INFO - Epoch 19/20, Validation Loss: 0.0945
 2024-12-03 16:16:49,169 - INFO - Epoch 20/20, Train Loss: 0.0962
 2024-12-03 16:16:49,964 - INFO - Epoch 20/20, Validation Loss: 0.0947
+2024-12-09 17:56:01,894 - INFO - Epoch 1/20, Train Loss: 0.0978
+2024-12-09 17:56:02,253 - INFO - Epoch 1/20, Validation Loss: 0.0945
+2024-12-09 17:56:05,960 - INFO - Epoch 2/20, Train Loss: 0.0970
+2024-12-09 17:56:06,303 - INFO - Epoch 2/20, Validation Loss: 0.0946
+2024-12-09 17:56:10,007 - INFO - Epoch 3/20, Train Loss: 0.0968
+2024-12-09 17:56:10,353 - INFO - Epoch 3/20, Validation Loss: 0.0956
+2024-12-09 17:56:13,975 - INFO - Epoch 4/20, Train Loss: 0.0964
+2024-12-09 17:56:14,306 - INFO - Epoch 4/20, Validation Loss: 0.0945
+2024-12-09 17:56:18,272 - INFO - Epoch 5/20, Train Loss: 0.0964
+2024-12-09 17:56:18,606 - INFO - Epoch 5/20, Validation Loss: 0.0949
+2024-12-09 17:56:22,165 - INFO - Epoch 6/20, Train Loss: 0.0963
+2024-12-09 17:56:22,500 - INFO - Epoch 6/20, Validation Loss: 0.0951
+2024-12-09 17:56:26,145 - INFO - Epoch 7/20, Train Loss: 0.0963
+2024-12-09 17:56:26,497 - INFO - Epoch 7/20, Validation Loss: 0.0947
+2024-12-09 17:56:30,348 - INFO - Epoch 8/20, Train Loss: 0.0964
+2024-12-09 17:56:30,703 - INFO - Epoch 8/20, Validation Loss: 0.0944
+2024-12-09 17:56:34,457 - INFO - Epoch 9/20, Train Loss: 0.0963
+2024-12-09 17:56:34,794 - INFO - Epoch 9/20, Validation Loss: 0.0949
+2024-12-09 17:56:38,320 - INFO - Epoch 10/20, Train Loss: 0.0963
+2024-12-09 17:56:38,643 - INFO - Epoch 10/20, Validation Loss: 0.0944
+2024-12-09 17:56:42,236 - INFO - Epoch 11/20, Train Loss: 0.0962
+2024-12-09 17:56:42,579 - INFO - Epoch 11/20, Validation Loss: 0.0947
+2024-12-09 17:56:46,317 - INFO - Epoch 12/20, Train Loss: 0.0964
+2024-12-09 17:56:46,671 - INFO - Epoch 12/20, Validation Loss: 0.0944
+2024-12-09 17:56:50,261 - INFO - Epoch 13/20, Train Loss: 0.0963
+2024-12-09 17:56:50,637 - INFO - Epoch 13/20, Validation Loss: 0.0944
+2024-12-09 17:56:54,691 - INFO - Epoch 14/20, Train Loss: 0.0962
+2024-12-09 17:56:55,030 - INFO - Epoch 14/20, Validation Loss: 0.0945
+2024-12-09 17:56:58,780 - INFO - Epoch 15/20, Train Loss: 0.0962
+2024-12-09 17:56:59,098 - INFO - Epoch 15/20, Validation Loss: 0.0943
+2024-12-09 17:57:02,571 - INFO - Epoch 16/20, Train Loss: 0.0962
+2024-12-09 17:57:02,889 - INFO - Epoch 16/20, Validation Loss: 0.0954
+2024-12-09 17:57:06,324 - INFO - Epoch 17/20, Train Loss: 0.0964
+2024-12-09 17:57:06,641 - INFO - Epoch 17/20, Validation Loss: 0.0943
+2024-12-09 17:57:10,138 - INFO - Epoch 18/20, Train Loss: 0.0961
+2024-12-09 17:57:10,502 - INFO - Epoch 18/20, Validation Loss: 0.0944
+2024-12-09 17:57:13,975 - INFO - Epoch 19/20, Train Loss: 0.0962
+2024-12-09 17:57:14,295 - INFO - Epoch 19/20, Validation Loss: 0.0948
+2024-12-09 17:57:17,872 - INFO - Epoch 20/20, Train Loss: 0.0961
+2024-12-09 17:57:18,191 - INFO - Epoch 20/20, Validation Loss: 0.0946
+2024-12-10 13:55:18,162 - INFO - Using device: cpu
+2024-12-10 13:58:05,715 - INFO - Using device: cpu
+2024-12-10 14:04:06,420 - INFO - Using device: cpu
+2024-12-10 14:04:11,794 - INFO - Using device: cpu
+2024-12-10 14:04:17,668 - INFO - Using device: cpu
+2024-12-10 14:16:21,435 - INFO - Using device: cpu
+2024-12-10 14:17:05,743 - INFO - Using device: cpu
+2024-12-10 14:25:03,852 - INFO - Using device: cpu
+2024-12-10 14:25:36,404 - INFO - Using device: cpu
+2024-12-10 14:31:12,528 - INFO - Using device: cpu
+2024-12-10 14:31:29,267 - INFO - Using device: cpu
+2024-12-10 14:31:38,640 - INFO - Using device: cpu
+2024-12-10 14:31:54,750 - INFO - Using device: cpu
+2024-12-10 14:32:12,761 - INFO - Using device: cpu
+2024-12-10 14:32:28,496 - INFO - Using device: cpu
+2024-12-10 14:32:52,656 - INFO - Using device: cpu
+2024-12-10 14:33:03,590 - INFO - Using device: cpu
+2024-12-10 14:33:17,819 - INFO - Using device: cpu
+2024-12-10 14:33:36,860 - INFO - Using device: cpu

@@ -1,63 +1,77 @@
-# src/predict.py
-
 import torch
 import yaml
 import pandas as pd
 import warnings
 import numpy as np
 import matplotlib.pyplot as plt
-from data_loader import ProteinDataset
+from data_loader import load_dssp, load_distance_matrix, map_dssp_to_distance_matrix
 from model import ProteinInteractionModel
+from utils import setup_logger
 
 # Suppress the FutureWarning
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-def predict(model_path, sequence, config, phys_prop_file):
+def predict(model_path, sequence_1, sequence_2, dssp_dir_1, dssp_dir_2, distance_matrix_path, config, phys_prop_file):
     with open(config, 'r') as file:
         cfg = yaml.safe_load(file)
 
+    # Set device
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {device}")
+
+    # Initialize model
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'],
                                     cfg['model']['num_layers'], cfg['model']['output_size'],
-                                    cfg['model']['phys_prop_size'], cfg['model']['num_chains'])
+                                    cfg['model']['phys_prop_size']).to(device)
 
-    state_dict = torch.load(model_path)
+    # Load model state dict
+    state_dict = torch.load(model_path, map_location=device)
     model_dict = model.state_dict()
     state_dict = {k: v for k, v in state_dict.items() if k in model_dict}
     model_dict.update(state_dict)
     model.load_state_dict(model_dict)
     model.eval()
 
-    phys_props_df = pd.read_csv(phys_prop_file, index_col='amino acid')
-    aa_to_index = {aa: idx for idx, aa in enumerate('ACDEFGHIKLMNPQRSTVWY')}
-    chain_to_index = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15, 'G': 16, 'H': 17, 'I': 18, 'J': 19, 'K': 20, 'L': 21, 'M': 22, 'N': 23, 'O': 24, 'P': 25, 'Q': 26, 'R': 27, 'S': 28, 'T': 29, 'U': 30, 'V': 31, 'W': 32, 'X': 33, 'Y': 34, 'Z': 35, 'a': 36, 'b': 37, 'c': 38, 'd': 39, 'e': 40, 'f': 41, 'g': 42, 'h': 43, 'i': 44, 'j': 45, 'k': 46, 'l': 47, 'm': 48, 'n': 49, 'q': 50, 'r': 51, 's': 52, 'u': 53, 'w': 54}  # Add more as needed
+    # Load DSSP data for both sequences
+    dssp_data_1 = load_dssp(dssp_dir_1)
+    dssp_data_2 = load_dssp(dssp_dir_2)
 
-    sequence_tensor = torch.tensor([aa_to_index[aa] for aa in sequence], dtype=torch.long).unsqueeze(0)
-    rsa_tensor = torch.tensor([0.5] * len(sequence), dtype=torch.float32).unsqueeze(0)  # Replace with actual RSA data
-    ss_tensor = torch.tensor([0] * len(sequence), dtype=torch.long).unsqueeze(0)  # Replace with actual secondary structure data
-    chain_tensor = torch.tensor([chain_to_index['A']] * len(sequence), dtype=torch.long).unsqueeze(0)  # Assuming chain ID is 'A'
-    phys_props_list = [phys_props_df.loc[aa].values for aa in sequence]
-    phys_props_array = np.array(phys_props_list)
-    phys_props_tensor = torch.tensor(phys_props_array, dtype=torch.float32).unsqueeze(0)
+    if dssp_data_1 is None or dssp_data_2 is None:
+        print("Error: Could not load DSSP data. Check file paths and format.")
+        return
 
-    print(f"Sequence tensor shape: {sequence_tensor.shape}")
-    print(f"RSA tensor shape: {rsa_tensor.shape}")
-    print(f"Secondary structure tensor shape: {ss_tensor.shape}")
-    print(f"Chain tensor shape: {chain_tensor.shape}")  # Print chain tensor shape
-    print(f"Physicochemical properties tensor shape: {phys_props_tensor.shape}")
+    # Load distance matrix
+    distance_matrix = load_distance_matrix(distance_matrix_path)
+
+    if distance_matrix is None:
+        print("Error: Could not load distance matrix. Check file path and format.")
+        return
+    
+    # Create interaction matrix from distance matrix
+    interaction_matrix = (distance_matrix < 5).astype(int)
+
+    # Map DSSP data to distance matrix
+    enhanced_distance_matrix = map_dssp_to_distance_matrix(dssp_data_1, dssp_data_2, distance_matrix, interaction_matrix)
+
+    # Convert data to tensors and move to device
+    dssp_data_1 = tuple(d.to(device) for d in dssp_data_1)
+    dssp_data_2 = tuple(d.to(device) for d in dssp_data_2)
+    enhanced_distance_matrix = torch.tensor(enhanced_distance_matrix, dtype=torch.float32).unsqueeze(0).to(device)
+    interaction_matrix = torch.tensor(interaction_matrix, dtype=torch.float32).unsqueeze(0).to(device)
 
     with torch.no_grad():
-        predictions = model(sequence_tensor, rsa_tensor, ss_tensor, phys_props_tensor, chain_tensor)  # Pass chain tensor to the model
+        predictions = model(dssp_data_1, dssp_data_2, enhanced_distance_matrix, interaction_matrix)
 
-    predictions = predictions.squeeze(0).cpu().numpy().tolist()
+    predictions = predictions.squeeze(0).cpu().numpy()
 
-    # Plot predicted interaction scores along the sequence
-    plt.figure(figsize=(12, 6))
-    plt.plot(predictions)
-    plt.title('Predicted Interaction Scores Along the Sequence')
-    plt.xlabel('Amino Acid Position')
-    plt.ylabel('Interaction Score')
-    plt.xticks(range(len(sequence)), list(sequence))
-    plt.savefig('predicted_interaction_scores.png')
+    # Plot predicted interaction matrix
+    plt.figure(figsize=(8, 6))
+    plt.imshow(predictions, cmap='viridis', origin='lower')
+    plt.title('Predicted Interaction Matrix')
+    plt.xlabel('Amino Acid Position (Protein 2)')
+    plt.ylabel('Amino Acid Position (Protein 1)')
+    plt.colorbar(label='Interaction Score')
+    plt.savefig('predicted_interaction_matrix.png')
     plt.close()
 
     return predictions
@@ -66,13 +80,16 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description="Predict protein interaction scores")
     parser.add_argument('--model', required=True, help='Path to the trained model')
-    parser.add_argument('--sequence', required=True, help='Amino acid sequence to predict')
+    parser.add_argument('--sequence_1', required=True, help='Amino acid sequence for protein 1')
+    parser.add_argument('--sequence_2', required=True, help='Amino acid sequence for protein 2')
+    parser.add_argument('--dssp_dir_1', required=True, help='Path to the DSSP file for protein 1')
+    parser.add_argument('--dssp_dir_2', required=True, help='Path to the DSSP file for protein 2')
+    parser.add_argument('--distance_matrix_path', required=True, help='Path to the distance matrix file')
     parser.add_argument('--config', default='config.yaml', help='Path to config file')
     parser.add_argument('--phys_prop_file', default='data/transformed_physicochemical_properties.csv', help='Path to physicochemical properties file')
     args = parser.parse_args()
 
-    predictions = predict(args.model, args.sequence, args.config, args.phys_prop_file)
-    print(f'Sequence: {args.sequence}')
-    print('Predicted Interaction Scores:')
-    for i, (aa, score) in enumerate(zip(args.sequence, predictions)):
-        print(f'Position {i+1} ({aa}): {score:.4f}')
+    predictions = predict(args.model, args.sequence_1, args.sequence_2, args.dssp_dir_1, args.dssp_dir_2, args.distance_matrix_path, args.config, args.phys_prop_file)
+    print(f'Sequence 1: {args.sequence_1}')
+    print(f'Sequence 2: {args.sequence_2}')
+    print('Predicted Interaction Matrix saved to predicted_interaction_matrix.png')

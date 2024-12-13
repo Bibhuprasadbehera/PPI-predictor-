@@ -6,6 +6,9 @@ data:
   phys_prop_file: "data/transformed_physicochemical_properties.csv" # Path to the physicochemical properties file
   batch_size: 32 # Number of samples per batch for training
   num_workers: 4 # Number of subprocesses to use for data loading.
+  csv_file: data/final_protein_dataset2_modified.csv
+  complex_dssp_dir: data/complex_dssp
+  distance_matrix_dir: data/distance_matrix
 
 model:
   input_size: 64  # Size of the embedding for each amino acid

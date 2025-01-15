@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from data_loader import ProteinDataset
 from model import ProteinInteractionModel
 
-# Suppress the FutureWarning
+# Suppress the FutureWarning 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 def predict(model_path, sequence1, sequence2, config, phys_prop_file):

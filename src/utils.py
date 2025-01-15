@@ -5,7 +5,7 @@ import numpy as np
 from scipy.stats import pearsonr, spearmanr
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
-def ensure_dir(directory):
+def ensure_dir(directory): 
     """Ensures that the specified directory exists. Creates it if it doesn't."""
     if not os.path.exists(directory):
         os.makedirs(directory)

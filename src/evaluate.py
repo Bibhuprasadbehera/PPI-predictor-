@@ -1,3 +1,4 @@
+# src/evaluate.py
 import yaml
 import torch
 import numpy as np
@@ -22,17 +23,10 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
 
     # Load the state dict
     state_dict = torch.load(model_path)
-
-    # Filter out keys that are not in the current model
     model_dict = model.state_dict()
     state_dict = {k: v for k, v in state_dict.items() if k in model_dict}
-
-    # Update the current model state dict
     model_dict.update(state_dict)
-
-    # Load the updated state dict
     model.load_state_dict(model_dict)
-
     model.eval()
     print(model)
 
@@ -42,37 +36,23 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
                              shuffle=False, num_workers=cfg['data']['num_workers'],
                              collate_fn=ProteinDataset.collate_fn)
 
-    print("Visualizing a batch from the test set...")
-    for batch in test_loader:
-        visualize_batch(batch)
-        break
-
-    all_labels = []
     all_preds = []
+    all_targets = []
 
     print("Running evaluation...")
     with torch.no_grad():
-        for sequences, rsas, secondary_structures, phys_props, chains, labels in tqdm(test_loader, desc='Evaluating'):  # Unpack chains
-            outputs = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to the model
-            all_labels.extend(labels.numpy().flatten())
-            all_preds.extend(outputs.cpu().numpy().flatten())
+        for sequences, rsas, secondary_structures, phys_props, chains, contact_maps in tqdm(test_loader, desc='Evaluating'):
+            outputs = model(sequences, rsas, secondary_structures, phys_props, chains, contact_maps)
+            
+            # Flatten the predictions and targets
+            all_preds.extend(outputs.cpu().numpy().ravel())
+            all_targets.extend(contact_maps.cpu().numpy().ravel())
 
-    all_labels = np.array(all_labels)
     all_preds = np.array(all_preds)
-    
-    # Remove any rows with NaN or inf values
-    valid_indices = np.isfinite(all_labels) & np.isfinite(all_preds)
-    all_labels = all_labels[valid_indices]
-    all_preds = all_preds[valid_indices]
-
-    print(f"Shape of all_labels: {all_labels.shape}")
-    print(f"Shape of all_preds: {all_preds.shape}")
-    print(f"Number of valid samples: {np.sum(valid_indices)}")
-    print(f"Sample of all_labels: {all_labels[:5]}")
-    print(f"Sample of all_preds: {all_preds[:5]}")
+    all_targets = np.array(all_targets)
 
     # Calculate metrics using the function from utils.py
-    metrics = calculate_metrics(all_labels, all_preds)
+    metrics = calculate_metrics(all_targets, all_preds)
 
     print(f'Mean Squared Error: {metrics["mse"]:.4f}')
     print(f'Root Mean Squared Error: {metrics["rmse"]:.4f}')
@@ -80,8 +60,6 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
     print(f'R2 Score: {metrics["r2"]:.4f}')
     print(f'Pearson Correlation Coefficient: {metrics["pearson_corr"]:.4f}')
     print(f'Spearman Correlation Coefficient: {metrics["spearman_corr"]:.4f}')
-
-    create_evaluation_plots(all_labels, all_preds)
 
     # Return metrics for potential further use
     return metrics

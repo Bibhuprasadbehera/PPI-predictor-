@@ -1,3 +1,4 @@
+# src/model.py
 import torch
 import torch.nn as nn
 
@@ -20,30 +21,47 @@ class SelfAttention(nn.Module):
         return context_vector
 
 class ProteinInteractionModel(nn.Module):
-    def __init__(self, input_size, hidden_size, num_layers, output_size, phys_prop_size, num_chains=54):  # Add num_chains parameter
+    def __init__(self, input_size, hidden_size, num_layers, output_size, phys_prop_size, num_chains=54):
         super(ProteinInteractionModel, self).__init__()
         self.embedding = nn.Embedding(20, input_size)
         self.ss_embedding = nn.Embedding(4, input_size)
-        self.chain_embedding = nn.Embedding(num_chains, input_size)  # Add chain embedding layer
-        total_input_size = input_size * 3 + 1 + phys_prop_size  # Adjust input size
+        self.chain_embedding = nn.Embedding(num_chains, input_size)
+        self.contact_map_embedding = nn.Conv2d(in_channels=1, out_channels=input_size, kernel_size=1)
+        total_input_size = input_size * 4 + 1 + phys_prop_size
         self.lstm = nn.LSTM(total_input_size, hidden_size, num_layers, batch_first=True, dropout=0.3, bidirectional=True)
         self.attention = SelfAttention(hidden_size * 2)
         self.fc1 = nn.Linear(hidden_size * 2, hidden_size)
         self.dropout = nn.Dropout(0.3)
         self.fc2 = nn.Linear(hidden_size, output_size)
 
-    def forward(self, x, rsa, ss, phys_props, chains):  # Add chains parameter
+    def forward(self, x, rsa, ss, phys_props, chains, contact_map):
+
         x = self.embedding(x)
         ss = self.ss_embedding(ss)
-        chains = self.chain_embedding(chains)  # Embed chain IDs
-        rsa = rsa.unsqueeze(2) if rsa.dim() == 2 else rsa
-        combined = torch.cat([x, ss, rsa, phys_props, chains], dim=-1)  # Concatenate chain embeddings
+        chains = self.chain_embedding(chains)
+        
+        if contact_map is not None:
+            contact_map = contact_map.unsqueeze(1)  # Shape: (B, 1, L, L)
+            contact_map = self.contact_map_embedding(contact_map)  # Shape: (B, input_size, L, L)
+            contact_map = contact_map.squeeze(1)  # Shape: (B, input_size, L, L)
+            contact_map = contact_map.permute(0, 2, 3, 1)  # Shape: (B, L, L, input_size)
+            contact_map = contact_map.mean(dim=2)  # Shape: (B, L, input_size)
+        else:
+            contact_map = torch.zeros(x.size(0), x.size(1), self.contact_map_embedding.out_channels, device=x.device)
+            contact_map = contact_map.permute(0, 2, 1)  # Shape: (B, L, input_size)
+        
+        rsa = rsa.unsqueeze(2)  # Shape: (B, L, 1)
+        phys_props = phys_props.unsqueeze(2) if phys_props.dim() == 2 else phys_props  # Shape: (B, L, phys_prop_size)
+        
+        combined = torch.cat([x, ss, rsa, phys_props, chains, contact_map], dim=2)
+        
         lstm_out, _ = self.lstm(combined)
         attention_out = self.attention(lstm_out)
         out = self.fc1(attention_out)
         out = self.dropout(out)
         output = self.fc2(out)
-        return torch.sigmoid(output).squeeze(-1)
+        
+        return torch.sigmoid(output).squeeze(-1)  # Shape: (B, L, L)
 
     def __str__(self):
         return (f"ProteinInteractionModel(\n"

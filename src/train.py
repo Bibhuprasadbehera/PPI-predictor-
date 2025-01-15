@@ -1,3 +1,4 @@
+# src/train.py
 import os
 import yaml
 import torch
@@ -8,7 +9,7 @@ import matplotlib.pyplot as plt
 from model import ProteinInteractionModel
 from torch.utils.data import random_split
 from data_loader import get_data_loader, ProteinDataset
-from utils import setup_logger  # Import setup_logger from utils.py
+from utils import setup_logger
 
 def train(config_path):
     with open(config_path, 'r') as f:
@@ -35,10 +36,10 @@ def train(config_path):
     print("Initializing model...")
     model = ProteinInteractionModel(cfg['model']['input_size'], cfg['model']['hidden_size'],
                                     cfg['model']['num_layers'], cfg['model']['output_size'],
-                                    cfg['model']['phys_prop_size'], cfg['model']['num_chains'])  # Include num_chains
+                                    cfg['model']['phys_prop_size'], cfg['model']['num_chains'])
     print(model)
 
-    criterion = nn.MSELoss()
+    criterion = nn.MSELoss()  # Use MSELoss for contact map prediction
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
     
     num_epochs = cfg['training']['num_epochs']
@@ -49,10 +50,10 @@ def train(config_path):
     for epoch in range(num_epochs):
         model.train()
         epoch_loss = 0
-        for batch_idx, (sequences, rsas, secondary_structures, phys_props, chains, targets) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):  # Unpack chains
+        for batch_idx, (sequences, rsas, secondary_structures, phys_props, chains, contact_maps) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
             optimizer.zero_grad()
-            output = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to model
-            loss = criterion(output, targets)
+            output = model(sequences, rsas, secondary_structures, phys_props, chains, contact_maps)
+            loss = criterion(output, contact_maps)  # Predict contact maps
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
@@ -67,9 +68,9 @@ def train(config_path):
         model.eval()
         val_loss = 0
         with torch.no_grad():
-            for sequences, rsas, secondary_structures, phys_props, chains, targets in tqdm(val_loader, desc='Validation'):  # Unpack chains
-                output = model(sequences, rsas, secondary_structures, phys_props, chains)  # Pass chains to model
-                val_loss += criterion(output, targets).item()
+            for sequences, rsas, secondary_structures, phys_props, chains, contact_maps in tqdm(val_loader, desc='Validation'):
+                output = model(sequences, rsas, secondary_structures, phys_props, chains, contact_maps)
+                val_loss += criterion(output, contact_maps).item()
         
         val_loss /= len(val_loader)
         val_losses.append(val_loss)
@@ -96,3 +97,4 @@ def train(config_path):
 
 if __name__ == '__main__':
     train('config.yaml')
+    

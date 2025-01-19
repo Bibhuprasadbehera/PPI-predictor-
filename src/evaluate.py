@@ -61,6 +61,9 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
     print(f'Pearson Correlation Coefficient: {metrics["pearson_corr"]:.4f}')
     print(f'Spearman Correlation Coefficient: {metrics["spearman_corr"]:.4f}')
 
+    # Generate evaluation plots
+    create_evaluation_plots(all_targets, all_preds)
+
     # Return metrics for potential further use
     return metrics
 

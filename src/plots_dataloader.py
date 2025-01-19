@@ -1,16 +1,9 @@
 # src/plots_dataloader.py
-import matplotlib.pyplot as plt
-import seaborn as sns
+import os
 import numpy as np
-
-def create_interaction_score_distribution_plot(data):
-    plt.figure(figsize=(12, 6))
-    sns.histplot(data['test_interaction_score'], kde=True)
-    plt.title('Distribution of Interaction Scores')
-    plt.xlabel('Interaction Score')
-    plt.ylabel('Count')
-    plt.savefig('interaction_score_distribution.png')
-    plt.close()
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 def create_rsa_distribution_plot(data):
     plt.figure(figsize=(12, 6))
@@ -51,18 +44,19 @@ def create_sequence_length_distribution_plot(data):
     plt.savefig('sequence_length_distribution.png')
     plt.close()
 
-def create_physicochemical_properties_distribution_plots(phys_prop_file):
-    # Load the physicochemical properties data
-    data = pd.read_csv(phys_prop_file)
+def create_physicochemical_properties_distribution_plots(phys_props):
+
+    # Create directory for physicochemical properties plots if it doesn't exist
+    os.makedirs("plots/physicochemical_properties_distribution", exist_ok=True)
 
     # Create distribution plots for each property
-    for property in data.columns[1:]:  # Skip the first column (amino acid)
+    for property in phys_props.columns:
         plt.figure(figsize=(8, 6))
-        sns.histplot(data[property], kde=True)
+        sns.histplot(phys_props[property], kde=True)
         plt.title(f'Distribution of {property}')
         plt.xlabel(property)
         plt.ylabel('Frequency')
-        plt.savefig(f'physicochemical_properties_distribution/{property}_distribution.png')
+        plt.savefig(f'plots/physicochemical_properties_distribution/{property}_distribution.png')
         plt.close()
 
     print("Distribution plots for physicochemical properties generated successfully.")

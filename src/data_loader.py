@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader
-from plots_dataloader import create_interaction_score_distribution_plot, create_rsa_distribution_plot, create_secondary_structure_distribution_plot, create_amino_acid_frequency_plot, create_sequence_length_distribution_plot, create_physicochemical_properties_distribution_plots, create_batch_visualization
+from plots_dataloader import create_rsa_distribution_plot, create_secondary_structure_distribution_plot, create_amino_acid_frequency_plot, create_sequence_length_distribution_plot, create_physicochemical_properties_distribution_plots, create_batch_visualization
 
 class ProteinDataset(Dataset):
     def __init__(self, data_dir, phys_prop_file):
@@ -17,10 +17,19 @@ class ProteinDataset(Dataset):
         self.chain_to_index = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15, 'G': 16, 'H': 17, 'I': 18, 'J': 19, 'K': 20, 'L': 21, 'M': 22, 'N': 23, 'O': 24, 'P': 25, 'Q': 26, 'R': 27, 'S': 28, 'T': 29, 'U': 30, 'V': 31, 'W': 32, 'X': 33, 'Y': 34, 'Z': 35, 'a': 36, 'b': 37, 'c': 38, 'd': 39, 'e': 40, 'f': 41, 'g': 42, 'h': 43, 'i': 44, 'j': 45, 'k': 46, 'l': 47, 'm': 48, 'n': 49, 'q': 50, 'r': 51, 's': 52, 'u': 53, 'w': 54}
         print(f"Loaded {len(self.data)} samples")
         self.print_sample_data()
+        self.generate_plots()
+
+    def generate_plots(self):
+        os.makedirs("plots", exist_ok=True)
+        create_rsa_distribution_plot(self.data)
+        create_secondary_structure_distribution_plot(self.data)
+        create_amino_acid_frequency_plot(self.data)
+        create_sequence_length_distribution_plot(self.data)
+        create_physicochemical_properties_distribution_plots(self.phys_props)
 
     def load_dssp_files(self, data_dir):
         all_data = []
-        for file in tqdm(os.listdir(data_dir), desc="Loading DSSP files"):
+        for file in tqdm(os.listdir(data_dir), desc="Loading contact map"):
             if file.endswith('_dssp.csv'):
                 # Extract protein_id from the filename (e.g., "1HLE_1_2_dssp.csv" -> "1HLE_1_2")
                 protein_id = file.replace('_dssp.csv', '')

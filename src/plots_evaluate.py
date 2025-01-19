@@ -55,8 +55,8 @@ def create_evaluation_plots(all_labels, all_preds):
 
     # 6. Error Distribution Plot
     plt.figure(figsize=(10, 5))
-    sns.kdeplot(all_labels, shade=True, label='Actual')
-    sns.kdeplot(all_preds, shade=True, label='Predicted')
+    sns.kdeplot(all_labels, fill=True, label='Actual')
+    sns.kdeplot(all_preds, fill=True, label='Predicted')
     plt.xlabel('Interaction Score')
     plt.ylabel('Density')
     plt.title('Distribution of Actual vs Predicted Scores')

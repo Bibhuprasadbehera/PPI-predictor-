@@ -41,13 +41,13 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
 
     print("Running evaluation...")
     with torch.no_grad():
-        for sequences, rsas, secondary_structures, phys_props, chains, contact_maps in tqdm(test_loader, desc='Evaluating'):
-            outputs = model(sequences, rsas, secondary_structures, phys_props, chains, contact_maps)
+        for sequences, rsas, secondary_structures, phys_props, chains, distance_matrices in tqdm(test_loader, desc='Evaluating'):
+            outputs = model(sequences, rsas, secondary_structures, phys_props, chains, distance_matrices)
             
             # Flatten the predictions and targets
             all_preds.extend(outputs.cpu().numpy().ravel())
-            all_targets.extend(contact_maps.cpu().numpy().ravel())
-
+            all_targets.extend(distance_matrices.cpu().numpy().ravel())
+    
     all_preds = np.array(all_preds)
     all_targets = np.array(all_targets)
 

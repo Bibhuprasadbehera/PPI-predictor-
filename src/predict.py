@@ -39,28 +39,28 @@ def predict(model_path, sequence1, sequence2, config, phys_prop_file):
     phys_props_list = [phys_props_df.loc[aa].values for aa in sequence1]
     phys_props_array = np.array(phys_props_list)
     phys_props_tensor = torch.tensor(phys_props_array, dtype=torch.float32).unsqueeze(0)
-    contact_map_tensor = torch.zeros((1, len(sequence1), len(sequence2)), dtype=torch.float32)  # Placeholder contact map
+    distance_mat_tensor = torch.zeros((1, len(sequence1), len(sequence2)), dtype=torch.float32)  # Placeholder distance matrix
 
     print(f"Sequence tensor shape: {sequence_tensor.shape}")
     print(f"RSA tensor shape: {rsa_tensor.shape}")
     print(f"Secondary structure tensor shape: {ss_tensor.shape}")
     print(f"Chain tensor shape: {chain_tensor.shape}")
     print(f"Physicochemical properties tensor shape: {phys_props_tensor.shape}")
-    print(f"Contact map tensor shape: {contact_map_tensor.shape}")
+    print(f"Distance matrix tensor shape: {distance_mat_tensor.shape}")
 
     with torch.no_grad():
-        predictions = model(sequence1_tensor, rsa_tensor, ss_tensor, phys_props_tensor, chain_tensor, contact_map_tensor)
+        predictions = model(sequence1_tensor, rsa_tensor, ss_tensor, phys_props_tensor, chain_tensor, distance_mat_tensor)
 
     predictions = predictions.squeeze(0).cpu().numpy()
 
-    # Plot predicted contact map
+    # Plot predicted distance matrix
     plt.figure(figsize=(12, 6))
     plt.imshow(predictions, cmap='viridis', aspect='auto')
-    plt.title('Predicted Contact Map')
+    plt.title('Predicted Distance Matrix')
     plt.xlabel('Sequence 2 Position')
     plt.ylabel('Sequence 1 Position')
-    plt.colorbar(label='Interaction Score')
-    plt.savefig('predicted_contact_map.png')
+    plt.colorbar(label='Distance')
+    plt.savefig('predicted_distance_mat.png')
     plt.close()
 
     return predictions

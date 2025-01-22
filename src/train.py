@@ -39,7 +39,7 @@ def train(config_path):
                                     cfg['model']['phys_prop_size'], cfg['model']['num_chains'])
     print(model)
 
-    criterion = nn.MSELoss()  # Use MSELoss for contact map prediction
+    criterion = nn.MSELoss()  # Use MSELoss for distance matrix prediction
     optimizer = optim.Adam(model.parameters(), lr=cfg['training']['learning_rate'])
     
     num_epochs = cfg['training']['num_epochs']
@@ -50,10 +50,10 @@ def train(config_path):
     for epoch in range(num_epochs):
         model.train()
         epoch_loss = 0
-        for batch_idx, (sequences, rsas, secondary_structures, phys_props, chains, contact_maps) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
+        for batch_idx, (sequences, rsas, secondary_structures, phys_props, chains, distance_matrices) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
             optimizer.zero_grad()
-            output = model(sequences, rsas, secondary_structures, phys_props, chains, contact_maps)
-            loss = criterion(output, contact_maps)  # Predict contact maps
+            output = model(sequences, rsas, secondary_structures, phys_props, chains, distance_matrices)
+            loss = criterion(output, distance_matrices)  # Predict distance matrices
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
@@ -68,9 +68,9 @@ def train(config_path):
         model.eval()
         val_loss = 0
         with torch.no_grad():
-            for sequences, rsas, secondary_structures, phys_props, chains, contact_maps in tqdm(val_loader, desc='Validation'):
-                output = model(sequences, rsas, secondary_structures, phys_props, chains, contact_maps)
-                val_loss += criterion(output, contact_maps).item()
+            for sequences, rsas, secondary_structures, phys_props, chains, distance_mats in tqdm(val_loader, desc='Validation'):
+                output = model(sequences, rsas, secondary_structures, phys_props, chains, distance_mats)
+                val_loss += criterion(output, distance_mats).item()
         
         val_loss /= len(val_loader)
         val_losses.append(val_loss)

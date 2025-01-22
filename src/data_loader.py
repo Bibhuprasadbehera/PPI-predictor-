@@ -29,13 +29,13 @@ class ProteinDataset(Dataset):
 
     def load_dssp_files(self, data_dir):
         all_data = []
-        for file in tqdm(os.listdir(data_dir), desc="Loading contact map"):
+        for file in tqdm(os.listdir(data_dir), desc="Loading distance matrix"):
             if file.endswith('_dssp.csv'):
                 # Extract protein_id from the filename (e.g., "1HLE_1_2_dssp.csv" -> "1HLE_1_2")
                 protein_id = file.replace('_dssp.csv', '')
-                contact_map_file = os.path.join(data_dir, 'contact_map', f'{protein_id}_ca_cm.tsv')
+                distance_mat_file = os.path.join(data_dir, 'distance_mat', f'{protein_id}_ca.tsv')
                 
-                if os.path.exists(contact_map_file):
+                if os.path.exists(distance_mat_file):
                     file_path = os.path.join(data_dir, file)
                     df = pd.read_csv(file_path)
                     required_columns = ['aa', 'rsa', 'three_hot_ss', 'chain']
@@ -52,28 +52,28 @@ class ProteinDataset(Dataset):
                         missing_columns = [col for col in required_columns if col not in df.columns]
                         print(f"Warning: File {file} is missing these required columns: {missing_columns}. Skipping.")
                 else:
-                    print(f"Warning: No contact map found for {file}. Skipping.")
+                    print(f"Warning: No distance matrix found for {file}. Skipping.")
         
         if not all_data:
             raise ValueError(f"No valid data files found in {data_dir}. Please check your data files and ensure they contain the required columns.")
         
         return pd.concat(all_data, ignore_index=True)
-        
-    def load_contact_map(self, protein_id, sequence):
-        contact_map_file = os.path.join(self.data_dir, 'contact_map', f'{protein_id}_ca_cm.tsv')
-        if os.path.exists(contact_map_file):
+            
+    def load_distance_mat(self, protein_id, sequence):
+        distance_mat_file = os.path.join(self.data_dir, 'distance_mat', f'{protein_id}_ca.tsv')
+        if os.path.exists(distance_mat_file):
             try:
-                contact_map_df = pd.read_csv(contact_map_file, sep='\t', header=0, index_col=0)
-                contact_map_matrix = contact_map_df.values
-                contact_map_tensor = torch.tensor(contact_map_matrix, dtype=torch.float32)
-                return contact_map_tensor
+                distance_mat_df = pd.read_csv(distance_mat_file, sep='\t', header=0, index_col=0)
+                distance_mat = distance_mat_df.values
+                distance_mat_tensor = torch.tensor(distance_mat, dtype=torch.float32)
+                return distance_mat_tensor
             except Exception as e:
-                print(f"Error loading contact map {contact_map_file}: {e}. Returning zero matrix.")
+                print(f"Error loading distance matrix {distance_mat_file}: {e}. Returning zero matrix.")
                 return torch.zeros((len(sequence), len(sequence)), dtype=torch.float32)
         else:
-            print(f"Warning: Contact map file not found: {contact_map_file}. Returning zero matrix.")
+            print(f"Warning: Distance matrix file not found: {distance_mat_file}. Returning zero matrix.")
             return torch.zeros((len(sequence), len(sequence)), dtype=torch.float32)
-
+        
     def load_phys_props(self, phys_prop_file):
         try:
             return pd.read_csv(phys_prop_file, index_col='amino acid')
@@ -95,16 +95,16 @@ class ProteinDataset(Dataset):
 
         # Use protein_id from the dataset
         protein_id = row['protein_id']
-        contact_map = self.load_contact_map(protein_id, sequence)
+        distance_mat = self.load_distance_mat(protein_id, sequence)
 
-        return sequence_tensor, rsa_tensor, ss_tensor, phys_prop_tensor, chain_tensor, contact_map
+        return sequence_tensor, rsa_tensor, ss_tensor, phys_prop_tensor, chain_tensor, distance_mat
 
     def __len__(self):
         return len(self.data)
 
     @staticmethod
     def collate_fn(batch):
-        sequences, rsas, secondary_structures, phys_props, chains, contact_maps = zip(*batch)
+        sequences, rsas, secondary_structures, phys_props, chains, distance_matrices = zip(*batch)
         
         # Find the maximum sequence length in the batch
         max_len = max(seq.size(0) for seq in sequences)
@@ -116,23 +116,23 @@ class ProteinDataset(Dataset):
         padded_rsas = torch.stack([torch.nn.functional.pad(rsa, (0, max_len - rsa.size(0))) for rsa in rsas])
         padded_chains = torch.stack([torch.nn.functional.pad(chain, (0, max_len - chain.size(0))) for chain in chains])
         
-        # Pad contact maps to (max_len, max_len)
-        padded_contact_maps = []
-        for contact_map in contact_maps:
-            # Get the current shape of the contact map
-            h, w = contact_map.size()
+        # Pad distance matrices to (max_len, max_len)
+        padded_distance_matrices = []
+        for distance_mat in distance_matrices:
+            # Get the current shape of the distance matrix
+            h, w = distance_mat.size()
             
             # Calculate padding for height and width
             pad_h = max_len - h
             pad_w = max_len - w
             
-            # Pad the contact map with zeros
-            padded_contact_map = torch.nn.functional.pad(contact_map, (0, pad_w, 0, pad_h), "constant", 0)
-            padded_contact_maps.append(padded_contact_map)
+            # Pad the distance matrix with zeros
+            padded_distance_mat = torch.nn.functional.pad(distance_mat, (0, pad_w, 0, pad_h), "constant", 0)
+            padded_distance_matrices.append(padded_distance_mat)
         
-        padded_contact_maps = torch.stack(padded_contact_maps)
+        padded_distance_matrices = torch.stack(padded_distance_matrices)
         
-        return padded_sequences, padded_rsas, padded_ss, padded_phys_props, padded_chains, padded_contact_maps
+        return padded_sequences, padded_rsas, padded_ss, padded_phys_props, padded_chains, padded_distance_matrices
     
     def print_sample_data(self):
         print("\nSample data:")

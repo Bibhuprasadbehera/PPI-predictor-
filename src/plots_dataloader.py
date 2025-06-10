@@ -1,14 +1,38 @@
-import matplotlib.pyplot as plt
-import seaborn as sns
+# src/plots_dataloader.py
+import os
 import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-def create_interaction_score_distribution_plot(data):
+def create_rsa_vs_ss_plot(data):
+    """Plot RSA values against secondary structure."""
     plt.figure(figsize=(12, 6))
-    sns.histplot(data['test_interaction_score'], kde=True)
-    plt.title('Distribution of Interaction Scores')
-    plt.xlabel('Interaction Score')
+    sns.boxplot(x='three_hot_ss', y='rsa', data=data)
+    plt.title('RSA Distribution by Secondary Structure')
+    plt.xlabel('Secondary Structure')
+    plt.ylabel('RSA')
+    plt.savefig('plots/rsa_vs_ss.png')
+    plt.close()
+
+def create_chain_distribution_plot(data):
+    """Plot the distribution of chain IDs."""
+    plt.figure(figsize=(12, 6))
+    chain_counts = data['chain'].value_counts()
+    sns.barplot(x=chain_counts.index, y=chain_counts.values)
+    plt.title('Distribution of Chain IDs')
+    plt.xlabel('Chain ID')
     plt.ylabel('Count')
-    plt.savefig('interaction_score_distribution.png')
+    plt.savefig('plots/chain_distribution.png')
+    plt.close()
+
+def create_physicochemical_properties_correlation_plot(phys_props):
+    """Plot a correlation heatmap for physicochemical properties."""
+    plt.figure(figsize=(10, 8))
+    corr = phys_props.corr()
+    sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f')
+    plt.title('Correlation Heatmap of Physicochemical Properties')
+    plt.savefig('plots/physicochemical_properties_correlation.png')
     plt.close()
 
 def create_rsa_distribution_plot(data):
@@ -50,18 +74,19 @@ def create_sequence_length_distribution_plot(data):
     plt.savefig('sequence_length_distribution.png')
     plt.close()
 
-def create_physicochemical_properties_distribution_plots(phys_prop_file):
-    # Load the physicochemical properties data
-    data = pd.read_csv(phys_prop_file)
+def create_physicochemical_properties_distribution_plots(phys_props):
+
+    # Create directory for physicochemical properties plots if it doesn't exist
+    os.makedirs("plots/physicochemical_properties_distribution", exist_ok=True)
 
     # Create distribution plots for each property
-    for property in data.columns[1:]:  # Skip the first column (amino acid)
+    for property in phys_props.columns:
         plt.figure(figsize=(8, 6))
-        sns.histplot(data[property], kde=True)
+        sns.histplot(phys_props[property], kde=True)
         plt.title(f'Distribution of {property}')
         plt.xlabel(property)
         plt.ylabel('Frequency')
-        plt.savefig(f'physicochemical_properties_distribution/{property}_distribution.png')
+        plt.savefig(f'plots/physicochemical_properties_distribution/{property}_distribution.png')
         plt.close()
 
     print("Distribution plots for physicochemical properties generated successfully.")

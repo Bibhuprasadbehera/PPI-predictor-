@@ -1,5 +1,4 @@
-# Main script 
-
+# src/main.py 
 import argparse
 import sys
 import os

@@ -1,10 +1,11 @@
+# src/utils.py
 import os
 import logging
 import numpy as np
 from scipy.stats import pearsonr, spearmanr
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
-def ensure_dir(directory):
+def ensure_dir(directory): 
     """Ensures that the specified directory exists. Creates it if it doesn't."""
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -20,29 +21,22 @@ def seed_everything(seed=42):
         torch.cuda.manual_seed_all(seed)
 
 def setup_logger(log_file, log_level=logging.INFO):
-    """Sets up a logger that writes to both console and a log file."""
     logger = logging.getLogger()
     logger.setLevel(log_level)
-
-    # Create console handler and set level
-    ch = logging.StreamHandler()
-    ch.setLevel(log_level)
-
-    # Create file handler and set level
+    
+    # File handler
     fh = logging.FileHandler(log_file)
     fh.setLevel(log_level)
-
-    # Create formatter
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-
-    # Add formatter to handlers
-    ch.setFormatter(formatter)
     fh.setFormatter(formatter)
-
-    # Add handlers to logger
-    logger.addHandler(ch)
     logger.addHandler(fh)
-
+    
+    # Console handler
+    ch = logging.StreamHandler()
+    ch.setLevel(log_level)
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)
+    
     return logger
 
 def calculate_metrics(y_true, y_pred):

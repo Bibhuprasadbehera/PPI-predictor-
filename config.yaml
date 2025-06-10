@@ -4,6 +4,7 @@ data:
   train_path: "data/" # Directory containing training data files
   test_path: "data/" # Directory containing test data files
   phys_prop_file: "data/transformed_physicochemical_properties.csv" # Path to the physicochemical properties file
+  distance_mat_dir: "data/distance_mat" # Directory containing distance matrix files
   batch_size: 32 # Number of samples per batch for training
   num_workers: 4 # Number of subprocesses to use for data loading.
 

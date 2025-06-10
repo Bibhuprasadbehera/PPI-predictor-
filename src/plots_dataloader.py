@@ -5,6 +5,36 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+def create_rsa_vs_ss_plot(data):
+    """Plot RSA values against secondary structure."""
+    plt.figure(figsize=(12, 6))
+    sns.boxplot(x='three_hot_ss', y='rsa', data=data)
+    plt.title('RSA Distribution by Secondary Structure')
+    plt.xlabel('Secondary Structure')
+    plt.ylabel('RSA')
+    plt.savefig('plots/rsa_vs_ss.png')
+    plt.close()
+
+def create_chain_distribution_plot(data):
+    """Plot the distribution of chain IDs."""
+    plt.figure(figsize=(12, 6))
+    chain_counts = data['chain'].value_counts()
+    sns.barplot(x=chain_counts.index, y=chain_counts.values)
+    plt.title('Distribution of Chain IDs')
+    plt.xlabel('Chain ID')
+    plt.ylabel('Count')
+    plt.savefig('plots/chain_distribution.png')
+    plt.close()
+
+def create_physicochemical_properties_correlation_plot(phys_props):
+    """Plot a correlation heatmap for physicochemical properties."""
+    plt.figure(figsize=(10, 8))
+    corr = phys_props.corr()
+    sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f')
+    plt.title('Correlation Heatmap of Physicochemical Properties')
+    plt.savefig('plots/physicochemical_properties_correlation.png')
+    plt.close()
+
 def create_rsa_distribution_plot(data):
     plt.figure(figsize=(12, 6))
     sns.histplot(data['rsa'], kde=True)

@@ -4,6 +4,41 @@ import seaborn as sns
 import numpy as np
 from scipy.stats import probplot
 
+def create_error_distribution_plot(all_labels, all_preds):
+    """Plot the distribution of prediction errors."""
+    errors = all_preds - all_labels
+    plt.figure(figsize=(10, 6))
+    sns.histplot(errors, kde=True, bins=50)
+    plt.title('Distribution of Prediction Errors')
+    plt.xlabel('Prediction Error')
+    plt.ylabel('Frequency')
+    plt.savefig('error_distribution.png')
+    plt.close()
+
+def create_cumulative_error_plot(all_labels, all_preds):
+    """Plot the cumulative distribution of prediction errors."""
+    errors = np.abs(all_preds - all_labels)
+    sorted_errors = np.sort(errors)
+    cumulative = np.arange(1, len(sorted_errors) + 1) / len(sorted_errors)
+    plt.figure(figsize=(10, 6))
+    plt.plot(sorted_errors, cumulative, marker='.', linestyle='none')
+    plt.title('Cumulative Distribution of Prediction Errors')
+    plt.xlabel('Absolute Error')
+    plt.ylabel('Cumulative Proportion')
+    plt.savefig('cumulative_error.png')
+    plt.close()
+
+def create_error_vs_rsa_plot(data, all_labels, all_preds):
+    """Plot prediction errors against RSA values."""
+    errors = all_preds - all_labels
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(x=data['rsa'], y=errors, alpha=0.5)
+    plt.title('Prediction Errors vs RSA Values')
+    plt.xlabel('RSA')
+    plt.ylabel('Prediction Error')
+    plt.savefig('error_vs_rsa.png')
+    plt.close()
+
 def create_evaluation_plots(all_labels, all_preds):
     # Plotting
     plt.figure(figsize=(20, 20))

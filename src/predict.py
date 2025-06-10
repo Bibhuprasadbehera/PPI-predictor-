@@ -8,9 +8,6 @@ import matplotlib.pyplot as plt
 from data_loader import ProteinDataset
 from model import ProteinInteractionModel
 
-# Suppress the FutureWarning 
-warnings.filterwarnings("ignore", category=FutureWarning)
-
 def predict(model_path, sequence1, sequence2, config, phys_prop_file):
     with open(config, 'r') as file:
         cfg = yaml.safe_load(file)
@@ -28,9 +25,14 @@ def predict(model_path, sequence1, sequence2, config, phys_prop_file):
 
     phys_props_df = pd.read_csv(phys_prop_file, index_col='amino acid')
     aa_to_index = {aa: idx for idx, aa in enumerate('ACDEFGHIKLMNPQRSTVWY')}
+    aa_to_index['X'] = len(aa_to_index)  # Add 'X' as a special token for unknown amino acids
     chain_to_index = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15, 'G': 16, 'H': 17, 'I': 18, 'J': 19, 'K': 20, 'L': 21, 'M': 22, 'N': 23, 'O': 24, 'P': 25, 'Q': 26, 'R': 27, 'S': 28, 'T': 29, 'U': 30, 'V': 31, 'W': 32, 'X': 33, 'Y': 34, 'Z': 35, 'a': 36, 'b': 37, 'c': 38, 'd': 39, 'e': 40, 'f': 41, 'g': 42, 'h': 43, 'i': 44, 'j': 45, 'k': 46, 'l': 47, 'm': 48, 'n': 49, 'q': 50, 'r': 51, 's': 52, 'u': 53, 'w': 54}
 
-    # Prepare input tensors for sequence1 and sequence2
+    # Handle unknown amino acids by replacing them with 'X'
+    sequence1 = ''.join([aa if aa in aa_to_index else 'X' for aa in sequence1])
+    sequence2 = ''.join([aa if aa in aa_to_index else 'X' for aa in sequence2])
+
+    # Prepare input tensors
     sequence1_tensor = torch.tensor([aa_to_index[aa] for aa in sequence1], dtype=torch.long).unsqueeze(0)
     sequence2_tensor = torch.tensor([aa_to_index[aa] for aa in sequence2], dtype=torch.long).unsqueeze(0)
     rsa_tensor = torch.tensor([0.5] * len(sequence1), dtype=torch.float32).unsqueeze(0)  # Placeholder RSA
@@ -39,31 +41,36 @@ def predict(model_path, sequence1, sequence2, config, phys_prop_file):
     phys_props_list = [phys_props_df.loc[aa].values for aa in sequence1]
     phys_props_array = np.array(phys_props_list)
     phys_props_tensor = torch.tensor(phys_props_array, dtype=torch.float32).unsqueeze(0)
-    distance_mat_tensor = torch.zeros((1, len(sequence1), len(sequence2)), dtype=torch.float32)  # Placeholder distance matrix
-
-    print(f"Sequence tensor shape: {sequence_tensor.shape}")
-    print(f"RSA tensor shape: {rsa_tensor.shape}")
-    print(f"Secondary structure tensor shape: {ss_tensor.shape}")
-    print(f"Chain tensor shape: {chain_tensor.shape}")
-    print(f"Physicochemical properties tensor shape: {phys_props_tensor.shape}")
-    print(f"Distance matrix tensor shape: {distance_mat_tensor.shape}")
+    interaction_matrix = np.zeros((len(sequence1), len(sequence2)))
 
     with torch.no_grad():
-        predictions = model(sequence1_tensor, rsa_tensor, ss_tensor, phys_props_tensor, chain_tensor, distance_mat_tensor)
+        for i in range(len(sequence1)):
+            for j in range(len(sequence2)):
+                # Prepare input tensors for the pair of amino acids
+                sequence1_tensor = torch.tensor([aa_to_index[sequence1[i]]], dtype=torch.long).unsqueeze(0)
+                sequence2_tensor = torch.tensor([aa_to_index[sequence2[j]]], dtype=torch.long).unsqueeze(0)
+                rsa_tensor = torch.tensor([0.5], dtype=torch.float32).unsqueeze(0)  # Placeholder RSA
+                ss_tensor = torch.tensor([0], dtype=torch.long).unsqueeze(0)  # Placeholder SS
+                chain_tensor = torch.tensor([chain_to_index['A']], dtype=torch.long).unsqueeze(0)  # Placeholder chain
+                phys_props_list = [phys_props_df.loc[sequence1[i]].values]
+                phys_props_array = np.array(phys_props_list)
+                phys_props_tensor = torch.tensor(phys_props_array, dtype=torch.float32).unsqueeze(0)
+                distance_matrix_tensor = torch.zeros((1, 1, 1), dtype=torch.float32)  # Placeholder contact map
 
-    predictions = predictions.squeeze(0).cpu().numpy()
+                prediction = model(sequence1_tensor, rsa_tensor, ss_tensor, phys_props_tensor, chain_tensor, distance_matrix_tensor)
+                interaction_matrix[i, j] = prediction.squeeze().item()
 
     # Plot predicted distance matrix
     plt.figure(figsize=(12, 6))
-    plt.imshow(predictions, cmap='viridis', aspect='auto')
-    plt.title('Predicted Distance Matrix')
+    plt.imshow(interaction_matrix, cmap='viridis', aspect='auto')
+    plt.title('Predicted Interaction Matrix')
     plt.xlabel('Sequence 2 Position')
     plt.ylabel('Sequence 1 Position')
     plt.colorbar(label='Distance')
-    plt.savefig('predicted_distance_mat.png')
+    plt.savefig('plots/prediction/predicted_interaction_matrix.png')
     plt.close()
 
-    return predictions
+    return interaction_matrix
 
 if __name__ == '__main__':
     import argparse
@@ -76,5 +83,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     predictions = predict(args.model, args.sequence1, args.sequence2, args.config, args.phys_prop_file)
-    print('Predicted Contact Map:')
+    print('Predicted Distance Matrix:')
     print(predictions)

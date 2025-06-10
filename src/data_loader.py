@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader
-from plots_dataloader import create_rsa_distribution_plot, create_secondary_structure_distribution_plot, create_amino_acid_frequency_plot, create_sequence_length_distribution_plot, create_physicochemical_properties_distribution_plots, create_batch_visualization
+from plots_dataloader import create_rsa_distribution_plot, create_secondary_structure_distribution_plot, create_amino_acid_frequency_plot, create_sequence_length_distribution_plot, create_physicochemical_properties_distribution_plots, create_batch_visualization, create_rsa_vs_ss_plot, create_chain_distribution_plot, create_physicochemical_properties_correlation_plot
 
 class ProteinDataset(Dataset):
     def __init__(self, data_dir, phys_prop_file):
@@ -26,7 +26,10 @@ class ProteinDataset(Dataset):
         create_amino_acid_frequency_plot(self.data)
         create_sequence_length_distribution_plot(self.data)
         create_physicochemical_properties_distribution_plots(self.phys_props)
-
+        create_rsa_vs_ss_plot(self.data)
+        create_chain_distribution_plot(self.data)
+        create_physicochemical_properties_correlation_plot(self.phys_props)
+    
     def load_dssp_files(self, data_dir):
         all_data = []
         for file in tqdm(os.listdir(data_dir), desc="Loading distance matrix"):

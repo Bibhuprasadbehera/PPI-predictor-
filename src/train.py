@@ -92,9 +92,8 @@ def train(config_path):
     plt.ylabel('Loss')
     plt.title('Training and Validation Loss')
     plt.legend()
-    plt.savefig('loss_plot.png')
+    plt.savefig('plots/loss_plot.png')
     plt.close()
 
 if __name__ == '__main__':
     train('config.yaml')
-    

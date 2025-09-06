@@ -79,7 +79,7 @@ if __name__ == '__main__':
     parser.add_argument('--sequence1', required=True, help='First amino acid sequence')
     parser.add_argument('--sequence2', required=True, help='Second amino acid sequence')
     parser.add_argument('--config', default='config.yaml', help='Path to config file')
-    parser.add_argument('--phys_prop_file', default='data/transformed_physicochemical_properties.csv', help='Path to physicochemical properties file')
+    parser.add_argument('--phys_prop_file', default='data/physicochemical/transformed_physicochemical_properties.csv', help='Path to physicochemical properties file')
     args = parser.parse_args()
 
     predictions = predict(args.model, args.sequence1, args.sequence2, args.config, args.phys_prop_file)

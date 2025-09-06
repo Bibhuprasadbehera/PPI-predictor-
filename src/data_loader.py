@@ -32,14 +32,15 @@ class ProteinDataset(Dataset):
     
     def load_dssp_files(self, data_dir):
         all_data = []
-        for file in tqdm(os.listdir(data_dir), desc="Loading distance matrix"):
+        dssp_dir = os.path.join(data_dir, 'dssp')
+        for file in tqdm(os.listdir(dssp_dir), desc="Loading distance matrix"):
             if file.endswith('_dssp.csv'):
                 # Extract protein_id from the filename (e.g., "1HLE_1_2_dssp.csv" -> "1HLE_1_2")
                 protein_id = file.replace('_dssp.csv', '')
                 distance_mat_file = os.path.join(data_dir, 'distance_mat', f'{protein_id}_ca.tsv')
-                
+
                 if os.path.exists(distance_mat_file):
-                    file_path = os.path.join(data_dir, file)
+                    file_path = os.path.join(dssp_dir, file)
                     df = pd.read_csv(file_path)
                     required_columns = ['aa', 'rsa', 'three_hot_ss', 'chain']
                     

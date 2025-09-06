@@ -41,7 +41,7 @@ def create_rsa_distribution_plot(data):
     plt.title('Distribution of RSA Values')
     plt.xlabel('RSA')
     plt.ylabel('Count')
-    plt.savefig('rsa_distribution.png')
+    plt.savefig('plots/rsa_distribution.png')
     plt.close()
 
 def create_secondary_structure_distribution_plot(data):
@@ -51,7 +51,7 @@ def create_secondary_structure_distribution_plot(data):
     plt.title('Distribution of Secondary Structures')
     plt.xlabel('Secondary Structure')
     plt.ylabel('Count')
-    plt.savefig('secondary_structure_distribution.png')
+    plt.savefig('plots/secondary_structure_distribution.png')
     plt.close()
 
 def create_amino_acid_frequency_plot(data):
@@ -61,7 +61,7 @@ def create_amino_acid_frequency_plot(data):
     plt.title('Amino Acid Frequency')
     plt.xlabel('Amino Acid')
     plt.ylabel('Count')
-    plt.savefig('amino_acid_frequency.png')
+    plt.savefig('plots/amino_acid_frequency.png')
     plt.close()
 
 def create_sequence_length_distribution_plot(data):
@@ -71,7 +71,7 @@ def create_sequence_length_distribution_plot(data):
     plt.title('Sequence Length Distribution')
     plt.xlabel('Sequence Length')
     plt.ylabel('Count')
-    plt.savefig('sequence_length_distribution.png')
+    plt.savefig('plots/sequence_length_distribution.png')
     plt.close()
 
 def create_physicochemical_properties_distribution_plots(phys_props):
@@ -121,7 +121,7 @@ def create_batch_visualization(batch, num_samples=5):
         axs[i, 3].set_xlabel('Position')
 
     plt.tight_layout()
-    plt.savefig('batch_visualization.png')
+    plt.savefig('plots/batch_visualization.png')
     plt.close()
     print(f"Batch shape - Sequences: {sequences.shape}, RSAs: {rsas.shape}, Secondary Structures: {secondary_structures.shape}, Physicochemical Properties: {phys_props.shape}, Chains: {chains.shape}, Labels: {labels.shape}")  # Include chains
     print(f"Label values: {labels[:num_samples]}")

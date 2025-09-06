@@ -69,7 +69,7 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config):
 
 if __name__ == '__main__':
     print("Starting evaluation...")
-    metrics = evaluate('checkpoints/model_epoch_20.pth', 'data/', 'data/transformed_physicochemical_properties.csv', 'config.yaml')
+    metrics = evaluate('checkpoints/model_epoch_20.pth', 'data/', 'data/physicochemical/transformed_physicochemical_properties.csv', 'config.yaml')
     print("Evaluation complete.")
     print("Summary of metrics:")
     for metric, value in metrics.items():

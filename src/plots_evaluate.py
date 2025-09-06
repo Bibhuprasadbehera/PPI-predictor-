@@ -12,7 +12,7 @@ def create_error_distribution_plot(all_labels, all_preds):
     plt.title('Distribution of Prediction Errors')
     plt.xlabel('Prediction Error')
     plt.ylabel('Frequency')
-    plt.savefig('error_distribution.png')
+    plt.savefig('plots/error_distribution.png')
     plt.close()
 
 def create_cumulative_error_plot(all_labels, all_preds):
@@ -25,7 +25,7 @@ def create_cumulative_error_plot(all_labels, all_preds):
     plt.title('Cumulative Distribution of Prediction Errors')
     plt.xlabel('Absolute Error')
     plt.ylabel('Cumulative Proportion')
-    plt.savefig('cumulative_error.png')
+    plt.savefig('plots/cumulative_error.png')
     plt.close()
 
 def create_error_vs_rsa_plot(data, all_labels, all_preds):
@@ -36,7 +36,7 @@ def create_error_vs_rsa_plot(data, all_labels, all_preds):
     plt.title('Prediction Errors vs RSA Values')
     plt.xlabel('RSA')
     plt.ylabel('Prediction Error')
-    plt.savefig('error_vs_rsa.png')
+    plt.savefig('plots/error_vs_rsa.png')
     plt.close()
 
 def create_evaluation_plots(all_labels, all_preds):
@@ -73,7 +73,7 @@ def create_evaluation_plots(all_labels, all_preds):
     plt.axhline(y=0, color='r', linestyle='--')
 
     plt.tight_layout()
-    plt.savefig('evaluation_plots.png')
+    plt.savefig('plots/evaluation_plots.png')
     plt.close()
 
     # 5. Actual vs Predicted Line Plot
@@ -85,7 +85,7 @@ def create_evaluation_plots(all_labels, all_preds):
     plt.ylabel('Interaction Score')
     plt.title('Actual vs Predicted Interaction Scores (Sorted)')
     plt.legend()
-    plt.savefig('actual_vs_predicted_line.png')
+    plt.savefig('plots/actual_vs_predicted_line.png')
     plt.close()
 
     # 6. Error Distribution Plot
@@ -96,5 +96,5 @@ def create_evaluation_plots(all_labels, all_preds):
     plt.ylabel('Density')
     plt.title('Distribution of Actual vs Predicted Scores')
     plt.legend()
-    plt.savefig('score_distribution.png')
+    plt.savefig('plots/score_distribution.png')
     plt.close()

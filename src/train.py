@@ -50,10 +50,11 @@ def train(config_path):
     for epoch in range(num_epochs):
         model.train()
         epoch_loss = 0
-        for batch_idx, (sequences, rsas, secondary_structures, phys_props, chains, distance_matrices) in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
+        for batch_idx, batch in enumerate(tqdm(train_loader, desc=f'Epoch {epoch+1}/{num_epochs}')):
             optimizer.zero_grad()
-            output = model(sequences, rsas, secondary_structures, phys_props, chains, distance_matrices)
-            loss = criterion(output, distance_matrices)  # Predict distance matrices
+            output = model(batch['sequence'], batch['rsa'], batch['ss'], 
+                         batch['phys_props'], batch['chain'], batch['distance_mat'])
+            loss = criterion(output, batch['distance_mat'])  # Predict distance matrices
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
@@ -68,9 +69,10 @@ def train(config_path):
         model.eval()
         val_loss = 0
         with torch.no_grad():
-            for sequences, rsas, secondary_structures, phys_props, chains, distance_mats in tqdm(val_loader, desc='Validation'):
-                output = model(sequences, rsas, secondary_structures, phys_props, chains, distance_mats)
-                val_loss += criterion(output, distance_mats).item()
+            for batch in tqdm(val_loader, desc='Validation'):
+                output = model(batch['sequence'], batch['rsa'], batch['ss'],
+                             batch['phys_props'], batch['chain'], batch['distance_mat'])
+                val_loss += criterion(output, batch['distance_mat']).item()
         
         val_loss /= len(val_loader)
         val_losses.append(val_loss)

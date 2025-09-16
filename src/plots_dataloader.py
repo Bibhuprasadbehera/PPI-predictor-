@@ -8,7 +8,17 @@ import matplotlib.pyplot as plt
 def create_rsa_vs_ss_plot(data):
     """Plot RSA values against secondary structure."""
     plt.figure(figsize=(12, 6))
-    sns.boxplot(x='three_hot_ss', y='rsa', data=data)
+    
+    # Create a list of paired RSA and SS values
+    plot_data = []
+    for _, row in data.iterrows():
+        ss_chars = list(str(row['three_hot_ss']))
+        rsa_values = row['rsa'] if isinstance(row['rsa'], np.ndarray) else np.array([float(row['rsa'])])
+        for ss, rsa in zip(ss_chars, rsa_values):
+            plot_data.append({'three_hot_ss': ss, 'rsa': rsa})
+    
+    plot_df = pd.DataFrame(plot_data)
+    sns.boxplot(x='three_hot_ss', y='rsa', data=plot_df)
     plt.title('RSA Distribution by Secondary Structure')
     plt.xlabel('Secondary Structure')
     plt.ylabel('RSA')
@@ -36,9 +46,20 @@ def create_physicochemical_properties_correlation_plot(phys_props):
     plt.close()
 
 def create_rsa_distribution_plot(data):
-    plt.figure(figsize=(12, 6))
-    sns.histplot(data['rsa'], kde=True)
-    plt.title('Distribution of RSA Values')
+    plt.figure(figsize=(10, 6))
+    
+    # Handle both array and scalar RSA values
+    rsa_values = []
+    for rsa in data['rsa']:
+        if isinstance(rsa, np.ndarray):
+            rsa_values.extend(rsa)
+        else:
+            rsa_values.append(float(rsa))
+            
+    rsa_values = np.array(rsa_values, dtype=float)
+    
+    sns.histplot(data=rsa_values, kde=True)
+    plt.title('Distribution of Relative Solvent Accessibility (RSA)')
     plt.xlabel('RSA')
     plt.ylabel('Count')
     plt.savefig('plots/rsa_distribution.png')
@@ -92,36 +113,54 @@ def create_physicochemical_properties_distribution_plots(phys_props):
     print("Distribution plots for physicochemical properties generated successfully.")
 
 def create_batch_visualization(batch, num_samples=5):
-    sequences, rsas, secondary_structures, phys_props, chains, labels = batch  # Unpack chains
-    fig, axs = plt.subplots(num_samples, 4, figsize=(20, 5*num_samples))  # Add a column for chains
+    """Create visualization for a batch of protein samples."""
+    sequences = batch['sequences']
+    rsas = batch['rsas']
+    secondary_structures = batch['secondary_structures']
+    phys_props = batch['phys_props']
+    chains = batch['chains']
+    labels = batch['labels']
+    
+    fig, axs = plt.subplots(num_samples, 4, figsize=(20, 5*num_samples))
     for i in range(num_samples):
         seq = sequences[i].numpy()
         rsa = rsas[i].numpy()
         ss = secondary_structures[i].numpy()
         chain = chains[i].numpy()
 
+        # Sequence visualization (one-hot encoded)
         axs[i, 0].imshow(np.eye(20)[seq], aspect='auto', cmap='viridis')
-        axs[i, 0].set_title(f'Sample {i+1} - Sequence (One-hot encoded)')
+        axs[i, 0].set_title(f'Sample {i+1} - Sequence')
         axs[i, 0].set_ylabel('AA Index')
         axs[i, 0].set_xlabel('Position')
 
-        axs[i, 1].plot(rsa.repeat(len(seq)))
-        axs[i, 1].set_title(f'Sample {i+1} - RSA Value')
+        # RSA visualization
+        axs[i, 1].plot(rsa)  # No need to repeat since RSA is per-residue now
+        axs[i, 1].set_title(f'Sample {i+1} - RSA')
         axs[i, 1].set_ylabel('RSA')
         axs[i, 1].set_xlabel('Position')
 
+        # Secondary structure visualization
         axs[i, 2].imshow(np.eye(4)[ss], aspect='auto', cmap='viridis')
         axs[i, 2].set_title(f'Sample {i+1} - Secondary Structure')
         axs[i, 2].set_ylabel('SS Index')
         axs[i, 2].set_xlabel('Position')
 
-        axs[i, 3].plot(chain.repeat(len(seq)))  # Visualize chain IDs
-        axs[i, 3].set_title(f'Sample {i+1} - Chain ID')
+        # Chain visualization
+        axs[i, 3].plot(chain)  # No need to repeat since chain is per-residue now
+        axs[i, 3].set_title(f'Sample {i+1} - Chain')
         axs[i, 3].set_ylabel('Chain ID')
         axs[i, 3].set_xlabel('Position')
 
     plt.tight_layout()
     plt.savefig('plots/batch_visualization.png')
     plt.close()
-    print(f"Batch shape - Sequences: {sequences.shape}, RSAs: {rsas.shape}, Secondary Structures: {secondary_structures.shape}, Physicochemical Properties: {phys_props.shape}, Chains: {chains.shape}, Labels: {labels.shape}")  # Include chains
-    print(f"Label values: {labels[:num_samples]}")
+
+    # Log batch shapes
+    logger.info(
+        f"Batch shapes - Sequences: {sequences.shape}, RSAs: {rsas.shape}, "
+        f"Secondary Structures: {secondary_structures.shape}, "
+        f"Physicochemical Properties: {phys_props.shape}, "
+        f"Chains: {chains.shape}, Labels: {labels.shape}"
+    )
+    logger.debug(f"First {num_samples} label values: {labels[:num_samples]}")

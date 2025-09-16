@@ -190,9 +190,6 @@ def main():
     all_data = motif_1_data + motif_2_data
     
     if all_data:
-        # Save all data (before filtering)
-        save_to_csv(all_data, output_dir / 'all_motif_data_with_empty.csv')
-        
         # Filter for self-matches only
         self_matches = filter_self_matches(all_data)
         save_to_csv(self_matches, output_dir / 'self_match_motif_data_with_empty.csv')

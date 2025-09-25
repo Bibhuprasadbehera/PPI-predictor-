@@ -25,10 +25,12 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 class ProteinDataset(Dataset):
-    def __init__(self, data_dir, phys_prop_file, motif_csv_path=None):
+    def __init__(self, data_dir, phys_prop_file, motif_csv_path=None, normalize_distance=True):
         self.data_dir = data_dir
+        self.normalize_distance = normalize_distance
         self.data = self.load_dssp_files(self.data_dir)
         self.phys_props = self.load_phys_props(phys_prop_file)
+        
         # Include J and B in amino acid mapping (J -> index 20, B -> index 21)
         self.aa_to_index = {aa: idx for idx, aa in enumerate('ACDEFGHIKLMNPQRSTVWYJB')}
         self.ss_to_index = {'C': 0, 'H': 1, 'E': 2, 'P': 3}
@@ -120,7 +122,18 @@ class ProteinDataset(Dataset):
             try:
                 distance_mat_df = pd.read_csv(distance_mat_file, sep='\t', header=0, index_col=0)
                 distance_mat = distance_mat_df.values
-                distance_mat_tensor = torch.tensor(distance_mat, dtype=torch.float32)
+                
+                # Convert to interaction probability (inverse relationship to distance)
+                # Lower distances = higher interaction probability
+                if self.normalize_distance:
+                    # Normalize distances to [0, 1] range and convert to probabilities
+                    # Use inverse function: prob = 1/(1 + distance/10) to map distances to probabilities
+                    distance_mat = np.nan_to_num(distance_mat, nan=20.0, posinf=20.0, neginf=0.0)
+                    interaction_prob = 1.0 / (1.0 + distance_mat / 10.0)
+                else:
+                    interaction_prob = np.nan_to_num(distance_mat, nan=10.0, posinf=20.0, neginf=0.0)
+                
+                distance_mat_tensor = torch.tensor(interaction_prob, dtype=torch.float32)
                 return distance_mat_tensor
             except Exception as e:
                 logger.error(f"Error loading distance matrix for protein {protein_id} from {distance_mat_file}: {e}. Returning zero matrix.")
@@ -130,6 +143,14 @@ class ProteinDataset(Dataset):
             return torch.zeros((len(sequence), len(sequence)), dtype=torch.float32)
         
     def load_phys_props(self, phys_prop_file):
+        try:
+            return pd.read_csv(phys_prop_file, index_col='amino acid')
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Error: Physicochemical properties file not found: {phys_prop_file}")
+
+    @staticmethod
+    def _load_phys_props_static(phys_prop_file):
+        """Static method to load physicochemical properties."""
         try:
             return pd.read_csv(phys_prop_file, index_col='amino acid')
         except FileNotFoundError:
@@ -182,7 +203,7 @@ class ProteinDataset(Dataset):
         chain_idx = self.chain_to_index.get(chain_id, 0)
         chain_tensor = torch.tensor([chain_idx] * len(sequence), dtype=torch.long)
 
-        # Distance matrix
+        # Distance matrix - now used as target
         distance_mat = self.load_distance_mat(protein_id, sequence)
 
         # Motif features with fallback
@@ -211,11 +232,11 @@ class ProteinDataset(Dataset):
             'ss': ss_tensor,
             'phys_props': phys_prop_tensor,
             'chain': chain_tensor,
-            'distance_mat': distance_mat,
             'motif_binary': torch.tensor(motif_binary, dtype=torch.float32),
             'motif_index': torch.tensor(motif_index, dtype=torch.long),
             'motif_position': torch.tensor(motif_position, dtype=torch.long),
             'motif_overlap': torch.tensor(motif_overlap, dtype=torch.long),
+            'distance_mat': distance_mat,  # Now as target
             'protein_id': protein_id
         }
 
@@ -269,8 +290,8 @@ class ProteinDataset(Dataset):
         logger.debug("Data statistics:")
         logger.debug("\n" + str(self.data.describe()))
 
-def get_data_loader(data_dir, phys_prop_file, batch_size, num_workers, motif_csv_path=None):
-    dataset = ProteinDataset(data_dir, phys_prop_file, motif_csv_path=motif_csv_path)
+def get_data_loader(data_dir, phys_prop_file, batch_size, num_workers, motif_csv_path=None, normalize_distance=True):
+    dataset = ProteinDataset(data_dir, phys_prop_file, motif_csv_path=motif_csv_path, normalize_distance=normalize_distance)
     return DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers, collate_fn=ProteinDataset.collate_fn)
 
 def visualize_batch(batch, num_samples=5):

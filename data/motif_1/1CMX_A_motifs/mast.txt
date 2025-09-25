@@ -1,0 +1,856 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.5.7 (Release date: Wed Jun 19 13:59:04 2024 -0700)
+
+	For further information on how to interpret these results please access https://meme-suite.org/meme.
+	To get a copy of the MAST software please access https://meme-suite.org.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE 1CMX_A_hseq.fasta (peptide)
+	Last updated on Sun Aug 24 21:57:22 2025
+	Database contains 29 sequences, 7295 residues
+
+	MOTIFS meme.xml (peptide)
+	MOTIF ID                ALT ID WIDTH BEST POSSIBLE MATCH
+	----- ----------------- ------ ----- -------------------
+	    1 FMKQTIGNACGTIGJIH MEME-1    17 FMKQTIGNACGTIGIIH
+	    2 GHLYELDGRKPFPINHG MEME-2    17 GHLYELDGRMPFPINHG
+	    3 PRPVCALJLLFPITAQY MEME-3    17 PRPVCALILLFPWTAQY
+	    4 WLPLESNPEVLNKVL   MEME-4    15 WCPMESNPEMFNKYL
+
+	PAIRWISE MOTIF CORRELATIONS:
+	MOTIF     1     2     3
+	----- ----- ----- -----
+	   2   0.15
+	   3   0.27  0.13
+	   4   0.20  0.15  0.21
+	No overly similar pairs (correlation > 0.60) found.
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.073 C 0.018 D 0.052 E 0.062 F 0.040 G 0.069 H 0.022 I 0.056 K 0.058 
+	L 0.092 M 0.023 N 0.046 P 0.051 Q 0.041 R 0.052 S 0.074 T 0.059 V 0.064 
+	W 0.013 Y 0.033 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 29 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+sp|Q9JKB1|UCHL3_MOUSE                                             3.7e-61    230
+sp|Q2TBG8|UCHL3_BOVIN                                             3.7e-61    230
+sp|Q06AB3|UCHL3_PIG                                               3.7e-61    230
+sp|P15374|UCHL3_HUMAN                                             3.7e-61    230
+sp|Q91Y78|UCHL3_RAT                                               3.7e-61    230
+sp|Q9GM50|UCHL1_HORSE                                             1.1e-58    223
+sp|Q6SEG5|UCHL1_PIG                                               1.1e-58    223
+sp|P09936|UCHL1_HUMAN                                             1.1e-58    223
+sp|Q60HC8|UCHL1_MACFA                                             1.1e-58    223
+sp|Q00981|UCHL1_RAT                                               2.2e-58    223
+sp|Q9R0P9|UCHL1_MOUSE                                             2.2e-58    223
+sp|P50103|UCHL1_MONDO                                             3.1e-58    223
+sp|P23356|UCHL1_BOVIN                                             1.3e-57    252
+sp|P58321|UCHL4_MOUSE                                             1.1e-56    233
+sp|Q54T48|UCHL_DICDI                                              1.4e-49    255
+sp|Q8GWE1|UCH3_ARATH                                              2.6e-48    234
+sp|P35122|UCHL_DROME                                              5.5e-45    227
+sp|Q9XSJ0|UCHL5_BOVIN                                             1.8e-43    328
+sp|Q9Y5K5|UCHL5_HUMAN                                             1.8e-43    329
+sp|Q9WUP7|UCHL5_MOUSE                                             1.8e-43    329
+sp|Q06AT3|UCHL5_PIG                                               1.8e-43    329
+sp|O01391|UCHL_APLCA                                              4.2e-42    214
+sp|O04482|UCH2_ARATH                                              2.4e-40    330
+sp|Q9FFF2|UCH1_ARATH                                              2.7e-37    334
+sp|Q10171|UBLH1_SCHPO                                             4.6e-37    222
+sp|Q54N38|UCHL5_DICDI                                             6.7e-36    343
+sp|Q8IKM8|UCHL3_PLAF7                                             1.1e-34    232
+sp|P35127|UBL1_YEAST                                              6.8e-26    236
+1CMX_A                                                            3.2e-10    157
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [n]  occurrence of motif `n' with p-value less than 0.0001.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+sp|Q9JKB1|UCHL3_MOUSE               3.7e-61  5-[4]-25-[3]-23-[1]-75-[2]-36
+sp|Q2TBG8|UCHL3_BOVIN               3.7e-61  5-[4]-25-[3]-23-[1]-75-[2]-36
+sp|Q06AB3|UCHL3_PIG                 3.7e-61  5-[4]-25-[3]-23-[1]-75-[2]-36
+sp|P15374|UCHL3_HUMAN               3.7e-61  5-[4]-25-[3]-23-[1]-75-[2]-36
+sp|Q91Y78|UCHL3_RAT                 3.7e-61  5-[4]-25-[3]-23-[1]-75-[2]-36
+sp|Q9GM50|UCHL1_HORSE               1.1e-58  2-[4]-25-[3]-21-[1]-72-[2]-37
+sp|Q6SEG5|UCHL1_PIG                 1.1e-58  2-[4]-25-[3]-21-[1]-72-[2]-37
+sp|P09936|UCHL1_HUMAN               1.1e-58  2-[4]-25-[3]-21-[1]-72-[2]-37
+sp|Q60HC8|UCHL1_MACFA               1.1e-58  2-[4]-25-[3]-21-[1]-72-[2]-37
+sp|Q00981|UCHL1_RAT                 2.2e-58  2-[4]-25-[3]-21-[1]-72-[2]-37
+sp|Q9R0P9|UCHL1_MOUSE               2.2e-58  2-[4]-25-[3]-21-[1]-72-[2]-37
+sp|P50103|UCHL1_MONDO               3.1e-58  2-[4]-25-[3]-21-[1]-72-[2]-37
+sp|P23356|UCHL1_BOVIN               1.3e-57  2-[4]-25-[3]-50-[1]-72-[2]-37
+sp|P58321|UCHL4_MOUSE               1.1e-56  5-[4]-25-[3]-23-[1]-78-[2]-36
+sp|Q54T48|UCHL_DICDI                1.4e-49  13-[4]-25-[3]-23-[1]-75-[2]-53
+sp|Q8GWE1|UCH3_ARATH                2.6e-48  12-[4]-26-[3]-21-[1]-72-[2]-15-[4]-7
+sp|P35122|UCHL_DROME                5.5e-45  3-[4]-25-[3]-23-[1]-72-[2]-38
+sp|Q9XSJ0|UCHL5_BOVIN               1.8e-43  7-[4]-23-[3]-16-[1]-77-[2]-139
+sp|Q9Y5K5|UCHL5_HUMAN               1.8e-43  7-[4]-23-[3]-16-[1]-77-[2]-140
+sp|Q9WUP7|UCHL5_MOUSE               1.8e-43  7-[4]-23-[3]-16-[1]-77-[2]-140
+sp|Q06AT3|UCHL5_PIG                 1.8e-43  7-[4]-23-[3]-16-[1]-77-[2]-140
+sp|O01391|UCHL_APLCA                4.2e-42  6-[4]-25-[3]-17-[1]-75-[2]-25
+sp|O04482|UCH2_ARATH                2.4e-40  2-[4]-23-[3]-15-[1]-76-[2]-148
+sp|Q9FFF2|UCH1_ARATH                2.7e-37  2-[4]-23-[3]-15-[1]-82-[2]-146
+sp|Q10171|UBLH1_SCHPO               4.6e-37  1-[4]-23-[3]-17-[1]-80-[2]-35
+sp|Q54N38|UCHL5_DICDI               6.7e-36  6-[4]-23-[3]-12-[1]-75-[2]-161
+sp|Q8IKM8|UCHL3_PLAF7               1.1e-34  6-[4]-24-[3]-20-[1]-73-[2]-43
+sp|P35127|UBL1_YEAST                6.8e-26  7-[4]-26-[3]-15-[1]-139
+1CMX_A                              3.2e-10  3-[1]-137
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence,
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif, and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+sp|Q9JKB1|UCHL3_MOUSE
+  LENGTH = 230  COMBINED P-VALUE = 1.28e-62  E-VALUE =  3.7e-61
+  DIAGRAM: 5-[4]-25-[3]-23-[1]-75-[2]-36
+
+          [4]                                     [3]
+          5.2e-16                                 2.3e-19
+          WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+          +++++++++++++++                         +++++++++++++++++
+1    MEGQRWLPLEANPEVTNQFLKQLGLHPNWQFVDVYGMEPELLSMVPRPVCAVLLLFPITEKYEVFRTEEEEKIKS
+
+               [1]
+               4.8e-22
+               FMKQTIGNACGTIGIIH
+               +++++++++++++++++
+76   QGQDVTSSVYFMKQTISNACGTIGLIHAIANNKDKMHFESGSTLKKFLEESVSMSPEERAKFLENYDAIRVTHET
+
+                                [2]
+                                1.7e-22
+                                GHLYELDGRMPFPINHG
+                                +++++++++++++++++
+151  SAHEGQTEAPSIDEKVDLHFIALVHVDGHLYELDGRKPFPINHGKTSDETLLEDAIEVCKKFMERDPDELRFNAI
+
+
+sp|Q2TBG8|UCHL3_BOVIN
+  LENGTH = 230  COMBINED P-VALUE = 1.28e-62  E-VALUE =  3.7e-61
+  DIAGRAM: 5-[4]-25-[3]-23-[1]-75-[2]-36
+
+          [4]                                     [3]
+          5.2e-16                                 2.3e-19
+          WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+          +++++++++++++++                         +++++++++++++++++
+1    MEGQRWLPLEANPEVTNQFLKQLGLHPNWQFVDVYGMDPELLSMVPRPVCAVLLLFPITEKYEVFRTEEEEKIKS
+
+               [1]
+               4.8e-22
+               FMKQTIGNACGTIGIIH
+               +++++++++++++++++
+76   QGQDVTSSVYFMKQTISNACGTIGLIHAIANNKDKMHFESGSTLKKFLEESASMSPEERARYLENYDAIRVTHET
+
+                                [2]
+                                1.7e-22
+                                GHLYELDGRMPFPINHG
+                                +++++++++++++++++
+151  SAHEGQTEAPNIDEKVDLHFIALVHVDGHLYELDGRKPFPINHGETSDETLLEDAIEVCKKFMERDPDELRFNAI
+
+
+sp|Q06AB3|UCHL3_PIG
+  LENGTH = 230  COMBINED P-VALUE = 1.28e-62  E-VALUE =  3.7e-61
+  DIAGRAM: 5-[4]-25-[3]-23-[1]-75-[2]-36
+
+          [4]                                     [3]
+          5.2e-16                                 2.3e-19
+          WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+          +++++++++++++++                         +++++++++++++++++
+1    MEGQRWLPLEANPEVTNQFLKQLGLHPNWQFVDVYGMDPELLSMVPRPVCAVLLLFPITEKYEVFRTEEEEKIKS
+
+               [1]
+               4.8e-22
+               FMKQTIGNACGTIGIIH
+               +++++++++++++++++
+76   QGQDVTPSVYFMKQTISNACGTIGLIHAIANNKNKMHFESGSTLKKFLEESASMSPDERARYLESYDAIPVTHET
+
+                                [2]
+                                1.7e-22
+                                GHLYELDGRMPFPINHG
+                                +++++++++++++++++
+151  SAHEGQTEAPNIDEKVDLHFIALVHVDGHLYELDGRKPFPINHGETSDETLLEDAIEVCKKFMERDPDELRFNAI
+
+
+sp|P15374|UCHL3_HUMAN
+  LENGTH = 230  COMBINED P-VALUE = 1.28e-62  E-VALUE =  3.7e-61
+  DIAGRAM: 5-[4]-25-[3]-23-[1]-75-[2]-36
+
+          [4]                                     [3]
+          5.2e-16                                 2.3e-19
+          WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+          +++++++++++++++                         +++++++++++++++++
+1    MEGQRWLPLEANPEVTNQFLKQLGLHPNWQFVDVYGMDPELLSMVPRPVCAVLLLFPITEKYEVFRTEEEEKIKS
+
+               [1]
+               4.8e-22
+               FMKQTIGNACGTIGIIH
+               +++++++++++++++++
+76   QGQDVTSSVYFMKQTISNACGTIGLIHAIANNKDKMHFESGSTLKKFLEESVSMSPEERARYLENYDAIRVTHET
+
+                                [2]
+                                1.7e-22
+                                GHLYELDGRMPFPINHG
+                                +++++++++++++++++
+151  SAHEGQTEAPSIDEKVDLHFIALVHVDGHLYELDGRKPFPINHGETSDETLLEDAIEVCKKFMERDPDELRFNAI
+
+
+sp|Q91Y78|UCHL3_RAT
+  LENGTH = 230  COMBINED P-VALUE = 1.28e-62  E-VALUE =  3.7e-61
+  DIAGRAM: 5-[4]-25-[3]-23-[1]-75-[2]-36
+
+          [4]                                     [3]
+          5.2e-16                                 2.3e-19
+          WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+          +++++++++++++++                         +++++++++++++++++
+1    MEGQRWLPLEANPEVTNQFLKQLGLHPNWQFVDVYGMEPELLSMVPRPVCAVLLLFPITEKYEVFRTEEEEKIKS
+
+               [1]
+               4.8e-22
+               FMKQTIGNACGTIGIIH
+               +++++++++++++++++
+76   QGQDVTSSVYFMKQTISNACGTIGLIHAIANNKDKMHFESGSALKKFLEESVAMSPEERARHLENYDAIRVTHET
+
+                                [2]
+                                1.7e-22
+                                GHLYELDGRMPFPINHG
+                                +++++++++++++++++
+151  SAHEGQTEAPSIDEKVDLHFIALVHVDGHLYELDGRKPFPINHGKTSDETLLEDAIEVCKKFMERDPDELRFNAI
+
+
+sp|Q9GM50|UCHL1_HORSE
+  LENGTH = 223  COMBINED P-VALUE = 3.94e-60  E-VALUE =  1.1e-58
+  DIAGRAM: 2-[4]-25-[3]-21-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 8.1e-18
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLARLGVAGQWRFVDVLGLEEETLGSVPAPACALLLLFPLTAQHENFRKKQIEELKGQEV
+
+          [1]
+          3.5e-22
+          FMKQTIGNACGTIGIIH
+          +++++++++++++++++
+76   SPKVYFMKQTIGNSCGTIGLIHAVANNQDKLEFEDGSVLKQFLSETEKLSPEDRAKCFEKNEAIQAAHDAVAQEG
+
+                        [2]
+                        4.1e-22
+                        GHLYELDGRMPFPINHG
+                        +++++++++++++++++
+151  QCRVDDKVNFHFILFNNVDGHLYELDGRMPFPVNHGASSEDLLLQDAAKVCREFTEREQGEVRFSAVALCKAA
+
+
+sp|Q6SEG5|UCHL1_PIG
+  LENGTH = 223  COMBINED P-VALUE = 3.94e-60  E-VALUE =  1.1e-58
+  DIAGRAM: 2-[4]-25-[3]-21-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 8.1e-18
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLTRLGVAGHWRFADVLGLEEESLGSVPAPACALLLLFPLTAQHENFRKKQIEELKGQEV
+
+          [1]
+          3.5e-22
+          FMKQTIGNACGTIGIIH
+          +++++++++++++++++
+76   SPKVYFMKQTIGNSCGTIGLIHAVANNQDKLEFEDGSVLKQFLSETEKLSPEDRAKCFEKNEAIQAAHDAVAQEG
+
+                        [2]
+                        4.1e-22
+                        GHLYELDGRMPFPINHG
+                        +++++++++++++++++
+151  QCRVDDKVNFHFILFNNVDGHLYELDGRMPFPVNHGASSEDSLLQDAAKVCREFTEREQGEVRFSAVALCKAA
+
+
+sp|P09936|UCHL1_HUMAN
+  LENGTH = 223  COMBINED P-VALUE = 3.94e-60  E-VALUE =  1.1e-58
+  DIAGRAM: 2-[4]-25-[3]-21-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 8.1e-18
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLSRLGVAGQWRFVDVLGLEEESLGSVPAPACALLLLFPLTAQHENFRKKQIEELKGQEV
+
+          [1]
+          3.5e-22
+          FMKQTIGNACGTIGIIH
+          +++++++++++++++++
+76   SPKVYFMKQTIGNSCGTIGLIHAVANNQDKLGFEDGSVLKQFLSETEKMSPEDRAKCFEKNEAIQAAHDAVAQEG
+
+                        [2]
+                        4.1e-22
+                        GHLYELDGRMPFPINHG
+                        +++++++++++++++++
+151  QCRVDDKVNFHFILFNNVDGHLYELDGRMPFPVNHGASSEDTLLKDAAKVCREFTEREQGEVRFSAVALCKAA
+
+
+sp|Q60HC8|UCHL1_MACFA
+  LENGTH = 223  COMBINED P-VALUE = 3.94e-60  E-VALUE =  1.1e-58
+  DIAGRAM: 2-[4]-25-[3]-21-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 8.1e-18
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLSRLGVAGQWRFVDVLGLEEDSLGSVPAPACALLLLFPLTAQHENFRKKQIEELKGQEV
+
+          [1]
+          3.5e-22
+          FMKQTIGNACGTIGIIH
+          +++++++++++++++++
+76   SPKVYFMKQTIGNSCGTIGLIHAVANNQDKLGFEDGSVLKQFLSETEKMSPEDRAKCFEKNEAIQAAHDAVAQEG
+
+                        [2]
+                        4.1e-22
+                        GHLYELDGRMPFPINHG
+                        +++++++++++++++++
+151  QCRVDDKVNFHFILFNNVDGHLYELDGRMPFPVNHGASSEGTLLQDAAKVCREFTEREQGEVRFSAVALCKAA
+
+
+sp|Q00981|UCHL1_RAT
+  LENGTH = 223  COMBINED P-VALUE = 7.64e-60  E-VALUE =  2.2e-58
+  DIAGRAM: 2-[4]-25-[3]-21-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 1.6e-17
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLAKLGVAGQWRFADVLGLEEETLGSVPSPACALLLLFPLTAQHENFRKKQIEELKGQEV
+
+          [1]
+          3.5e-22
+          FMKQTIGNACGTIGIIH
+          +++++++++++++++++
+76   SPKVYFMKQTIGNSCGTIGLIHAVANNQDKLEFEDGSVLKQFLSETEKLSPEDRAKCFEKNEAIQAAHDSVAQEG
+
+                        [2]
+                        4.1e-22
+                        GHLYELDGRMPFPINHG
+                        +++++++++++++++++
+151  QCRVDDKVNFHFILFNNVDGHLYELDGRMPFPVNHGASSEDSLLQDAAKVCREFTEREQGEVRFSAVALCKAA
+
+
+sp|Q9R0P9|UCHL1_MOUSE
+  LENGTH = 223  COMBINED P-VALUE = 7.64e-60  E-VALUE =  2.2e-58
+  DIAGRAM: 2-[4]-25-[3]-21-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 1.6e-17
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLAKLGVAGQWRFADVLGLEEETLGSVPSPACALLLLFPLTAQHENFRKKQIEELKGQEV
+
+          [1]
+          3.5e-22
+          FMKQTIGNACGTIGIIH
+          +++++++++++++++++
+76   SPKVYFMKQTIGNSCGTIGLIHAVANNQDKLEFEDGSVLKQFLSETEKLSPEDRAKCFEKNEAIQAAHDSVAQEG
+
+                        [2]
+                        4.1e-22
+                        GHLYELDGRMPFPINHG
+                        +++++++++++++++++
+151  QCRVDDKVNFHFILFNNVDGHLYELDGRMPFPVNHGASSEDSLLQDAAKVCREFTEREQGEVRFSAVALCKAA
+
+
+sp|P50103|UCHL1_MONDO
+  LENGTH = 223  COMBINED P-VALUE = 1.06e-59  E-VALUE =  3.1e-58
+  DIAGRAM: 2-[4]-25-[3]-21-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 8.1e-18
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLTRLGVGGDWKFVDVLGLEEDVLGTVPAPACALLLLFPLTAQHENFRKKQIEELKGQEV
+
+          [1]
+          8.4e-21
+          FMKQTIGNACGTIGIIH
+          +++++++++++++++++
+76   SPKVYFMKQTVGNSCGTIGLIHAVANNQDKLNFDDGSVLKQFISETAKLSPEDRAKCFEKNEAIQAAHDAVAQEG
+
+                        [2]
+                        4.7e-23
+                        GHLYELDGRMPFPINHG
+                        +++++++++++++++++
+151  QCRVDDEVNFHFILFNNVDGHLYELDGRMPFPINHGSNSDESVLKGAAEICRQFTEREEGEVRFSAVALCKCA
+
+
+sp|P23356|UCHL1_BOVIN
+  LENGTH = 252  COMBINED P-VALUE = 4.52e-59  E-VALUE =  1.3e-57
+  DIAGRAM: 2-[4]-25-[3]-50-[1]-72-[2]-37
+
+       [4]                                     [3]
+       3.2e-15                                 5.8e-17
+       WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+       +++++++++++++++                         +++++++++++++++++
+1    MQLKPMEINPEMLNKVLTRLGVAGQWRFEDVLGLEEESLGSVPAPACALLLLFPLTAQRCFKLGREAASRFHHPD
+
+                                       [1]
+                                       3.5e-22
+                                       FMKQTIGNACGTIGIIH
+                                       +++++++++++++++++
+76   YPGRLFILLVSQHENFRKKQIEELKGQEVSPKVYFMKQTIGNSCGTIGLIHAVANNQDKLEFEDGSVLKQFLSET
+
+                                                     [2]
+                                                     4.1e-22
+                                                     GHLYELDGRMPFPINHG
+                                                     +++++++++++++++++
+151  EKLSPEDRAKCFEKNEAIQAAHDAVAQEGQCRVDDKVNFHFILFNNVDGHLYELDGRMPFPVNHGTSSEDSLLQD
+
+
+sp|P58321|UCHL4_MOUSE
+  LENGTH = 233  COMBINED P-VALUE = 3.74e-58  E-VALUE =  1.1e-56
+  DIAGRAM: 5-[4]-25-[3]-23-[1]-78-[2]-36
+
+          [4]                                     [3]
+          5.2e-16                                 2.3e-19
+          WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+          +++++++++++++++                         +++++++++++++++++
+1    MEGQRWLPLEANPEVTNQFLKQLGLHPNWQFVDVYGMESELLSIIPRPVCAVLLLFPITEKYEVFRTEEEEKIKS
+
+               [1]
+               1.4e-18
+               FMKQTIGNACGTIGIIH
+               ++++++++++++++ +
+76   QGQDVTSSVYFMKQTISNACGTIGTIGLIHAIANNKDKVHFESGSTLKKFLEESVSMSPEERAKYLENYDAIRVT
+
+                                   [2]
+                                   2.0e-21
+                                   GHLYELDGRMPFPINHG
+                                   +++++++++++++++++
+151  HETSAHEGQTEAPSIDEKVDLHFIALVHVDGHLYELDGWKPFPINHGKTSDETLLEDVIKVCKKFMERDPDELRF
+
+
+sp|Q54T48|UCHL_DICDI
+  LENGTH = 255  COMBINED P-VALUE = 4.80e-51  E-VALUE =  1.4e-49
+  DIAGRAM: 13-[4]-25-[3]-23-[1]-75-[2]-53
+
+                  [4]                                     [3]
+                  5.9e-14                                 2.7e-14
+                  WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+                  ++++++++++++ ++                         ++++ +++++++++ ++
+1    MSVDQELIETQKNWIPLEANPEVLTTFMQSLGVSKDWEFCDIYGIDEGLLEMVPSPCVAVILLFPITNEYEDKRY
+
+                       [1]
+                       6.6e-20
+                       FMKQTIGNACGTIGIIH
+                       ++++++++++++++ ++
+76   KLEKEIEEKGQVLSDKVYFMKQYIGNACGTIGVIHSVLNNANVIEFNENGFFKQFLDKTTSLSTEERAISLLKNS
+
+                                        [2]
+                                        3.9e-20
+                                        GHLYELDGRMPFPINHG
+                                        ++++++++++++ ++++
+151  EIEKSHEISALQGQSNVPQEDEPVVLHFVSFVHVDGHLYELDGRKPFAINHGESSAETLLKDTANVLQKMIDEDP
+
+
+sp|Q8GWE1|UCH3_ARATH
+  LENGTH = 234  COMBINED P-VALUE = 8.85e-50  E-VALUE =  2.6e-48
+  DIAGRAM: 12-[4]-26-[3]-21-[1]-72-[2]-15-[4]-7
+
+                 [4]                                      [3]
+                 3.2e-15                                  4.6e-14
+                 WCPMESNPEMFNKYL                          PRPVCALILLFPWTAQY
+                 +++++++++++++++                          ++++ +++++++++++
+1    MATASESSSSKRWLPLESNPDVMNQYLWGLGLAPDEAECNDVYGLDDELLEMVPKPVLAVLFLYPITKKSEEERI
+
+                     [1]
+                     2.9e-20
+                     FMKQTIGNACGTIGIIH
+                     +++++++++++++++++
+76   EQDKEIKEKVHSDKVYFMKQTVGNACGTIGLLHAIGNITSEIKLSDGSFLDRFFKSTANMTPMERAKFLENDSQI
+
+                                   [2]                             [4]
+                                   2.7e-17                         5.0e-05
+                                   GHLYELDGRMPFPINHG               WCPMESNPEMFNK
+                                   + ++++++++ ++++++                + ++ +++ ++
+151  EDAHSVAVIAGDTPASEDADTHFICLACVEGELYELDGRKAGPISHGASSPATLLKDATKVIKKMIEKNPGSLNF
+
+     
+     
+     YL
+      +
+226  NLIAISKRT
+
+
+sp|P35122|UCHL_DROME
+  LENGTH = 227  COMBINED P-VALUE = 1.90e-46  E-VALUE =  5.5e-45
+  DIAGRAM: 3-[4]-25-[3]-23-[1]-72-[2]-38
+
+        [4]                                     [3]
+        4.5e-16                                 2.9e-14
+        WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+        +++++++++++++++                         ++++++ ++++++++++
+1    MLTWTPLESNPEVLTKYIHKLGVSPAWSVTDVIGLEDDTLEWIPRPVKAFILLFPCSETYEKHRAEEHDRIKEVE
+
+             [1]
+             2.7e-15
+             FMKQTIGNACGTIGIIH
+             ++++  +++++++++++
+76   EQHPEDLFYMRQFTHNACGTVALIHSVANNKEVDIDRGVLKDFLEKTASLSPEERGRALEKDEKFTADHEALAQE
+
+                           [2]
+                           9.5e-18
+                           GHLYELDGRMPFPINHG
+                           ++++++++++ +++ ++
+151  GQTNAANHEKVIHHFIALVNKEGTLYELDGRKSFPIKHGPTSEETFVKDAAKVCKEFMARDPNEVRFTVLALTAA
+
+
+sp|Q9XSJ0|UCHL5_BOVIN
+  LENGTH = 328  COMBINED P-VALUE = 6.14e-45  E-VALUE =  1.8e-43
+  DIAGRAM: 7-[4]-23-[3]-16-[1]-77-[2]-139
+
+            [4]                                   [3]
+            1.9e-14                               2.2e-14
+            WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY
+            +++++++++++++++                       +++++++++++++++++
+1    MTGNAGEWCLMESDPGVFTELIKGFGCRGAQVEEIWSLEPENFEKLKPVHGLIFLFKWQPGEEPAGSVVQDSRLD
+
+        [1]
+        1.0e-16
+        FMKQTIGNACGTIGIIH
+        +++++++++++++++++
+76   TIFFAKQVINNACATQAIVSVLLNCTHQDVHLGETLSEFKEFSQSFDAAMKGLALSNSDVIRQVHNSFARQQMFE
+
+                           [2]
+                           5.8e-17
+                           GHLYELDGRMPFPINHG
+                           +++++++++++++++++
+151  FDAKTAAKEEDAFHFVSYVPVNGRLYELDGLREGPIDLGACNQDDWISAVRPVIEKRIQKYSEGEIRFNLMAIVS
+
+
+sp|Q9Y5K5|UCHL5_HUMAN
+  LENGTH = 329  COMBINED P-VALUE = 6.21e-45  E-VALUE =  1.8e-43
+  DIAGRAM: 7-[4]-23-[3]-16-[1]-77-[2]-140
+
+            [4]                                   [3]
+            1.9e-14                               2.2e-14
+            WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY
+            +++++++++++++++                       +++++++++++++++++
+1    MTGNAGEWCLMESDPGVFTELIKGFGCRGAQVEEIWSLEPENFEKLKPVHGLIFLFKWQPGEEPAGSVVQDSRLD
+
+        [1]
+        1.0e-16
+        FMKQTIGNACGTIGIIH
+        +++++++++++++++++
+76   TIFFAKQVINNACATQAIVSVLLNCTHQDVHLGETLSEFKEFSQSFDAAMKGLALSNSDVIRQVHNSFARQQMFE
+
+                           [2]
+                           5.8e-17
+                           GHLYELDGRMPFPINHG
+                           +++++++++++++++++
+151  FDTKTSAKEEDAFHFVSYVPVNGRLYELDGLREGPIDLGACNQDDWISAVRPVIEKRIQKYSEGEIRFNLMAIVS
+
+
+sp|Q9WUP7|UCHL5_MOUSE
+  LENGTH = 329  COMBINED P-VALUE = 6.21e-45  E-VALUE =  1.8e-43
+  DIAGRAM: 7-[4]-23-[3]-16-[1]-77-[2]-140
+
+            [4]                                   [3]
+            1.9e-14                               2.2e-14
+            WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY
+            +++++++++++++++                       +++++++++++++++++
+1    MSSNAGEWCLMESDPGVFTELIKGFGCRGAQVEEIWSLEPESFEKLKPVHGLIFLFKWQPGEEPAGSVVQDSRLE
+
+        [1]
+        1.0e-16
+        FMKQTIGNACGTIGIIH
+        +++++++++++++++++
+76   TIFFAKQVINNACATQAIVSVLLNCTHQDVHLGETLSEFKEFSQSFDAAMKGLALSNSDVIRQVHNSFARQQMFE
+
+                           [2]
+                           5.8e-17
+                           GHLYELDGRMPFPINHG
+                           +++++++++++++++++
+151  FDTKTPAKEEDAFHFVSYVPVNGRLYELDGLREGPIDLGACNQDDWITAVRPVIEKRIQKYSEGEIRFNLMAIVS
+
+
+sp|Q06AT3|UCHL5_PIG
+  LENGTH = 329  COMBINED P-VALUE = 6.21e-45  E-VALUE =  1.8e-43
+  DIAGRAM: 7-[4]-23-[3]-16-[1]-77-[2]-140
+
+            [4]                                   [3]
+            1.9e-14                               2.2e-14
+            WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY
+            +++++++++++++++                       +++++++++++++++++
+1    MTGNAGEWCLMESDPGVFTELIKGFGCRGAQVEEIWSLEPENFEKLKPVHGLIFLFKWQPGEEPAGSVVQDSRLD
+
+        [1]
+        1.0e-16
+        FMKQTIGNACGTIGIIH
+        +++++++++++++++++
+76   TIFFAKQVINNACATQAIVSVLLNCTHQDVHLGETLSEFKEFSQSFDAAMKGLALSNSDVIRQVHNSFARQQMFE
+
+                           [2]
+                           5.8e-17
+                           GHLYELDGRMPFPINHG
+                           +++++++++++++++++
+151  FDAKTSAKEEDAFHFVSYVPVNGRLYELDGLREGPIDLGACNQDDWISAVRPVIEKRIQKYSEGEIRFNLMAIVS
+
+
+sp|O01391|UCHL_APLCA
+  LENGTH = 214  COMBINED P-VALUE = 1.44e-43  E-VALUE =  4.2e-42
+  DIAGRAM: 6-[4]-25-[3]-17-[1]-75-[2]-25
+
+           [4]                                     [3]
+           8.1e-14                                 5.3e-12
+           WCPMESNPEMFNKYL                         PRPVCALILLFPWTAQY
+           ++++++++ +++++                          ++++ +++++++  +++
+1    MASEQRWIPLESNPKVLNKYVHNLGMDAGWNFVDVFGLDPELLAMVPRPAAALVLLFPDDKETVNQLIGEYQSDY
+
+          [1]
+          1.4e-17
+          FMKQTIGNACGTIGIIH
+          + +++++++++++++++
+76   PDSLYYTKQTIGNACGTVAIVHALANNENVIPFDAAKHFKTFLEKTKPLNPEERAKHLEQDNLMGAAHGDCAQEG
+
+                           [2]
+                           6.3e-17
+                           GHLYELDGRMPFPINHG
+                           +++++++++++ ++ ++
+151  DTQAPSQDEHVKSHFVALVHCNGTLYELDGRKEAPVVHGTTSADTFLEDAAEVVKKFMARDPEI
+
+
+sp|O04482|UCH2_ARATH
+  LENGTH = 330  COMBINED P-VALUE = 8.18e-42  E-VALUE =  2.4e-40
+  DIAGRAM: 2-[4]-23-[3]-15-[1]-76-[2]-148
+
+       [4]                                   [3]                             [1]
+       1.5e-13                               1.1e-14                         8.7
+       WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY               FMK
+       +++++++++++++++                       +++++++++++++++++               ++
+1    MSWCTIESDPGVFTELIQQMQVKGVQVEELYSLDSDSLNNLRPVYGLIFLFKWQAGEKDERPTIQDQVSNLFFAN
+
+     
+     e-15
+     QTIGNACGTIGIIH
+     +++++++++++++
+76   QVINNACATQAILAILLNSPEVDIGPELSALKEFTKNFPSDLKGLAINNSDSIRAAHNSFARPEPFVPEEQKAAT
+
+                    [2]
+                    2.9e-16
+                    GHLYELDGRMPFPINHG
+                    + +++++++++++++++
+151  KDDDVYHFISYIPVDGVLYELDGLKEGPISLGPCPGDQTGIEWLQMVQPVIQERIERYSQSEIRFNLLAVIKNRK
+
+
+sp|Q9FFF2|UCH1_ARATH
+  LENGTH = 334  COMBINED P-VALUE = 9.27e-39  E-VALUE =  2.7e-37
+  DIAGRAM: 2-[4]-23-[3]-15-[1]-82-[2]-146
+
+       [4]                                   [3]                             [1]
+       3.2e-12                               5.8e-13                         1.2
+       WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY               FMK
+       +++ +++++ +++ +                        ++++++++++++ +++               ++
+1    MSWLPVESDPGIFTEIIQQMQVKGVQVEELYSLDFNSLDEIRPVYGLILLYKWRPEEKENRVVITEPNPNFFFAS
+
+     
+     e-14
+     QTIGNACGTIGIIH
+     + ++++++++++++
+76   QIINNACATQAILSVLMNSSSIDIGSELSELKQFAKEFPPELKGLAINNNEAIRAAHNTFARPDPSSIMEDEELA
+
+                          [2]
+                          2.4e-16
+                          GHLYELDGRMPFPINHG
+                          + +++++++++++++++
+151  AAKNLDEDDDVYHYISYLPVDGILYELDGLKEGPISLGQCLGEPEGIEWLRMVQPVVQEQIDRYSQNEIRFSLLA
+
+
+sp|Q10171|UBLH1_SCHPO
+  LENGTH = 222  COMBINED P-VALUE = 1.59e-38  E-VALUE =  4.6e-37
+  DIAGRAM: 1-[4]-23-[3]-17-[1]-80-[2]-35
+
+      [4]                                   [3]                               [1
+      1.8e-11                               1.7e-12                           5.
+      WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY                 FM
+      + +++  ++++  ++                       +++++++++ ++ + +                  ++
+1    MWRPLENTPEVLEPYLQKIGVQDASVFDLFSLEEIPEYIPRPVHALLFVFPSSGTKTIYKGSRILPKDSDKVLWY
+
+     ]
+     9e-17
+     KQTIGNACGTIGIIH
+      ++++++++++++++
+76   PQTIPNACGTIGLLHAVSNGELRRKVNENDFIKSLIRTAEGSSIEERAKLIEDSKELEALHAAFAGPPLEVEGSE
+
+                         [2]
+                         2.9e-14
+                         GHLYELDGRMPFPINHG
+                          + ++++++ ++++ +
+151  EDVETDLHFICFVKGKSKDDNHFYELDGRQEGPVQHSEIESDLLNAEVLSVIKNYIQSIDSPFFSLVAITTP
+
+
+sp|Q54N38|UCHL5_DICDI
+  LENGTH = 343  COMBINED P-VALUE = 2.32e-37  E-VALUE =  6.7e-36
+  DIAGRAM: 6-[4]-23-[3]-12-[1]-75-[2]-161
+
+           [4]                                   [3]                          [1
+           1.5e-13                               4.0e-12                      8.
+           WCPMESNPEMFNKYL                       PRPVCALILLFPWTAQY            FM
+           +++++++++++++++                       ++++ ++++++++ +++            ++
+1    MSENEGWCTIESDPGVFTELITKIGVKDIQVEELYTLDSSEYDRLKPVLGLIFLFKWEKEEENRTISDNENIFFA
+
+     ]
+     7e-15
+     KQTIGNACGTIGIIH
+      +++ ++++++++++
+76   NQVIQNACATQAILSVLLNSEGIELGEELSNFKSFVGDFPPMMKGEAIGNSELIKETHNSFTVQDPFIFSKKKNR
+
+                    [2]
+                    2.5e-14
+                    GHLYELDGRMPFPINHG
+                    ++ +++++++ ++++++
+151  KPSDAFHFISFIPFQGKVYELDGLKKGPYCLGDCTPDNWLEIATPFIQKRMEKYSQGEIRFNLMAVIKNRQTTLQ
+
+
+sp|Q8IKM8|UCHL3_PLAF7
+  LENGTH = 232  COMBINED P-VALUE = 3.74e-36  E-VALUE =  1.1e-34
+  DIAGRAM: 6-[4]-24-[3]-20-[1]-73-[2]-43
+
+           [4]                                    [3]
+           2.3e-11                                2.9e-11
+           WCPMESNPEMFNKYL                        PRPVCALILLFPWTAQY
+           +++++++++ ++ +                         + ++ +++++++ +
+1    MAKNDIWTPLESNPDSLYLYSCKLGQSKLKFVDIYGFNNDLLDMIPQPVQAVIFLYPVNDNIVSENNTNDKHNLK
+
+            [1]
+            2.8e-17
+            FMKQTIGNACGTIGIIH
+            + +++++++++++++++
+76   ENFDNVWFIKQYIPNSCGTIALLHLYGNLRNKFELDKDSVLDDFFNKVNEMSAEKRGQELKNNKSIENLHHEFCG
+
+                           [2]
+                           6.5e-13
+                           GHLYELDGRMPFPINHG
+                           ++  ++++++ ++  ++
+151  QVENRDDILDVDTHFIVFVQIEGKIIELDGRKDHPTVHCFTNGDNFLYDTGKIIQDKFIEKCKDDLRFSALAVIP
+
+
+sp|P35127|UBL1_YEAST
+  LENGTH = 236  COMBINED P-VALUE = 2.34e-27  E-VALUE =  6.8e-26
+  DIAGRAM: 7-[4]-26-[3]-15-[1]-139
+
+            [4]                                      [3]
+            3.1e-11                                  4.2e-13
+            WCPMESNPEMFNKYL                          PRPVCALILLFPWTAQY
+              ++++++++++ +                           ++++++ ++++++++ +
+1    MSGENRAVVPIESNPEVFTNFAHKLGLKNEWAYFDIYSLTEPELLAFLPRPVKAIVLLFPINEDRKSSTSQQITS
+
+          [1]
+          9.4e-15
+          FMKQTIGNACGTIGIIH
+          +++++++++++ +++++
+76   SYDVIWFKQSVKNACGLYAILHSLSNNQSLLEPGSDLDNFLKSQSDTSSSKNRFDDVTTDQFVLNVIKENVQTFS
+
+
+1CMX_A
+  LENGTH = 157  COMBINED P-VALUE = 1.11e-11  E-VALUE =  3.2e-10
+  DIAGRAM: 3-[1]-137
+
+        [1]
+        9.4e-15
+        FMKQTIGNACGTIGIIH
+        +++++++++++ +++++
+1    DVIWFKQSVKNACGLYAILHSLSNNQSLLEPGSDLDNFLKSQSDTSSSKNRFDDVTTDQFVLNVIKENVQTFSTG
+
+********************************************************************************
+
+
+CPU: admin1-OptiPlex-Tower-Plus-7010
+Time 0.018 secs.
+
+mast -nostatus -oc /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1CMX_A_motifs /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1CMX_A_motifs/meme.xml /media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_1/1CMX_A_hseq.fasta

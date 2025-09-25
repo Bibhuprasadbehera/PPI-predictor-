@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<mast version="5.5.7" release="Wed Jun 19 13:59:04 2024 -0700">
+	<command_line><arg>mast</arg><arg>-nostatus</arg><arg>-oc</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1AVO_D_motifs</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1AVO_D_motifs/meme.xml</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_2/1AVO_D_hseq.fasta</arg></command_line>
+	<settings strand_handling="unstranded" max_correlation="0.60" remove_correlated="n" max_seq_evalue="10" adjust_hit="n" max_hit_pvalue="0.0001" max_weak_pvalue="0.0001"/>
+	<alphabet name="Protein" like="protein">
+		<letter id="A" symbol="A" name="Alanine" colour="0000CC"/>
+		<letter id="C" symbol="C" name="Cysteine" colour="0000CC"/>
+		<letter id="D" symbol="D" name="Aspartic acid" colour="FF00FF"/>
+		<letter id="E" symbol="E" name="Glutamic acid" colour="FF00FF"/>
+		<letter id="F" symbol="F" name="Phenylalanine" colour="0000CC"/>
+		<letter id="G" symbol="G" name="Glycine" colour="FFB300"/>
+		<letter id="H" symbol="H" name="Histidine" colour="FFCCCC"/>
+		<letter id="I" symbol="I" name="Isoleucine" colour="0000CC"/>
+		<letter id="K" symbol="K" name="Lysine" colour="CC0000"/>
+		<letter id="L" symbol="L" name="Leucine" colour="0000CC"/>
+		<letter id="M" symbol="M" name="Methionine" colour="0000CC"/>
+		<letter id="N" symbol="N" name="Asparagine" colour="008000"/>
+		<letter id="P" symbol="P" name="Proline" colour="FFFF00"/>
+		<letter id="Q" symbol="Q" name="Glutamine" colour="008000"/>
+		<letter id="R" symbol="R" name="Arginine" colour="CC0000"/>
+		<letter id="S" symbol="S" name="Serine" colour="008000"/>
+		<letter id="T" symbol="T" name="Threonine" colour="008000"/>
+		<letter id="V" symbol="V" name="Valine" colour="0000CC"/>
+		<letter id="W" symbol="W" name="Tryptophan" colour="0000CC"/>
+		<letter id="Y" symbol="Y" name="Tyrosine" colour="33E6CC"/>
+		<letter id="X" symbol="X" aliases="*." equals="ACDEFGHIKLMNPQRSTVWY" name="Any amino acid"/>
+		<letter id="B" symbol="B" equals="DN" name="Asparagine or Aspartic acid"/>
+		<letter id="Z" symbol="Z" equals="EQ" name="Glutamine or Glutamic acid"/>
+		<letter id="J" symbol="J" equals="IL" name="Leucine or Isoleucine"/>
+	</alphabet>
+	<background source="--nrdb--" A="0.0730919" C="0.0181455" D="0.051688" E="0.0622785" F="0.0402434" G="0.0692596" H="0.0224055" I="0.056227" K="0.058435" L="0.0916218" M="0.0230443" N="0.0460321" P="0.0506238" Q="0.0407153" R="0.0518462" S="0.073729" T="0.0593523" V="0.0642985" W="0.0133282" Y="0.0326497"/>
+	<motif_dbs>
+		<motif_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1AVO_D_motifs/meme.xml" last_mod_date="Mon Aug 25 20:03:57 2025">
+			<background A="0.0571913" C="0.0102989" D="0.0624905" E="0.103984" F="0.0325953" G="0.0355948" H="0.0187975" I="0.0672897" K="0.0987847" L="0.109983" M="0.021897" N="0.0427937" P="0.0499925" Q="0.0412939" R="0.0491926" S="0.0445934" T="0.0421937" V="0.0731888" W="0.00524966" Y="0.0325953"/>
+		</motif_db>
+	</motif_dbs>
+	<motifs>
+		<motif db="0" id="WLQLLIPRIEDGNNFGV" alt="MEME-1" length="17" nsites="19" evalue="1.7e-251">
+			<pos A="-441" C="-319" D="-506" E="-570" F="-182" G="-390" H="-388" I="-504" K="-551" L="-368" M="-353" N="-450" P="-516" Q="-437" R="-424" S="-420" T="-428" V="-455" W="749" Y="-235"/>
+			<pos A="-384" C="-283" D="-728" E="-746" F="-326" G="-581" H="-630" I="221" K="-737" L="167" M="-226" N="-630" P="-654" Q="-634" R="-669" S="-552" T="-367" V="211" W="-422" Y="-519"/>
+			<pos A="-250" C="-248" D="-409" E="-235" F="-409" G="-345" H="-21" I="-421" K="-381" L="-342" M="-185" N="-262" P="-357" Q="437" R="-235" S="-72" T="-281" V="-402" W="-197" Y="-418"/>
+			<pos A="-557" C="-453" D="-718" E="-790" F="-308" G="-547" H="373" I="-379" K="-732" L="272" M="-272" N="-646" P="-645" Q="-601" R="-612" S="-592" T="-547" V="-454" W="-320" Y="-374"/>
+			<pos A="-359" C="-352" D="-395" E="-461" F="-291" G="-353" H="-322" I="-335" K="-342" L="231" M="-234" N="29" P="-519" Q="301" R="-288" S="-324" T="-355" V="-376" W="-287" Y="-351"/>
+			<pos A="-535" C="-434" D="-724" E="-825" F="-502" G="-551" H="-625" I="386" K="-801" L="-445" M="-419" N="-688" P="-670" Q="-706" R="-696" S="-617" T="-523" V="-293" W="-492" Y="-610"/>
+			<pos A="-467" C="-498" D="-622" E="-690" F="-618" G="-483" H="-531" I="-699" K="-669" L="-667" M="-628" N="-609" P="430" Q="-572" R="-585" S="-479" T="-523" V="-651" W="-496" Y="-658"/>
+			<pos A="-356" C="-346" D="-505" E="-428" F="-523" G="-362" H="-218" I="-489" K="127" L="-462" M="-363" N="-321" P="-465" Q="-197" R="383" S="-321" T="-325" V="-469" W="-284" Y="-431"/>
+			<pos A="-535" C="-434" D="-724" E="-825" F="-502" G="-551" H="-625" I="386" K="-801" L="-445" M="-419" N="-688" P="-670" Q="-706" R="-696" S="-617" T="-523" V="-293" W="-492" Y="-610"/>
+			<pos A="-468" C="-475" D="-248" E="321" F="-573" G="-435" H="-426" I="-564" K="-641" L="-652" M="-543" N="-421" P="-638" Q="-382" R="-552" S="-481" T="-496" V="-578" W="-435" Y="-584"/>
+			<pos A="-428" C="-404" D="393" E="-323" F="-509" G="-392" H="-357" I="-570" K="-592" L="-595" M="-502" N="-221" P="-563" Q="-475" R="-501" S="-392" T="-459" V="-542" W="-373" Y="-497"/>
+			<pos A="-344" C="-403" D="-459" E="-583" F="-562" G="477" H="-443" I="-639" K="-567" L="-665" M="-533" N="-397" P="-540" Q="-528" R="-472" S="-357" T="-472" V="-582" W="-381" Y="-552"/>
+			<pos A="-481" C="-382" D="-398" E="-629" F="-492" G="-391" H="-228" I="-518" K="-549" L="-595" M="-484" N="449" P="-525" Q="-429" R="-488" S="-282" T="-375" V="-551" W="-338" Y="-495"/>
+			<pos A="-380" C="-413" D="201" E="-397" F="-542" G="-227" H="-248" I="-668" K="-436" L="-661" M="-582" N="402" P="-470" Q="-348" R="-427" S="-212" T="-315" V="-626" W="-443" Y="-466"/>
+			<pos A="-459" C="-309" D="-597" E="-664" F="488" G="-473" H="-445" I="-427" K="-664" L="-355" M="-348" N="-550" P="-539" Q="-578" R="-573" S="-424" T="-503" V="-449" W="-189" Y="-202"/>
+			<pos A="-344" C="-403" D="-459" E="-583" F="-562" G="477" H="-443" I="-639" K="-567" L="-665" M="-533" N="-397" P="-540" Q="-528" R="-472" S="-357" T="-472" V="-582" W="-381" Y="-552"/>
+			<pos A="-422" C="-373" D="-684" E="-757" F="-507" G="-516" H="-579" I="-279" K="-752" L="-470" M="-433" N="-647" P="-626" Q="-666" R="-639" S="-546" T="-446" V="373" W="-493" Y="-617"/>
+		</motif>
+		<motif db="0" id="HVGDYRQLVHELDEAEY" alt="MEME-2" length="17" nsites="18" evalue="4.2e-193">
+			<pos A="-680" C="-542" D="-675" E="-810" F="-595" G="-532" H="572" I="-827" K="-809" L="-748" M="-697" N="-572" P="-654" Q="-559" R="-616" S="-612" T="-643" V="-784" W="-466" Y="-523"/>
+			<pos A="-399" C="-354" D="-667" E="-735" F="-489" G="-503" H="-561" I="-261" K="-731" L="-453" M="-415" N="-629" P="-610" Q="-647" R="-618" S="-528" T="-425" V="372" W="-478" Y="-602"/>
+			<pos A="-241" C="-355" D="-212" E="167" F="-526" G="328" H="-343" I="-528" K="-383" L="-527" M="349" N="-299" P="-436" Q="-246" R="-389" S="-254" T="-313" V="-450" W="-438" Y="-504"/>
+			<pos A="-413" C="-391" D="392" E="-307" F="-496" G="-380" H="-343" I="-556" K="-578" L="-581" M="-487" N="-206" P="-551" Q="-461" R="-487" S="-378" T="-445" V="-527" W="-361" Y="-484"/>
+			<pos A="-671" C="-514" D="-716" E="-835" F="-286" G="-543" H="-417" I="-700" K="-794" L="-641" M="-609" N="-635" P="-662" Q="-649" R="-649" S="-616" T="-641" V="-694" W="-247" Y="492"/>
+			<pos A="-400" C="-278" D="-537" E="-603" F="-505" G="-385" H="-249" I="-516" K="-296" L="-512" M="-443" N="-398" P="-442" Q="-322" R="427" S="-384" T="-412" V="-569" W="-242" Y="-483"/>
+			<pos A="213" C="-313" D="-456" E="-395" F="-513" G="-304" H="-239" I="-494" K="-158" L="-468" M="-360" N="-309" P="-460" Q="308" R="267" S="-255" T="-287" V="-435" W="-323" Y="-432"/>
+			<pos A="-409" C="-361" D="-718" E="-759" F="-271" G="-486" H="-536" I="-270" K="-724" L="256" M="-186" N="-624" P="-610" Q="-565" R="-600" S="-473" T="288" V="-325" W="-326" Y="-465"/>
+			<pos A="-399" C="-354" D="-667" E="-735" F="-489" G="-503" H="-561" I="-261" K="-731" L="-453" M="-415" N="-629" P="-610" Q="-647" R="-618" S="-528" T="-425" V="372" W="-478" Y="-602"/>
+			<pos A="-451" C="-448" D="-573" E="-713" F="-508" G="-436" H="512" I="-734" K="-671" L="-700" M="-637" N="-484" P="-611" Q="-557" R="-570" S="-441" T="295" V="-662" W="-421" Y="-463"/>
+			<pos A="-466" C="-474" D="-247" E="321" F="-572" G="-434" H="-425" I="-563" K="-640" L="-651" M="-542" N="-420" P="-637" Q="-381" R="-551" S="-480" T="-495" V="-577" W="-434" Y="-583"/>
+			<pos A="-411" C="-322" D="-725" E="-697" F="-207" G="-542" H="-482" I="222" K="-565" L="181" M="-119" N="-588" P="-604" Q="-489" R="234" S="-509" T="-394" V="-239" W="-271" Y="-413"/>
+			<pos A="-413" C="-391" D="392" E="-307" F="-496" G="-380" H="-343" I="-556" K="-578" L="-581" M="-487" N="-206" P="-551" Q="-461" R="-487" S="-378" T="-445" V="-527" W="-361" Y="-484"/>
+			<pos A="-466" C="-474" D="-247" E="321" F="-572" G="-434" H="-425" I="-563" K="-640" L="-651" M="-542" N="-420" P="-637" Q="-381" R="-551" S="-480" T="-495" V="-577" W="-434" Y="-583"/>
+			<pos A="348" C="-280" D="-550" E="-552" F="-557" G="-297" H="-399" I="-588" K="169" L="-584" M="-475" N="-427" P="-502" Q="-381" R="-301" S="-258" T="-331" V="-477" W="-417" Y="-547"/>
+			<pos A="181" C="-371" D="-169" E="269" F="-568" G="-301" H="-353" I="-489" K="-363" L="-520" M="-409" N="-346" P="-411" Q="-201" R="-397" S="-256" T="-302" V="-51" W="-474" Y="-539"/>
+			<pos A="-555" C="-398" D="-651" E="-718" F="-83" G="-520" H="155" I="-528" K="-667" L="-474" M="-430" N="-488" P="-613" Q="-504" R="-527" S="-483" T="-516" V="-528" W="-57" Y="479"/>
+		</motif>
+		<motif db="0" id="SFLTQISKYFSERGDAV" alt="MEME-3" length="17" nsites="19" evalue="3.8e-184">
+			<pos A="222" C="-190" D="-595" E="-664" F="-533" G="329" H="-502" I="-591" K="-683" L="-604" M="-470" N="-453" P="-450" Q="-505" R="-541" S="299" T="-261" V="-422" W="-436" Y="-592"/>
+			<pos A="-540" C="-377" D="-653" E="-710" F="422" G="-525" H="-224" I="-483" K="-661" L="-104" M="-385" N="-480" P="-606" Q="-493" R="-520" S="-470" T="-503" V="-495" W="-42" Y="327"/>
+			<pos A="-419" C="-384" D="-518" E="-523" F="-231" G="-432" H="396" I="-356" K="-343" L="168" M="-253" N="-405" P="-562" Q="283" R="-285" S="-402" T="-404" V="-406" W="-217" Y="-234"/>
+			<pos A="-425" C="-431" D="251" E="-545" F="-613" G="-372" H="-431" I="-683" K="-602" L="-708" M="-605" N="-329" P="-572" Q="-504" R="-557" S="-326" T="387" V="-619" W="-486" Y="-594"/>
+			<pos A="22" C="-200" D="-466" E="-474" F="-506" G="59" H="-309" I="-549" K="-516" L="-538" M="-400" N="-355" P="-434" Q="396" R="-419" S="-176" T="218" V="-418" W="-383" Y="-536"/>
+			<pos A="-311" C="-288" D="-581" E="-642" F="-368" G="-396" H="-503" I="369" K="-609" L="-267" M="-236" N="-496" P="-551" Q="-531" R="-539" S="3" T="-339" V="-111" W="-370" Y="-451"/>
+			<pos A="-252" C="-258" D="-410" E="-115" F="-488" G="-299" H="-395" I="-571" K="-522" L="-581" M="-457" N="-294" P="-469" Q="-444" R="-446" S="432" T="-104" V="-514" W="-388" Y="-494"/>
+			<pos A="-346" C="-380" D="-496" E="-404" F="-534" G="-358" H="-219" I="-483" K="260" L="-456" M="-350" N="-307" P="-478" Q="-182" R="257" S="12" T="-309" V="-452" W="-309" Y="-424"/>
+			<pos A="-682" C="-524" D="-724" E="-845" F="-299" G="-552" H="-429" I="-713" K="-804" L="-654" M="-622" N="-646" P="-671" Q="-660" R="-659" S="-627" T="-651" V="-706" W="-260" Y="492"/>
+			<pos A="-561" C="-392" D="-663" E="-723" F="432" G="-532" H="-225" I="-514" K="-669" L="-458" M="-416" N="-484" P="-618" Q="-497" R="-524" S="-482" T="-513" V="-517" W="-43" Y="329"/>
+			<pos A="28" C="-194" D="-599" E="-656" F="-486" G="-232" H="-496" I="213" K="-663" L="-513" M="-415" N="-458" P="-458" Q="-504" R="-533" S="374" T="-260" V="-339" W="-420" Y="-557"/>
+			<pos A="-230" C="-367" D="-180" E="251" F="-569" G="-280" H="-329" I="-552" K="-371" L="-549" M="-433" N="-274" P="-419" Q="-221" R="-394" S="27" T="272" V="-454" W="-467" Y="-523"/>
+			<pos A="-410" C="-288" D="-546" E="-613" F="-514" G="-394" H="-259" I="-526" K="-307" L="-522" M="-453" N="-408" P="-452" Q="-333" R="427" S="-395" T="-422" V="-579" W="-252" Y="-493"/>
+			<pos A="264" C="-225" D="-584" E="-667" F="-551" G="409" H="-506" I="-613" K="-676" L="-626" M="-496" N="-465" P="-476" Q="-526" R="-544" S="-208" T="-297" V="-455" W="-438" Y="-598"/>
+			<pos A="-327" C="-387" D="320" E="-306" F="-523" G="-206" H="-223" I="-611" K="154" L="-594" M="-500" N="-106" P="-440" Q="-280" R="-306" S="39" T="-282" V="-556" W="-417" Y="-438"/>
+			<pos A="340" C="-277" D="-675" E="-727" F="-359" G="-329" H="-538" I="-354" K="-721" L="170" M="-280" N="-552" P="-536" Q="-557" R="-588" S="-290" T="-354" V="-366" W="-381" Y="-522"/>
+			<pos A="-422" C="-373" D="-684" E="-757" F="-507" G="-516" H="-579" I="-279" K="-752" L="-470" M="-433" N="-647" P="-626" Q="-666" R="-639" S="-546" T="-446" V="373" W="-493" Y="-617"/>
+		</motif>
+		<motif db="0" id="RNAYAVLYDIILKNFEK" alt="MEME-4" length="17" nsites="19" evalue="4.8e-177">
+			<pos A="-169" C="-204" D="-473" E="-531" F="-440" G="-323" H="-173" I="-439" K="-217" L="-439" M="-366" N="-323" P="-374" Q="-245" R="420" S="-307" T="-337" V="-494" W="-170" Y="-415"/>
+			<pos A="218" C="-274" D="-402" E="-564" F="-557" G="-264" H="-406" I="-636" K="-586" L="-646" M="-534" N="403" P="-493" Q="-474" R="-521" S="-231" T="-321" V="-500" W="-453" Y="-557"/>
+			<pos A="259" C="-239" D="-333" E="-420" F="288" G="-232" H="-279" I="-455" K="-398" L="-465" M="-365" N="36" P="-435" Q="279" R="-348" S="-188" T="-258" V="-391" W="-245" Y="-259"/>
+			<pos A="-682" C="-524" D="-724" E="-845" F="-299" G="-552" H="-429" I="-713" K="-804" L="-654" M="-622" N="-646" P="-671" Q="-660" R="-659" S="-627" T="-651" V="-706" W="-260" Y="492"/>
+			<pos A="351" C="-201" D="-620" E="-662" F="-466" G="-257" H="-519" I="-302" K="-671" L="-457" M="-384" N="-492" P="-489" Q="-528" R="-550" S="-209" T="-284" V="202" W="-427" Y="-560"/>
+			<pos A="-242" C="-273" D="-296" E="128" F="-418" G="-330" H="-400" I="-235" K="-444" L="-388" M="-318" N="-382" P="-472" Q="-312" R="-433" S="-272" T="298" V="221" W="-404" Y="-484"/>
+			<pos A="-347" C="-267" D="-571" E="-551" F="-187" G="-435" H="-378" I="-185" K="-530" L="299" M="-66" N="-477" P="-462" Q="-380" R="-404" S="-383" T="-20" V="-238" W="-227" Y="-366"/>
+			<pos A="-577" C="-413" D="-667" E="-738" F="-97" G="-533" H="421" I="-543" K="-683" L="-488" M="-445" N="-501" P="-627" Q="-517" R="-541" S="-500" T="-532" V="-543" W="-68" Y="424"/>
+			<pos A="-337" C="-382" D="334" E="-343" F="-506" G="-200" H="363" I="-638" K="-405" L="-629" M="-544" N="-95" P="-446" Q="-317" R="-396" S="38" T="-287" V="-583" W="-419" Y="-430"/>
+			<pos A="-450" C="-344" D="-793" E="-786" F="-220" G="-615" H="-566" I="313" K="-767" L="-37" M="374" N="-679" P="-650" Q="-567" R="-637" S="-601" T="-432" V="-231" W="-300" Y="-454"/>
+			<pos A="-535" C="-434" D="-724" E="-825" F="-502" G="-551" H="-625" I="386" K="-801" L="-445" M="-419" N="-688" P="-670" Q="-706" R="-696" S="-617" T="-523" V="-293" W="-492" Y="-610"/>
+			<pos A="-278" C="-253" D="-622" E="-619" F="-231" G="-378" H="-437" I="-199" K="-596" L="259" M="-130" N="-503" P="-505" Q="-451" R="-479" S="229" T="-320" V="-34" W="-272" Y="-401"/>
+			<pos A="-347" C="-384" D="-477" E="-503" F="-578" G="-357" H="-330" I="-597" K="283" L="-570" M="-469" N="-354" P="-531" Q="-312" R="-214" S="248" T="-375" V="-535" W="-400" Y="-511"/>
+			<pos A="-481" C="-382" D="-398" E="-629" F="-492" G="-391" H="-228" I="-518" K="-549" L="-595" M="-484" N="449" P="-525" Q="-429" R="-488" S="-282" T="-375" V="-551" W="-338" Y="-495"/>
+			<pos A="-474" C="-364" D="-815" E="-798" F="357" G="-625" H="-539" I="216" K="-777" L="135" M="-115" N="-690" P="-649" Q="-554" R="-630" S="-616" T="-456" V="-285" W="-274" Y="-413"/>
+			<pos A="-314" C="-470" D="-239" E="320" F="-569" G="-427" H="-418" I="-557" K="-616" L="-643" M="-533" N="-412" P="-624" Q="-367" R="-541" S="-465" T="-482" V="-567" W="-432" Y="-579"/>
+			<pos A="-374" C="-325" D="-540" E="-555" F="-539" G="-409" H="-378" I="-477" K="325" L="-550" M="-424" N="-392" P="-492" Q="-426" R="-95" S="-415" T="-386" V="-529" W="-318" Y="-510"/>
+		</motif>
+	</motifs>
+	<correlations>
+		<correlation idx_a="0" idx_b="1" value="0.16"/>
+		<correlation idx_a="0" idx_b="2" value="0.19"/>
+		<correlation idx_a="1" idx_b="2" value="0.16"/>
+		<correlation idx_a="0" idx_b="3" value="0.17"/>
+		<correlation idx_a="1" idx_b="3" value="0.20"/>
+		<correlation idx_a="2" idx_b="3" value="0.23"/>
+	</correlations>
+	<sequence_dbs>
+		<sequence_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_2/1AVO_D_hseq.fasta" last_mod_date="Sun Aug 24 22:00:04 2025" seq_count="19" residue_count="4577"/>
+	</sequence_dbs>
+	<sequences>
+		<sequence db="0" name="1AVO_D" comment="" length="140">
+			<score strand="both" combined_pvalue="2.13e-69" evalue="4e-68"/>
+			<seg start="1">
+				<data>
+AVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGVAVQEKVFELMTSLHTKLEGFHTQISKY
+FSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAVLYDIILKNFEKLKKPRG
+				</data>
+				<hit pos="32" idx="0" pvalue="5.4e-22" match="+++++++++++++++++"/>
+				<hit pos="67" idx="2" pvalue="7.3e-22" match="+++++++++++++++++"/>
+				<hit pos="91" idx="1" pvalue="1.2e-21" match="+++++++++++++++++"/>
+				<hit pos="118" idx="3" pvalue="2.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q06323|PSME1_HUMAN" comment="" length="249">
+			<score strand="both" combined_pvalue="2.54e-68" evalue="4.8e-67"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="5.4e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTSLHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+LYDIILKNFEKLKKPRGETKGMIY
+				</data>
+				<hit pos="169" idx="2" pvalue="7.3e-22" match="+++++++++++++++++"/>
+				<hit pos="193" idx="1" pvalue="1.2e-21" match="+++++++++++++++++"/>
+				<hit pos="220" idx="3" pvalue="2.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P58238|PSME1_MACFA" comment="" length="249">
+			<score strand="both" combined_pvalue="2.54e-68" evalue="4.8e-67"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKILVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="5.4e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTSLHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+LYDIILKNFEKLKKPRGETKGMIY
+				</data>
+				<hit pos="169" idx="2" pvalue="7.3e-22" match="+++++++++++++++++"/>
+				<hit pos="193" idx="1" pvalue="1.2e-21" match="+++++++++++++++++"/>
+				<hit pos="220" idx="3" pvalue="2.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q64L94|PSME1_PIG" comment="" length="249">
+			<score strand="both" combined_pvalue="2.54e-68" evalue="4.8e-67"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="5.4e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTALHTKLEGFHTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+LYDIILKNFEKLKKPRGETKGMIY
+				</data>
+				<hit pos="169" idx="2" pvalue="7.3e-22" match="+++++++++++++++++"/>
+				<hit pos="193" idx="1" pvalue="1.2e-21" match="+++++++++++++++++"/>
+				<hit pos="220" idx="3" pvalue="2.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q4U5R3|PSME1_BOVIN" comment="" length="249">
+			<score strand="both" combined_pvalue="2.54e-68" evalue="4.8e-67"/>
+			<seg start="76">
+				<data>
+ERRKQQEKEDKDEKKKGEDEDKGPPCGPVGCNEKIVVLLQRVKPEIKDVIEKLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="5.4e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTALHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+LYDIILKNFEKLKKPRGETKGMIY
+				</data>
+				<hit pos="169" idx="2" pvalue="7.3e-22" match="+++++++++++++++++"/>
+				<hit pos="193" idx="1" pvalue="1.2e-21" match="+++++++++++++++++"/>
+				<hit pos="220" idx="3" pvalue="2.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P97371|PSME1_MOUSE" comment="" length="249">
+			<score strand="both" combined_pvalue="2.54e-68" evalue="4.8e-67"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEEKEEKKKGDEDDKGPPCGPVNCNEKIVVLLQRLKPEIKDVTEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="5.4e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTNLHTKLEGFHTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYQEIRLMVMEIRNAYAV
+LYDIILKNFEKLKKPRGETKGMIY
+				</data>
+				<hit pos="169" idx="2" pvalue="7.3e-22" match="+++++++++++++++++"/>
+				<hit pos="193" idx="1" pvalue="1.2e-21" match="+++++++++++++++++"/>
+				<hit pos="220" idx="3" pvalue="2.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q63797|PSME1_RAT" comment="" length="249">
+			<score strand="both" combined_pvalue="1.99e-67" evalue="3.8e-66"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEEKDEKKKGDEDDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="5.4e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQAKVFELMTSLHTKLEGFQTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYQEIRLMVMEIRNAYAV
+LYDIILKNFEKLKKPRGETKGMIY
+				</data>
+				<hit pos="169" idx="2" pvalue="6.0e-21" match="+++++++++++++++++"/>
+				<hit pos="193" idx="1" pvalue="1.2e-21" match="+++++++++++++++++"/>
+				<hit pos="220" idx="3" pvalue="2.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9UL46|PSME2_HUMAN" comment="" length="239">
+			<score strand="both" combined_pvalue="1.61e-62" evalue="3e-61"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVHKCGFLPGNEKVLSLLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="5.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAAYGELRAMVLDLRAFYAELYHIISSNLE
+KIVNPKGEEKPSMY
+				</data>
+				<hit pos="159" idx="2" pvalue="2.3e-19" match="+++++++++++++++++"/>
+				<hit pos="183" idx="1" pvalue="4.5e-21" match="+++++++++++++++++"/>
+				<hit pos="210" idx="3" pvalue="1.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P97372|PSME2_MOUSE" comment="" length="239">
+			<score strand="both" combined_pvalue="1.61e-62" evalue="3e-61"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVPKCGYLPGNEKLLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="5.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKDTHVMDYRALVHERDEAAYGALRAMVLDLRAFYAELYHIISSNLE
+KIVNPKGEEKPSMY
+				</data>
+				<hit pos="159" idx="2" pvalue="2.3e-19" match="+++++++++++++++++"/>
+				<hit pos="183" idx="1" pvalue="4.5e-21" match="+++++++++++++++++"/>
+				<hit pos="210" idx="3" pvalue="1.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q63798|PSME2_RAT" comment="" length="238">
+			<score strand="both" combined_pvalue="9.26e-62" evalue="1.8e-60"/>
+			<seg start="76">
+				<data>
+DEMETEQEKKEVPKCGFLPGNEKLLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERVN
+				</data>
+				<hit pos="123" idx="0" pvalue="5.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVKTKVEAFQTAISKYFSERGDAVAKASKDTHVMDYRALVHERDEAAYGALRAMVLDLRAFYAELHHIISSNLEK
+				</data>
+				<hit pos="158" idx="2" pvalue="1.4e-18" match="+++++++++++++++++"/>
+				<hit pos="182" idx="1" pvalue="4.5e-21" match="+++++++++++++++++"/>
+				<hit pos="209" idx="3" pvalue="1.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5E9G3|PSME2_BOVIN" comment="" length="239">
+			<score strand="both" combined_pvalue="9.59e-62" evalue="1.8e-60"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVPKCGFLPGNEKVLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="5.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAVYGDLRAMVLDLRAFYAELYHIISSNLE
+KIVNPKGEEKPSMY
+				</data>
+				<hit pos="159" idx="2" pvalue="2.3e-19" match="+++++++++++++++++"/>
+				<hit pos="183" idx="1" pvalue="2.8e-20" match="+++++++++++++++ +"/>
+				<hit pos="210" idx="3" pvalue="1.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q863Z0|PSME2_PIG" comment="" length="239">
+			<score strand="both" combined_pvalue="1.59e-61" evalue="3e-60"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVPKCGFLPGNEKILALLGLVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAVQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="5.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAAHGELRAMVLDLRAFYAELYHIISSNLE
+KIVDPKGEEKPSMY
+				</data>
+				<hit pos="159" idx="2" pvalue="2.3e-19" match="+++++++++++++++++"/>
+				<hit pos="183" idx="1" pvalue="4.7e-20" match="+++++++++++++++++"/>
+				<hit pos="210" idx="3" pvalue="1.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5F3J5|PSME3_CHICK" comment="" length="254">
+			<score strand="both" combined_pvalue="2.84e-60" evalue="5.4e-59"/>
+			<seg start="76">
+				<data>
+HDGLDGPNMKKRKLEDREETFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+NQYVTLHDMILKNIEKIKRPRSSNAETLY
+				</data>
+				<hit pos="139" idx="0" pvalue="9.3e-22" match="+++++++++++++++++"/>
+				<hit pos="174" idx="2" pvalue="1.2e-16" match="+++++++++++++++++"/>
+				<hit pos="198" idx="1" pvalue="9.3e-20" match="+++++++++++++++++"/>
+				<hit pos="225" idx="3" pvalue="1.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P61289|PSME3_HUMAN" comment="" length="254">
+			<score strand="both" combined_pvalue="2.84e-60" evalue="5.4e-59"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+NQYVTLHDMILKNIEKIKRPRSSNAETLY
+				</data>
+				<hit pos="139" idx="0" pvalue="9.3e-22" match="+++++++++++++++++"/>
+				<hit pos="174" idx="2" pvalue="1.2e-16" match="+++++++++++++++++"/>
+				<hit pos="198" idx="1" pvalue="9.3e-20" match="+++++++++++++++++"/>
+				<hit pos="225" idx="3" pvalue="1.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P61290|PSME3_MOUSE" comment="" length="254">
+			<score strand="both" combined_pvalue="2.84e-60" evalue="5.4e-59"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+NQYVTLHDMILKNIEKIKRPRSSNAETLY
+				</data>
+				<hit pos="139" idx="0" pvalue="9.3e-22" match="+++++++++++++++++"/>
+				<hit pos="174" idx="2" pvalue="1.2e-16" match="+++++++++++++++++"/>
+				<hit pos="198" idx="1" pvalue="9.3e-20" match="+++++++++++++++++"/>
+				<hit pos="225" idx="3" pvalue="1.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P61291|PSME3_PIG" comment="" length="254">
+			<score strand="both" combined_pvalue="2.84e-60" evalue="5.4e-59"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+NQYVTLHDMILKNIEKIKRPRSSNAETLY
+				</data>
+				<hit pos="139" idx="0" pvalue="9.3e-22" match="+++++++++++++++++"/>
+				<hit pos="174" idx="2" pvalue="1.2e-16" match="+++++++++++++++++"/>
+				<hit pos="198" idx="1" pvalue="9.3e-20" match="+++++++++++++++++"/>
+				<hit pos="225" idx="3" pvalue="1.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q4R4V3|PSME3_MACFA" comment="" length="254">
+			<score strand="both" combined_pvalue="2.84e-60" evalue="5.4e-59"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+NQYVTLHDMILKNIEKIKRPRSSNAETLY
+				</data>
+				<hit pos="139" idx="0" pvalue="9.3e-22" match="+++++++++++++++++"/>
+				<hit pos="174" idx="2" pvalue="1.2e-16" match="+++++++++++++++++"/>
+				<hit pos="198" idx="1" pvalue="9.3e-20" match="+++++++++++++++++"/>
+				<hit pos="225" idx="3" pvalue="1.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5RFD3|PSME3_PONAB" comment="" length="254">
+			<score strand="both" combined_pvalue="2.84e-60" evalue="5.4e-59"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDDCEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+NQYVTLHDMILKNIEKIKRPRSSNAETLY
+				</data>
+				<hit pos="139" idx="0" pvalue="9.3e-22" match="+++++++++++++++++"/>
+				<hit pos="174" idx="2" pvalue="1.2e-16" match="+++++++++++++++++"/>
+				<hit pos="198" idx="1" pvalue="9.3e-20" match="+++++++++++++++++"/>
+				<hit pos="225" idx="3" pvalue="1.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q967U1|PSME_DICDI" comment="" length="225">
+			<score strand="both" combined_pvalue="3.94e-33" evalue="7.5e-32"/>
+			<seg start="76">
+				<data>
+IEDLIKTNRVIMETHQKFKKAYIELIETFSVIRGWISLNIPRIEDGNNFGVDVQEDIITQITKLEEVYTSLLDGS
+ESYFASRASLVKKILKHKDIEAYRYSLAQVDEKEFTRFSFSYFDLANNYATTYSLIVKNFAKLETPRPTNASNIY
+				</data>
+				<hit pos="110" idx="0" pvalue="6.9e-20" match="++ ++++++++++++++"/>
+				<hit pos="145" idx="2" pvalue="3.9e-11" match="+ +++  ++++++++++"/>
+				<hit pos="169" idx="1" pvalue="1.0e-05" match="  + ++      ++++ "/>
+				<hit pos="196" idx="3" pvalue="6.6e-13" match=" +++++ ++ + +++ +"/>
+			</seg>
+		</sequence>
+	</sequences>
+	<runtime host="admin1-OptiPlex-Tower-Plus-7010" when="Mon Aug 25 20:03:59 2025" cycles="16570" seconds="0.017"/>
+</mast>

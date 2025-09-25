@@ -1,0 +1,991 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: Sequence Logo : 
+%%Creator: Ceqlogo
+%%CreationDate: 25.08.25 19:24:56
+%%BoundingBox:   0  0  481 212 
+%%Pages: 0
+%%DocumentFonts: 
+%%EndComments
+
+% ---- CONSTANTS ----
+/cmfactor 72 2.54 div def % defines points -> cm conversion
+/cm {cmfactor mul} bind def % defines centimeters
+
+% ---- VARIABLES ----
+
+% NA = Nucleic Acid, AA = Amino Acid
+/logoType (AA) def 
+
+/logoTitle () def
+
+% Dimensions in cm
+/logoWidth 17 cm def
+/logoHeight 7.5 cm def
+/totalHeight 7.5 cm def
+
+/yaxis true def
+/yaxisLabel (bits) def
+/yaxisBits  4.32193 def % bits
+/yaxisTicBits 1 def
+
+/xaxis true def
+/xaxisLabel () def
+/showEnds (false) def 
+
+/showFineprint true def
+/fineprint (MEME (no SSC) 25.08.25 19:24) def
+
+/charsPerLine 15 def
+
+/showingBox false def    
+/shrinking false def   % true falses
+/shrink  1.0 def
+/outline false def
+
+/IbeamFraction  1.0 def
+/IbeamGray      0.50 def
+/IbeamLineWidth 0.5 def
+
+/fontsize       12 def
+/titleFontsize  12 def
+/smallFontsize  6 def
+
+/topMargin      0.9 cm def
+/bottomMargin   0.9 cm def
+
+/defaultColor [0 0 0] def 
+
+/fullColourDict <<
+ (A)  [0.0000 0.0000 0.8000]
+ (C)  [0.0000 0.0000 0.8000]
+ (D)  [1.0000 0.0000 1.0000]
+ (E)  [1.0000 0.0000 1.0000]
+ (F)  [0.0000 0.0000 0.8000]
+ (G)  [1.0000 0.7020 0.0000]
+ (H)  [1.0000 0.8000 0.8000]
+ (I)  [0.0000 0.0000 0.8000]
+ (K)  [0.8000 0.0000 0.0000]
+ (L)  [0.0000 0.0000 0.8000]
+ (M)  [0.0000 0.0000 0.8000]
+ (N)  [0.0000 0.5020 0.0000]
+ (P)  [1.0000 1.0000 0.0000]
+ (Q)  [0.0000 0.5020 0.0000]
+ (R)  [0.8000 0.0000 0.0000]
+ (S)  [0.0000 0.5020 0.0000]
+ (T)  [0.0000 0.5020 0.0000]
+ (V)  [0.0000 0.0000 0.8000]
+ (W)  [0.0000 0.0000 0.8000]
+ (Y)  [0.2000 0.9020 0.8000]
+>> def
+/mutedColourDict <<
+ (A)  [0.6000 0.6000 1.0000]
+ (C)  [0.6000 0.6000 1.0000]
+ (D)  [1.0000 0.6667 1.0000]
+ (E)  [1.0000 0.6667 1.0000]
+ (F)  [0.6000 0.6000 1.0000]
+ (G)  [1.0000 0.9007 0.6667]
+ (H)  [1.0000 0.9333 0.9333]
+ (I)  [0.6000 0.6000 1.0000]
+ (K)  [1.0000 0.6000 0.6000]
+ (L)  [0.6000 0.6000 1.0000]
+ (M)  [0.6000 0.6000 1.0000]
+ (N)  [0.5007 1.0000 0.5007]
+ (P)  [1.0000 1.0000 0.6667]
+ (Q)  [0.5007 1.0000 0.5007]
+ (R)  [1.0000 0.6000 0.6000]
+ (S)  [0.5007 1.0000 0.5007]
+ (T)  [0.5007 1.0000 0.5007]
+ (V)  [0.6000 0.6000 1.0000]
+ (W)  [0.6000 0.6000 1.0000]
+ (Y)  [0.7333 0.9673 0.9333]
+>> def
+
+
+/colorDict fullColourDict def
+
+% ---- DERIVED PARAMETERS ----
+
+/leftMargin
+  fontsize 3.5 mul
+
+def 
+
+/rightMargin 
+  %Add extra room if showing ends
+  showEnds (false) eq { fontsize}{fontsize 1.5 mul} ifelse
+def
+
+/yaxisHeight 
+  logoHeight 
+  bottomMargin sub  
+  topMargin sub
+def
+
+/ticWidth fontsize 2 div def
+
+/pointsPerBit yaxisHeight yaxisBits div  def
+
+/stackMargin 1 def
+
+% Do not add space aroung characters if characters are boxed
+/charRightMargin 
+  showingBox { 0.0 } {stackMargin} ifelse
+def
+
+/charTopMargin 
+  showingBox { 0.0 } {stackMargin} ifelse
+def
+
+/charWidth
+  logoWidth
+  leftMargin sub
+  rightMargin sub
+  charsPerLine div
+  charRightMargin sub
+def
+
+/charWidth4 charWidth 4 div def
+/charWidth2 charWidth 2 div def
+
+/stackWidth 
+  charWidth charRightMargin add
+def
+ 
+/numberFontsize 
+  fontsize charWidth lt {fontsize}{charWidth} ifelse
+def
+
+% movements to place 5'/N and 3'/C symbols
+/leftEndDeltaX  fontsize neg         def
+/leftEndDeltaY  fontsize 1.5 mul neg def
+/rightEndDeltaX fontsize 0.25 mul     def
+/rightEndDeltaY leftEndDeltaY        def
+
+% Outline width is proporional to charWidth, 
+% but no less that 1 point
+/outlinewidth 
+  charWidth 32 div dup 1 gt  {}{pop 1} ifelse
+def
+
+
+% ---- PROCEDURES ----
+
+/StartLogo { 
+  % Save state
+  save 
+  gsave 
+
+  % Print Logo Title, top center 
+  gsave 
+    SetStringFont
+
+    logoWidth 2 div
+    logoTitle
+    stringwidth pop 2 div sub
+    totalHeight
+    titleFontsize sub
+    moveto
+
+    logoTitle
+    show
+  grestore
+
+  % Print X-axis label, bottom center
+  gsave
+    SetStringFont
+
+    logoWidth 2 div
+    xaxisLabel
+    stringwidth pop 2 div sub
+    0
+    titleFontsize 3 div
+    add
+    moveto
+
+    xaxisLabel
+    show
+  grestore
+
+  % Show Fine Print
+  showFineprint {
+    gsave
+      SetSmallFont
+      logoWidth
+        fineprint stringwidth pop sub
+        smallFontsize sub
+          smallFontsize 3 div
+      moveto
+    
+      fineprint show
+    grestore
+  } if
+
+  % Move to lower left corner of last line, first stack
+  leftMargin bottomMargin translate
+
+  % Move above first line ready for StartLine 
+  0 totalHeight translate
+
+  SetLogoFont
+} bind def
+
+/EndLogo { 
+  grestore 
+  showpage 
+  restore 
+} bind def
+
+
+/StartLine { 
+  % move down to the bottom of the line:
+  0 logoHeight neg translate
+  
+  gsave 
+    yaxis { MakeYaxis } if
+    xaxis { showEnds (true) eq {ShowLeftEnd} if } if
+} bind def
+
+/EndLine{ 
+    xaxis { showEnds (true) eq {ShowRightEnd} if } if
+  grestore 
+} bind def
+
+
+/MakeYaxis {
+  gsave    
+    stackMargin neg 0 translate
+    ShowYaxisBar
+    ShowYaxisLabel
+  grestore
+} bind def
+
+
+/ShowYaxisBar { 
+  gsave  
+    SetStringFont
+
+    /str 10 string def % string to hold number  
+    /smallgap stackMargin 2 div def
+
+    % Draw first tic and bar
+    gsave    
+      ticWidth neg 0 moveto 
+      ticWidth 0 rlineto 
+      0 yaxisHeight rlineto
+      stroke
+    grestore
+
+   
+    % Draw the tics
+    % initial increment limit proc for
+    0 yaxisTicBits yaxisBits abs %cvi
+    {/loopnumber exch def
+
+      % convert the number coming from the loop to a string
+      % and find its width
+      loopnumber 10 str cvrs
+      /stringnumber exch def % string representing the number
+
+      stringnumber stringwidth pop
+      /numberwidth exch def % width of number to show
+
+      /halfnumberheight
+         stringnumber CharBoxHeight 2 div
+      def
+
+      numberwidth % move back width of number
+      neg loopnumber pointsPerBit mul % shift on y axis
+      halfnumberheight sub % down half the digit
+
+      moveto % move back the width of the string
+
+      ticWidth neg smallgap sub % Move back a bit more  
+      0 rmoveto % move back the width of the tic  
+
+      stringnumber show
+      smallgap 0 rmoveto % Make a small gap  
+
+      % now show the tic mark
+      0 halfnumberheight rmoveto % shift up again
+      ticWidth 0 rlineto
+      stroke
+    } for
+  grestore
+} bind def
+
+/ShowYaxisLabel {
+  gsave
+    SetStringFont
+
+    % How far we move left depends on the size of
+    % the tic labels.
+    /str 10 string def % string to hold number  
+    yaxisBits yaxisTicBits div cvi yaxisTicBits mul 
+    str cvs stringwidth pop
+    ticWidth 1.5 mul  add neg  
+
+
+    yaxisHeight
+    yaxisLabel stringwidth pop
+    sub 2 div
+
+    translate
+    90 rotate
+    0 0 moveto
+    yaxisLabel show
+  grestore
+} bind def
+
+
+/StartStack {  % <stackNumber> startstack
+  xaxis {MakeNumber}{pop} ifelse
+  gsave
+} bind def
+
+/EndStack {
+  grestore
+  stackWidth 0 translate
+} bind def
+
+
+% Draw a character whose height is proportional to symbol bits
+/MakeSymbol{ % charbits character MakeSymbol
+  gsave
+    /char exch def
+    /bits exch def
+
+    /bitsHeight 
+       bits pointsPerBit mul 
+    def
+
+    /charHeight 
+       bitsHeight charTopMargin sub
+       dup 
+       0.0 gt {}{pop 0.0} ifelse % if neg replace with zero 
+    def 
+ 
+    charHeight 0.0 gt {
+      char SetColor
+      charWidth charHeight char ShowChar
+
+      showingBox { % Unfilled box
+        0 0 charWidth charHeight false ShowBox
+      } if
+
+
+    } if
+
+  grestore
+
+  0 bitsHeight translate 
+} bind def
+
+
+/ShowChar { % <width> <height> <char> ShowChar
+  gsave
+    /tc exch def    % The character
+    /ysize exch def % the y size of the character
+    /xsize exch def % the x size of the character
+
+    /xmulfactor 1 def 
+    /ymulfactor 1 def
+    /limmulfactor 0.01 def
+    /drawable true def
+
+  
+    % if ysize is negative, make everything upside down!
+    ysize 0 lt {
+      % put ysize normal in this orientation
+      /ysize ysize abs def
+      xsize ysize translate
+      180 rotate
+    } if
+
+    shrinking {
+      xsize 1 shrink sub 2 div mul
+        ysize 1 shrink sub 2 div mul translate 
+
+      shrink shrink scale
+    } if
+
+    % Calculate the font scaling factors
+    % Loop twice to catch small correction due to first scaling
+    2 {
+      gsave
+        xmulfactor ymulfactor scale
+      
+        ysize % desired size of character in points
+        tc CharBoxHeight 
+        dup 0.0 ne {
+          div % factor by which to scale up the character
+          /ymulfactor exch def
+        } % end if
+        {pop pop}
+        ifelse
+
+        xsize % desired size of character in points
+        tc CharBoxWidth  
+        dup 0.0 ne {
+          div % factor by which to scale up the character
+          /xmulfactor exch def
+        } % end if
+        {pop pop}
+        ifelse
+      grestore
+      % if the multiplication factors get too small we need to avoid a crash
+      xmulfactor limmulfactor lt {
+        /xmulfactor 1 def
+        /drawable false def
+      } if
+      ymulfactor limmulfactor lt {
+        /ymulfactor 1 def
+        /drawable false def
+      } if
+    } repeat
+
+    % Adjust horizontal position if the symbol is an I
+    tc (I) eq {
+      charWidth 2 div % half of requested character width
+      tc CharBoxWidth 2 div % half of the actual character
+      sub 0 translate
+      % Avoid x scaling for I 
+      /xmulfactor 1 def 
+    } if
+
+
+    % ---- Finally, draw the character
+    drawable { 
+      newpath
+      xmulfactor ymulfactor scale
+
+      % Move lower left corner of character to start point
+      tc CharBox pop pop % llx lly : Lower left corner
+      exch neg exch neg
+      moveto
+
+      outline {  % outline characters:
+        outlinewidth setlinewidth
+        tc true charpath
+        gsave 1 setgray fill grestore
+        clip stroke
+      } { % regular characters
+        tc show
+      } ifelse
+    } if
+
+  grestore
+} bind def
+
+
+/ShowBox { % x1 y1 x2 y2 filled ShowBox
+  gsave
+    /filled exch def 
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+    newpath
+    x1 y1 moveto
+    x2 y1 lineto
+    x2 y2 lineto
+    x1 y2 lineto
+    closepath
+
+    clip
+    
+    filled {
+      fill
+    }{ 
+      0 setgray stroke   
+    } ifelse
+
+  grestore
+} bind def
+
+
+/MakeNumber { % number MakeNumber
+  gsave
+    SetNumberFont
+    stackWidth 0 translate
+    90 rotate % rotate so the number fits
+    dup stringwidth pop % find the length of the number
+    neg % prepare for move
+    stackMargin sub % Move back a bit
+    charWidth (0) CharBoxHeight % height of numbers
+    sub 2 div %
+    moveto % move back to provide space
+    show
+  grestore
+} bind def
+
+
+/Ibeam{ % heightInBits Ibeam
+  gsave
+    % Make an Ibeam of twice the given height in bits
+    /height exch  pointsPerBit mul def 
+    /heightDRAW height IbeamFraction mul def
+
+    IbeamLineWidth setlinewidth
+    IbeamGray setgray 
+
+    charWidth2 height neg translate
+    ShowIbar
+    newpath
+      0 0 moveto
+      0 heightDRAW rlineto
+    stroke
+    newpath
+      0 height moveto
+      0 height rmoveto
+      currentpoint translate
+    ShowIbar
+    newpath
+    0 0 moveto
+    0 heightDRAW neg rlineto
+    currentpoint translate
+    stroke
+  grestore
+} bind def
+
+
+/ShowIbar { % make a horizontal bar
+  gsave
+    newpath
+      charWidth4 neg 0 moveto
+      charWidth4 0 lineto
+    stroke
+  grestore
+} bind def
+
+
+/ShowLeftEnd {
+  gsave
+    SetStringFont
+    leftEndDeltaX leftEndDeltaY moveto
+    logoType (NA) eq {(5) show ShowPrime} if
+    logoType (AA) eq {(N) show} if
+  grestore
+} bind def
+
+
+/ShowRightEnd { 
+  gsave
+    SetStringFont
+    rightEndDeltaX rightEndDeltaY moveto
+    logoType (NA) eq {(3) show ShowPrime} if
+    logoType (AA) eq {(C) show} if
+  grestore
+} bind def
+
+
+/ShowPrime {
+  gsave
+    SetPrimeFont
+    (\242) show 
+  grestore
+} bind def
+
+ 
+/SetColor{ % <char> SetColor
+  dup colorDict exch known {
+    colorDict exch get aload pop setrgbcolor
+  } {
+    pop
+    defaultColor aload pop setrgbcolor
+  } ifelse 
+} bind def
+
+% define fonts
+/SetTitleFont {/Times-Bold findfont titleFontsize scalefont setfont} bind def
+/SetLogoFont  {/Helvetica-Bold findfont charWidth  scalefont setfont} bind def
+/SetStringFont{/Helvetica-Bold findfont fontsize scalefont setfont} bind def
+/SetPrimeFont {/Symbol findfont fontsize scalefont setfont} bind def
+/SetSmallFont {/Helvetica findfont smallFontsize scalefont setfont} bind def
+
+/SetNumberFont {
+    /Helvetica-Bold findfont 
+    numberFontsize
+    scalefont
+    setfont
+} bind def
+
+%Take a single character and return the bounding box
+/CharBox { % <char> CharBox <lx> <ly> <ux> <uy>
+  gsave
+    newpath
+    0 0 moveto
+    % take the character off the stack and use it here:
+    true charpath 
+    flattenpath 
+    pathbbox % compute bounding box of 1 pt. char => lx ly ux uy
+    % the path is here, but toss it away ...
+  grestore
+} bind def
+
+
+% The height of a characters bounding box
+/CharBoxHeight { % <char> CharBoxHeight <num>
+  CharBox
+  exch pop sub neg exch pop
+} bind def
+
+
+% The width of a characters bounding box
+/CharBoxWidth { % <char> CharBoxHeight <num>
+  CharBox
+  pop exch pop sub neg 
+} bind def
+
+% Set the colour scheme to be faded to indicate trimming
+/MuteColour {
+  /colorDict mutedColourDict def
+} def
+
+% Restore the colour scheme to the normal colours
+/RestoreColour {
+  /colorDict fullColourDict def
+} def
+
+% Draw the background for a trimmed section
+% takes the number of columns as a parameter
+/DrawTrimBg { % <num> DrawTrimBox
+  /col exch def
+  
+  /boxwidth 
+    col stackWidth mul 
+  def
+ 
+  gsave
+    0.97 setgray
+
+    newpath
+    0 0 moveto
+    boxwidth 0 rlineto
+    0 yaxisHeight rlineto
+    0 yaxisHeight lineto
+    closepath
+    
+    fill
+  grestore
+} def
+
+/DrawTrimEdge {
+  gsave
+    0.2 setgray
+    [2] 0 setdash
+
+    newpath
+    0 0 moveto
+    0 yaxisHeight lineto
+    
+    stroke
+
+} def
+
+
+% Deprecated names
+/startstack {StartStack} bind  def
+/endstack {EndStack}     bind def
+/makenumber {MakeNumber} bind def
+/numchar { MakeSymbol }  bind def
+
+%%EndProlog
+
+%%Page: 1 1
+StartLogo
+
+
+StartLine
+(1) startstack
+ 0.001550 (W) numchar
+ 0.003617 (F) numchar
+ 0.005425 (P) numchar
+ 0.006201 (Y) numchar
+ 0.007751 (M) numchar
+ 0.009042 (C) numchar
+ 0.009301 (L) numchar
+ 0.009559 (I) numchar
+ 0.014468 (V) numchar
+ 0.016276 (T) numchar
+ 0.019377 (H) numchar
+ 0.031520 (A) numchar
+ 0.041854 (S) numchar
+ 0.042112 (G) numchar
+ 0.044179 (D) numchar
+ 0.056322 (Q) numchar
+ 0.074665 (N) numchar
+ 0.181883 (R) numchar
+ 0.190926 (K) numchar
+ 0.191184 (E) numchar
+endstack
+
+(2) startstack
+ 0.001530 (G) numchar
+ 0.002622 (W) numchar
+ 0.004589 (H) numchar
+ 0.004807 (N) numchar
+ 0.007429 (Y) numchar
+ 0.007866 (C) numchar
+ 0.008522 (A) numchar
+ 0.009396 (S) numchar
+ 0.009614 (D) numchar
+ 0.013547 (M) numchar
+ 0.018791 (F) numchar
+ 0.031027 (Q) numchar
+ 0.039331 (R) numchar
+ 0.056374 (P) numchar
+ 0.058777 (I) numchar
+ 0.062929 (T) numchar
+ 0.083905 (L) numchar
+ 0.088712 (E) numchar
+ 0.148364 (K) numchar
+ 0.151423 (V) numchar
+endstack
+
+(3) startstack
+ 0.001534 (E) numchar
+ 0.001534 (Y) numchar
+ 0.003834 (F) numchar
+ 0.004601 (K) numchar
+ 0.004601 (T) numchar
+ 0.005368 (C) numchar
+ 0.006901 (A) numchar
+ 0.015337 (M) numchar
+ 0.264557 (V) numchar
+ 1.102704 (I) numchar
+ 1.430141 (L) numchar
+endstack
+
+(4) startstack
+ 0.001065 (C) numchar
+ 0.001065 (H) numchar
+ 0.001065 (K) numchar
+ 0.002130 (R) numchar
+ 0.002130 (V) numchar
+ 0.004259 (P) numchar
+ 0.005324 (D) numchar
+ 0.006389 (T) numchar
+ 0.007454 (E) numchar
+ 0.007454 (Q) numchar
+ 0.009583 (N) numchar
+ 0.060695 (S) numchar
+ 0.071343 (A) numchar
+ 3.765224 (G) numchar
+endstack
+
+(5) startstack
+ 0.001267 (P) numchar
+ 0.003801 (W) numchar
+ 0.004815 (F) numchar
+ 0.005322 (Y) numchar
+ 0.005575 (L) numchar
+ 0.007095 (I) numchar
+ 0.012417 (G) numchar
+ 0.013431 (C) numchar
+ 0.015204 (M) numchar
+ 0.016978 (N) numchar
+ 0.017992 (D) numchar
+ 0.018752 (V) numchar
+ 0.030662 (H) numchar
+ 0.033703 (T) numchar
+ 0.043840 (A) numchar
+ 0.088693 (Q) numchar
+ 0.120115 (S) numchar
+ 0.151284 (R) numchar
+ 0.166489 (E) numchar
+ 0.181440 (K) numchar
+endstack
+
+(6) startstack
+ 0.001151 (E) numchar
+ 0.002303 (C) numchar
+ 0.002303 (D) numchar
+ 0.005757 (T) numchar
+ 0.010362 (S) numchar
+ 4.243791 (G) numchar
+endstack
+
+(7) startstack
+ 0.000665 (L) numchar
+ 0.001331 (M) numchar
+ 0.001663 (W) numchar
+ 0.001996 (I) numchar
+ 0.001996 (P) numchar
+ 0.001996 (Y) numchar
+ 0.007318 (F) numchar
+ 0.008316 (V) numchar
+ 0.009314 (D) numchar
+ 0.022286 (R) numchar
+ 0.024282 (C) numchar
+ 0.029271 (H) numchar
+ 0.029937 (K) numchar
+ 0.041579 (E) numchar
+ 0.061204 (Q) numchar
+ 0.066526 (N) numchar
+ 0.152344 (T) numchar
+ 0.249805 (S) numchar
+ 0.257455 (G) numchar
+ 0.263110 (A) numchar
+endstack
+
+(8) startstack
+ 0.000693 (P) numchar
+ 0.002079 (K) numchar
+ 0.002079 (R) numchar
+ 0.002079 (W) numchar
+ 0.005543 (E) numchar
+ 0.007622 (V) numchar
+ 0.010393 (L) numchar
+ 0.013165 (A) numchar
+ 0.013165 (H) numchar
+ 0.013858 (I) numchar
+ 0.018708 (N) numchar
+ 0.022172 (C) numchar
+ 0.030487 (G) numchar
+ 0.036723 (T) numchar
+ 0.037416 (Q) numchar
+ 0.054045 (M) numchar
+ 0.094926 (S) numchar
+ 0.533524 (Y) numchar
+ 1.668475 (F) numchar
+endstack
+
+(9) startstack
+ 0.000909 (N) numchar
+ 0.000909 (V) numchar
+ 0.000909 (W) numchar
+ 0.001819 (C) numchar
+ 0.002728 (F) numchar
+ 0.002728 (T) numchar
+ 0.030010 (K) numchar
+ 0.260996 (S) numchar
+ 0.332838 (A) numchar
+ 2.735455 (G) numchar
+endstack
+
+(10) startstack
+ 0.000383 (W) numchar
+ 0.003637 (F) numchar
+ 0.004211 (G) numchar
+ 0.005360 (H) numchar
+ 0.006508 (Y) numchar
+ 0.006891 (P) numchar
+ 0.010337 (M) numchar
+ 0.015122 (N) numchar
+ 0.017037 (D) numchar
+ 0.017611 (C) numchar
+ 0.019525 (L) numchar
+ 0.020482 (A) numchar
+ 0.038476 (R) numchar
+ 0.039816 (Q) numchar
+ 0.041539 (I) numchar
+ 0.052450 (S) numchar
+ 0.087480 (T) numchar
+ 0.092074 (V) numchar
+ 0.107388 (E) numchar
+ 0.122893 (K) numchar
+endstack
+
+(11) startstack
+ 0.001009 (G) numchar
+ 0.001009 (R) numchar
+ 0.005046 (S) numchar
+ 0.030273 (C) numchar
+ 0.035319 (L) numchar
+ 0.063574 (I) numchar
+ 0.068619 (A) numchar
+ 0.089810 (T) numchar
+ 3.444071 (V) numchar
+endstack
+
+(12) startstack
+ 0.000362 (G) numchar
+ 0.003256 (N) numchar
+ 0.003979 (D) numchar
+ 0.009405 (T) numchar
+ 0.013746 (E) numchar
+ 0.014108 (A) numchar
+ 0.014470 (S) numchar
+ 0.016279 (Q) numchar
+ 0.028216 (I) numchar
+ 0.037260 (M) numchar
+ 0.038707 (H) numchar
+ 0.041601 (L) numchar
+ 0.057156 (W) numchar
+ 0.060773 (V) numchar
+ 0.065114 (R) numchar
+ 0.074881 (K) numchar
+ 0.102012 (C) numchar
+ 0.177978 (F) numchar
+ 0.580962 (Y) numchar
+endstack
+
+(13) startstack
+ 0.000699 (D) numchar
+ 0.001048 (W) numchar
+ 0.001398 (N) numchar
+ 0.005941 (C) numchar
+ 0.010485 (G) numchar
+ 0.012931 (F) numchar
+ 0.015727 (Y) numchar
+ 0.017824 (I) numchar
+ 0.018873 (T) numchar
+ 0.024115 (V) numchar
+ 0.031105 (H) numchar
+ 0.034950 (M) numchar
+ 0.036348 (A) numchar
+ 0.045435 (Q) numchar
+ 0.082132 (S) numchar
+ 0.094714 (E) numchar
+ 0.142944 (R) numchar
+ 0.322586 (L) numchar
+ 0.395631 (K) numchar
+endstack
+
+(14) startstack
+ 0.000597 (D) numchar
+ 0.000597 (Q) numchar
+ 0.001194 (R) numchar
+ 0.002986 (F) numchar
+ 0.003583 (W) numchar
+ 0.008361 (T) numchar
+ 0.010152 (L) numchar
+ 0.010749 (Y) numchar
+ 0.020902 (I) numchar
+ 0.024485 (M) numchar
+ 0.024485 (S) numchar
+ 0.219169 (C) numchar
+ 0.273513 (V) numchar
+ 0.718420 (G) numchar
+ 0.893396 (A) numchar
+endstack
+
+(15) startstack
+ 0.000194 (P) numchar
+ 0.000777 (G) numchar
+ 0.003690 (C) numchar
+ 0.006020 (A) numchar
+ 0.009128 (N) numchar
+ 0.010293 (W) numchar
+ 0.011847 (D) numchar
+ 0.013012 (H) numchar
+ 0.015148 (M) numchar
+ 0.017479 (S) numchar
+ 0.018061 (F) numchar
+ 0.029908 (Y) numchar
+ 0.033598 (L) numchar
+ 0.042338 (Q) numchar
+ 0.052631 (E) numchar
+ 0.057680 (I) numchar
+ 0.059816 (V) numchar
+ 0.089336 (T) numchar
+ 0.097493 (K) numchar
+ 0.151094 (R) numchar
+endstack
+
+EndLine
+
+
+EndLogo
+
+%%EOF

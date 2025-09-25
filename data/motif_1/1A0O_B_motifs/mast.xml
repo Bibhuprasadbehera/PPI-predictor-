@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<mast version="5.5.7" release="Wed Jun 19 13:59:04 2024 -0700">
+	<command_line><arg>mast</arg><arg>-nostatus</arg><arg>-oc</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1A0O_B_motifs</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1A0O_B_motifs/meme.xml</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_1/1A0O_B_hseq.fasta</arg></command_line>
+	<settings strand_handling="unstranded" max_correlation="0.60" remove_correlated="n" max_seq_evalue="10" adjust_hit="n" max_hit_pvalue="0.0001" max_weak_pvalue="0.0001"/>
+	<alphabet name="Protein" like="protein">
+		<letter id="A" symbol="A" name="Alanine" colour="0000CC"/>
+		<letter id="C" symbol="C" name="Cysteine" colour="0000CC"/>
+		<letter id="D" symbol="D" name="Aspartic acid" colour="FF00FF"/>
+		<letter id="E" symbol="E" name="Glutamic acid" colour="FF00FF"/>
+		<letter id="F" symbol="F" name="Phenylalanine" colour="0000CC"/>
+		<letter id="G" symbol="G" name="Glycine" colour="FFB300"/>
+		<letter id="H" symbol="H" name="Histidine" colour="FFCCCC"/>
+		<letter id="I" symbol="I" name="Isoleucine" colour="0000CC"/>
+		<letter id="K" symbol="K" name="Lysine" colour="CC0000"/>
+		<letter id="L" symbol="L" name="Leucine" colour="0000CC"/>
+		<letter id="M" symbol="M" name="Methionine" colour="0000CC"/>
+		<letter id="N" symbol="N" name="Asparagine" colour="008000"/>
+		<letter id="P" symbol="P" name="Proline" colour="FFFF00"/>
+		<letter id="Q" symbol="Q" name="Glutamine" colour="008000"/>
+		<letter id="R" symbol="R" name="Arginine" colour="CC0000"/>
+		<letter id="S" symbol="S" name="Serine" colour="008000"/>
+		<letter id="T" symbol="T" name="Threonine" colour="008000"/>
+		<letter id="V" symbol="V" name="Valine" colour="0000CC"/>
+		<letter id="W" symbol="W" name="Tryptophan" colour="0000CC"/>
+		<letter id="Y" symbol="Y" name="Tyrosine" colour="33E6CC"/>
+		<letter id="X" symbol="X" aliases="*." equals="ACDEFGHIKLMNPQRSTVWY" name="Any amino acid"/>
+		<letter id="B" symbol="B" equals="DN" name="Asparagine or Aspartic acid"/>
+		<letter id="Z" symbol="Z" equals="EQ" name="Glutamine or Glutamic acid"/>
+		<letter id="J" symbol="J" equals="IL" name="Leucine or Isoleucine"/>
+	</alphabet>
+	<background source="--nrdb--" A="0.0730919" C="0.0181455" D="0.051688" E="0.0622785" F="0.0402434" G="0.0692596" H="0.0224055" I="0.056227" K="0.058435" L="0.0916218" M="0.0230443" N="0.0460321" P="0.0506238" Q="0.0407153" R="0.0518462" S="0.073729" T="0.0593523" V="0.0642985" W="0.0133282" Y="0.0326497"/>
+	<motif_dbs>
+		<motif_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1A0O_B_motifs/meme.xml" last_mod_date="Mon Aug 25 19:23:43 2025">
+			<background A="0.076037" C="0.00930497" D="0.0529259" E="0.0721351" F="0.0279139" G="0.0692337" H="0.0163083" I="0.0648316" K="0.0391193" L="0.133064" M="0.0247124" N="0.0471231" P="0.0449221" Q="0.051025" R="0.0410202" S="0.0850413" T="0.0523256" V="0.0721351" W="0.00481281" Y="0.0160082"/>
+		</motif_db>
+	</motif_dbs>
+	<motifs>
+		<motif db="0" id="MSIRMMPMEYVFSRY" alt="MEME-1" length="15" nsites="3" evalue="2.1e-018">
+			<pos A="-419" C="-241" D="-505" E="-530" F="-298" G="-501" H="-386" I="-254" K="-403" L="-245" M="522" N="-474" P="-474" Q="-486" R="-464" S="-471" T="-390" V="-308" W="-159" Y="-214"/>
+			<pos A="-115" C="-54" D="-255" E="-317" F="-254" G="-239" H="-201" I="-339" K="-189" L="-393" M="-257" N="-144" P="-264" Q="-292" R="-216" S="312" T="87" V="-310" W="-175" Y="-184"/>
+			<pos A="-261" C="-147" D="-384" E="-399" F="-153" G="-414" H="-311" I="342" K="-280" L="-87" M="-48" N="-344" P="-399" Q="-380" R="-332" S="-350" T="-217" V="83" W="-173" Y="-164"/>
+			<pos A="-329" C="-164" D="-404" E="-418" F="-378" G="-383" H="-122" I="-399" K="-43" L="-431" M="-346" N="-298" P="-327" Q="-237" R="443" S="-365" T="-329" V="-449" W="-129" Y="-271"/>
+			<pos A="-419" C="-241" D="-505" E="-530" F="-298" G="-501" H="-386" I="-254" K="-403" L="-245" M="522" N="-474" P="-474" Q="-486" R="-464" S="-471" T="-390" V="-308" W="-159" Y="-214"/>
+			<pos A="-419" C="-241" D="-505" E="-530" F="-298" G="-501" H="-386" I="-254" K="-403" L="-245" M="522" N="-474" P="-474" Q="-486" R="-464" S="-471" T="-390" V="-308" W="-159" Y="-214"/>
+			<pos A="-136" C="-173" D="-264" E="-269" F="-271" G="-282" H="-187" I="-328" K="-173" L="-347" M="-281" N="-276" P="419" Q="-245" R="-217" S="-207" T="-194" V="-283" W="-219" Y="-247"/>
+			<pos A="-419" C="-241" D="-505" E="-530" F="-298" G="-501" H="-386" I="-254" K="-403" L="-245" M="522" N="-474" P="-474" Q="-486" R="-464" S="-471" T="-390" V="-308" W="-159" Y="-214"/>
+			<pos A="-461" C="-442" D="-196" E="373" F="-528" G="-500" H="-374" I="-533" K="-426" L="-644" M="-524" N="-401" P="-569" Q="-367" R="-477" S="-526" T="-483" V="-540" W="-403" Y="-452"/>
+			<pos A="-247" C="-123" D="-313" E="-329" F="149" G="-333" H="26" I="-252" K="-226" L="-262" M="-188" N="-258" P="-314" Q="-292" R="-231" S="-276" T="-259" V="-248" W="120" Y="553"/>
+			<pos A="-104" C="-45" D="-344" E="-337" F="-177" G="-354" H="-224" I="25" K="-259" L="-204" M="-139" N="-334" P="-305" Q="-350" R="-259" S="-311" T="-132" V="337" W="-190" Y="-222"/>
+			<pos A="-321" C="-122" D="-417" E="-437" F="493" G="-433" H="-264" I="-231" K="-359" L="-197" M="-177" N="-397" P="-369" Q="-443" R="-387" S="-341" T="-359" V="-258" W="-4" Y="80"/>
+			<pos A="-115" C="-54" D="-255" E="-317" F="-254" G="-239" H="-201" I="-339" K="-189" L="-393" M="-257" N="-144" P="-264" Q="-292" R="-216" S="312" T="87" V="-310" W="-175" Y="-184"/>
+			<pos A="-329" C="-164" D="-404" E="-418" F="-378" G="-383" H="-122" I="-399" K="-43" L="-431" M="-346" N="-298" P="-327" Q="-237" R="443" S="-365" T="-329" V="-449" W="-129" Y="-271"/>
+			<pos A="-200" C="-79" D="-284" E="-288" F="322" G="-320" H="78" I="-213" K="-198" L="-220" M="-142" N="-233" P="-281" Q="-262" R="-200" S="-231" T="-223" V="-208" W="155" Y="498"/>
+		</motif>
+		<motif db="0" id="MSMDISDFYQTFFDE" alt="MEME-2" length="15" nsites="3" evalue="2.6e-015">
+			<pos A="-419" C="-241" D="-505" E="-530" F="-298" G="-501" H="-386" I="-254" K="-403" L="-245" M="522" N="-474" P="-474" Q="-486" R="-464" S="-471" T="-390" V="-308" W="-159" Y="-214"/>
+			<pos A="-115" C="-54" D="-255" E="-317" F="-254" G="-239" H="-201" I="-339" K="-189" L="-393" M="-257" N="-144" P="-264" Q="-292" R="-216" S="312" T="87" V="-310" W="-175" Y="-184"/>
+			<pos A="-419" C="-241" D="-505" E="-530" F="-298" G="-501" H="-386" I="-254" K="-403" L="-245" M="522" N="-474" P="-474" Q="-486" R="-464" S="-471" T="-390" V="-308" W="-159" Y="-214"/>
+			<pos A="-308" C="-250" D="402" E="-103" F="-341" G="-343" H="-181" I="-408" K="-290" L="-473" M="-362" N="-73" P="-412" Q="-338" R="-321" S="-321" T="-330" V="-382" W="-225" Y="-245"/>
+			<pos A="-261" C="-147" D="-384" E="-399" F="-153" G="-414" H="-311" I="342" K="-280" L="-87" M="-48" N="-344" P="-399" Q="-380" R="-332" S="-350" T="-217" V="83" W="-173" Y="-164"/>
+			<pos A="-115" C="-54" D="-255" E="-317" F="-254" G="-239" H="-201" I="-339" K="-189" L="-393" M="-257" N="-144" P="-264" Q="-292" R="-216" S="312" T="87" V="-310" W="-175" Y="-184"/>
+			<pos A="-30" C="-205" D="382" E="-60" F="-309" G="-268" H="-140" I="-364" K="-179" L="-422" M="-305" N="-58" P="-318" Q="-236" R="-242" S="-239" T="-240" V="-322" W="-206" Y="-207"/>
+			<pos A="-321" C="-122" D="-417" E="-437" F="493" G="-433" H="-264" I="-231" K="-359" L="-197" M="-177" N="-397" P="-369" Q="-443" R="-387" S="-341" T="-359" V="-258" W="-4" Y="80"/>
+			<pos A="-247" C="-123" D="-313" E="-329" F="149" G="-333" H="26" I="-252" K="-226" L="-262" M="-188" N="-258" P="-314" Q="-292" R="-231" S="-276" T="-259" V="-248" W="120" Y="553"/>
+			<pos A="-241" C="-186" D="-303" E="-122" F="-319" G="-379" H="47" I="-354" K="-161" L="-315" M="-153" N="-216" P="-286" Q="399" R="-143" S="-289" T="-254" V="-340" W="-131" Y="-241"/>
+			<pos A="-163" C="-73" D="-278" E="-320" F="-242" G="-295" H="-198" I="-221" K="-182" L="-350" M="-178" N="-153" P="-293" Q="-256" R="-216" S="-21" T="385" V="-185" W="-162" Y="-208"/>
+			<pos A="-321" C="-122" D="-417" E="-437" F="493" G="-433" H="-264" I="-231" K="-359" L="-197" M="-177" N="-397" P="-369" Q="-443" R="-387" S="-341" T="-359" V="-258" W="-4" Y="80"/>
+			<pos A="-321" C="-122" D="-417" E="-437" F="493" G="-433" H="-264" I="-231" K="-359" L="-197" M="-177" N="-397" P="-369" Q="-443" R="-387" S="-341" T="-359" V="-258" W="-4" Y="80"/>
+			<pos A="-308" C="-250" D="402" E="-103" F="-341" G="-343" H="-181" I="-408" K="-290" L="-473" M="-362" N="-73" P="-412" Q="-338" R="-321" S="-321" T="-330" V="-382" W="-225" Y="-245"/>
+			<pos A="-461" C="-442" D="-196" E="373" F="-528" G="-500" H="-374" I="-533" K="-426" L="-644" M="-524" N="-401" P="-569" Q="-367" R="-477" S="-526" T="-483" V="-540" W="-403" Y="-452"/>
+		</motif>
+	</motifs>
+	<correlations>
+		<correlation idx_a="0" idx_b="1" value="0.27"/>
+	</correlations>
+	<sequence_dbs>
+		<sequence_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_1/1A0O_B_hseq.fasta" last_mod_date="Sun Aug 24 21:57:22 2025" seq_count="5" residue_count="3119"/>
+	</sequence_dbs>
+	<sequences>
+		<sequence db="0" name="sp|P07363|CHEA_ECOLI" comment="" length="654">
+			<score strand="both" combined_pvalue="4.86e-34" evalue="2.4e-33"/>
+			<seg start="1">
+				<data>
+MSMDISDFYQTFFDEADELLADMEQHLLVLQPEAPDAEQLNAIFRAAHSIKGGAGTFGFSVLQETTHLMENLLDE
+				</data>
+				<hit pos="1" idx="1" pvalue="7.2e-21" match="+++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GDLITSMGQLQRNARDLQESVMSIRMMPMEYVFSRYPRLVRDLAGKLGKQVELTLVGSSTELDKSLIERIIDPLT
+				</data>
+				<hit pos="322" idx="0" pvalue="2.0e-21" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P09384|CHEA_SALTY" comment="" length="671">
+			<score strand="both" combined_pvalue="1.13e-33" evalue="5.7e-33"/>
+			<seg start="1">
+				<data>
+MSMDISDFYQTFFDEADELLADMEQHLLDLVPESPDAEQLNAIFRAAHSIKGGAGTFGFTILQETTHLMENLLDE
+				</data>
+				<hit pos="1" idx="1" pvalue="7.2e-21" match="+++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TQSMLAQRSNELDPVNHGDLITSMGQLQRNARDLQESVMSIRMMPMEYVFSRFPRLVRDLAGKLGKQVELTLVGS
+				</data>
+				<hit pos="339" idx="0" pvalue="4.5e-21" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P21813|CHEA_KLEAK" comment="" length="652">
+			<score strand="both" combined_pvalue="6.16e-33" evalue="3.1e-32"/>
+			<seg start="1">
+				<data>
+MSMDISAFYQTFFDEADELLADMEQHLLELDPQAPDIEPLNAIFRAAHSIKGGAATFGFSVLQETTHLLENLLDG
+				</data>
+				<hit pos="1" idx="1" pvalue="9.4e-20" match="++++++ ++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+LLNSMSQLERNARDLQESVMSIRMMPMEYVFSRYPRLVRDLAGKLNKQVELTLQGSSTELDKSLIERIIDPLTHL
+				</data>
+				<hit pos="320" idx="0" pvalue="2.0e-21" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|C0LGF5|RGI5_ARATH" comment="" length="1072">
+			<score strand="both" combined_pvalue="5.64e-01" evalue="2.8"/>
+		</sequence>
+		<sequence db="0" name="1A0O_B" comment="" length="70">
+			<score strand="both" combined_pvalue="8.83e-01" evalue="4.4"/>
+		</sequence>
+	</sequences>
+	<runtime host="admin1-OptiPlex-Tower-Plus-7010" when="Mon Aug 25 19:23:46 2025" cycles="11218" seconds="0.011"/>
+</mast>

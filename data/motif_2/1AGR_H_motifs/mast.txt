@@ -1,0 +1,2281 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.5.7 (Release date: Wed Jun 19 13:59:04 2024 -0700)
+
+	For further information on how to interpret these results please access https://meme-suite.org/meme.
+	To get a copy of the MAST software please access https://meme-suite.org.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE 1AGR_H_hseq.fasta (peptide)
+	Last updated on Sun Aug 24 22:00:06 2025
+	Database contains 107 sequences, 48658 residues
+
+	MOTIFS meme.xml (peptide)
+	MOTIF ID                ALT ID WIDTH BEST POSSIBLE MATCH
+	----- ----------------- ------ ----- -------------------
+	    1 FLKSEFSEENJEFWLAC MEME-1    17 FLKTEFCEENIDFWLAC
+	    2 AQKQIYTLMEKDSYPRF MEME-2    17 AQKHIYNLMEKDSYPRF
+	    3 IYEEFJSSQAPKEVNJD MEME-3    17 IYEEFISIQAPKEVNID
+
+	PAIRWISE MOTIF CORRELATIONS:
+	MOTIF     1     2
+	----- ----- -----
+	   2   0.14
+	   3   0.21  0.14
+	No overly similar pairs (correlation > 0.60) found.
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.073 C 0.018 D 0.052 E 0.062 F 0.040 G 0.069 H 0.022 I 0.056 K 0.058 
+	L 0.092 M 0.023 N 0.046 P 0.051 Q 0.041 R 0.052 S 0.074 T 0.059 V 0.064 
+	W 0.013 Y 0.033 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 106 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+sp|Q864Z2|RGS5_PIG                                                1.1e-43    181
+sp|Q3T0T8|RGS5_BOVIN                                              2.7e-43    181
+1AGR_H                                                            7.2e-43    116
+sp|O08850|RGS5_MOUSE                                              3.9e-42    181
+sp|P49800|RGS5_RAT                                                3.9e-42    181
+sp|Q0R4E4|RGS4_RABIT                                              4.7e-42    205
+sp|P49799|RGS4_RAT                                                4.7e-42    205
+sp|P49798|RGS4_HUMAN                                              4.7e-42    205
+sp|Q4R525|RGS4_MACFA                                              4.7e-42    205
+sp|Q8BXT1|RGS8_MOUSE                                              4.9e-42    180
+sp|P49804|RGS8_RAT                                                4.9e-42    180
+sp|P57771|RGS8_HUMAN                                              4.9e-42    180
+sp|O46471|RGS16_BOVIN                                             4.9e-42    202
+sp|O15492|RGS16_HUMAN                                             5.5e-42    202
+sp|Q95K68|RGS8_MACFA                                              6.4e-42    196
+sp|Q6RG78|RGS1_HORSE                                              9.1e-42    196
+sp|Q08116|RGS1_HUMAN                                              1.1e-41    209
+sp|O08899|RGS4_MOUSE                                              1.2e-41    205
+sp|O15539|RGS5_HUMAN                                              1.3e-41    181
+sp|Q0P5H5|RGS2_BOVIN                                              2.1e-41    211
+sp|O08849|RGS2_MOUSE                                              2.1e-41    211
+sp|Q9JHX0|RGS2_RAT                                                2.1e-41    211
+sp|P41220|RGS2_HUMAN                                              2.1e-41    211
+sp|Q3S853|RGS2_PIG                                                2.1e-41    212
+sp|Q5M8L6|RGS1_XENTR                                                5e-41    201
+sp|A1A643|RGS1_XENLA                                                5e-41    201
+sp|Q9JL25|RGS1_MOUSE                                              7.5e-41    209
+sp|Q9PWA1|RGS20_CHICK                                             7.9e-41    218
+sp|Q5R747|RGS4_PONAB                                              9.2e-41    205
+sp|Q9QZB1|RGS20_MOUSE                                             1.1e-40    239
+sp|Q29RM9|RGS4_BOVIN                                              1.1e-40    205
+sp|P97844|RGS1_RAT                                                1.1e-40    209
+sp|F1S668|RGS16_PIG                                               1.7e-40    200
+sp|P56700|RGS16_RAT                                               3.2e-40    199
+sp|P97428|RGS16_MOUSE                                             3.3e-40    201
+sp|Q9CX84|RGS19_MOUSE                                               4e-40    216
+sp|O70521|RGS19_RAT                                                 4e-40    216
+sp|P49795|RGS19_HUMAN                                             4.1e-40    217
+sp|P79348|RGS20_BOVIN                                             4.2e-40    374
+sp|Q7SZC6|RGS4_CHICK                                              4.3e-40    208
+sp|Q08DC7|RGS19_BOVIN                                             4.5e-40    223
+sp|O76081|RGS20_HUMAN                                             4.7e-40    388
+sp|Q9NS28|RGS18_HUMAN                                             1.4e-39    235
+sp|Q9DC04|RGS3_MOUSE                                              1.4e-39    966
+sp|P49797|RGS3_RAT                                                1.4e-39    967
+sp|Q6DGI0|RGS8_DANRE                                              1.7e-39    174
+sp|Q99PG4|RGS18_MOUSE                                             2.2e-39    235
+sp|Q9PWA0|RGS17_CHICK                                             4.1e-39    210
+sp|Q9UGC6|RGS17_HUMAN                                             4.1e-39    210
+sp|Q9QZB0|RGS17_MOUSE                                             4.1e-39    210
+sp|P49796|RGS3_HUMAN                                              7.3e-39   1198
+sp|Q2M5E4|RGS21_HUMAN                                               2e-37    152
+sp|P34295|RGS1_CAEEL                                              1.2e-36    201
+sp|P49808|RGS2_CAEEL                                              1.9e-36    169
+sp|Q4L0E8|RGS18_RAT                                                 5e-36    235
+sp|Q9Z2H1|RGS11_MOUSE                                             3.2e-35    443
+sp|O94810|RGS11_HUMAN                                             9.2e-35    467
+sp|O75916|RGS9_HUMAN                                              1.2e-34    674
+sp|O54828|RGS9_MOUSE                                              1.2e-34    675
+sp|P49805|RGS9_RAT                                                1.2e-34    677
+sp|O46469|RGS9_BOVIN                                              1.2e-34    484
+sp|Q80ZD1|RGS9_TAMST                                              1.2e-34    484
+sp|O46470|RGS7_BOVIN                                              1.3e-33    469
+sp|O54829|RGS7_MOUSE                                              1.3e-33    469
+sp|P49803|RGS7_RAT                                                1.4e-33    477
+sp|P49802|RGS7_HUMAN                                              1.6e-33    495
+sp|O14921|RGS13_HUMAN                                             2.8e-33    159
+sp|O08773|RGS14_RAT                                                 3e-33    544
+sp|O43665|RGS10_HUMAN                                             4.5e-33    181
+sp|Q2KHW7|RGS10_BOVIN                                             4.5e-33    181
+sp|O43566|RGS14_HUMAN                                             5.1e-33    566
+sp|P49806|RGS10_RAT                                               5.5e-33    181
+sp|Q9CQE5|RGS10_MOUSE                                             5.5e-33    181
+sp|P49758|RGS6_HUMAN                                              1.2e-32    472
+sp|P97492|RGS14_MOUSE                                             1.3e-32    547
+sp|Q8K443|RGS13_MOUSE                                             9.9e-32    158
+sp|Q9Z2H2|RGS6_MOUSE                                              1.1e-31    472
+sp|Q8CGE9|RGS12_MOUSE                                             1.3e-31   1381
+sp|O08774|RGS12_RAT                                               1.3e-31   1387
+sp|O14924|RGS12_HUMAN                                             1.5e-31   1447
+sp|Q8WQC0|RGS7_CAEEL                                              2.2e-29    819
+sp|Q9VCX1|RGS_DROME                                               5.4e-28   1541
+sp|Q18563|RGS6_CAEEL                                              1.7e-20    734
+sp|P49809|EGL10_CAEEL                                             2.9e-19    555
+sp|O70239|AXIN1_RAT                                               3.5e-17    827
+sp|O35625|AXIN1_MOUSE                                             3.9e-17    863
+sp|O15169|AXIN1_HUMAN                                             4.6e-17    862
+sp|P57094|AXIN1_DANRE                                             5.7e-17    835
+sp|Q18312|RGS3_CAEEL                                                2e-16    363
+sp|P57770|AKA10_PIG                                               2.1e-16    650
+sp|O43572|AKA10_HUMAN                                             2.2e-16    662
+sp|O88845|AKA10_MOUSE                                             2.4e-16    662
+sp|P57095|AXIN2_DANRE                                             2.5e-16    812
+sp|Q9YGY0|AXIN1_XENLA                                             2.7e-16    842
+sp|O70240|AXIN2_RAT                                               2.8e-16    838
+sp|O88566|AXIN2_MOUSE                                             2.8e-16    840
+sp|Q9Y2T1|AXIN2_HUMAN                                             3.1e-16    843
+sp|O42400|AXIN1_CHICK                                             1.7e-15    841
+sp|Q23376|RGS9_CAEEL                                              7.9e-15    235
+sp|O45523|RGS10_CAEEL                                             1.3e-14    270
+sp|O45524|RGS11_CAEEL                                             2.8e-13    274
+sp|Q9PTP2|AXNR_XENLA                                              2.3e-11    706
+sp|Q6XHA6|ROC10_DICDI                                             1.5e-10   2646
+sp|P49801|RGS6_RAT                                                  1e-08     66
+sp|Q10955|RGS5_CAEEL                                                5e-07    492
+sp|Q8NE09|RGS22_HUMAN                                             4.8e-05   1264
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [n]  occurrence of motif `n' with p-value less than 0.0001.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+sp|Q864Z2|RGS5_PIG                  1.1e-43  80-[1]-18-[3]-21-[2]-11
+sp|Q3T0T8|RGS5_BOVIN                2.7e-43  80-[1]-18-[3]-21-[2]-11
+1AGR_H                              7.2e-43  19-[1]-18-[3]-21-[2]-7
+sp|O08850|RGS5_MOUSE                3.9e-42  80-[1]-18-[3]-21-[2]-11
+sp|P49800|RGS5_RAT                  3.9e-42  80-[1]-18-[3]-21-[2]-11
+sp|Q0R4E4|RGS4_RABIT                4.7e-42  78-[1]-18-[3]-21-[2]-37
+sp|P49799|RGS4_RAT                  4.7e-42  78-[1]-18-[3]-21-[2]-37
+sp|P49798|RGS4_HUMAN                4.7e-42  78-[1]-18-[3]-21-[2]-37
+sp|Q4R525|RGS4_MACFA                4.7e-42  78-[1]-18-[3]-21-[2]-37
+sp|Q8BXT1|RGS8_MOUSE                4.9e-42  72-[1]-18-[3]-21-[2]-18
+sp|P49804|RGS8_RAT                  4.9e-42  72-[1]-18-[3]-21-[2]-18
+sp|P57771|RGS8_HUMAN                4.9e-42  72-[1]-18-[3]-21-[2]-18
+sp|O46471|RGS16_BOVIN               4.9e-42  81-[1]-18-[3]-21-[2]-31
+sp|O15492|RGS16_HUMAN               5.5e-42  81-[1]-18-[3]-21-[2]-31
+sp|Q95K68|RGS8_MACFA                6.4e-42  88-[1]-18-[3]-21-[2]-18
+sp|Q6RG78|RGS1_HORSE                9.1e-42  88-[1]-17-[3]-21-[2]-19
+sp|Q08116|RGS1_HUMAN                1.1e-41  101-[1]-17-[3]-21-[2]-19
+sp|O08899|RGS4_MOUSE                1.2e-41  78-[1]-18-[3]-21-[2]-37
+sp|O15539|RGS5_HUMAN                1.3e-41  80-[1]-18-[3]-21-[2]-11
+sp|Q0P5H5|RGS2_BOVIN                2.1e-41  99-[1]-18-[3]-21-[2]-22
+sp|O08849|RGS2_MOUSE                2.1e-41  99-[1]-18-[3]-21-[2]-22
+sp|Q9JHX0|RGS2_RAT                  2.1e-41  99-[1]-18-[3]-21-[2]-22
+sp|P41220|RGS2_HUMAN                2.1e-41  99-[1]-18-[3]-21-[2]-22
+sp|Q3S853|RGS2_PIG                  2.1e-41  99-[1]-18-[3]-21-[2]-23
+sp|Q5M8L6|RGS1_XENTR                  5e-41  91-[1]-18-[3]-21-[2]-20
+sp|A1A643|RGS1_XENLA                  5e-41  91-[1]-18-[3]-21-[2]-20
+sp|Q9JL25|RGS1_MOUSE                7.5e-41  101-[1]-17-[3]-21-[2]-19
+sp|Q9PWA1|RGS20_CHICK               7.9e-41  108-[1]-18-[3]-21-[2]-20
+sp|Q5R747|RGS4_PONAB                9.2e-41  78-[1]-18-[3]-21-[2]-37
+sp|Q9QZB1|RGS20_MOUSE               1.1e-40  129-[1]-18-[3]-21-[2]-20
+sp|Q29RM9|RGS4_BOVIN                1.1e-40  78-[1]-18-[3]-21-[2]-37
+sp|P97844|RGS1_RAT                  1.1e-40  101-[1]-17-[3]-21-[2]-19
+sp|F1S668|RGS16_PIG                 1.7e-40  81-[1]-18-[3]-21-[2]-29
+sp|P56700|RGS16_RAT                 3.2e-40  80-[1]-18-[3]-21-[2]-29
+sp|P97428|RGS16_MOUSE               3.3e-40  80-[1]-18-[3]-21-[2]-31
+sp|Q9CX84|RGS19_MOUSE                 4e-40  106-[1]-18-[3]-21-[2]-20
+sp|O70521|RGS19_RAT                   4e-40  106-[1]-18-[3]-21-[2]-20
+sp|P49795|RGS19_HUMAN               4.1e-40  106-[1]-18-[3]-21-[2]-21
+sp|P79348|RGS20_BOVIN               4.2e-40  264-[1]-18-[3]-21-[2]-20
+sp|Q7SZC6|RGS4_CHICK                4.3e-40  78-[1]-18-[3]-21-[2]-40
+sp|Q08DC7|RGS19_BOVIN               4.5e-40  112-[1]-18-[3]-21-[2]-21
+sp|O76081|RGS20_HUMAN               4.7e-40  278-[1]-18-[3]-21-[2]-20
+sp|Q9NS28|RGS18_HUMAN               1.4e-39  102-[1]-18-[3]-21-[2]-43
+sp|Q9DC04|RGS3_MOUSE                1.4e-39  857-[1]-18-[3]-21-[2]-19
+sp|P49797|RGS3_RAT                  1.4e-39  858-[1]-18-[3]-21-[2]-19
+sp|Q6DGI0|RGS8_DANRE                1.7e-39  62-[1]-18-[3]-21-[2]-22
+sp|Q99PG4|RGS18_MOUSE               2.2e-39  102-[1]-18-[3]-21-[2]-43
+sp|Q9PWA0|RGS17_CHICK               4.1e-39  100-[1]-18-[3]-21-[2]-20
+sp|Q9UGC6|RGS17_HUMAN               4.1e-39  100-[1]-18-[3]-21-[2]-20
+sp|Q9QZB0|RGS17_MOUSE               4.1e-39  100-[1]-18-[3]-21-[2]-20
+sp|P49796|RGS3_HUMAN                7.3e-39  1089-[1]-18-[3]-21-[2]-19
+sp|Q2M5E4|RGS21_HUMAN                 2e-37  37-[1]-18-[3]-21-[2]-25
+sp|P34295|RGS1_CAEEL                1.2e-36  57-[1]-18-[3]-21-[2]-54
+sp|P49808|RGS2_CAEEL                1.9e-36  59-[1]-18-[3]-21-[2]-20
+sp|Q4L0E8|RGS18_RAT                   5e-36  102-[1]-18-[3]-21-[2]-43
+sp|Q9Z2H1|RGS11_MOUSE               3.2e-35  296-[1]-17-[3]-21-[2]-58
+sp|O94810|RGS11_HUMAN               9.2e-35  319-[1]-17-[3]-21-[2]-59
+sp|O75916|RGS9_HUMAN                1.2e-34  318-[1]-17-[3]-21-[2]-267
+sp|O54828|RGS9_MOUSE                1.2e-34  315-[1]-17-[3]-21-[2]-271
+sp|P49805|RGS9_RAT                  1.2e-34  315-[1]-17-[3]-21-[2]-273
+sp|O46469|RGS9_BOVIN                1.2e-34  315-[1]-17-[3]-21-[2]-80
+sp|Q80ZD1|RGS9_TAMST                1.2e-34  315-[1]-17-[3]-21-[2]-80
+sp|O46470|RGS7_BOVIN                1.3e-33  349-[1]-17-[3]-21-[2]-31
+sp|O54829|RGS7_MOUSE                1.3e-33  349-[1]-17-[3]-21-[2]-31
+sp|P49803|RGS7_RAT                  1.4e-33  349-[1]-17-[3]-21-[2]-39
+sp|P49802|RGS7_HUMAN                1.6e-33  349-[1]-17-[3]-21-[2]-57
+sp|O14921|RGS13_HUMAN               2.8e-33  50-[1]-18-[3]-21-[2]-19
+sp|O08773|RGS14_RAT                   3e-33  83-[1]-20-[3]-20-[2]-370
+sp|O43665|RGS10_HUMAN               4.5e-33  57-[1]-18-[3]-20-[2]-35
+sp|Q2KHW7|RGS10_BOVIN               4.5e-33  57-[1]-18-[3]-20-[2]-35
+sp|O43566|RGS14_HUMAN               5.1e-33  83-[1]-20-[3]-20-[2]-392
+sp|P49806|RGS10_RAT                 5.5e-33  57-[1]-18-[3]-20-[2]-35
+sp|Q9CQE5|RGS10_MOUSE               5.5e-33  57-[1]-18-[3]-20-[2]-35
+sp|P49758|RGS6_HUMAN                1.2e-32  352-[1]-17-[3]-21-[2]-31
+sp|P97492|RGS14_MOUSE               1.3e-32  83-[1]-20-[3]-20-[2]-373
+sp|Q8K443|RGS13_MOUSE               9.9e-32  50-[1]-18-[3]-21-[2]-18
+sp|Q9Z2H2|RGS6_MOUSE                1.1e-31  352-[1]-17-[3]-21-[2]-31
+sp|Q8CGE9|RGS12_MOUSE               1.3e-31  731-[1]-20-[3]-20-[2]-559
+sp|O08774|RGS12_RAT                 1.3e-31  731-[1]-20-[3]-20-[2]-565
+sp|O14924|RGS12_HUMAN               1.5e-31  731-[1]-20-[3]-20-[2]-625
+sp|Q8WQC0|RGS7_CAEEL                2.2e-29  698-[1]-19-[3]-22-[2]-29
+sp|Q9VCX1|RGS_DROME                 5.4e-28  843-[1]-18-[3]-21-[2]-608
+sp|Q18563|RGS6_CAEEL                1.7e-20  62-[1]-18-[3]-23-[2]-580
+sp|P49809|EGL10_CAEEL               2.9e-19  437-[1]-17-[3]-22-[2]-28
+sp|O70239|AXIN1_RAT                 3.5e-17  104-[1]-63-[2]-626
+sp|O35625|AXIN1_MOUSE               3.9e-17  104-[1]-63-[2]-662
+sp|O15169|AXIN1_HUMAN               4.6e-17  104-[1]-63-[2]-661
+sp|P57094|AXIN1_DANRE               5.7e-17  108-[1]-62-[2]-631
+sp|Q18312|RGS3_CAEEL                  2e-16  128-[1]-53-[2]-41-[1]-19-[3]-23-[2]-14
+sp|P57770|AKA10_PIG                 2.1e-16  129-[1]-141-[3]-25-[2]-36-[1]-25-[3]-209
+sp|O43572|AKA10_HUMAN               2.2e-16  141-[1]-142-[3]-25-[2]-36-[1]-25-[3]-208
+sp|O88845|AKA10_MOUSE               2.4e-16  141-[1]-142-[3]-25-[2]-36-[1]-25-[3]-208
+sp|P57095|AXIN2_DANRE               2.5e-16  100-[1]-19-[3]-23-[2]-4-[3]-598
+sp|Q9YGY0|AXIN1_XENLA               2.7e-16  104-[1]-63-[2]-641
+sp|O70240|AXIN2_RAT                 2.8e-16  97-[1]-59-[2]-648
+sp|O88566|AXIN2_MOUSE               2.8e-16  97-[1]-59-[2]-650
+sp|Q9Y2T1|AXIN2_HUMAN               3.1e-16  97-[1]-59-[2]-653
+sp|O42400|AXIN1_CHICK               1.7e-15  104-[1]-63-[2]-640
+sp|Q23376|RGS9_CAEEL                7.9e-15  123-[1]-20-[3]-19-[2]-22
+sp|O45523|RGS10_CAEEL               1.3e-14  151-[1]-17-[3]-23-[2]-28
+sp|O45524|RGS11_CAEEL               2.8e-13  153-[1]-19-[3]-23-[2]-28
+sp|Q9PTP2|AXNR_XENLA                2.3e-11  88-[1]-59-[2]-525
+sp|Q6XHA6|ROC10_DICDI               1.5e-10  2428-[1]-23-[3]-161
+sp|P49801|RGS6_RAT                    1e-08  20-[3]-29
+sp|Q10955|RGS5_CAEEL                  5e-07  97-[1]-24-[3]-23-[2]-35-[1]-21-[3]-207
+sp|Q8NE09|RGS22_HUMAN               4.8e-05  454-[1]-252-[3]-128-[1]-68-[2]-69-[1]-208
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence,
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif, and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+sp|Q864Z2|RGS5_PIG
+  LENGTH = 181  COMBINED P-VALUE = 1.07e-45  E-VALUE =  1.1e-43
+  DIAGRAM: 80-[1]-18-[3]-21-[2]-11
+
+          [1]                                [3]
+          6.6e-21                            6.5e-19
+          FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+          +++++++++++++++++                  +++++++++++++++++
+76   ASFKSFLKSEFSEENLEFWMACEDYKKIKSPVKMAEKAKKIYEEFIQSEAPKEVNIDHFTKEITMKNLVEPSPSS
+
+        [2]
+        8.7e-18
+        AQKHIYNLMEKDSYPRF
+        +++++++++++++ +++
+151  FDVAQKRIYALMEKDSLPRFVRSEFYQEFIK
+
+
+sp|Q3T0T8|RGS5_BOVIN
+  LENGTH = 181  COMBINED P-VALUE = 2.53e-45  E-VALUE =  2.7e-43
+  DIAGRAM: 80-[1]-18-[3]-21-[2]-11
+
+          [1]                                [3]
+          6.6e-21                            1.4e-19
+          FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+          +++++++++++++++++                  +++++++++++++++++
+76   ASFKSFLKSEFSEENLEFWMACEDYKKIKSPVKMAETAKKIYEEFIQVEAPKEVNIDHFTKEITVKNLVEPSPSS
+
+        [2]
+        9.9e-17
+        AQKHIYNLMEKDSYPRF
+        +++++++++++++ +++
+151  FDVAQKRIHALMEKDSLPRFVRSEFYQEFIK
+
+
+1AGR_H
+  LENGTH = 116  COMBINED P-VALUE = 6.75e-45  E-VALUE =  7.2e-43
+  DIAGRAM: 19-[1]-18-[3]-21-[2]-7
+
+                        [1]                                [3]
+                        1.3e-18                            2.0e-18
+                        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+                        +++++++++++++++ +                  +++++++++++++++++
+1    AESLENLINHECGLAAFKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQATKEVNLDSCTR
+
+                      [2]
+                      4.1e-19
+                      AQKHIYNLMEKDSYPRF
+                      +++++++++++++++++
+76   EETSRNMLEPTITCFDEAQKKIFNLMEKDSYRRFLKSRFYL
+
+
+sp|O08850|RGS5_MOUSE
+  LENGTH = 181  COMBINED P-VALUE = 3.66e-44  E-VALUE =  3.9e-42
+  DIAGRAM: 80-[1]-18-[3]-21-[2]-11
+
+          [1]                                [3]
+          5.1e-20                            3.1e-18
+          FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+          +++++++++++++++++                  +++++++ +++++++++
+76   ASFKSFLKSEFSEENLEFWVACENYKKIKSPIKMAEKAKQIYEEFIQTEAPKEVNIDHFTKDITMKNLVEPSPRS
+
+        [2]
+        8.7e-18
+        AQKHIYNLMEKDSYPRF
+        +++++++++++++ +++
+151  FDLAQKRIYALMEKDSLPRFVRSEFYKELIK
+
+
+sp|P49800|RGS5_RAT
+  LENGTH = 181  COMBINED P-VALUE = 3.66e-44  E-VALUE =  3.9e-42
+  DIAGRAM: 80-[1]-18-[3]-21-[2]-11
+
+          [1]                                [3]
+          5.1e-20                            3.1e-18
+          FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+          +++++++++++++++++                  +++++++ +++++++++
+76   ASFKSFLKSEFSEENLEFWVACENYKKIKSPIKMAEKAKQIYEEFIQTEAPKEVNIDHFTKDITMKNLVEPSPHS
+
+        [2]
+        8.7e-18
+        AQKHIYNLMEKDSYPRF
+        +++++++++++++ +++
+151  FDLAQKRIYALMEKDSLPRFVRSEFYKELIN
+
+
+sp|Q0R4E4|RGS4_RABIT
+  LENGTH = 205  COMBINED P-VALUE = 4.40e-44  E-VALUE =  4.7e-42
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-37
+
+        [1]                                [3]
+        1.3e-18                            2.0e-18
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  +++++++++++++++++
+76   FKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQATKEVNLDSCTREETSRNMLEPTITCFD
+
+      [2]
+      4.1e-19
+      AQKHIYNLMEKDSYPRF
+      +++++++++++++++++
+151  EAQKKIFNLMEKDSYRRFLKSRFYLDLANPSNCGSEKQKGAKSSVDCASLLPQCA
+
+
+sp|P49799|RGS4_RAT
+  LENGTH = 205  COMBINED P-VALUE = 4.40e-44  E-VALUE =  4.7e-42
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-37
+
+        [1]                                [3]
+        1.3e-18                            2.0e-18
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  +++++++++++++++++
+76   FKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQATKEVNLDSCTREETSRNMLEPTITCFD
+
+      [2]
+      4.1e-19
+      AQKHIYNLMEKDSYPRF
+      +++++++++++++++++
+151  EAQKKIFNLMEKDSYRRFLKSRFYLDLTNPSSCGAEKQKGAKSSADCTSLVPQCA
+
+
+sp|P49798|RGS4_HUMAN
+  LENGTH = 205  COMBINED P-VALUE = 4.40e-44  E-VALUE =  4.7e-42
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-37
+
+        [1]                                [3]
+        1.3e-18                            2.0e-18
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  +++++++++++++++++
+76   FKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQATKEVNLDSCTREETSRNMLEPTITCFD
+
+      [2]
+      4.1e-19
+      AQKHIYNLMEKDSYPRF
+      +++++++++++++++++
+151  EAQKKIFNLMEKDSYRRFLKSRFYLDLVNPSSCGAEKQKGAKSSADCASLVPQCA
+
+
+sp|Q4R525|RGS4_MACFA
+  LENGTH = 205  COMBINED P-VALUE = 4.40e-44  E-VALUE =  4.7e-42
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-37
+
+        [1]                                [3]
+        1.3e-18                            2.0e-18
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  +++++++++++++++++
+76   FKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQATKEVNLDSCTREETSRNMLEPTITCFD
+
+      [2]
+      4.1e-19
+      AQKHIYNLMEKDSYPRF
+      +++++++++++++++++
+151  EAQKKIFNLMEKDSYRRFLKSRFYLDLVNPSSCGAEKQKGAKSSADCASLVPQCA
+
+
+sp|Q8BXT1|RGS8_MOUSE
+  LENGTH = 180  COMBINED P-VALUE = 4.54e-44  E-VALUE =  4.9e-42
+  DIAGRAM: 72-[1]-18-[3]-21-[2]-18
+
+                                                                             [1]
+                                                                             5.8
+                                                                             FLK
+                                                                             +++
+1    MAALLMPRRNKGMRTRLGCLSHKSDSCSDFTAILPDKPNRALKRLSTEEATRWAESFDVLLSHKYGVAAFRAFLK
+
+                                     [3]                                   [2]
+     e-22                            2.3e-16                               1.3e-
+     TEFCEENIDFWLAC                  IYEEFISIQAPKEVNID                     AQKHI
+     ++++++++++++++                  +++++++++++++++++                     +++++
+76   TEFSEENLEFWLACEEFKKTRSTAKLVTKAHRIFEEFVDVQAPREVNIDFQTREATRKNMQEPSLTCFDQAQGKV
+
+     
+     17
+     YNLMEKDSYPRF
+     ++++++++++++
+151  HSLMEKDSYPRFLRSKMYLDLLSQSQRRLS
+
+
+sp|P49804|RGS8_RAT
+  LENGTH = 180  COMBINED P-VALUE = 4.54e-44  E-VALUE =  4.9e-42
+  DIAGRAM: 72-[1]-18-[3]-21-[2]-18
+
+                                                                             [1]
+                                                                             5.8
+                                                                             FLK
+                                                                             +++
+1    MAALLMPRRNKGMRTRLGCLSHKSDSCSDFTAILPDKPNRALKRLSTEEATRWADSFDVLLSHKYGVAAFRAFLK
+
+                                     [3]                                   [2]
+     e-22                            2.3e-16                               1.3e-
+     TEFCEENIDFWLAC                  IYEEFISIQAPKEVNID                     AQKHI
+     ++++++++++++++                  +++++++++++++++++                     +++++
+76   TEFSEENLEFWLACEEFKKTRSTAKLVTKAHRIFEEFVDVQAPREVNIDFQTREATRKNMQEPSLTCFDQAQGKV
+
+     
+     17
+     YNLMEKDSYPRF
+     ++++++++++++
+151  HSLMEKDSYPRFLRSKMYLDLLSQSQRRLS
+
+
+sp|P57771|RGS8_HUMAN
+  LENGTH = 180  COMBINED P-VALUE = 4.54e-44  E-VALUE =  4.9e-42
+  DIAGRAM: 72-[1]-18-[3]-21-[2]-18
+
+                                                                             [1]
+                                                                             5.8
+                                                                             FLK
+                                                                             +++
+1    MAALLMPRRNKGMRTRLGCLSHKSDSCSDFTAILPDKPNRALKRLSTEEATRWADSFDVLLSHKYGVAAFRAFLK
+
+                                     [3]                                   [2]
+     e-22                            2.3e-16                               1.3e-
+     TEFCEENIDFWLAC                  IYEEFISIQAPKEVNID                     AQKHI
+     ++++++++++++++                  +++++++++++++++++                     +++++
+76   TEFSEENLEFWLACEEFKKTRSTAKLVSKAHRIFEEFVDVQAPREVNIDFQTREATRKNLQEPSLTCFDQAQGKV
+
+     
+     17
+     YNLMEKDSYPRF
+     ++++++++++++
+151  HSLMEKDSYPRFLRSKMYLDLLSQSQRRLS
+
+
+sp|O46471|RGS16_BOVIN
+  LENGTH = 202  COMBINED P-VALUE = 4.59e-44  E-VALUE =  4.9e-42
+  DIAGRAM: 81-[1]-18-[3]-21-[2]-31
+
+           [1]                                [3]
+           5.8e-22                            2.1e-17
+           FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+           +++++++++++++++++                  +++++++++++++++++
+76   VAAFHAFLKTEFSEENLEFWLACEEFKKLRSATKLGSRAHRIFEEFICSEAPKEVNIDHETRELTRTNLQAATAV
+
+         [2]
+         9.9e-17
+         AQKHIYNLMEKDSYPRF
+         ++ ++ +++++++++++
+151  CFDAAQWKVRALMEKDSYPRFLKSPAYRDLATQATAASASPSSSSPAEPLHT
+
+
+sp|O15492|RGS16_HUMAN
+  LENGTH = 202  COMBINED P-VALUE = 5.13e-44  E-VALUE =  5.5e-42
+  DIAGRAM: 81-[1]-18-[3]-21-[2]-31
+
+           [1]                                [3]
+           5.8e-22                            2.1e-17
+           FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+           +++++++++++++++++                  +++++++++++++++++
+76   VAAFHAFLKTEFSEENLEFWLACEEFKKIRSATKLASRAHQIFEEFICSEAPKEVNIDHETHELTRMNLQTATAT
+
+         [2]
+         1.1e-16
+         AQKHIYNLMEKDSYPRF
+         ++++  +++++++++++
+151  CFDAAQGKTRTLMEKDSYPRFLKSPAYRDLAAQASAASATLSSCSLDEPSHT
+
+
+sp|Q95K68|RGS8_MACFA
+  LENGTH = 196  COMBINED P-VALUE = 5.98e-44  E-VALUE =  6.4e-42
+  DIAGRAM: 88-[1]-18-[3]-21-[2]-18
+
+                  [1]                                [3]
+                  5.8e-22                            2.3e-16
+                  FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+                  +++++++++++++++++                  +++++++++++++++++
+76   LLSHKYGVAAFRAFLKTEFSEENLEFWLACEEFKKTRSTAKLVSKAHRIFEEFVDVQAPREVNIDFQTREATRKN
+
+                [2]
+                1.3e-17
+                AQKHIYNLMEKDSYPRF
+                +++++++++++++++++
+151  MQEPSLTCFDQAQGKVHSLMEKDSYPRFLRSKMYLDLLSQSQRRLS
+
+
+sp|Q6RG78|RGS1_HORSE
+  LENGTH = 196  COMBINED P-VALUE = 8.47e-44  E-VALUE =  9.1e-42
+  DIAGRAM: 88-[1]-17-[3]-21-[2]-19
+
+                  [1]                               [3]
+                  1.1e-21                           1.7e-13
+                  FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+                  +++++++++++++++++                 +++ ++++++ ++++++
+76   LLANQTGQDVFGNFLKSEFSEENIEFWLACEDYKKTESDLLRCKAEKIYKAFVHSDAAKQINIDFHTRESTAKKI
+
+               [2]
+               1.3e-20
+               AQKHIYNLMEKDSYPRF
+               +++++++++++++++++
+151  KAPTLTCFDEAQKVIYTLMEKDSYPRFLKSNIYLNLLNDLQANSLK
+
+
+sp|Q08116|RGS1_HUMAN
+  LENGTH = 209  COMBINED P-VALUE = 1.04e-43  E-VALUE =  1.1e-41
+  DIAGRAM: 101-[1]-17-[3]-21-[2]-19
+
+                               [1]                               [3]
+                               1.1e-21                           1.7e-13
+                               FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVN
+                               +++++++++++++++++                 +++ ++++++ ++++
+76   AAEVMQWSQSLEKLLANQTGQNVFGSFLKSEFSEENIEFWLACEDYKKTESDLLPCKAEEIYKAFVHSDAAKQIN
+
+                            [2]
+                            1.3e-20
+     ID                     AQKHIYNLMEKDSYPRF
+     ++                     +++++++++++++++++
+151  IDFRTRESTAKKIKAPTPTCFDEAQKVIYTLMEKDSYPRFLKSDIYLNLLNDLQANSLK
+
+
+sp|O08899|RGS4_MOUSE
+  LENGTH = 205  COMBINED P-VALUE = 1.12e-43  E-VALUE =  1.2e-41
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-37
+
+        [1]                                [3]
+        1.3e-18                            2.0e-18
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  +++++++++++++++++
+76   FKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQATKEVNLDSCTREETSRNMLQPTITCFD
+
+      [2]
+      1.1e-18
+      AQKHIYNLMEKDSYPRF
+      +++++++++++++++++
+151  EAQKKIFNLMERDSYRRFLKSRFYLDLTNPSSCGAEKQKGAKSSADCTSLVSQCA
+
+
+sp|O15539|RGS5_HUMAN
+  LENGTH = 181  COMBINED P-VALUE = 1.19e-43  E-VALUE =  1.3e-41
+  DIAGRAM: 80-[1]-18-[3]-21-[2]-11
+
+          [1]                                [3]
+          1.5e-20                            3.1e-18
+          FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+          +++++++++++++++++                  +++++++ +++++++++
+76   ASFKSFLKSEFSEENLEFWIACEDYKKIKSPAKMAEKAKQIYEEFIQTEAPKEVNIDHFTKDITMKNLVEPSLSS
+
+        [2]
+        9.9e-17
+        AQKHIYNLMEKDSYPRF
+        +++++++++++++ +++
+151  FDMAQKRIHALMEKDSLPRFVRSEFYQELIK
+
+
+sp|Q0P5H5|RGS2_BOVIN
+  LENGTH = 211  COMBINED P-VALUE = 1.93e-43  E-VALUE =  2.1e-41
+  DIAGRAM: 99-[1]-18-[3]-21-[2]-22
+
+                             [1]                                [3]
+                             1.1e-21                            7.2e-16
+                             FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNI
+                             +++++++++++++++++                  ++++++  ++++++++
+76   EAQLWSEAFDELLASKYGLAAFRAFLKSEFCEENIEFWLACEDFKKTKSPQKLSSKAKKIYTDFIEKEAPKEINI
+
+                           [2]
+                           5.9e-18
+     D                     AQKHIYNLMEKDSYPRF
+     +                     +++++++++++++++++
+151  DFQTKSLIAQNIQEATSGCFTTAQKRVYSLMENNSYPRFLESEFYQDLCKKPQITTEPHAT
+
+
+sp|O08849|RGS2_MOUSE
+  LENGTH = 211  COMBINED P-VALUE = 1.93e-43  E-VALUE =  2.1e-41
+  DIAGRAM: 99-[1]-18-[3]-21-[2]-22
+
+                             [1]                                [3]
+                             1.1e-21                            7.2e-16
+                             FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNI
+                             +++++++++++++++++                  ++++++  ++++++++
+76   EAQLWAEAFDELLASKYGLAAFRAFLKSEFCEENIEFWLACEDFKKTKSPQKLSSKARKIYTDFIEKEAPKEINI
+
+                           [2]
+                           5.9e-18
+     D                     AQKHIYNLMEKDSYPRF
+     +                     +++++++++++++++++
+151  DFQTKSLIAQNIQEATSGCFTTAQKRVYSLMENNSYPRFLESEFYQDLCKKPQITTEPHAT
+
+
+sp|Q9JHX0|RGS2_RAT
+  LENGTH = 211  COMBINED P-VALUE = 1.93e-43  E-VALUE =  2.1e-41
+  DIAGRAM: 99-[1]-18-[3]-21-[2]-22
+
+                             [1]                                [3]
+                             1.1e-21                            7.2e-16
+                             FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNI
+                             +++++++++++++++++                  ++++++  ++++++++
+76   EALLWAEAFDELLASKYGLAAFRAFLKSEFCEENIEFWLACEDFKKTKSPQKLSSKARKIYTDFIEKEAPKEINI
+
+                           [2]
+                           5.9e-18
+     D                     AQKHIYNLMEKDSYPRF
+     +                     +++++++++++++++++
+151  DFQTKTLIAQNIQEATSGCFTTAQKRVYSLMENNSYPRFLESEFYQDLCKKPQITTEPHAT
+
+
+sp|P41220|RGS2_HUMAN
+  LENGTH = 211  COMBINED P-VALUE = 1.93e-43  E-VALUE =  2.1e-41
+  DIAGRAM: 99-[1]-18-[3]-21-[2]-22
+
+                             [1]                                [3]
+                             1.1e-21                            7.2e-16
+                             FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNI
+                             +++++++++++++++++                  ++++++  ++++++++
+76   EAQLWSEAFDELLASKYGLAAFRAFLKSEFCEENIEFWLACEDFKKTKSPQKLSSKARKIYTDFIEKEAPKEINI
+
+                           [2]
+                           5.9e-18
+     D                     AQKHIYNLMEKDSYPRF
+     +                     +++++++++++++++++
+151  DFQTKTLIAQNIQEATSGCFTTAQKRVYSLMENNSYPRFLESEFYQDLCKKPQITTEPHAT
+
+
+sp|Q3S853|RGS2_PIG
+  LENGTH = 212  COMBINED P-VALUE = 1.96e-43  E-VALUE =  2.1e-41
+  DIAGRAM: 99-[1]-18-[3]-21-[2]-23
+
+                             [1]                                [3]
+                             1.1e-21                            7.2e-16
+                             FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNI
+                             +++++++++++++++++                  ++++++  ++++++++
+76   EAQLWAEAFDELLASKYGLAAFRAFLKSEFCEENIEFWLACEDFKKTKSPQKLSSKARKIYTDFIEKEAPKEINI
+
+                           [2]
+                           5.9e-18
+     D                     AQKHIYNLMEKDSYPRF
+     +                     +++++++++++++++++
+151  DFQTKTLIAQNIQEATSGCFTTAQKRVYSLMENNSYPRFLESEFYQDLCRKPPQITTEPHAT
+
+
+sp|Q5M8L6|RGS1_XENTR
+  LENGTH = 201  COMBINED P-VALUE = 4.65e-43  E-VALUE =    5e-41
+  DIAGRAM: 91-[1]-18-[3]-21-[2]-20
+
+                     [1]                                [3]
+                     1.1e-21                            1.6e-15
+                     FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+                     +++++++++++++++++                  ++++++++++ ++++++
+76   LEKLLISEDGQSVFREFLKSEFSEENIEFWLACEDYKATNDSEELRCKANVIYQEFIQPNANKQINIDFSTRNSV
+
+                   [2]
+                   7.6e-18
+                   AQKHIYNLMEKDSYPRF
+                   +++ ++ ++++++++++
+151  TKDLLEPTITTFNDAQKMIFILMERDSYPRFLKSEIFLRLAERHHGNNVRG
+
+
+sp|A1A643|RGS1_XENLA
+  LENGTH = 201  COMBINED P-VALUE = 4.65e-43  E-VALUE =    5e-41
+  DIAGRAM: 91-[1]-18-[3]-21-[2]-20
+
+                     [1]                                [3]
+                     1.1e-21                            1.6e-15
+                     FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+                     +++++++++++++++++                  ++++++++++ ++++++
+76   LEKLLVSEEGQAVFRAFLKSEFSEENIEFWLACEDYKATNDSEELRCKANVIYQEFIQPNANKQINIDFSTRNSV
+
+                   [2]
+                   7.6e-18
+                   AQKHIYNLMEKDSYPRF
+                   +++ ++ ++++++++++
+151  TKDLLEPTKATFNGAQKMIFILMERDSYPRFLKSEIFFRLAERHHGNNMRG
+
+
+sp|Q9JL25|RGS1_MOUSE
+  LENGTH = 209  COMBINED P-VALUE = 7.00e-43  E-VALUE =  7.5e-41
+  DIAGRAM: 101-[1]-17-[3]-21-[2]-19
+
+                               [1]                               [3]
+                               1.1e-21                           2.3e-13
+                               FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVN
+                               +++++++++++++++++                 +++ ++++++ ++++
+76   AEEVMQWSQSLEKLLANQTGQNVFGRFLKSEFSEENIEFWLACEDYKKTETDLLHNKAENIYKAFVHSDAVKQIN
+
+                            [2]
+                            7.1e-20
+     ID                     AQKHIYNLMEKDSYPRF
+     ++                     +++++++++++++++++
+151  IDFHTRESTAKKIKTPTPTSFDEAQKVIYSLMEKDSYPRFLKSNIYLNLLNDLQANTLK
+
+
+sp|Q9PWA1|RGS20_CHICK
+  LENGTH = 218  COMBINED P-VALUE = 7.34e-43  E-VALUE =  7.9e-41
+  DIAGRAM: 108-[1]-18-[3]-21-[2]-20
+
+                                      [1]                                [3]
+                                      1.0e-19                            6.0e-15
+                                      FLKTEFCEENIDFWLAC                  IYEEFIS
+                                      +++++++++++++++++                  +++++++
+76   EESPAPTLEEVNAWAQSFDKLMLTPAGRNAFREFLRTEFSEENMLFWMACEELKQESNKSVIEEKARLIYEDYIS
+
+                                    [2]
+                                    2.5e-20
+     IQAPKEVNID                     AQKHIYNLMEKDSYPRF
+     ++++++++++                     +++++++++++++++++
+151  ILSPKEVSLDSRVREVINRNMLEPSQHTFDDAQLQIYTLMHRDSYPRFMNSAIYKDLLRSLSEKSIEA
+
+
+sp|Q5R747|RGS4_PONAB
+  LENGTH = 205  COMBINED P-VALUE = 8.57e-43  E-VALUE =  9.2e-41
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-37
+
+        [1]                                [3]
+        1.3e-18                            4.1e-17
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  ++++++++++ ++++++
+76   FKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQASKEVNLDSCTREETSRNMLEPTITCFD
+
+      [2]
+      4.1e-19
+      AQKHIYNLMEKDSYPRF
+      +++++++++++++++++
+151  EAQKKIFNLMEKDSYRRFLKSRFYLDLVNPSSCGAEKQKGAKSSADCASLVPQCA
+
+
+sp|Q9QZB1|RGS20_MOUSE
+  LENGTH = 239  COMBINED P-VALUE = 9.82e-43  E-VALUE =  1.1e-40
+  DIAGRAM: 129-[1]-18-[3]-21-[2]-20
+
+                                                           [1]
+                                                           1.0e-19
+                                                           FLKTEFCEENIDFWLAC
+                                                           +++++++++++++++++
+76   NQEDQRPQRASHEIRTDIPACEESPTPTLEEVCAWAQSFDNLMVTPAGRNAFREFLRTEFSEENMLFWMACEELK
+
+                   [3]                                   [2]
+                   6.0e-15                               2.5e-20
+                   IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+                   +++++++++++++++++                     +++++++++++++++++
+151  REANKSTIEEKARIIYEDYISILSPKEVSLDSRVREVINRNMVDPSQHIFDDAQLQIYTLMHRDSYPRFMNSTVY
+
+
+sp|Q29RM9|RGS4_BOVIN
+  LENGTH = 205  COMBINED P-VALUE = 1.00e-42  E-VALUE =  1.1e-40
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-37
+
+        [1]                                [3]
+        1.3e-18                            2.0e-18
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  +++++++++++++++++
+76   FKAFLKSEYSEENIDFWISCEEYKKIKSPSKLSPKAKKIYNEFISVQATKEVNLDSCTREETSRNMLEPTITCFD
+
+      [2]
+      9.9e-18
+      AQKHIYNLMEKDSYPRF
+      ++ ++++++++++++++
+151  EAQRKIFNLMEKDSYRRFLKSRFYLDLVNLSSCGSEKQKGAKSSTDCASLVPQCA
+
+
+sp|P97844|RGS1_RAT
+  LENGTH = 209  COMBINED P-VALUE = 1.01e-42  E-VALUE =  1.1e-40
+  DIAGRAM: 101-[1]-17-[3]-21-[2]-19
+
+                               [1]                               [3]
+                               1.1e-21                           2.3e-13
+                               FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVN
+                               +++++++++++++++++                 +++ ++++++ ++++
+76   AEEVMQWSQSLEKLLANQMGQNVFGKFLKSEFSEENIEFWLACEDYKKTETDLLHNKAEHIYKAFVHSDAVKQIN
+
+                            [2]
+                            1.0e-19
+     ID                     AQKHIYNLMEKDSYPRF
+     ++                     +++++++++++++++++
+151  IDFHTRESTAKKIKTPTPTCFDEAQKVIYALMEKDSYPRFLKSNIYLNLLNDLQANTLK
+
+
+sp|F1S668|RGS16_PIG
+  LENGTH = 200  COMBINED P-VALUE = 1.60e-42  E-VALUE =  1.7e-40
+  DIAGRAM: 81-[1]-18-[3]-21-[2]-29
+
+           [1]                                [3]
+           5.8e-22                            7.2e-16
+           FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+           +++++++++++++++++                  ++++++ ++++++++++
+76   VAAFHTFLKTEFSEENLEFWLACEEFKKLRSATKLASRAHRIFEEFIRSEAPKEVNLDHETRELTRTNLQAATAT
+
+         [2]
+         1.1e-16
+         AQKHIYNLMEKDSYPRF
+         ++++  +++++++++++
+151  CFDVAQGKTRTLMEKDSYPRFLKSPAYRDLAAQAASASPSSGSPAEPSHT
+
+
+sp|P56700|RGS16_RAT
+  LENGTH = 199  COMBINED P-VALUE = 3.01e-42  E-VALUE =  3.2e-40
+  DIAGRAM: 80-[1]-18-[3]-21-[2]-29
+
+          [1]                                [3]
+          5.8e-22                            1.4e-15
+          FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+          +++++++++++++++++                  ++++++ ++++++++++
+76   AAFHAFLKTEFSEENLEFWLACEEFKKIRSATKLASRAHHIFDEYIRSEAPKEVNIDHETRELTKTNLQAATTSC
+
+        [2]
+        1.1e-16
+        AQKHIYNLMEKDSYPRF
+        ++++  +++++++++++
+151  FDVAQGKTRTLMEKDSYPRFLKSPAYRDLAAQASATSASGSSPAEPSHT
+
+
+sp|P97428|RGS16_MOUSE
+  LENGTH = 201  COMBINED P-VALUE = 3.10e-42  E-VALUE =  3.3e-40
+  DIAGRAM: 80-[1]-18-[3]-21-[2]-31
+
+          [1]                                [3]
+          5.8e-22                            1.4e-15
+          FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+          +++++++++++++++++                  ++++++ ++++++++++
+76   AAFHAFLKTEFSEENLEFWLACEEFKKIRSATKLASRAHHIFDEYIRSEAPKEVNIDHETRELTKTNLQAATTSC
+
+        [2]
+        1.1e-16
+        AQKHIYNLMEKDSYPRF
+        ++++  +++++++++++
+151  FDVAQGKTRTLMEKDSYPRFLKSPAYRDLAAQASATSTSAPSGSPAEPSHT
+
+
+sp|Q9CX84|RGS19_MOUSE
+  LENGTH = 216  COMBINED P-VALUE = 3.76e-42  E-VALUE =    4e-40
+  DIAGRAM: 106-[1]-18-[3]-21-[2]-20
+
+                                    [1]                                [3]
+                                    1.5e-19                            2.3e-14
+                                    FLKTEFCEENIDFWLAC                  IYEEFISIQ
+                                    +++++++++++++++++                  +++++++++
+76   CTPPSPKEVQSWAQSFDKLMHSPTGRSVFRAFLRTEYSEENMLFWLACEELKAEANQHVVDEKARLIYEDYVSIL
+
+                                  [2]
+                                  2.5e-20
+     APKEVNID                     AQKHIYNLMEKDSYPRF
+     ++++++++                     +++++++++++++++++
+151  SPKEVSLDSRVREGINRKMQEPSPHTFDDAQLQIYTLMHRDSYPRFLTSPTYRSLLLQGAPQSSEA
+
+
+sp|O70521|RGS19_RAT
+  LENGTH = 216  COMBINED P-VALUE = 3.76e-42  E-VALUE =    4e-40
+  DIAGRAM: 106-[1]-18-[3]-21-[2]-20
+
+                                    [1]                                [3]
+                                    1.5e-19                            2.3e-14
+                                    FLKTEFCEENIDFWLAC                  IYEEFISIQ
+                                    +++++++++++++++++                  +++++++++
+76   CTPPSPEEVQSWAQSFDKLMHSPTGRSVFRAFLRTEYSEENMLFWLACEELKTEADRHVVDEKARLIYEDYVSIL
+
+                                  [2]
+                                  2.5e-20
+     APKEVNID                     AQKHIYNLMEKDSYPRF
+     ++++++++                     +++++++++++++++++
+151  SPKEVSLDSRVREGINRKMQEPSPHTFDDAQLQIYTLMHRDSYPRFLTSPTYRSLLLQGAPQSSEA
+
+
+sp|P49795|RGS19_HUMAN
+  LENGTH = 217  COMBINED P-VALUE = 3.82e-42  E-VALUE =  4.1e-40
+  DIAGRAM: 106-[1]-18-[3]-21-[2]-21
+
+                                    [1]                                [3]
+                                    1.5e-19                            2.3e-14
+                                    FLKTEFCEENIDFWLAC                  IYEEFISIQ
+                                    +++++++++++++++++                  +++++++++
+76   CATPSPEEVQSWAQSFDKLMHSPAGRSVFRAFLRTEYSEENMLFWLACEELKAEANQHVVDEKARLIYEDYVSIL
+
+                                  [2]
+                                  2.5e-20
+     APKEVNID                     AQKHIYNLMEKDSYPRF
+     ++++++++                     +++++++++++++++++
+151  SPKEVSLDSRVREGINKKMQEPSAHTFDDAQLQIYTLMHRDSYPRFLSSPTYRALLLQGPSQSSSEA
+
+
+sp|P79348|RGS20_BOVIN
+  LENGTH = 374  COMBINED P-VALUE = 3.96e-42  E-VALUE =  4.2e-40
+  DIAGRAM: 264-[1]-18-[3]-21-[2]-20
+
+                                            [1]                                [
+                                            1.0e-19                            6
+                                            FLKTEFCEENIDFWLAC                  I
+                                            +++++++++++++++++                  +
+226  EDLPTCEESPGPTLEEASAWAQSFDKLMLTPAGRNAFREFLRTEFSEENMLFWMACEELKKEANKATIEEKARII
+
+     3]                                   [2]
+     .0e-15                               2.5e-20
+     YEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+     ++++++++++++++++                     +++++++++++++++++
+301  YEDYISILSPKEVSLDSRVRETINRSMAEPSRNIFDDAQLQIYTLMHRDSYPRFMNSALYKDLLRSLSEKAVEA
+
+
+sp|Q7SZC6|RGS4_CHICK
+  LENGTH = 208  COMBINED P-VALUE = 4.05e-42  E-VALUE =  4.3e-40
+  DIAGRAM: 78-[1]-18-[3]-21-[2]-40
+
+        [1]                                [3]
+        3.0e-18                            3.1e-18
+        FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+        +++++++++++++++ +                  +++++++++++++++++
+76   FRAFLKSEYSEENIEFWVSCEDYKKTKSPAKLSTKARKIYDEFISVQATKEVNLDSCTREKTSHNMLEPTLSCFD
+
+      [2]
+      1.1e-17
+      AQKHIYNLMEKDSYPRF
+      ++ ++++++++++++++
+151  EAQRKIFTLMEKDSYRRFLKSPYLDLVSPPRAGCGPENCKRAHAHALDCNSNIISQCA
+
+
+sp|Q08DC7|RGS19_BOVIN
+  LENGTH = 223  COMBINED P-VALUE = 4.16e-42  E-VALUE =  4.5e-40
+  DIAGRAM: 112-[1]-18-[3]-21-[2]-21
+
+                                          [1]                                [3]
+                                          1.5e-19                            2.3
+                                          FLKTEFCEENIDFWLAC                  IYE
+                                          +++++++++++++++++                  +++
+76   CATPTPTPTPTPEEVRSWAQSFDKLMHSPAGRSVFREFLRTEYSEENMLFWLACEELKAEANQHVVDEKARLIYE
+
+                                        [2]
+     e-14                               2.5e-20
+     EFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+     ++++++++++++++                     +++++++++++++++++
+151  DYVSILSPKEVSLDSRVREGINKKMQEPSAHTFDDAQLQIYTLMHRDSYPRFLSSPAYRALLLQGASQSSSEA
+
+
+sp|O76081|RGS20_HUMAN
+  LENGTH = 388  COMBINED P-VALUE = 4.43e-42  E-VALUE =  4.7e-40
+  DIAGRAM: 278-[1]-18-[3]-21-[2]-20
+
+                                                          [1]
+                                                          1.0e-19
+                                                          FLKTEFCEENIDFWLAC
+                                                          +++++++++++++++++
+226  QEDQRPTIASHELRADLPTWEESPAPTLEEVNAWAQSFDKLMVTPAGRNAFREFLRTEFSEENMLFWMACEELKK
+
+                  [3]                                   [2]
+                  6.0e-15                               2.5e-20
+                  IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+                  +++++++++++++++++                     +++++++++++++++++
+301  EANKNIIEEKARIIYEDYISILSPKEVSLDSRVREVINRNMVEPSQHIFDDAQLQIYTLMHRDSYPRFMNSAVYK
+
+
+sp|Q9NS28|RGS18_HUMAN
+  LENGTH = 235  COMBINED P-VALUE = 1.28e-41  E-VALUE =  1.4e-39
+  DIAGRAM: 102-[1]-18-[3]-21-[2]-43
+
+                                [1]                                [3]
+                                3.2e-21                            1.7e-16
+                                FLKTEFCEENIDFWLAC                  IYEEFISIQAPKE
+                                +++++++++++++++++                  +++++++ +++++
+76   SPEEAVKWGESFDKLLSHRDGLEAFTRFLKTEFSEENIEFWIACEDFKKSKGPQQIHLKAKAIYEKFIQTDAPKE
+
+                              [2]
+                              4.1e-16
+     VNID                     AQKHIYNLMEKDSYPRF
+     ++++                     ++ +++++++++++ ++
+151  VNLDFHTKEVITNSITQPTLHSFDAAQSRVYQLMEQDSYTRFLKSDIYLDLMEGRPQRPTNLRRRSRSFTCNEFQ
+
+
+sp|Q9DC04|RGS3_MOUSE
+  LENGTH = 966  COMBINED P-VALUE = 1.32e-41  E-VALUE =  1.4e-39
+  DIAGRAM: 857-[1]-18-[3]-21-[2]-19
+
+                                     [1]                                [3]
+                                     5.4e-21                            9.3e-16
+                                     FLKTEFCEENIDFWLAC                  IYEEFISI
+                                     +++++++++++++++++                  ++ +++++
+826  KSFKPTSEEALKWSESLEKLLLHKYGLEVFQAFLRTEFSEENLEFWLACEDFKKVKSQSKMAAKAKKIFAEFIAI
+
+                                   [2]
+                                   5.7e-19
+     QAPKEVNID                     AQKHIYNLMEKDSYPRF
+     +++++++++                     ++++++ ++++++++++
+901  QACKEVNLDSYTREHTKENLQSITRGCFDLAQKRIFGLMEKDSYPRFLRSDLYLDLINQKKMSPPL
+
+
+sp|P49797|RGS3_RAT
+  LENGTH = 967  COMBINED P-VALUE = 1.33e-41  E-VALUE =  1.4e-39
+  DIAGRAM: 858-[1]-18-[3]-21-[2]-19
+
+                                      [1]                                [3]
+                                      5.4e-21                            9.3e-16
+                                      FLKTEFCEENIDFWLAC                  IYEEFIS
+                                      +++++++++++++++++                  ++ ++++
+826  TKSFKPTSEEALKWSESLEKLLLHKYGLEVFQAFLRTEFSEENLEFWLACEDFKKVKSQSKMAAKAKKIFAEFIA
+
+                                    [2]
+                                    5.7e-19
+     IQAPKEVNID                     AQKHIYNLMEKDSYPRF
+     ++++++++++                     ++++++ ++++++++++
+901  IQACKEVNLDSYTREHTKENLQSITRGCFDLAQKRIFGLMEKDSYPRFLRSDLYLDLINQKKMSPPL
+
+
+sp|Q6DGI0|RGS8_DANRE
+  LENGTH = 174  COMBINED P-VALUE = 1.55e-41  E-VALUE =  1.7e-39
+  DIAGRAM: 62-[1]-18-[3]-21-[2]-22
+
+                                                                   [1]
+                                                                   1.5e-20
+                                                                   FLKTEFCEENIDF
+                                                                   +++++++++++++
+1    MKTRLGCLSNKSDSCSDFSEFLPPAQERTTRCLKLSNDEVTRWADSFDILLSNKYGLAAFRTFLKTEFSDENIEF
+
+                           [3]                                   [2]
+                           1.5e-16                               3.3e-16
+     WLAC                  IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYP
+     ++++                  ++++++++ ++++++++                      + ++++++++++++
+76   WLACEDYKKIKSPAKMMSKANKIYKEFIDVHAPREVNIDHRTREETKNRLLEPTPHSLNEVQAKVYSLMEKDSYP
+
+     
+     
+     RF
+     ++
+151  RFIRSKIYQDLLNRTQIYCQRKSV
+
+
+sp|Q99PG4|RGS18_MOUSE
+  LENGTH = 235  COMBINED P-VALUE = 2.03e-41  E-VALUE =  2.2e-39
+  DIAGRAM: 102-[1]-18-[3]-21-[2]-43
+
+                                [1]                                [3]
+                                1.5e-20                            2.1e-17
+                                FLKTEFCEENIDFWLAC                  IYEEFISIQAPKE
+                                +++++++++++++++++                  +++++++++++++
+76   SPEEAVKWAESFDKLLSHRDGVDAFTRFLKTEFSEENIEFWVACEDFKKCKEPQQIILKAKAIYEKFIQNDAPKE
+
+                              [2]
+                              1.2e-15
+     VNID                     AQKHIYNLMEKDSYPRF
+     ++++                     ++ +++++++ +++ ++
+151  VNIDFHTKEVIAKSIAQPTLHSFDTAQSRVYQLMEHDSYKRFLKSETYLHLIEGRPQRPTNLRRRSRSFTYNDFQ
+
+
+sp|Q9PWA0|RGS17_CHICK
+  LENGTH = 210  COMBINED P-VALUE = 3.88e-41  E-VALUE =  4.1e-39
+  DIAGRAM: 100-[1]-18-[3]-21-[2]-20
+
+                              [1]                                [3]
+                              8.7e-20                            6.0e-15
+                              FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVN
+                              +++++++++++++++++                  +++++++++++++++
+76   DEILSWAQNFDKMMKTPAGRNLFREFLRTEYSEENLLFWLACEDLKKEQNKKVIEEKARLIYEDYISILSPKEVS
+
+                            [2]
+                            1.9e-18
+     ID                     AQKHIYNLMEKDSYPRF
+     ++                     +++++++++++++++++
+151  LDSRVREVINRNLLDPSPHMYEDAQLQIYTLMHRDSFPRFLNSQIYKSLVESITGSTSET
+
+
+sp|Q9UGC6|RGS17_HUMAN
+  LENGTH = 210  COMBINED P-VALUE = 3.88e-41  E-VALUE =  4.1e-39
+  DIAGRAM: 100-[1]-18-[3]-21-[2]-20
+
+                              [1]                                [3]
+                              8.7e-20                            6.0e-15
+                              FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVN
+                              +++++++++++++++++                  +++++++++++++++
+76   EEVLSWSQNFDKMMKAPAGRNLFREFLRTEYSEENLLFWLACEDLKKEQNKKVIEEKARMIYEDYISILSPKEVS
+
+                            [2]
+                            1.9e-18
+     ID                     AQKHIYNLMEKDSYPRF
+     ++                     +++++++++++++++++
+151  LDSRVREVINRNLLDPNPHMYEDAQLQIYTLMHRDSFPRFLNSQIYKSFVESTAGSSSES
+
+
+sp|Q9QZB0|RGS17_MOUSE
+  LENGTH = 210  COMBINED P-VALUE = 3.88e-41  E-VALUE =  4.1e-39
+  DIAGRAM: 100-[1]-18-[3]-21-[2]-20
+
+                              [1]                                [3]
+                              8.7e-20                            6.0e-15
+                              FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVN
+                              +++++++++++++++++                  +++++++++++++++
+76   DEVLSWSQNFDKMMKTPAGRNLFREFLRTEYSEENLLFWLACEDLKKEQNKKAVEEKARMIYEDYISILSPKEVS
+
+                            [2]
+                            1.9e-18
+     ID                     AQKHIYNLMEKDSYPRF
+     ++                     +++++++++++++++++
+151  LDSRVREVINRSLLDPSPHMYEDAQLQIYTLMHRDSFPRFLNSQIYKAFVESTTSCTSES
+
+
+sp|P49796|RGS3_HUMAN
+  LENGTH = 1198  COMBINED P-VALUE = 6.85e-41  E-VALUE =  7.3e-39
+  DIAGRAM: 1089-[1]-18-[3]-21-[2]-19
+
+                                            [1]                                [
+                                            5.4e-21                            2
+                                            FLKTEFCEENIDFWLAC                  I
+                                            +++++++++++++++++                  +
+1051 GKADKMMKSFKPTSEEALKWGESLEKLLVHKYGLAVFQAFLRTEFSEENLEFWLACEDFKKVKSQSKMASKAKKI
+
+     3]                                   [2]
+     .6e-15                               5.7e-19
+     YEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+     + ++++++++++++++                     ++++++ ++++++++++
+1126 FAEYIAIQACKEVNLDSYTREHTKDNLQSVTRGCFDLAQKRIFGLMEKDSYPRFLRSDLYLDLINQKKMSPPL
+
+
+sp|Q2M5E4|RGS21_HUMAN
+  LENGTH = 152  COMBINED P-VALUE = 1.91e-39  E-VALUE =    2e-37
+  DIAGRAM: 37-[1]-18-[3]-21-[2]-25
+
+                                          [1]                                [3]
+                                          1.5e-20                            6.0
+                                          FLKTEFCEENIDFWLAC                  IYE
+                                          +++++++++++++++++                  ++
+1    MPVKCCFYRSPTAETMTWSENMDTLLANQAGLDAFRIFLKSEFSEENVEFWLACEDFKKTKNADKIASKAKMIYS
+
+                                        [2]
+     e-15                               1.8e-15
+     EFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+     +++  +++++++++                     +++ +++++ +++++++
+76   EFIEADAPKEINIDFGTRDLISKNIAEPTLKCFDEAQKLIYCLMAKDSFPRFLKSEIYKKLVNSQQVPNHKKWLP
+
+
+sp|P34295|RGS1_CAEEL
+  LENGTH = 201  COMBINED P-VALUE = 1.12e-38  E-VALUE =  1.2e-36
+  DIAGRAM: 57-[1]-18-[3]-21-[2]-54
+
+                                                              [1]
+                                                              2.6e-18
+                                                              FLKTEFCEENIDFWLAC
+                                                              +++++++++++++++++
+1    MGYMGCWCSNLGRKYSGTVSPQRSVQPEALSYEMVYSWQQSFDTLMSFKSGQKCFAEFLKSEYSDENILFWQACE
+
+                      [3]                                   [2]
+                      2.3e-15                               6.2e-17
+                      IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+                      +++++++++++++++++                     ++ ++++++ +++++++
+76   ELKREKNSEKMEEKARIIYEDFISILSPKEVSLDSKVREIVNTNMSRPTQNTFEDAQHQIYQLMARDSYPRFLTS
+
+
+sp|P49808|RGS2_CAEEL
+  LENGTH = 169  COMBINED P-VALUE = 1.81e-38  E-VALUE =  1.9e-36
+  DIAGRAM: 59-[1]-18-[3]-21-[2]-20
+
+                                                                [1]
+                                                                2.5e-17
+                                                                FLKTEFCEENIDFWLA
+                                                                +++ ++++++++++++
+1    MRLLTCDCTFMGQKHSGSVSVEKKNQENDGPPTYEIVFGWSQSFENLMKHRAGQKYFAEFLKGEYSDENILFWQA
+
+                        [3]                                   [2]
+                        2.3e-15                               1.9e-17
+     C                  IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+     +                  +++++++++++++++++                     ++ ++++++ +++++++
+76   CEELKREKNAEKIEEKARIIYEDFISILSPKEVSLDSRVREIVNTNMGRPSASTFDEAQNQIYTLMQRDSYPRFL
+
+
+sp|Q4L0E8|RGS18_RAT
+  LENGTH = 235  COMBINED P-VALUE = 4.68e-38  E-VALUE =    5e-36
+  DIAGRAM: 102-[1]-18-[3]-21-[2]-43
+
+                                [1]                                [3]
+                                1.5e-20                            2.0e-15
+                                FLKTEFCEENIDFWLAC                  IYEEFISIQAPKE
+                                +++++++++++++++++                  ++++++ ++++++
+76   SSEEALKWAESFDKLLSHRDGVDAFTRFLKTEFSEENIEFWVACEDFKKCTEPQQLILKAKSIYEKFIKNDAPKE
+
+                              [2]
+                              3.3e-14
+     VNID                     AQKHIYNLMEKDSYPRF
+     ++++                     ++ ++ ++++ +++ ++
+151  VNLDFHTKEVITKSIAQPTLHSFDAAQSRVCQLMEHDSYKRFLKSEIYLHLIEGRPQRPTNLRRRSRSFTYNEFQ
+
+
+sp|Q9Z2H1|RGS11_MOUSE
+  LENGTH = 443  COMBINED P-VALUE = 3.01e-37  E-VALUE =  3.2e-35
+  DIAGRAM: 296-[1]-17-[3]-21-[2]-58
+
+                                                                            [1]
+                                                                            1.3e
+                                                                            FLKT
+                                                                            ++ +
+226  EAYLKFSSQHGPHDPIMSGCLPSNPWITDDVTYWAMNAPNVAAPTKLRVERWSFSFRELLDDPVGRAHFMDFLQK
+
+                                   [3]                                   [2]
+     -16                           6.7e-13                               1.0e-20
+     EFCEENIDFWLAC                 IYEEFISIQAPKEVNID                     AQKHIYN
+     +++++++ ++ ++                  ++ ++++++ ++++++                     +++++++
+301  EFSAENLSFWEACEELRFGGQAQVPTLVDSVYQQFLAPGAARWINIDSRTMERTLEGLRQPHRYVLDAAQLHIYM
+
+     
+     
+     LMEKDSYPRF
+     ++++++++++
+376  LMKKDSYPRFLKSDIYKGLLEEAVIPLETKRWPFPFLRKPLHSSPSPALQSTPREPAATSSPEGADGE
+
+
+sp|O94810|RGS11_HUMAN
+  LENGTH = 467  COMBINED P-VALUE = 8.61e-37  E-VALUE =  9.2e-35
+  DIAGRAM: 319-[1]-17-[3]-21-[2]-59
+
+                        [1]                               [3]
+                        4.1e-16                           5.2e-13
+                        FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+                        ++ ++++++++ ++ ++                  ++ ++++++ ++++++
+301  GFSFRELLEDPVGRAHFMDFLGKEFSGENLSFWEACEELRYGAQAQVPTLVDAVYEQFLAPGAAHWVNIDSRTME
+
+                     [2]
+                     1.0e-20
+                     AQKHIYNLMEKDSYPRF
+                     +++++++++++++++++
+376  QTLEGLRQPHRYVLDDAQLHIYMLMKKDSYPRFLKSDMYKALLAEAGIPLEMKRRVFPFTWRPRHSSPSPALLPT
+
+
+sp|O75916|RGS9_HUMAN
+  LENGTH = 674  COMBINED P-VALUE = 1.13e-36  E-VALUE =  1.2e-34
+  DIAGRAM: 318-[1]-17-[3]-21-[2]-267
+
+                       [1]                               [3]
+                       3.0e-18                           3.1e-14
+                       FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+                       +++++++++++ ++ ++                 +++ ++++++ ++++++
+301  FNFSELIRDPKGRQSFQYFLKKEFSGENLGFWEACEDLKYGDQSKVKEKAEEIYKLFLAPGARRWINIDGKTMDI
+
+                    [2]
+                    9.9e-18
+                    AQKHIYNLMEKDSYPRF
+                    +++++++++++++++++
+376  TVKGLKHPHRYVLDAAQTHIYMLMKKDSYARYLKSPIYKDMLAKAIEPQETTKKSSTLPFMRRHLRSSPSPVILR
+
+
+sp|O54828|RGS9_MOUSE
+  LENGTH = 675  COMBINED P-VALUE = 1.14e-36  E-VALUE =  1.2e-34
+  DIAGRAM: 315-[1]-17-[3]-21-[2]-271
+
+                    [1]                               [3]
+                    3.0e-18                           3.1e-14
+                    FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+                    +++++++++++ ++ ++                 +++ ++++++ ++++++
+301  SELIRDPKGRQSFQYFLKKEFSGENLGFWEACEDLKYGDQSKVKEKAEEIYKLFLAPGARRWINIDGKTMDITVK
+
+                 [2]
+                 9.9e-18
+                 AQKHIYNLMEKDSYPRF
+                 +++++++++++++++++
+376  GLRHPHRYVLDAAQTHIYMLMKKDSYARYLKSPIYKEMLAKAIEPQETTKRSSTLPFMRRHLRSSPSPVILRQLE
+
+
+sp|P49805|RGS9_RAT
+  LENGTH = 677  COMBINED P-VALUE = 1.15e-36  E-VALUE =  1.2e-34
+  DIAGRAM: 315-[1]-17-[3]-21-[2]-273
+
+                    [1]                               [3]
+                    3.0e-18                           3.1e-14
+                    FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+                    +++++++++++ ++ ++                 +++ ++++++ ++++++
+301  SELIRDPKGRQSFQYFLKKEFSGENLGFWEACEDLKYGDQSKVKEKAEEIYKLFLAPGARRWINIDGKTMDITVK
+
+                 [2]
+                 9.9e-18
+                 AQKHIYNLMEKDSYPRF
+                 +++++++++++++++++
+376  GLRHPHRYVLDAAQTHIYMLMKKDSYARYLKSPIYKEMLAKAIEPQETTKRSSTLPFMRRHLRSSPSPVILRQLE
+
+
+sp|O46469|RGS9_BOVIN
+  LENGTH = 484  COMBINED P-VALUE = 1.15e-36  E-VALUE =  1.2e-34
+  DIAGRAM: 315-[1]-17-[3]-21-[2]-80
+
+                    [1]                               [3]
+                    8.5e-18                           3.1e-14
+                    FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+                    +++++++++++ ++ ++                 +++ ++++++ ++++++
+301  SELIRDPKGRQSFQHFLRKEFSGENLGFWEACEDLKYGDQSKVKEKAEEIYKLFLAPGARRWINIDGKTMDITVK
+
+                 [2]
+                 9.9e-18
+                 AQKHIYNLMEKDSYPRF
+                 +++++++++++++++++
+376  GLKHPHRYVLDAAQTHIYMLMKKDSYARYLKSPIYKEMLAKAIEPQGTTRKSSSLPFMRRHLRSSPSPVILRQLE
+
+
+sp|Q80ZD1|RGS9_TAMST
+  LENGTH = 484  COMBINED P-VALUE = 1.15e-36  E-VALUE =  1.2e-34
+  DIAGRAM: 315-[1]-17-[3]-21-[2]-80
+
+                    [1]                               [3]
+                    8.5e-18                           3.1e-14
+                    FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+                    +++++++++++ ++ ++                 +++ ++++++ ++++++
+301  SELIRDPKGRQSFQYFLRKEFSGENLGFWEACEDLKYGDQSKVKEKAEEIYKLFLAPGARRWINIDGKTMDITVK
+
+                 [2]
+                 9.9e-18
+                 AQKHIYNLMEKDSYPRF
+                 +++++++++++++++++
+376  GLKHPHRYVLDAAQTHIYMLMKKDSYARYLKSPIYKEMLAKAIEPQETTKKSSTLPFIRRHLRSSPSPVILRQLE
+
+
+sp|O46470|RGS7_BOVIN
+  LENGTH = 469  COMBINED P-VALUE = 1.23e-35  E-VALUE =  1.3e-33
+  DIAGRAM: 349-[1]-17-[3]-21-[2]-31
+
+                                                      [1]
+                                                      1.1e-16
+                                                      FLKTEFCEENIDFWLAC
+                                                      +++++++ +++++++++
+301  DPSNPWLSDDTTFWELEASKEPSQQRVKRWGFGMDEALKDPVGREQFLKFLESEFSSENLRFWLAVEDLKKRPIR
+
+             [3]                                   [2]
+             2.3e-14                               1.3e-17
+             IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+             +++++++++++++++++                     ++ +++ +++ ++++++
+376  EVPSRVQEIWQEFLAPGAPSAINLDSKSYDKTTQNVKEPGRYTFEDAQEHIYKLMKSDSYPRFIRSSAYQELLQA
+
+
+sp|O54829|RGS7_MOUSE
+  LENGTH = 469  COMBINED P-VALUE = 1.23e-35  E-VALUE =  1.3e-33
+  DIAGRAM: 349-[1]-17-[3]-21-[2]-31
+
+                                                      [1]
+                                                      1.1e-16
+                                                      FLKTEFCEENIDFWLAC
+                                                      +++++++ +++++++++
+301  DPSNPWLSDDTTFWELEASKEPSQQRVKRWGFGMDEALKDPVGREQFLKFLESEFSSENLRFWLAVEDLKRRPIR
+
+             [3]                                   [2]
+             2.3e-14                               1.3e-17
+             IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+             +++++++++++++++++                     ++ +++ +++ ++++++
+376  EVPSRVQEIWQEFLAPGAPSAINLDSKSYDKTTQNVKEPGRYTFEDAQEHIYKLMKSDSYPRFIRSSAYQELLQA
+
+
+sp|P49803|RGS7_RAT
+  LENGTH = 477  COMBINED P-VALUE = 1.30e-35  E-VALUE =  1.4e-33
+  DIAGRAM: 349-[1]-17-[3]-21-[2]-39
+
+                                                      [1]
+                                                      1.1e-16
+                                                      FLKTEFCEENIDFWLAC
+                                                      +++++++ +++++++++
+301  DPSNPWLSDDTTFWELEASKEPSQQRVKRWGFGMDEALKDPVGREQFLKFLESEFSSENLRFWLAVEDLKKRPIR
+
+             [3]                                   [2]
+             2.3e-14                               1.3e-17
+             IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+             +++++++++++++++++                     ++ +++ +++ ++++++
+376  EVPSRVQEIWQEFLAPGAPSAINLDSKSYDKTTQNVKEPGRYTFEDAQEHIYKLMKSDSYPRFIRSSAYQELLQA
+
+
+sp|P49802|RGS7_HUMAN
+  LENGTH = 495  COMBINED P-VALUE = 1.45e-35  E-VALUE =  1.6e-33
+  DIAGRAM: 349-[1]-17-[3]-21-[2]-57
+
+                                                      [1]
+                                                      1.1e-16
+                                                      FLKTEFCEENIDFWLAC
+                                                      +++++++ +++++++++
+301  DPSNPWLSDDTTFWELEASKEPSQQRVKRWGFGMDEALKDPVGREQFLKFLESEFSSENLRFWLAVEDLKKRPIK
+
+             [3]                                   [2]
+             2.3e-14                               1.3e-17
+             IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+             +++++++++++++++++                     ++ +++ +++ ++++++
+376  EVPSRVQEIWQEFLAPGAPSAINLDSKSYDKTTQNVKEPGRYTFEDAQEHIYKLMKSDSYPRFIRSSAYQELLQA
+
+
+sp|O14921|RGS13_HUMAN
+  LENGTH = 159  COMBINED P-VALUE = 2.61e-35  E-VALUE =  2.8e-33
+  DIAGRAM: 50-[1]-18-[3]-21-[2]-19
+
+                                                       [1]
+                                                       5.0e-16
+                                                       FLKTEFCEENIDFWLAC
+                                                       +++ +++++++ +++++
+1    MSRRNCWICKMCRDESKRPPSNLTLEEVLQWAQSFENLMATKYGPVVYAAYLKMEHSDENIQFWMACETYKKIAS
+
+               [3]                                   [2]
+               1.9e-13                               2.4e-17
+               IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+                ++ +++++++++++++                     +++ +++ +++++++++
+76   RWSRISRAKKLYKIYIQPQSPREINIDSSTRETIIRNIQEPTETCFEEAQKIVYMHMERDSYPRFLKSEMYQKLL
+
+
+sp|O08773|RGS14_RAT
+  LENGTH = 544  COMBINED P-VALUE = 2.83e-35  E-VALUE =    3e-33
+  DIAGRAM: 83-[1]-20-[3]-20-[2]-370
+
+             [1]                                  [3]
+             7.5e-18                              5.3e-14
+             FLKTEFCEENIDFWLAC                    IYEEFISIQAPKEVNID
+             +++++++++++ +++++                    ++ +++++++ ++++++
+76   RGLAYFTEFLKKEFSAENVTFWQACERFQQIPASDTKQLAQEAHNIYHEFLSSQALSPVNIDRQAWLSEEVLAQP
+
+            [2]
+            1.2e-16
+            AQKHIYNLMEKDSYPRF
+            +++++++++++++++++
+151  RPDMFRAQQLQIFNLMKFDSYARFVKSPLYQECLLAEAEGRPLREPGSSHLGSPDTARKKPKLKPGKSLPLGVEE
+
+
+sp|O43665|RGS10_HUMAN
+  LENGTH = 181  COMBINED P-VALUE = 4.16e-35  E-VALUE =  4.5e-33
+  DIAGRAM: 57-[1]-18-[3]-20-[2]-35
+
+                                                              [1]
+                                                              5.1e-20
+                                                              FLKTEFCEENIDFWLAC
+                                                              +++++++++++++++++
+1    MFNRAVSRLSRKRPPSDIHDSDGSSSSSHQSLKSTAKWAASLENLLEDPEGVKRFREFLKKEFSEENVLFWLACE
+
+                      [3]                                  [2]
+                      3.6e-11                              1.3e-15
+                      IYEEFISIQAPKEVNID                    AQKHIYNLMEKDSYPRF
+                      +++ ++++++ +++++                      + +++++++++++ ++
+76   DFKKMQDKTQMQEKAKEIYMTFLSSKASSQVNVEGQSRLNEKILEEPHPLMFQKLQDQIFNLMKYDSYSRFLKSD
+
+
+sp|Q2KHW7|RGS10_BOVIN
+  LENGTH = 181  COMBINED P-VALUE = 4.16e-35  E-VALUE =  4.5e-33
+  DIAGRAM: 57-[1]-18-[3]-20-[2]-35
+
+                                                              [1]
+                                                              5.1e-20
+                                                              FLKTEFCEENIDFWLAC
+                                                              +++++++++++++++++
+1    MFNRAVSRLSRKRPPSDIHDSDGSSSSSHQTPKSTAKWASSLENLLEDPEGVKRFREFLKKEFSEENVLFWLACE
+
+                      [3]                                  [2]
+                      3.6e-11                              1.3e-15
+                      IYEEFISIQAPKEVNID                    AQKHIYNLMEKDSYPRF
+                      +++ ++++++ +++++                      + +++++++++++ ++
+76   DFKKTQDKKQMQEKAKEIYMTFLSSKASSQVNVEGQSRLNEKILEEPHPLMFQKLQDQIFNLMKYDSYSRFLKSD
+
+
+sp|O43566|RGS14_HUMAN
+  LENGTH = 566  COMBINED P-VALUE = 4.79e-35  E-VALUE =  5.1e-33
+  DIAGRAM: 83-[1]-20-[3]-20-[2]-392
+
+             [1]                                  [3]
+             3.2e-17                              1.8e-14
+             FLKTEFCEENIDFWLAC                    IYEEFISIQAPKEVNID
+             +++++++++++ ++ ++                    ++++++++++ ++++++
+76   LGLAYFTEFLKKEFSAENVTFWKACERFQQIPASDTQQLAQEARNIYQEFLSSQALSPVNIDRQAWLGEEVLAEP
+
+            [2]
+            1.2e-16
+            AQKHIYNLMEKDSYPRF
+            +++++++++++++++++
+151  RPDMFRAQQLQIFNLMKFDSYARFVKSPLYRECLLAEAEGRPLREPGSSRLGSPDATRKKPKLKPGKSLPLGVEE
+
+
+sp|P49806|RGS10_RAT
+  LENGTH = 181  COMBINED P-VALUE = 5.14e-35  E-VALUE =  5.5e-33
+  DIAGRAM: 57-[1]-18-[3]-20-[2]-35
+
+                                                              [1]
+                                                              5.1e-20
+                                                              FLKTEFCEENIDFWLAC
+                                                              +++++++++++++++++
+1    MFTRAVSRLSRKRPPSDIHDGDGSSSSGHQSLKSTAKWASSLENLLEDPEGVKRFREFLKKEFSEENVLFWLACE
+
+                      [3]                                  [2]
+                      4.5e-11                              1.3e-15
+                      IYEEFISIQAPKEVNID                    AQKHIYNLMEKDSYPRF
+                      +++ ++++++ +++++                      + +++++++++++ ++
+76   DFKKTEDKKQMQEKAKKIYMTFLSNKASSQVNVEGQSRLTEKILEEPHPLMFQKLQDQIFNLMKYDSYSRFLKSD
+
+
+sp|Q9CQE5|RGS10_MOUSE
+  LENGTH = 181  COMBINED P-VALUE = 5.14e-35  E-VALUE =  5.5e-33
+  DIAGRAM: 57-[1]-18-[3]-20-[2]-35
+
+                                                              [1]
+                                                              5.1e-20
+                                                              FLKTEFCEENIDFWLAC
+                                                              +++++++++++++++++
+1    MFTRAVSRLSRKRPPSDIHDGDGSSSSGHQSLKSTAKWASSLENLLEDPEGVQRFREFLKKEFSEENVLFWLACE
+
+                      [3]                                  [2]
+                      4.5e-11                              1.3e-15
+                      IYEEFISIQAPKEVNID                    AQKHIYNLMEKDSYPRF
+                      +++ ++++++ +++++                      + +++++++++++ ++
+76   DFKKTEDRKQMQEKAKEIYMTFLSNKASSQVNVEGQSRLTEKILEEPHPLMFQKLQDQIFNLMKYDSYSRFLKSD
+
+
+sp|P49758|RGS6_HUMAN
+  LENGTH = 472  COMBINED P-VALUE = 1.16e-34  E-VALUE =  1.2e-32
+  DIAGRAM: 352-[1]-17-[3]-21-[2]-31
+
+                                                         [1]
+                                                         1.1e-16
+                                                         FLKTEFCEENIDFWLAC
+                                                         +++++++ +++++++++
+301  TPAEPSNPWISDDVALWDIEMSKEPSQQRVKRWGFSFDEILKDQVGRDQFLRFLESEFSSENLRFWLAVQDLKKQ
+
+                [3]                                   [2]
+                2.3e-14                               1.2e-16
+                IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+                +++++++++++++++++                     ++ +++ +++ ++++++
+376  PLQDVAKRVEEIWQEFLAPGAPSAINLDSHSYEITSQNVKDGGRYTFEDAQEHIYKLMKSDSYARFLRSNAYQDL
+
+
+sp|P97492|RGS14_MOUSE
+  LENGTH = 547  COMBINED P-VALUE = 1.20e-34  E-VALUE =  1.3e-32
+  DIAGRAM: 83-[1]-20-[3]-20-[2]-373
+
+             [1]                                  [3]
+             3.2e-17                              5.3e-14
+             FLKTEFCEENIDFWLAC                    IYEEFISIQAPKEVNID
+             +++++++++++ ++ ++                    ++ +++++++ ++++++
+76   RGLAYFTEFLKKEFSAENVTFWKACERFQQIPASDTKQLAQEAHNIYHEFLSSQALSPVNIDRQAWLSEEVLAQP
+
+            [2]
+            1.2e-16
+            AQKHIYNLMEKDSYPRF
+            +++++++++++++++++
+151  RPDMFRAQQLQIFNLMKFDSYARFVKSPLYQECLLAEAEGRPLREPGSSHLGSPDTARKKPKLKPGKSLPLGVEE
+
+
+sp|Q8K443|RGS13_MOUSE
+  LENGTH = 158  COMBINED P-VALUE = 9.24e-34  E-VALUE =  9.9e-32
+  DIAGRAM: 50-[1]-18-[3]-21-[2]-18
+
+                                                       [1]
+                                                       4.0e-15
+                                                       FLKTEFCEENIDFWLAC
+                                                       +++ +++++++ +++++
+1    MSRHICWICKLCRDESKRLPSNLTLDEVLKWAQSLESLMATKYGPIVYTAYLKLEHSDENIKFWMACETYKKIAS
+
+               [3]                                   [2]
+               1.3e-13                               1.7e-16
+               IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+                ++ +++++++++++++                     +++ +++ ++ ++++++
+76   RRGRISRAKKLYNIYIQPQSPREINIDSTTREAIIKSIREPTQTCFEEAQKIVYMHMEMDSYPRFLKSEMYQQLL
+
+
+sp|Q9Z2H2|RGS6_MOUSE
+  LENGTH = 472  COMBINED P-VALUE = 9.97e-34  E-VALUE =  1.1e-31
+  DIAGRAM: 352-[1]-17-[3]-21-[2]-31
+
+                                                         [1]
+                                                         1.0e-15
+                                                         FLKTEFCEENIDFWLAC
+                                                         +++++++ +++++++ +
+301  TPAEPSNPWISDDITLWDIEMSKEPSQQRVKRWGFSFDEILKDQVGRDQFLRFLESEFSSENLRFWLSVQDLKKQ
+
+                [3]                                   [2]
+                2.3e-14                               1.2e-16
+                IYEEFISIQAPKEVNID                     AQKHIYNLMEKDSYPRF
+                +++++++++++++++++                     ++ +++ +++ ++++++
+376  PLQDVAKRVEEIWQEFLAPGAPSAINLDSHSYEITSQNVKDGGRYTFEDAQEHIYKLMKSDSYARFLRSNAYQDL
+
+
+sp|Q8CGE9|RGS12_MOUSE
+  LENGTH = 1381  COMBINED P-VALUE = 1.21e-33  E-VALUE =  1.3e-31
+  DIAGRAM: 731-[1]-20-[3]-20-[2]-559
+
+                                                             [1]
+                                                             4.0e-19
+                                                             FLKTEFCEENIDFWLAC
+                                                             +++++++++++++++++
+676  TGADLKDCISNNSLSSNASLPSVQSCRRLRERRVASWAVSFERLLQDPVGVRYFSDFLRKEFSEENILFWQACEC
+
+                       [3]                                  [2]
+                       1.9e-12                              1.7e-16
+                       IYEEFISIQAPKEVNID                    AQKHIYNLMEKDSYPRF
+                       ++ ++++++++ +++++                    ++++++++++++++ ++
+751  FSHVPAHDKKELSYRAREIFSKFLCSKATTPVNIDSQAQLADDILNAPHPDMFKEQQLQIFNLMKFDSYTRFLKS
+
+
+sp|O08774|RGS12_RAT
+  LENGTH = 1387  COMBINED P-VALUE = 1.22e-33  E-VALUE =  1.3e-31
+  DIAGRAM: 731-[1]-20-[3]-20-[2]-565
+
+                                                             [1]
+                                                             4.0e-19
+                                                             FLKTEFCEENIDFWLAC
+                                                             +++++++++++++++++
+676  TGADLKDCISNNSLSSNASLPSVQSCRRLRERRVASWAVSFERLLQDPVGVRYFSDFLRKEFSEENILFWQACEC
+
+                       [3]                                  [2]
+                       1.9e-12                              1.7e-16
+                       IYEEFISIQAPKEVNID                    AQKHIYNLMEKDSYPRF
+                       ++ ++++++++ +++++                    ++++++++++++++ ++
+751  FSHVPAHDKKELSYRAREIFSKFLCSKATTPVNIDSQAQLADDILNAPHPDMFKEQQLQIFNLMKFDSYTRFLKS
+
+
+sp|O14924|RGS12_HUMAN
+  LENGTH = 1447  COMBINED P-VALUE = 1.39e-33  E-VALUE =  1.5e-31
+  DIAGRAM: 731-[1]-20-[3]-20-[2]-625
+
+                                                             [1]
+                                                             4.0e-19
+                                                             FLKTEFCEENIDFWLAC
+                                                             +++++++++++++++++
+676  TGADLKDCVSNNSLSSNASLPSVQSCRRLRERRVASWAVSFERLLQDPVGVRYFSDFLRKEFSEENILFWQACEY
+
+                       [3]                                  [2]
+                       1.9e-12                              1.7e-16
+                       IYEEFISIQAPKEVNID                    AQKHIYNLMEKDSYPRF
+                       ++ ++++++++ +++++                    ++++++++++++++ ++
+751  FNHVPAHDKKELSYRAREIFSKFLCSKATTPVNIDSQAQLADDVLRAPHPDMFKEQQLQIFNLMKFDSYTRFLKS
+
+
+sp|Q8WQC0|RGS7_CAEEL
+  LENGTH = 819  COMBINED P-VALUE = 2.04e-31  E-VALUE =  2.2e-29
+  DIAGRAM: 698-[1]-19-[3]-22-[2]-29
+
+                            [1]                                 [3]
+                            6.6e-18                             8.7e-14
+                            FLKTEFCEENIDFWLAC                   IYEEFISIQAPKEVNI
+                            +++++++++++++++ +                   ++ ++++  +++++++
+676  VRQWEISFESLLNNKFGCALFRQFLKKEFSDENMDFWLECEEFKKMKDGKKSTTQKAIEIYSEFVAEHSPKEVNL
+
+                            [2]
+                            2.2e-13
+     D                      AQKHIYNLMEKDSYPRF
+     +                      ++ ++ +++ +++++++
+751  DSDTRAATKAAVEAGCKPDTFALAQSRVEQLMSKDSYRRFLRDRLFLDLLESYEITDKEDKPSSSKDKN
+
+
+sp|Q9VCX1|RGS_DROME
+  LENGTH = 1541  COMBINED P-VALUE = 5.03e-30  E-VALUE =  5.4e-28
+  DIAGRAM: 843-[1]-18-[3]-21-[2]-608
+
+                       [1]                                [3]
+                       2.3e-17                            1.9e-09
+                       FLKTEFCEENIDFWLAC                  IYEEFISIQAPKEVNID
+                       +++++++++++ ++ ++                  ++ + +++++  +++++
+826  GSFERMLQDAAGMQTFSEFLKKEFSAENIYFWTACERYRLLESEADRVAQAREIFAKHLANNSSDPVNVDSQARS
+
+                     [2]
+                     1.1e-17
+                     AQKHIYNLMEKDSYPRF
+                     +++++++++++++++++
+901  LTEEKLADAAPDIFAPAQKQIFSLMKFDSYQRFIRSDLYKSCVEAEQKNQPLPYSGLDLDELLKTNFHLGAFSKL
+
+
+sp|Q18563|RGS6_CAEEL
+  LENGTH = 734  COMBINED P-VALUE = 1.55e-22  E-VALUE =  1.7e-20
+  DIAGRAM: 62-[1]-18-[3]-23-[2]-580
+
+                                                                   [1]
+                                                                   1.5e-13
+                                                                   FLKTEFCEENIDF
+                                                                   ++++ ++++++ +
+1    MSTPCSGNEPATPTNTSPNNETSNSCLSMGVGVASNETNSSRELKIFKKVIRDPVLRAPFQEFLEQQFCAENLNF
+
+                           [3]                                     [2]
+                           7.4e-11                                 2.2e-11
+     WLAC                  IYEEFISIQAPKEVNID                       AQKHIYNLMEKDS
+      +++                  +++ +++++++ +++++                       ++ ++  + +++
+76   YLAVEQFKEIQDFQERSSFGRRIFDRYFAMNSTEPVNIDNSTSKRIRETVESGGFPLDTYDVAQYQILHLLKYDC
+
+     
+     
+     YPRF
+      +++
+151  WPRFLRSTNNSQPSFTDEELAADDEDKNGHSQPTSLNNTNEFEAAAQQSQPAPNAPAATKEKPSKQYSMPAEMTS
+
+
+sp|P49809|EGL10_CAEEL
+  LENGTH = 555  COMBINED P-VALUE = 2.74e-21  E-VALUE =  2.9e-19
+  DIAGRAM: 437-[1]-17-[3]-22-[2]-28
+
+                                                                   [1]
+                                                                   5.0e-14
+                                                                   FLKTEFCEENIDF
+                                                                   ++ ++++++++++
+376  LTPPGSQADPFQSQPNPWINDTVDFWQHDKITGDIQTRRLKLWEDSFEELLADSLGRETLQKFLDKEYSGENLRF
+
+                          [3]                                    [2]
+                          8.0e-05                                2.9e-15
+     WLAC                 IYEEFISIQAPKEVNID                      AQKHIYNLMEKDSYP
+     +  +                 +++++++ ++                             +  ++++++++++++
+451  WWEVQKLRKCSSRMVPVMVTEIYNEFIDTNAATSPVNVDCKVMEVTEDNLKNPNRWSFDEAADHIYCLMKNDSYQ
+
+     
+     
+     RF
+     ++
+526  RFLRSEIYKDLVLQSRKKVSLNCSFSIFAS
+
+
+sp|O70239|AXIN1_RAT
+  LENGTH = 827  COMBINED P-VALUE = 3.29e-19  E-VALUE =  3.5e-17
+  DIAGRAM: 104-[1]-63-[2]-626
+
+                                  [1]
+                                  1.7e-15
+                                  FLKTEFCEENIDFWLAC
+                                  +++++ +++ +++++++
+76   ASPTPPYLRWAESLHSLLDDQDGISLFRTFLKQEGCADLLDFWFACSGFRKLEPCDSNEEKRLKLARAIYRKYIL
+
+                                       [2]
+                                       3.0e-13
+                                       AQKHIYNLMEKDSYPRF
+                                       +++++++ +++++++ +
+151  DSNGIVSRQTKPATKSFIKDCVMKQQIDPAMFDQAQTEIQSTMEENTYPSFLKSDIYLEYTRTGSESPKVCSDQS
+
+
+sp|O35625|AXIN1_MOUSE
+  LENGTH = 863  COMBINED P-VALUE = 3.65e-19  E-VALUE =  3.9e-17
+  DIAGRAM: 104-[1]-63-[2]-662
+
+                                  [1]
+                                  1.7e-15
+                                  FLKTEFCEENIDFWLAC
+                                  +++++ +++ +++++++
+76   ASPTPPYLRWAESLHSLLDDQDGISLFRTFLKQEGCADLLDFWFACSGFRKLEPCDSNEEKRLKLARAIYRKYIL
+
+                                       [2]
+                                       3.0e-13
+                                       AQKHIYNLMEKDSYPRF
+                                       +++++++ +++++++ +
+151  DSNGIVSRQTKPATKSFIKDCVMKQQIDPAMFDQAQTEIQSTMEENTYPSFLKSDIYLEYTRTGSESPKVCSDQS
+
+
+sp|O15169|AXIN1_HUMAN
+  LENGTH = 862  COMBINED P-VALUE = 4.26e-19  E-VALUE =  4.6e-17
+  DIAGRAM: 104-[1]-63-[2]-661
+
+                                  [1]
+                                  1.7e-15
+                                  FLKTEFCEENIDFWLAC
+                                  +++++ +++ +++++++
+76   ASPTPPYLKWAESLHSLLDDQDGISLFRTFLKQEGCADLLDFWFACTGFRKLEPCDSNEEKRLKLARAIYRKYIL
+
+                                       [2]
+                                       3.6e-13
+                                       AQKHIYNLMEKDSYPRF
+                                       +++++++ +++++++ +
+151  DNNGIVSRQTKPATKSFIKGCIMKQLIDPAMFDQAQTEIQATMEENTYPSFLKSDIYLEYTRTGSESPKVCSDQS
+
+
+sp|P57094|AXIN1_DANRE
+  LENGTH = 835  COMBINED P-VALUE = 5.28e-19  E-VALUE =  5.7e-17
+  DIAGRAM: 108-[1]-62-[2]-631
+
+                                      [1]
+                                      7.7e-15
+                                      FLKTEFCEENIDFWLAC
+                                      +++++ +++ +++++++
+76   PEGSASPTPPYLKWAESLHSLLDDQDGIHLFRTFLKQEECADMLDFWFACSGFRKQEANDGNEKMLKLAKAIYKK
+
+                                          [2]
+                                          1.0e-13
+                                          AQKHIYNLMEKDSYPRF
+                                          +++++++++++++++ +
+151  YILDNNGIVSRQIKPATKSFIKDCVTKLHIDPAMFDQAQTEIQTMMEENTYPLFLKSDIYLEYTRTGGESPKLFS
+
+
+sp|Q18312|RGS3_CAEEL
+  LENGTH = 363  COMBINED P-VALUE = 1.89e-18  E-VALUE =    2e-16
+  DIAGRAM: 128-[1]-53-[2]-41-[1]-19-[3]-23-[2]-14
+
+                                                          [1]
+                                                          1.6e-06
+                                                          FLKTEFCEENIDFWLAC
+                                                          ++ +   ++++ +  +
+76   FIAGMFDGKEKVNREQPPMPTTDGVEYPRAASWAAGNCANVLNDDKGKQLFRVFLFQSLAEENLAFLEAMEKLKK
+
+                                                     [2]
+                                                     1.2e-10
+                                                     AQKHIYNLMEKDSYPRF
+                                                     + +++  + +++ ++++
+151  MKISDEKVAYAKEILETYQGSINLSSSSMKSLRNAVASETLDMEEFAPAIKEVRRLLENDQFPRFRRSELYLEYL
+
+                                    [1]                                 [3]
+                                    9.1e-14                             3.6e-06
+                                    FLKTEFCEENIDFWLAC                   IYEEFISI
+                                    ++++ + +++++++ ++                   +   +++
+226  EELLPRSYAEKWAQSFEGLLGNHVGRHHFRIFLRSIHAEENLRFWEAVVEFRSSRHKANAMNNLGKVILSTYLAE
+
+                                     [2]
+                                     1.6e-07
+     QAPKEVNID                       AQKHIYNLMEKDSYPRF
+     + + ++ +                        + +++ +   ++ + ++
+301  GTTNEVFLPFGVRQVIERRIQDNQIDITLFDEAIKHVEQVLRNDPYVRFLQSSQYIDLLSKLK
+
+
+sp|P57770|AKA10_PIG
+  LENGTH = 650  COMBINED P-VALUE = 1.95e-18  E-VALUE =  2.1e-16
+  DIAGRAM: 129-[1]-141-[3]-25-[2]-36-[1]-25-[3]-209
+
+                                                           [1]
+                                                           2.5e-06
+                                                           FLKTEFCEENIDFWLAC
+                                                           +++    +  + +++
+76   TATLKKQPSHMEAAHFGDLGRSCLDYQAQETKSSLSKTLEQVLRDAVVLPYFIQFMELRRMEHLVKFWLEAESFH
+
+                                                                   [3]
+                                                                   1.5e-07
+                                                                   IYEEFISIQAPKE
+                                                                    +++++++++ ++
+226  LSPECDGARALHPAAARTGARRASLEPQESCRLTVASRNSPSSPLKEVSGKLMKSIEQDAVNTFTKYISPDAAKP
+
+                                  [2]
+                                  2.6e-10
+     VNID                         AQKHIYNLMEKDSYPRF
+     + +                          ++  +++ +++  +  +
+301  IPITEAMRNDIIAKICGEDGQVDPNCFVLAQSIVFSAMEQEHFSEFLRSHHFCKYQIEVLTSGTVYLADILFCES
+
+            [1]                                       [3]
+            1.2e-11                                   2.0e-09
+            FLKTEFCEENIDFWLAC                         IYEEFISIQAPKEVNID
+            +++++  ++ + ++++                           ++++++ +++++   +
+376  ALFYSSEYMEKEDAVNILQFWLAADNFQSQPAAKKGQYDGQEAQNDAMILYDKYFSLQATHPLGFDDVVRLEIES
+
+
+sp|O43572|AKA10_HUMAN
+  LENGTH = 662  COMBINED P-VALUE = 2.06e-18  E-VALUE =  2.2e-16
+  DIAGRAM: 141-[1]-142-[3]-25-[2]-36-[1]-25-[3]-208
+
+                                                                       [1]
+                                                                       2.5e-06
+                                                                       FLKTEFCEE
+                                                                       +++    +
+76   ISANMDSFSSSRTATLKKQPSHMEAAHFGDLGRSCLDYQTQETKSSLSKTLEQVLHDTIVLPYFIQFMELRRMEH
+
+     
+     
+     NIDFWLAC
+      + +++
+151  LVKFWLEAESFHSTTWSRIRAHSLNTVKQSSLAEPVSPSKKHETTASFLTDSLDKRLEDSGSAQLFMTHSEGIDL
+
+     [3]                                       [2]
+     1.5e-07                                   2.6e-10
+     IYEEFISIQAPKEVNID                         AQKHIYNLMEKDSYPRF
+      +++++++++ +++ +                          ++  +++ +++  +  +
+301  TFTKYISPDAAKPIPITEAMRNDIIARICGEDGQVDPNCFVLAQSIVFSAMEQEHFSEFLRSHHFCKYQIEVLTS
+
+                         [1]                                       [3]
+                         1.2e-11                                   2.0e-09
+                         FLKTEFCEENIDFWLAC                         IYEEFISIQAPKE
+                         +++++  ++ + ++++                           ++++++ +++++
+376  GTVYLADILFCESALFYFSEYMEKEDAVNILQFWLAADNFQSQLAAKKGQYDGQEAQNDAMILYDKYFSLQATHP
+
+     
+     
+     VNID
+        +
+451  LGFDDVVRLEIESNICREGGPLPNCFTTPLRQAWTTMEKVFLPGFLSSNLYYKYLNDLIHSVRGDEFLGGNVSLT
+
+
+sp|O88845|AKA10_MOUSE
+  LENGTH = 662  COMBINED P-VALUE = 2.20e-18  E-VALUE =  2.4e-16
+  DIAGRAM: 141-[1]-142-[3]-25-[2]-36-[1]-25-[3]-208
+
+                                                                       [1]
+                                                                       2.5e-06
+                                                                       FLKTEFCEE
+                                                                       +++    +
+76   ISANMDSFSSSRTATLKKQPSHMEAAHFGDLGRSCLDYQTQETKSSLSKTLEQVLRDTVVLPYFLQFMELRRMEH
+
+     
+     
+     NIDFWLAC
+      + +++
+151  LVKFWLEAESFHSTTWSRIRAHSLNTVKQSSLAEPVSPSKRHETPASSVTEALDRRLGDSSSAPLLVTQSEGTDL
+
+     [3]                                       [2]
+     1.5e-07                                   2.8e-10
+     IYEEFISIQAPKEVNID                         AQKHIYNLMEKDSYPRF
+      +++++++++ +++ +                          ++ ++++ +++  +  +
+301  TFTKYISPDAAKPIPITEAMRNDIIAKICGEDGQVDPNCFVLAQAVVFSAMEQEHFSEFLRSHHFCKYQIEVLTS
+
+                         [1]                                       [3]
+                         1.2e-11                                   2.0e-09
+                         FLKTEFCEENIDFWLAC                         IYEEFISIQAPKE
+                         +++++  ++ + ++++                           ++++++ +++++
+376  GTVYLADILFCESALFYFSEYMEKEDAVNILQFWLAADNFQSQLAAKKGQYDGQEAQNDAMILYDKYFSLQATHP
+
+     
+     
+     VNID
+        +
+451  LGFDDVVRLEIESNICREGGPLPNCFTTPLRQAWTTMEKVFLPGFLSSNLYYKYLNDLIHSVRGDEFLGGNVSLA
+
+
+sp|P57095|AXIN2_DANRE
+  LENGTH = 812  COMBINED P-VALUE = 2.35e-18  E-VALUE =  2.5e-16
+  DIAGRAM: 100-[1]-19-[3]-23-[2]-4-[3]-598
+
+                              [1]                                 [3]
+                              5.9e-14                             8.3e-05
+                              FLKTEFCEENIDFWLAC                   IYEEFISIQAPKEV
+                              +++ + +++ +++++++                   +++ ++ +++  +
+76   SPLARWTKSLHFLLGDQDGAQLFRAYLEREKCVDTLDFWFACNGFRQMDLKDTKTHRVAKAIYKRYIENNSIVAK
+
+                               [2]                  [3]
+                               1.8e-12              3.8e-05
+     NID                       AQKHIYNLMEKDSYPRF    IYEEFISIQAPKEVNID
+      +                        ++ ++++ ++++ ++ +    ++ +++  +   +  +
+151  QLKPATKTFIRDNIKRQQIDSAMFDQAQMEIQTAMEENAYQMFLTSDIYLEYVRTGCENPSHVNPNGLGGLKLVC
+
+
+sp|Q9YGY0|AXIN1_XENLA
+  LENGTH = 842  COMBINED P-VALUE = 2.55e-18  E-VALUE =  2.7e-16
+  DIAGRAM: 104-[1]-63-[2]-641
+
+                                  [1]
+                                  1.9e-14
+                                  FLKTEFCEENIDFWLAC
+                                  ++ ++ +++ +++++++
+76   ASPTPPYLKWAESLHSLLDDQDGIHLFRTFLQQENCADLLDFWFACSGFRKLEPNDSKVEKRLKLAKAIYKKYVL
+
+                                       [2]
+                                       4.2e-13
+                                       AQKHIYNLMEKDSYPRF
+                                       ++ +++++++ ++++ +
+151  DSNGIVSRQIKPATKSFIKDCVLRQQIDPAMFDQAQMEIQSMMEDNTYPVFLKSDIYLEYTTIGGESPKNYSDQS
+
+
+sp|O70240|AXIN2_RAT
+  LENGTH = 838  COMBINED P-VALUE = 2.63e-18  E-VALUE =  2.8e-16
+  DIAGRAM: 97-[1]-59-[2]-648
+
+                           [1]
+                           1.3e-14
+                           FLKTEFCEENIDFWLAC
+                           +++ + +++ +++++++
+76   TRWTKSLHSLLGDQDGAYLFRTFLEREKCVDTLDFWFACNGFRQMNLKDTKTLRVAKAIYKRYIENNSVVSKQLK
+
+                            [2]
+                            2.1e-12
+                            AQKHIYNLMEKDSYPRF
+                            +++++++ ++++ ++ +
+151  PATKTYIRDGIKKQQIGSVMFDQAQTEIQAVMEENAYQVFLTSDIYLEYVRSGGENTAYMSNGGLGSLKVLCGYL
+
+
+sp|O88566|AXIN2_MOUSE
+  LENGTH = 840  COMBINED P-VALUE = 2.65e-18  E-VALUE =  2.8e-16
+  DIAGRAM: 97-[1]-59-[2]-650
+
+                           [1]
+                           1.3e-14
+                           FLKTEFCEENIDFWLAC
+                           +++ + +++ +++++++
+76   TRWTKSLHSLLGDQDGAYLFRTFLEREKCVDTLDFWFACNGFRQMNLKDTKTLRVAKAIYKRYIENNSVVSKQLK
+
+                            [2]
+                            2.1e-12
+                            AQKHIYNLMEKDSYPRF
+                            +++++++ ++++ ++ +
+151  PATKTYIRDGIKKQQIGSVMFDQAQTEIQAVMEENAYQVFLTSDIYLEYVRSGGENTAYMSNGGLGSLKVLCGYL
+
+
+sp|Q9Y2T1|AXIN2_HUMAN
+  LENGTH = 843  COMBINED P-VALUE = 2.89e-18  E-VALUE =  3.1e-16
+  DIAGRAM: 97-[1]-59-[2]-653
+
+                           [1]
+                           1.3e-14
+                           FLKTEFCEENIDFWLAC
+                           +++ + +++ +++++++
+76   TRWTKSLHSLLGDQDGAYLFRTFLEREKCVDTLDFWFACNGFRQMNLKDTKTLRVAKAIYKRYIENNSIVSKQLK
+
+                            [2]
+                            1.4e-12
+                            AQKHIYNLMEKDSYPRF
+                            +++++++ ++++ ++ +
+151  PATKTYIRDGIKKQQIDSIMFDQAQTEIQSVMEENAYQMFLTSDIYLEYVRSGGENTAYMSNGGLGSLKVVCGYL
+
+
+sp|O42400|AXIN1_CHICK
+  LENGTH = 841  COMBINED P-VALUE = 1.60e-17  E-VALUE =  1.7e-15
+  DIAGRAM: 104-[1]-63-[2]-640
+
+                                  [1]
+                                  1.5e-15
+                                  FLKTEFCEENIDFWLAC
+                                  +++++ +++ +++++++
+76   ASPTPPYLKWAESLHSLLDDQDGINLFRTFLKQEDCADLLDFWFACSGFRKLEPCVSNEEKRLKLAKAIYKKYIL
+
+                                       [2]
+                                       1.9e-11
+                                       AQKHIYNLMEKDSYPRF
+                                       ++++++++ + ++++ +
+151  DNNGIVSRQIKPATKSFIKDCVMKLQIDPDMFDQAQTEIQCMIEDNTYPLFLKSDIYLEYTRTGGESPKIYSDPS
+
+
+sp|Q23376|RGS9_CAEEL
+  LENGTH = 235  COMBINED P-VALUE = 7.41e-17  E-VALUE =  7.9e-15
+  DIAGRAM: 123-[1]-20-[3]-19-[2]-22
+
+                                                     [1]
+                                                     2.7e-11
+                                                     FLKTEFCEENIDFWLAC
+                                                     ++++  +++ +++++
+76   RLSSALKSPASLFRRSPEISLREDILSWKKSPHSLAASEYGGSDLLVQFLKQQTSDDYVDFWLESGEYRWTRTKP
+
+               [3]                                 [2]
+               5.3e-08                             5.0e-09
+               IYEEFISIQAPKEVNID                   AQKHIYNLMEKDSYPRF
+               ++++++  + ++ +                      ++  + +   ++++  +
+151  GRKRDIEAQRIYDKFVYGECPRKIAHLEKMCFVSRQGPTGRDVFICAQAYVGTNFPKDSYKKFLQDPIYLNLLKT
+
+
+sp|O45523|RGS10_CAEEL
+  LENGTH = 270  COMBINED P-VALUE = 1.18e-16  E-VALUE =  1.3e-14
+  DIAGRAM: 151-[1]-17-[3]-23-[2]-28
+
+      [1]                               [3]
+      1.8e-12                           8.5e-11
+      FLKTEFCEENIDFWLAC                 IYEEFISIQAPKEVNID
+      +++   +++ +++++ +                 ++++++++++++ + +
+151  QFLKEQTSENEVDFWLDCQKFRSSKMSSRQNEARRIFDEYFAMGSPKKIYIERYLWCVVQAYLVNDPGWRHTFDV
+
+     [2]
+     4.9e-05
+     AQKHIYNLMEKDSYPRF
+     ++  +     + +   +
+226  AQAYVGLKLAKKSHKKFLEDPLYLDLVELVTSGVNYNKFWHDKLE
+
+
+sp|O45524|RGS11_CAEEL
+  LENGTH = 274  COMBINED P-VALUE = 2.61e-15  E-VALUE =  2.8e-13
+  DIAGRAM: 153-[1]-19-[3]-23-[2]-28
+
+        [1]                                 [3]
+        3.7e-13                             2.1e-08
+        FLKTEFCEENIDFWLAC                   IYEEFISIQAPKEVNID
+        ++++  +++ +++++ +                   + + ++++ +++ +
+151  FIQFLKQQTSENEVDFWLDCQKFRSSTAKISWKNKEVHRILDQFLSSSAPRKIDMETSILARCMEYVEHIEGWKY
+
+         [2]
+         2.3e-05
+         AQKHIYNLMEKDSYPRF
+         ++  +     + +   +
+226  TFDVAQAYVGLKFPKESHKKFLEDPLYLDLLELVISGRSCNKVGHKKSC
+
+
+sp|Q9PTP2|AXNR_XENLA
+  LENGTH = 706  COMBINED P-VALUE = 2.13e-13  E-VALUE =  2.3e-11
+  DIAGRAM: 88-[1]-59-[2]-525
+
+                  [1]
+                  4.1e-12
+                  FLKTEFCEENIDFWLAC
+                  +++ +  ++ + +++++
+76   LLDDQDGATLFRMYLEGEGLGDLLTFWFACNGFRAMDPLEPKTSKTAKAIYRWYVQNSSAVSGRLKPTTRTQVKE
+
+                   [2]
+                   7.4e-10
+                   AQKHIYNLMEKDSYPRF
+                   ++ +++  +++  +  +
+151  CVKNHQLNKTVFDQAQQEIQRAMEQEAFTSFLQSDICKEYARGVEDSPTPESPGPGLPTLTEDEEFGGLHHFSSG
+
+
+sp|Q6XHA6|ROC10_DICDI
+  LENGTH = 2646  COMBINED P-VALUE = 1.36e-12  E-VALUE =  1.5e-10
+  DIAGRAM: 2428-[1]-23-[3]-161
+
+                                 [1]                                     [3]
+                                 2.1e-11                                 1.6e-11
+                                 FLKTEFCEENIDFWLAC                       IYEEFIS
+                                  + +++ ++++ +  +                        +++ ++
+2401 NLSSMLFEDKLMVVLNNKQSTTYKAFYTHMQSEFNEENLMFYEAIKTFKSLPNQTPDDREIIKIQSKKIYQVFIG
+
+     
+     
+     IQAPKEVNID
+      ++++++++
+2476 ENAPKEINLPFLLKKELKNKIDFPDGPSVTVFNDTLTFVISSIEDSFHRFKFTVPTTNKNGWVEIECKGIPPLPM
+
+
+sp|P49801|RGS6_RAT
+  LENGTH = 66  COMBINED P-VALUE = 9.66e-11  E-VALUE =    1e-08
+  DIAGRAM: 20-[3]-29
+
+                         [3]
+                         2.3e-14
+                         IYEEFISIQAPKEVNID
+                         +++++++++++++++++
+1    LAVQDLKKQPLQDVAKRVEEIWQEFLAPGAPSAINLDSHSYEITSQNVKDGGRYTFEDAQEHIYKL
+
+
+sp|Q10955|RGS5_CAEEL
+  LENGTH = 492  COMBINED P-VALUE = 4.65e-09  E-VALUE =    5e-07
+  DIAGRAM: 97-[1]-24-[3]-23-[2]-35-[1]-21-[3]-207
+
+                           [1]                                      [3]
+                           2.5e-06                                  6.2e-07
+                           FLKTEFCEENIDFWLAC                        IYEEFISIQAPK
+                           ++ +    + + +++ +                        +++++++ ++++
+76   PQLAFSLDRLLIDSSALSYFIQYLDSTDKLNLIKFWMHVEGFKSSFSEQIQAAQELSLRDAKSIYDKYIDDGSTS
+
+                                 [2]
+                                 1.3e-05
+     EVNID                       AQKHIYNLMEKDSYPRF
+        +                        ++  + ++ ++  +  +
+151  SLALPRKIKQIVDDKLSASPLQKSCFDEAQDFVKSLFEYRYFDEFQNSVYYKKHELEVLSDGCSLADILKVQPLL
+
+          [1]                                   [3]
+          1.6e-05                               3.9e-09
+          FLKTEFCEENIDFWLAC                     IYEEFISIQAPKEVNID
+          + +     + + + + +                      ++++++++++  + +
+226  LSFLEFIKEKEDHDTIQFLLGCDSFEANLDLMEDSEALGDAMALYEKYFSMQATNMIDLGSAIRAEMESLICEES
+
+
+sp|Q8NE09|RGS22_HUMAN
+  LENGTH = 1264  COMBINED P-VALUE = 4.47e-07  E-VALUE =  4.8e-05
+  DIAGRAM: 454-[1]-252-[3]-128-[1]-68-[2]-69-[1]-208
+
+         [1]
+         9.2e-05
+         FLKTEFCEENIDFWLAC
+          +++ + + + +  +
+451  RHLEKMKKCYLVSNGDYYLSAEILSKFKLLDGSQWNEEHLRNIQSEVLKPLLLYWAPRFCVTHSASTKYASAELK
+
+                                                     [3]
+                                                     2.0e-06
+                                                     IYEEFISIQAPKEVNID
+                                                      +  ++++ ++  + +
+676  FFFTKFCEHSGNKLWKNSVYFWFDLQAYHQLFYQETLQPFKVCKQAQYLFATYVAPSATLDIGLQQEKKKEIYMK
+
+                                                [1]
+                                                4.9e-06
+                                                FLKTEFCEENIDFWLAC
+                                                ++++  +   +  +
+826  TGILSLSNVSKRTEYWDNVPAEYKHFKFSDLLNNKLEFEHFRQFLETHSSSMDLMCWTDIEQFRRITYRDRNQRK
+
+                                                          [2]
+                                                          1.7e-06
+                                                          AQKHIYNLMEKDSYPRF
+                                                           ++++++  ++   + +
+901  AKSIYIKNKYLNKKYFFGPNSPASLYQQNQVMHLSGGWGKILHEQLDAPVLVEIQKHVQNRLENVWLPLFLASEQ
+
+                                                                     [1]
+                                                                     3.0e-07
+                                                                     FLKTEFCEENI
+                                                                      ++    ++ +
+976  FAARQKIKVQMKDIAEELLLQKAEKKIGVWKPVESKWISSSCKIIAFRKALLNPVTSRQFQRFVALKGDLLENGL
+
+     
+     
+     DFWLAC
+     ++++ +
+1051 LFWQEVQKYKDLCHSHCDESVIQKKITTIINCFINSSIPPALQIDIPVEQAQKIIEHRKELGPYVFREAQMTIFG
+
+********************************************************************************
+
+
+CPU: admin1-OptiPlex-Tower-Plus-7010
+Time 0.043 secs.
+
+mast -nostatus -oc /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1AGR_H_motifs /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1AGR_H_motifs/meme.xml /media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_2/1AGR_H_hseq.fasta

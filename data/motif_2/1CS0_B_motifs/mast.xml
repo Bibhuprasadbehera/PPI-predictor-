@@ -1,0 +1,4717 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<mast version="5.5.7" release="Wed Jun 19 13:59:04 2024 -0700">
+	<command_line><arg>mast</arg><arg>-nostatus</arg><arg>-oc</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1CS0_B_motifs</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1CS0_B_motifs/meme.xml</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_2/1CS0_B_hseq.fasta</arg></command_line>
+	<settings strand_handling="unstranded" max_correlation="0.60" remove_correlated="n" max_seq_evalue="10" adjust_hit="n" max_hit_pvalue="0.0001" max_weak_pvalue="0.0001"/>
+	<alphabet name="Protein" like="protein">
+		<letter id="A" symbol="A" name="Alanine" colour="0000CC"/>
+		<letter id="C" symbol="C" name="Cysteine" colour="0000CC"/>
+		<letter id="D" symbol="D" name="Aspartic acid" colour="FF00FF"/>
+		<letter id="E" symbol="E" name="Glutamic acid" colour="FF00FF"/>
+		<letter id="F" symbol="F" name="Phenylalanine" colour="0000CC"/>
+		<letter id="G" symbol="G" name="Glycine" colour="FFB300"/>
+		<letter id="H" symbol="H" name="Histidine" colour="FFCCCC"/>
+		<letter id="I" symbol="I" name="Isoleucine" colour="0000CC"/>
+		<letter id="K" symbol="K" name="Lysine" colour="CC0000"/>
+		<letter id="L" symbol="L" name="Leucine" colour="0000CC"/>
+		<letter id="M" symbol="M" name="Methionine" colour="0000CC"/>
+		<letter id="N" symbol="N" name="Asparagine" colour="008000"/>
+		<letter id="P" symbol="P" name="Proline" colour="FFFF00"/>
+		<letter id="Q" symbol="Q" name="Glutamine" colour="008000"/>
+		<letter id="R" symbol="R" name="Arginine" colour="CC0000"/>
+		<letter id="S" symbol="S" name="Serine" colour="008000"/>
+		<letter id="T" symbol="T" name="Threonine" colour="008000"/>
+		<letter id="V" symbol="V" name="Valine" colour="0000CC"/>
+		<letter id="W" symbol="W" name="Tryptophan" colour="0000CC"/>
+		<letter id="Y" symbol="Y" name="Tyrosine" colour="33E6CC"/>
+		<letter id="X" symbol="X" aliases="*." equals="ACDEFGHIKLMNPQRSTVWY" name="Any amino acid"/>
+		<letter id="B" symbol="B" equals="DN" name="Asparagine or Aspartic acid"/>
+		<letter id="Z" symbol="Z" equals="EQ" name="Glutamine or Glutamic acid"/>
+		<letter id="J" symbol="J" equals="IL" name="Leucine or Isoleucine"/>
+	</alphabet>
+	<background source="--nrdb--" A="0.0730919" C="0.0181455" D="0.051688" E="0.0622785" F="0.0402434" G="0.0692596" H="0.0224055" I="0.056227" K="0.058435" L="0.0916218" M="0.0230443" N="0.0460321" P="0.0506238" Q="0.0407153" R="0.0518462" S="0.073729" T="0.0593523" V="0.0642985" W="0.0133282" Y="0.0326497"/>
+	<motif_dbs>
+		<motif_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1CS0_B_motifs/meme.xml" last_mod_date="Mon Aug 25 20:09:58 2025">
+			<background A="0.0791973" C="0.0128" D="0.0546983" E="0.061398" F="0.0404989" G="0.0860971" H="0.0306993" I="0.061798" K="0.0514984" L="0.0857971" M="0.0215996" N="0.0435988" P="0.0529984" Q="0.0354991" R="0.0440987" S="0.0601981" T="0.063598" V="0.0764974" W="0.00713021" Y="0.0302993"/>
+		</motif_db>
+	</motif_dbs>
+	<motifs>
+		<motif db="0" id="FNTGMTGYQEILTDPSY" alt="MEME-1" length="17" nsites="215" evalue="6.8e-2721">
+			<pos A="-1156" C="-972" D="-1076" E="-1176" F="463" G="-1037" H="-1048" I="-1241" K="-1130" L="-1135" M="-1180" N="-1102" P="-1045" Q="-1090" R="-1061" S="-1110" T="-1138" V="-1227" W="-912" Y="-988"/>
+			<pos A="-201" C="-143" D="-549" E="-677" F="-154" G="-659" H="-265" I="-943" K="-694" L="-920" M="-846" N="393" P="-784" Q="39" R="-750" S="-21" T="158" V="-841" W="-811" Y="-798"/>
+			<pos A="-1141" C="-971" D="-1077" E="-1177" F="-1111" G="-1035" H="-1063" I="-1253" K="-1132" L="-1146" M="-1194" N="-1105" P="-1045" Q="-1094" R="-1063" S="-1103" T="397" V="-1231" W="-937" Y="-1082"/>
+			<pos A="179" C="-560" D="-940" E="-938" F="-905" G="207" H="-921" I="-918" K="-939" L="-908" M="-808" N="-811" P="-798" Q="-192" R="-868" S="253" T="-660" V="-394" W="-821" Y="-925"/>
+			<pos A="-789" C="-687" D="-1046" E="-970" F="-201" G="-995" H="-272" I="-69" K="-925" L="127" M="504" N="-929" P="-350" Q="-193" R="-876" S="-871" T="-784" V="-376" W="-624" Y="-168"/>
+			<pos A="-201" C="-513" D="-733" E="-762" F="-736" G="-222" H="-728" I="-654" K="-670" L="-738" M="-579" N="-121" P="-736" Q="-633" R="-663" S="-5" T="353" V="91" W="-649" Y="-756"/>
+			<pos A="-1148" C="-972" D="-1075" E="-1176" F="-1112" G="354" H="-1062" I="-1253" K="-1131" L="-1147" M="-1195" N="-1103" P="-1045" Q="-1094" R="-1062" S="-1106" T="-1138" V="-1234" W="-936" Y="-1082"/>
+			<pos A="-951" C="-766" D="-985" E="-989" F="-263" G="-1000" H="-262" I="-846" K="-916" L="-767" M="-758" N="-825" P="-968" Q="-814" R="-848" S="-867" T="-913" V="-866" W="-425" Y="502"/>
+			<pos A="-628" C="-822" D="-461" E="74" F="-941" G="-760" H="-715" I="-850" K="-572" L="-318" M="-743" N="-306" P="151" Q="422" R="-676" S="-351" T="-365" V="-47" W="-847" Y="-838"/>
+			<pos A="-567" C="-559" D="-251" E="399" F="-657" G="-616" H="-548" I="-601" K="-602" L="-668" M="-592" N="-474" P="-703" Q="-325" R="-589" S="-576" T="-607" V="-635" W="-532" Y="-626"/>
+			<pos A="-28" C="-610" D="-993" E="-960" F="-759" G="-868" H="-981" I="277" K="-937" L="-636" M="-214" N="-895" P="-919" Q="-906" R="-932" S="185" T="130" V="79" W="-830" Y="-850"/>
+			<pos A="-868" C="-741" D="-1148" E="-1069" F="-291" G="-1103" H="-966" I="172" K="-1031" L="293" M="237" N="-1049" P="-998" Q="-870" R="-956" S="-1018" T="-862" V="-168" W="-660" Y="-771"/>
+			<pos A="-360" C="-551" D="-854" E="-870" F="-841" G="-701" H="-843" I="-795" K="-812" L="-843" M="-708" N="-697" P="-784" Q="-749" R="-783" S="101" T="377" V="-715" W="-754" Y="-860"/>
+			<pos A="-1159" C="-975" D="419" E="-1178" F="-1112" G="-1037" H="-1063" I="-1256" K="-1133" L="-1148" M="-1198" N="-1106" P="-1046" Q="-1095" R="-1064" S="-1113" T="-1141" V="-1238" W="-937" Y="-1083"/>
+			<pos A="-838" C="-862" D="-933" E="-939" F="-981" G="-944" H="-932" I="-1014" K="-897" L="-960" M="-952" N="-939" P="414" Q="76" R="-323" S="-847" T="-908" V="-984" W="-876" Y="-981"/>
+			<pos A="-240" C="-655" D="-994" E="-1015" F="-976" G="-776" H="-976" I="-1007" K="-1007" L="-984" M="-901" N="-895" P="-876" Q="-908" R="-937" S="403" T="-757" V="-864" W="-868" Y="-984"/>
+			<pos A="-976" C="-791" D="-1000" E="-1012" F="-191" G="-1007" H="-665" I="-878" K="-941" L="-798" M="-790" N="-854" P="-981" Q="-843" R="-874" S="-894" T="-940" V="-897" W="-458" Y="503"/>
+		</motif>
+		<motif db="0" id="PAFSVQYHPEASPGPHD" alt="MEME-2" length="17" nsites="216" evalue="7.9e-2414">
+			<pos A="-198" C="-576" D="-129" E="-594" F="-677" G="-407" H="-270" I="-669" K="-325" L="-314" M="-222" N="-224" P="396" Q="-277" R="-50" S="-165" T="-178" V="-207" W="-640" Y="-703"/>
+			<pos A="237" C="-42" D="-760" E="-360" F="5" G="-706" H="-265" I="171" K="-636" L="-68" M="-104" N="-636" P="-697" Q="-598" R="-615" S="-558" T="-516" V="159" W="-58" Y="-38"/>
+			<pos A="-511" C="-345" D="-607" E="-597" F="429" G="-658" H="-582" I="-2" K="-588" L="-78" M="-20" N="-579" P="-576" Q="-316" R="-593" S="-274" T="-580" V="-454" W="159" Y="1"/>
+			<pos A="-16" C="134" D="-905" E="-913" F="-878" G="-257" H="-893" I="-895" K="-888" L="-885" M="-785" N="-764" P="-786" Q="-807" R="-833" S="366" T="92" V="-762" W="-796" Y="-889"/>
+			<pos A="-372" C="-501" D="-821" E="-749" F="221" G="-769" H="-698" I="-188" K="-701" L="-239" M="-444" N="-700" P="-759" Q="-666" R="-222" S="-349" T="73" V="308" W="-547" Y="-593"/>
+			<pos A="-1159" C="-975" D="-1078" E="-1179" F="-1113" G="-1038" H="-1064" I="-1256" K="-1134" L="-1148" M="-1198" N="-1108" P="-1046" Q="482" R="-1065" S="-1114" T="-1142" V="-1238" W="-938" Y="-1083"/>
+			<pos A="-950" C="-764" D="-985" E="-987" F="275" G="113" H="207" I="-844" K="-914" L="-765" M="-756" N="-823" P="-967" Q="-813" R="-846" S="-866" T="-912" V="-864" W="-52" Y="373"/>
+			<pos A="-1160" C="-975" D="-1078" E="-1179" F="-1111" G="-1038" H="502" I="-1256" K="-1134" L="-1148" M="-1198" N="-1108" P="-1046" Q="-1096" R="-1065" S="-1114" T="-1142" V="-1238" W="-937" Y="-1080"/>
+			<pos A="-1158" C="-975" D="-1078" E="-1178" F="-1113" G="-1038" H="-1063" I="-1256" K="-1133" L="-1148" M="-1198" N="-1107" P="424" Q="-1095" R="-1064" S="-1113" T="-1141" V="-1238" W="-938" Y="-1083"/>
+			<pos A="-815" C="-909" D="12" E="393" F="-1006" G="-903" H="-860" I="-966" K="-767" L="-957" M="-896" N="-802" P="-893" Q="-661" R="-850" S="-837" T="-875" V="-940" W="-866" Y="-947"/>
+			<pos A="344" C="-457" D="-799" E="-772" F="-751" G="-254" H="-18" I="-741" K="-762" L="-732" M="-644" N="-318" P="-768" Q="-724" R="-735" S="31" T="-598" V="-238" W="-676" Y="-783"/>
+			<pos A="123" C="50" D="-491" E="-425" F="-647" G="-122" H="-39" I="-643" K="79" L="-606" M="-209" N="47" P="-606" Q="-115" R="23" S="298" T="-113" V="-612" W="-556" Y="-566"/>
+			<pos A="82" C="-563" D="-877" E="-865" F="-873" G="3" H="-868" I="-880" K="-848" L="-860" M="-783" N="-787" P="385" Q="-776" R="-815" S="-336" T="-654" V="-756" W="-799" Y="-894"/>
+			<pos A="-1148" C="-973" D="-1076" E="-1176" F="-1112" G="354" H="-1063" I="-1254" K="-1131" L="-1147" M="-1195" N="-1104" P="-1046" Q="-1094" R="-1063" S="-1107" T="-1138" V="-1234" W="-937" Y="-1082"/>
+			<pos A="-1158" C="-975" D="-1078" E="-1178" F="-1113" G="-1038" H="-1063" I="-1256" K="-1133" L="-1148" M="-1198" N="-1107" P="424" Q="-1095" R="-1064" S="-1113" T="-1141" V="-1238" W="-938" Y="-1083"/>
+			<pos A="-340" C="-145" D="-466" E="-49" F="-599" G="-599" H="375" I="-354" K="-98" L="-53" M="75" N="35" P="-580" Q="184" R="45" S="38" T="-44" V="-373" W="165" Y="-499"/>
+			<pos A="-1096" C="-962" D="413" E="-56" F="-1095" G="-1018" H="-1025" I="-1209" K="-1069" L="-1124" M="-1146" N="-966" P="-1032" Q="-1021" R="-1036" S="-1049" T="-1097" V="-1188" W="-927" Y="-1059"/>
+		</motif>
+		<motif db="0" id="PIFGICLGHQLLALALG" alt="MEME-3" length="17" nsites="218" evalue="9.5e-2401">
+			<pos A="-383" C="-676" D="-829" E="-815" F="-870" G="-786" H="-831" I="-876" K="-781" L="-838" M="-804" N="-808" P="422" Q="-750" R="-783" S="-647" T="-369" V="-814" W="-802" Y="-887"/>
+			<pos A="-667" C="-582" D="-919" E="-849" F="85" G="-873" H="-799" I="250" K="-804" L="145" M="123" N="-803" P="-851" Q="-755" R="-783" S="-362" T="45" V="137" W="-616" Y="-676"/>
+			<pos A="-54" C="-473" D="-744" E="-730" F="427" G="-787" H="-698" I="-482" K="-718" L="-34" M="111" N="-709" P="-706" Q="-698" R="-714" S="-608" T="-112" V="-371" W="-380" Y="-147"/>
+			<pos A="-405" C="-844" D="-953" E="-1025" F="-1041" G="353" H="-986" I="-1112" K="-990" L="-1072" M="-1023" N="-924" P="-976" Q="-984" R="-952" S="-859" T="-961" V="-1047" W="-878" Y="-1008"/>
+			<pos A="-776" C="-659" D="-1047" E="-1025" F="-785" G="-1052" H="-1104" I="398" K="-1004" L="-640" M="-643" N="-986" P="-1019" Q="-1018" R="-1036" S="-955" T="-773" V="-184" W="-923" Y="-909"/>
+			<pos A="-752" C="626" D="-892" E="-876" F="-852" G="-889" H="-866" I="-827" K="-893" L="-854" M="-768" N="-856" P="-890" Q="-855" R="-829" S="-219" T="-785" V="-872" W="-793" Y="-885"/>
+			<pos A="-822" C="-703" D="-1036" E="-953" F="102" G="-1028" H="-890" I="-521" K="-348" L="321" M="222" N="-950" P="-920" Q="-796" R="-855" S="-911" T="-221" V="-624" W="-631" Y="-730"/>
+			<pos A="-1150" C="-974" D="-1077" E="-1178" F="-1114" G="354" H="-1064" I="-1256" K="-1133" L="-1149" M="-1197" N="-1106" P="-1047" Q="-1096" R="-1064" S="-1109" T="-1140" V="-1236" W="-938" Y="-1084"/>
+			<pos A="-614" C="-150" D="-517" E="-571" F="-495" G="-663" H="481" I="-687" K="-604" L="-313" M="-502" N="99" P="-635" Q="-77" R="-424" S="-489" T="-556" V="-649" W="-415" Y="-317"/>
+			<pos A="-859" C="-799" D="-977" E="-371" F="-747" G="-970" H="-830" I="-269" K="-841" L="-397" M="-655" N="-918" P="-966" Q="478" R="-830" S="-890" T="-901" V="-756" W="-757" Y="-794"/>
+			<pos A="-309" C="-713" D="-1117" E="-1055" F="-597" G="-1091" H="-991" I="217" K="-1023" L="283" M="185" N="-1029" P="-1003" Q="-894" R="-972" S="-997" T="-830" V="-166" W="-693" Y="-793"/>
+			<pos A="-153" C="-673" D="-1006" E="-928" F="193" G="-988" H="-872" I="129" K="-888" L="281" M="39" N="-912" P="-905" Q="-789" R="-839" S="-861" T="-179" V="-198" W="-632" Y="-726"/>
+			<pos A="286" C="-563" D="-927" E="-934" F="-907" G="149" H="-918" I="-921" K="-936" L="-910" M="-810" N="-223" P="-800" Q="-827" R="-869" S="110" T="-61" V="-770" W="-823" Y="-925"/>
+			<pos A="-576" C="-477" D="-718" E="-634" F="-406" G="-746" H="-11" I="-45" K="-200" L="312" M="16" N="-327" P="-638" Q="-51" R="95" S="-360" T="-358" V="-326" W="-453" Y="-267"/>
+			<pos A="350" C="-141" D="-943" E="-939" F="-905" G="-688" H="-923" I="-918" K="-940" L="-908" M="-808" N="-813" P="-348" Q="-829" R="-869" S="47" T="-270" V="-767" W="-821" Y="-925"/>
+			<pos A="58" C="110" D="-352" E="-361" F="55" G="-707" H="-266" I="-24" K="-634" L="180" M="-54" N="90" P="-698" Q="73" R="-615" S="147" T="-257" V="6" W="-479" Y="-109"/>
+			<pos A="-569" C="-631" D="-619" E="-219" F="-790" G="350" H="-704" I="-809" K="-341" L="-826" M="-710" N="-575" P="-750" Q="-692" R="-639" S="-579" T="-719" V="-772" W="-622" Y="-735"/>
+		</motif>
+	</motifs>
+	<correlations>
+		<correlation idx_a="0" idx_b="1" value="0.17"/>
+		<correlation idx_a="0" idx_b="2" value="0.18"/>
+		<correlation idx_a="1" idx_b="2" value="0.21"/>
+	</correlations>
+	<sequence_dbs>
+		<sequence_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_2/1CS0_B_hseq.fasta" last_mod_date="Sun Aug 24 22:00:01 2025" seq_count="219" residue_count="107902"/>
+	</sequence_dbs>
+	<sequences>
+		<sequence db="0" name="sp|Q3A450|CARA_SYNC1" comment="" length="376">
+			<score strand="both" combined_pvalue="4.53e-54" evalue="9.9e-52"/>
+			<seg start="1">
+				<data>
+MKAILALADGRVFTGKAFGARGEVTGEVVFNTSMTGYQEILTDPSYCGEIVTMTYPLIGNYGINPEDVESGRPHL
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+MNPDGVFLSNGPGDPEPIQYAQENIRQLLGKMPIFGICLGHQLLALALGGHTYKLKFGHRGGNQPVQRKAEGQVE
+				</data>
+				<hit pos="258" idx="2" pvalue="1.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ITSQNHGFAVEGSSIDNTAVLTHINLNDNTIEGLEHCKLPAFSVQYHPEASPGPHDARYLFERFADLMEKNRQSQ
+				</data>
+				<hit pos="340" idx="1" pvalue="7.3e-23" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q87SF4|CARA_VIBPA" comment="" length="379">
+			<score strand="both" combined_pvalue="1.52e-51" evalue="3.3e-49"/>
+			<seg start="1">
+				<data>
+MSKLALLVLEDGTVFRGVSIGADGVSVGEVVFNTSMTGYQEILTDPSYSQQIVTLTYPHIGNTGTNSEDEESSSI
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EEVLALNPDGVFLSNGPGDPEPCTYAIEATKVFLEKGLPIFGICLGHQILALASGAQTVKMKFGHHGANHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="6.1e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ERNVVMITSQNHGFAADEATLPENLRATHVSLFDGSLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIK
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P0A6F1|CARA_ECOLI" comment="" length="382">
+			<score strand="both" combined_pvalue="4.12e-51" evalue="9e-49"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGATGSAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNDADEESSQV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLKMNPDGIFLSNGPGDPAPCDYAITAIQKFLETDIPVFGICLGHQLLALASGAKTVKMKFGHHGGNHPVKDV
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKNVVMITAQNHGFAVDEATLPANLRVTHKSLFDGTLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIE
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P0A6F2|CARA_ECO57" comment="" length="382">
+			<score strand="both" combined_pvalue="4.12e-51" evalue="9e-49"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGATGSAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNDADEESSQV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLKMNPDGIFLSNGPGDPAPCDYAITAIQKFLETDIPVFGICLGHQLLALASGAKTVKMKFGHHGGNHPVKDV
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKNVVMITAQNHGFAVDEATLPANLRVTHKSLFDGTLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIE
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8FLB1|CARA_ECOL6" comment="" length="382">
+			<score strand="both" combined_pvalue="4.12e-51" evalue="9e-49"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGATGSAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNDADEESSQV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLKMNPDGIFLSNGPGDPAPCDYAITAIQKFLETDIPVFGICLGHQLLALASGAKTVKMKFGHHGGNHPVKDV
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKNVVMITAQNHGFAVDEATLPANLRVTHKSLFDGTLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIALIE
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P14845|CARA_SALTY" comment="" length="382">
+			<score strand="both" combined_pvalue="4.12e-51" evalue="9e-49"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGATGSAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNKADEESSQV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EEVLKMNPDGIFLSNGPGDPAPCDYAITAIQKFLETDIPLFGICLGHQLLALASGAKTVKMKFGHHGGNHPVKDM
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DRNVVMITAQNHGFAVDEDSLPANLRVTHKSLFDGTLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIE
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8Z9L8|CARA_SALTI" comment="" length="382">
+			<score strand="both" combined_pvalue="4.12e-51" evalue="9e-49"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGATGSAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNEADEESSQV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EEVLKMNPDGIFLSNGPSDPAPCDYAIEAIKKFLQTDIPVFGICLGHQLLALASGAKTVKMKFGHHGGNHPVKDM
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DRNVVMITAQNHGFAVDEDSLPANLRVTHKSLFDGTLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIK
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6D0C8|CARA_PECAS" comment="" length="382">
+			<score strand="both" combined_pvalue="4.12e-51" evalue="9e-49"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGAEGLAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGANANDEESPSV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLKLNPDGIFLSNGPGDPEPCDYAIRAIKTFLETGIPVFGICLGHQLLALASGAKTTKMKLGHHGGNHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DNNCVMITAQNHGFAVDEDNLPDTLRVTHKSLFDHTVQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIDLIQ
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9KPH8|CARA_VIBCH" comment="" length="379">
+			<score strand="both" combined_pvalue="1.10e-50" evalue="2.4e-48"/>
+			<seg start="1">
+				<data>
+MSKSALLVLEDGTVFRGVSIGADGISVGEVVFNTSMTGYQEILTDPSYSQQIVTLTYPHIGNTGTNSEDEESTAI
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLALNPDGVFLSNGPGDPEPCTYAIEATRVFLEKNIPVFGICLGHQILALASGAKTVKMKFGHHGANHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DRGVVMITSQNHGFAADEATLPDNLRATHKSLFDGSLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIK
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7MNU1|CARA_VIBVY" comment="" length="379">
+			<score strand="both" combined_pvalue="1.10e-50" evalue="2.4e-48"/>
+			<seg start="1">
+				<data>
+MSKSALLVLEDGTVFRGVSIGADGISVGEVVFNTSMTGYQEILTDPSYSQQIVTLTYPHIGNTGTTSEDEESSSI
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLALNPDGVFLSNGPGDPAPCTYAIEATKVFLEKGLPVFGICLGHQILALASGAKTVKMKFGHHGANHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DRNVVMITSQNHGFAADEATLPDNLRATHVSLFDGSLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIK
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8DEM1|CARA_VIBVU" comment="" length="379">
+			<score strand="both" combined_pvalue="1.10e-50" evalue="2.4e-48"/>
+			<seg start="1">
+				<data>
+MSKSALLVLEDGTVFRGVSIGADGISVGEVVFNTSMTGYQEILTDPSYSQQIVTLTYPHIGNTGTTSEDEESSSI
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLALNPDGVFLSNGPGDPAPCTYAIEATKVFLENGLPVFGICLGHQILALASGAKTVKMKFGHHGANHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DRNVVMITSQNHGFAADEATLPDNLRATHVSLFDGSLQGIHRTDKPAFSFQGHPEASPGPHDAAPLFDHFIELIK
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8EHS6|CARA_SHEON" comment="" length="386">
+			<score strand="both" combined_pvalue="1.64e-50" evalue="3.6e-48"/>
+			<seg start="1">
+				<data>
+MEVALTKSALLVLEDGTVFTGTAIGADGLSVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNTGTNNEDVE
+				</data>
+				<hit pos="36" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+KTPASEVLAMNPDGVFLSNGPGDPEPCDYAIEAIQQILKTDTPIFGICLGHQLLALASGAKTLKMKFGHHGANHP
+VSNIEKGNVMITSQNHGFAADEATLPANIKVTHKSLFDGSLQGIHLTDKPAFSFQGHPEASPGPNDAAPLFDHFI
+				</data>
+				<hit pos="268" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+				<hit pos="300" idx="2" pvalue="9.4e-05" match="++  +  ++ ++   + "/>
+				<hit pos="350" idx="1" pvalue="1.5e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q1IWN0|CARA_DEIGD" comment="" length="394">
+			<score strand="both" combined_pvalue="2.26e-50" evalue="4.9e-48"/>
+			<seg start="1">
+				<data>
+MIRKERAILALEDGTVYRGYAFGHRGETVGEVVFNTSMTGYQEIMTDPSYNGQIVTITYPHVGNYGVAIYDMESN
+				</data>
+				<hit pos="34" idx="0" pvalue="2.7e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+QIMALQPHGLFLSNGPGDPAPLEYAHKTAWELMGLLPTFGICLGHQILGLAAGGQTFKMKFGHRGGNQPVKNLLT
+				</data>
+				<hit pos="262" idx="2" pvalue="8.4e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GNVEITSQNHGYAVDIASIPDGAFVATHVNLNDGTLEGMAHSRYPVFSVQYHPEASPGPHDSRYLFDRFIEEIDA
+				</data>
+				<hit pos="345" idx="1" pvalue="2.4e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9RWI4|CARA_DEIRA" comment="" length="394">
+			<score strand="both" combined_pvalue="2.26e-50" evalue="4.9e-48"/>
+			<seg start="1">
+				<data>
+MIRKERAILALEDGTVYRGYAFGYRGETVGEVVFNTSMTGYQEIMTDPSYNGQIVTITYPHVGNYGVAIYDMESN
+				</data>
+				<hit pos="34" idx="0" pvalue="2.7e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+QIMALQPHGLFLSNGPGDPAPLEYAHKTAWEMMGLLPTFGICLGHQILGLAAGGQTFKMKFGHRGGNQPVKNLLT
+				</data>
+				<hit pos="262" idx="2" pvalue="8.4e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GNVEITSQNHGYAVDLDSIPNGAFVATHVNLNDGTLEGMAHSRYPVFSVQYHPEASPGPHDSRYLFDRFIEEIDA
+				</data>
+				<hit pos="345" idx="1" pvalue="2.4e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5LTN6|CARA_RUEPO" comment="" length="388">
+			<score strand="both" combined_pvalue="2.91e-50" evalue="6.4e-48"/>
+			<seg start="1">
+				<data>
+MAQNPLSKPTACLVLADGTVFYGTGFGATGQTVAELCFNTAMTGYQEIMTDPSYAGQIVTFTFPHIGNVGVTPED
+				</data>
+				<hit pos="38" idx="0" pvalue="6.8e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ATATAAEVLAHAPDGVFLSNGPGDPAATGEYAVPMIREILDTTSLPVFGICLGHQMLALALGGRTVKMNHGHHGA
+				</data>
+				<hit pos="271" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+NHPVKDLETGKVEITSMNHGFAVDAQSLPEGVVETHRSLFDGSNCGIRMSERPVFSVQYHPEASPGPQDSFYLFE
+				</data>
+				<hit pos="353" idx="1" pvalue="2.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6F8M7|CARA_ACIAD" comment="" length="379">
+			<score strand="both" combined_pvalue="3.43e-50" evalue="7.5e-48"/>
+			<seg start="1">
+				<data>
+MSTPAILALADGTIFKGTSIGATGSTTGEVVFNTAMTGYQEILTDPSYAQQLVTLTYPHIGNTGCNEEDTESGRI
+				</data>
+				<hit pos="32" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+QVLALNPDGVFLSNGPGDPAACDYAIEAVKTIVETTNLPVFGICLGHQILALASGAKTMKMNHGHHGANHPVQNL
+				</data>
+				<hit pos="264" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EQGTVMITSQNHGFAVDESTLPANLKVTHRSLFDGTNQGIHRTDKPAFSFQGHPEASPGPHDCAPLFDHFIELIE
+				</data>
+				<hit pos="346" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q31LB7|CARA_SYNE7" comment="" length="391">
+			<score strand="both" combined_pvalue="3.69e-50" evalue="8.1e-48"/>
+			<seg start="1">
+				<data>
+MVRISGFCCAMSLAERQAALLVLADGSVFHGYACGAAGTVIGEVVFNTGMTGYQEVLTDPSYCGQIVSFTYPELG
+				</data>
+				<hit pos="46" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VIVVPADTPIEEILRHEPDGVFLSNGPGDPATVKNGISTAQALLQTGLPLFGICLGHQILGLALGAQTFKLKFGH
+RGLNHPCGLSQQVEITSQNHGFAIAADSLGPDVEVTHLNLNDRTVAGLRHRHLPVFSVQYHPEASPGPHDSDYLF
+				</data>
+				<hit pos="274" idx="2" pvalue="1.6e-19" match="+++++++++++++++++"/>
+				<hit pos="292" idx="2" pvalue="9.4e-05" match=" ++   +++  +   ++"/>
+				<hit pos="354" idx="1" pvalue="2.4e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7N8W2|CARA_PHOLL" comment="" length="387">
+			<score strand="both" combined_pvalue="4.35e-50" evalue="9.5e-48"/>
+			<seg start="1">
+				<data>
+MIKSAILVLEDGTQFHGRAIGAEGAAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGVNSVDKESLKV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLKLNPDGIFLSNGPGDPAPCGYAIDAVKTLLETEIPIFGICLGHQLLALASGAETMKMKFGHHGGNHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ECNVVMITAQNHGFAVDEKSLPSNLRVTHKSLFDGTLQGIHRTDKPAFSFQGHPEASPGPHETASLFDHFIELIE
+				</data>
+				<hit pos="346" idx="1" pvalue="4.1e-19" match="++++++++++++++++ "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8CXH8|CARA_OCEIH" comment="" length="366">
+			<score strand="both" combined_pvalue="6.64e-50" evalue="1.5e-47"/>
+			<seg start="1">
+				<data>
+MKKRKLILEDGTVFNGTAFGSDAESSGEIVFNTGMTGYQEVITDPSYCGQFVTLTYPLIGNYGINRDDFETVTPF
+				</data>
+				<hit pos="31" idx="0" pvalue="7.5e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPEAIEMIKQLLGQIPIFGICLGHQLLALACGADTEKMKFGHRGANHPVKDLLAGKTYLTSQNHSYAVNVSSLV
+				</data>
+				<hit pos="242" idx="2" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+NTDLELTQIALNDDTVEGIRHTAFPAFSVQYHPEASPGPEDTNFLFDEFLNLIKASKVKQGGEVYA
+				</data>
+				<hit pos="325" idx="1" pvalue="1.1e-20" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6LUK6|CARA_PHOPR" comment="" length="384">
+			<score strand="both" combined_pvalue="7.69e-50" evalue="1.7e-47"/>
+			<seg start="1">
+				<data>
+MSKSALLVLEDGTVFRGISIGADGSAIGEVVFNTSMTGYQEILTDPSYSQQIVTLTYPHIGNTGTNSEDEESNSI
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLAMNPDGVFLSNGPGDPEPCTYAIEATKTFLDIGLPIFGICLGHQILALASGAKTVKMKFGHHGANHPVKDI
+				</data>
+				<hit pos="264" idx="2" pvalue="6.1e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DRDVVMITSQNHGFAADEATLPDTLRATHKSLFDGSLQGIHRTDKPAFSFQGHPEASPGPTDAAPLFDHFIELIK
+				</data>
+				<hit pos="346" idx="1" pvalue="2.7e-19" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8DKU5|CARA_THEVB" comment="" length="382">
+			<score strand="both" combined_pvalue="1.28e-49" evalue="2.8e-47"/>
+			<seg start="1">
+				<data>
+MPTPALLVLADGSVFRGFSFGAPGTAIGEVVFNTGMTGYQEVLTDPSYYGQIVTFTYPELGNTGTTPEDDESDRP
+				</data>
+				<hit pos="32" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ILSYDPDGIFLSNGPGDPAAVQEGIETTRKLLGAQRPMFGICLGHQLLGLSLGAETFKLKFGHRGLNQPAGLTQE
+				</data>
+				<hit pos="262" idx="2" pvalue="1.1e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VEITSQNHGFAITAESLAQTPVEITHFNLNDKTVAGLKHQTLPIFSVQYHPEASPGPHDADYLFGEFVAQMRAYR
+				</data>
+				<hit pos="343" idx="1" pvalue="1.3e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|C5BQ30|CARA_TERTT" comment="" length="386">
+			<score strand="both" combined_pvalue="1.89e-49" evalue="4.1e-47"/>
+			<seg start="1">
+				<data>
+MLAQLTGAGKVPAILVLEDGSVFRGVSIGATGKSVGEVVFNTSITGYQEILTDPSYARQIVTLTYPHIGNTGTNS
+				</data>
+				<hit pos="40" idx="0" pvalue="4.3e-20" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+QTPAADVLAMNPDGVFLSNGPGDPEPCDYAIDAIKVLLNENMPIFGICLGHQLLALASGAKTIKMKFGHHGGNHP
+				</data>
+				<hit pos="268" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VQNVKTGEVMITSQNHGFAADESTLPDCLEATHKSLFDGSLQGIHRTDKPAFSFQGHPEASPGPHDAAELFDHFI
+				</data>
+				<hit pos="350" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P59576|CARA_BUCBP" comment="" length="397">
+			<score strand="both" combined_pvalue="1.90e-49" evalue="4.2e-47"/>
+			<seg start="1">
+				<data>
+MKHVLRKEKTLEISATLVLKDGTIFYGKSVGIQGETYGEIVFNTSMTGYQEILTDPSYSNQIITFTYPHIGNVGI
+				</data>
+				<hit pos="42" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+YLTVIPADTSAEKVLQILPDGIFLSNGPGDPRSCTYALNAINAFLKINIPIFGICLGHQLLALASGAKIIKMKFG
+				</data>
+				<hit pos="275" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HHGSNHPVKELKSNTVMITSQNHNYTVDTNNLPKNINITHISLFDGSIQGLQRNDKHAFSFQGHPEASPGPHDSM
+				</data>
+				<hit pos="357" idx="1" pvalue="1.7e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8YXQ7|CARA_NOSS1" comment="" length="388">
+			<score strand="both" combined_pvalue="2.02e-49" evalue="4.4e-47"/>
+			<seg start="1">
+				<data>
+MPLSDAMPALLVLADGTAYRGWSFGATGTTIGEVVFNTGMTGYQEVLTDPSYRGQIVVFTYPELGNTGVNPEDEE
+				</data>
+				<hit pos="36" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TSPEEILKYNPDGIFLSNGPGDPSAVTEGITTAKALLESEKPIFGICMGHQILGHALGAETFKLKFGHRGLNQPA
+				</data>
+				<hit pos="267" idx="2" pvalue="1.7e-18" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GLTQRVEITSQNHSFAIDPDSLPEAVVEISHLNLNDRTVAGLRHKSLPIFSVQYHPEASPGPHDADYLFAQFVHQ
+				</data>
+				<hit pos="348" idx="1" pvalue="1.3e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8RSS4|CARA_HALER" comment="" length="381">
+			<score strand="both" combined_pvalue="3.04e-49" evalue="6.6e-47"/>
+			<seg start="1">
+				<data>
+MSKPAILALEDGSVFHGTAIGADGQTSGEVVFNTAMTGYQEILTDPSYSRQIVTLTYPHIGNTGVNSEDVESSSI
+				</data>
+				<hit pos="32" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TPAEEVLAMNPDGIFLSNGPGDPEPCDYAISAIQAFLETEIPVFGICLGHQLLALASGAQTVKMNHGHHGANHPV
+				</data>
+				<hit pos="267" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+QDLDSGRVMITSQNHGFAVEESTLPDNLRAIHRSLFDGTLQGIERTDRPAFSFQGHPEASPGPRDVAPLFDRFVE
+				</data>
+				<hit pos="349" idx="1" pvalue="1.3e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9WZ28|CARA_THEMA" comment="" length="392">
+			<score strand="both" combined_pvalue="6.97e-49" evalue="1.5e-46"/>
+			<seg start="1">
+				<data>
+MSKKALLALEDGSFFFGQSLGAEGETFGELVFNTGMTGYQEVLTDPSYTGQIVVMTYPEIGIYGVNDEDVESDGI
+				</data>
+				<hit pos="32" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GDPAALLKTIRLIKDLLKEEIPLAGICLGHQLLGLAVGGRTYKMKFGHRGINHPVKDLRTGRVLITTHNHGFAVD
+				</data>
+				<hit pos="247" idx="2" pvalue="1.0e-17" match="++ ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+PKSFGLPELGSEDQDANVLTKNLQKISVLEGISPQGIKVEITHISLNDGTMEGMRLVDYPAFSVQYHPEASPGPH
+DAKYFFEEFKRLIKEVR
+				</data>
+				<hit pos="360" idx="1" pvalue="7.3e-23" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q66ER8|CARA_YERPS" comment="" length="391">
+			<score strand="both" combined_pvalue="7.99e-49" evalue="1.7e-46"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGAEGTAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNASDEESSAV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLKLNPDGIFLSNGPGDPEPCDYAITAIKRFLETDIPVFGICLGHQLLALASGAKTVKMKFGHHGGNHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DASCVMITAQNHGFAVDETSLPSNLRTTHVSLFDGSLQGLHRTDKAAFSFQGHPEASPGPHDAAPLFDHFIELIE
+				</data>
+				<hit pos="346" idx="1" pvalue="1.0e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8ZIL5|CARA_YERPE" comment="" length="391">
+			<score strand="both" combined_pvalue="7.99e-49" evalue="1.7e-46"/>
+			<seg start="1">
+				<data>
+MIKSALLVLEDGTQFHGRAIGAEGTAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNASDEESSAV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EDVLKLNPDGIFLSNGPGDPEPCDYAITAIKRFLETDIPVFGICLGHQLLALASGAKTVKMKFGHHGGNHPVKDL
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DASCVMITAQNHGFAVDETSLPSNLRTTHVSLFDGSLQGLHRTDKAAFSFQGHPEASPGPHDAAPLFDHFIELIE
+				</data>
+				<hit pos="346" idx="1" pvalue="1.0e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6B940|CARA_GRATL" comment="" length="395">
+			<score strand="both" combined_pvalue="8.47e-49" evalue="1.9e-46"/>
+			<seg start="1">
+				<data>
+MTYNLHPAILVLKDGKFYRGWTLINSIISFGEVVFNTGMTGYQEIMTDPSYAEQIITFTYPEIGNTGINHEDNES
+				</data>
+				<hit pos="35" idx="0" pvalue="5.8e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+SSYETINAYNPDGIILSNGPGDPSIITYAIKTVKKIIKYTNIPIFGICMGHQIISLALEGTTFKLKFGHRGLNHP
+AGMKQKAEVTSQNHGFAVNQESLYKDTINITHFNLNDTTVAGILHNKKPIFSVQYHPEASPGPHDSDYLFKYFIN
+				</data>
+				<hit pos="268" idx="2" pvalue="2.8e-17" match="++++++++++++++++ "/>
+				<hit pos="286" idx="2" pvalue="4.8e-05" match=" ++   +++  +   ++"/>
+				<hit pos="349" idx="1" pvalue="1.3e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9A4J7|CARA_CAUVC" comment="" length="388">
+			<score strand="both" combined_pvalue="8.75e-49" evalue="1.9e-46"/>
+			<seg start="1">
+				<data>
+MSQDLLPGVTGVLALADGAILQGVGCGAVGDAVGEVCFNTAMTGYQEILTDPSYMAQIVAFTFPHVGNVGVNGED
+				</data>
+				<hit pos="38" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TVVPASTSAEDILARNPDGVMLSNGPGDPAATGQYAVPEIQKLVASGKPVFGICLGHQMLALALGAKTVKMEQGH
+				</data>
+				<hit pos="274" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HGANHPVKDLTTGKVEIVSMNHGFTVDTASLPAPVKETHVSLFDGTNAGIALDGKPVFSVQHHPEASPGPTDSLY
+				</data>
+				<hit pos="356" idx="1" pvalue="1.3e-19" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P38098|CARA_PSEAE" comment="" length="378">
+			<score strand="both" combined_pvalue="2.25e-48" evalue="4.9e-46"/>
+			<seg start="1">
+				<data>
+MTKPAILALADGSIFRGEAIGADGQTVGEVVFNTAMTGYQEILTDPSYAQQIVTLTYPHIGNTGTTPEDAEANRV
+				</data>
+				<hit pos="32" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+SEVLALNPDGIFLSNGPGDPEPCDYAIQAIREFLDTEIPVFGICLGHQLLALASGAKTLKMGHGHHGANHPVQDL
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DSGVVMITSQNHGFAVDESTLPDNLRATHKSLFDGTLQGIERTDKVAFSFQGHPEASPGPHDVAPLFDRFISAMA
+				</data>
+				<hit pos="346" idx="1" pvalue="1.0e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5N0L0|CARA_SYNP6" comment="" length="391">
+			<score strand="both" combined_pvalue="3.91e-48" evalue="8.6e-46"/>
+			<seg start="1">
+				<data>
+MVRISGFCCAMSLAERQAALLVLADGSVFHGYACGAAGTVIGEVVFNTGMTGYQEVLTDPSYCGQIVSFTYPELG
+				</data>
+				<hit pos="46" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VIVVPADTPIEEILRHEPDGVFLSNGPGDPATVKNGISTAQALLQTGLPLFGICLGHQILGSALGAQTFKLKFGH
+RGLNHPCGLSQQVEITGQNHGFAIAADSLGPDVEVTHLNLNDRTVAGLRHRHLPVFSVQYHPEASPGPHDSDYLF
+				</data>
+				<hit pos="274" idx="2" pvalue="1.8e-17" match="+++++++++++++ +++"/>
+				<hit pos="292" idx="2" pvalue="9.4e-05" match=" ++   +++  +   ++"/>
+				<hit pos="354" idx="1" pvalue="2.4e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8KGA2|CARA_CHLTE" comment="" length="366">
+			<score strand="both" combined_pvalue="3.92e-48" evalue="8.6e-46"/>
+			<seg start="1">
+				<data>
+MQEIPAILVLENGSVYRGTAFGHAGEATGEVVFNTSLTGYQEILTDPSYTGQMVVMTYPLIGNYGITPNDNESKK
+				</data>
+				<hit pos="33" idx="0" pvalue="7.5e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GPGDPFAVTYAIDTIRELAARNSTLPIFGICLGHQLLSLAFGAKTYKLKFGHHGANHPVKNLLSNTIEITSQNHG
+				</data>
+				<hit pos="251" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+FAVEMESLPGELELTHKNLYDMTVEGIRHRELPCFSVQYHPEAAPGPHDSHYLFKEFTELMERLKN
+				</data>
+				<hit pos="333" idx="1" pvalue="1.6e-20" match="+ +++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q98IA7|CARA_RHILO" comment="" length="398">
+			<score strand="both" combined_pvalue="4.27e-48" evalue="9.3e-46"/>
+			<seg start="1">
+				<data>
+MTPAWATEKPTALLVLADGTVIEGRGLGATGSAVAEVCFNTALTGYQEILTDPSYAGQIVTFTFPHIGNIGTNGE
+				</data>
+				<hit pos="39" idx="0" pvalue="1.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VTVVPANTGSEEILAMQPDGIFLSNGPGDPEATGDYAVPVIQDLLKTDIPVFGICLGHQMLALALGGRTAKMHQG
+				</data>
+				<hit pos="275" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HHGANHPVKDHTTGKVEIVSMNHGFAVDADSLPEGVEETHVSLFDGSNCGIALTGRPVFSVQHHPEASPGPQDSH
+				</data>
+				<hit pos="357" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q92N95|CARA_RHIME" comment="" length="401">
+			<score strand="both" combined_pvalue="4.37e-48" evalue="9.6e-46"/>
+			<seg start="1">
+				<data>
+MTATPAWTIQKPTALLVLADGTVIEGKGIGATGTVQAEVCFNTALTGYQEILTDPSYLGQIVTFTFPHIGNIGAN
+				</data>
+				<hit pos="41" idx="0" pvalue="1.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LNCRVTVVPAQTSAEEVLALKPDGIFLSNGPGDPAATGEYAVPVIQDLLKTDIPVFGICLGHQMLALALGARTEK
+				</data>
+				<hit pos="279" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+MHQGHHGANHPVKDHTTGKVEIVSMNHGFAVDANSLPQGVEQTHISLFDGTNCGLRVDGRPVFSVQHHPEASPGP
+QDSHYLFRRFLNLIREKKGEPALAER
+				</data>
+				<hit pos="361" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6FZ66|CARA_BARQU" comment="" length="398">
+			<score strand="both" combined_pvalue="7.00e-48" evalue="1.5e-45"/>
+			<seg start="1">
+				<data>
+MTQTIPSPNPWSISRPTALLILADGTVIEGKGAGATGVAEGEICFNTAMTGYEEILTDPSYKKQIINFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.0e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AAHGARITIVPANTNVEKILAMNPDGVFLSNGPGDPTATANYAVPTIQALIDSNIPLFGICLGHQLLALAVGAKT
+				</data>
+				<hit pos="281" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+IKMHQGHHGANHPVKDFITRKVEIASMNHGFAVETTSLPEHVEETHISLFDNSNCGLRIIGKPVFSVQHHPEASP
+GPQDSHYLFQRFFNLIMDYKRTA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6G5M0|CARA_BARHE" comment="" length="399">
+			<score strand="both" combined_pvalue="7.05e-48" evalue="1.5e-45"/>
+			<seg start="1">
+				<data>
+MTQTIPSPKPWSINKPTALLVLANGTVIEGKGAGATGFAEAEICFNTAMTGYEEILTDPSYKKQIVNFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.0e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+IAAHSAHITIVPANTNIEEILAMNPDGVFLSNGPGDPAATANYAVPTIQALIDSNIPLFGICLGHQLLALAVGAK
+				</data>
+				<hit pos="282" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TIKMHQGHHGANHPVKDFITGKVEIVSMNHGFTVDTTSLPQHVEETHISLFDNSNCGLRIIGKPVFSVQHHPEAS
+PGPQDSHYLFQRFFNLIMDYKKTA
+				</data>
+				<hit pos="364" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B8GNX4|CARA_THISH" comment="" length="379">
+			<score strand="both" combined_pvalue="8.83e-48" evalue="1.9e-45"/>
+			<seg start="1">
+				<data>
+MNFTPALLALEDGSLFHGISIGAPGQTVGEVVFNTAMTGYQEILTDPSYARQIVTLTYPHIGNTGVNPEDEESAG
+				</data>
+				<hit pos="33" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VLAMQPDGVFLSNGPGDPEPCDYAISAIREIVDTGIPTYGICLGHQLLGLASGARTVKMKFGHHGANHPVQDLDS
+				</data>
+				<hit pos="262" idx="2" pvalue="1.3e-17" match="++ ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KRVMISSQNHGFAVDENTLPGNVKATHRSLFDGTLQGIARTDRPAFSFQGHPEASPGPHDVAPLFDRFIELMKPQ
+				</data>
+				<hit pos="344" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A9IWF8|CARA_BART1" comment="" length="398">
+			<score strand="both" combined_pvalue="1.38e-47" evalue="3e-45"/>
+			<seg start="1">
+				<data>
+MIQTISSSRPWSVNTPTALLVLADGTVIEGKGAGATGIAEAELCFNTAITGYEEILTDPSYTQQIVNFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="6.1e-19" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ATQKARITVVPAHTTAKEILAMTPDGVFLSNGPGDPAATAQYAIPTINTLIDHNLPIFGICLGHQLLALAVGAKT
+				</data>
+				<hit pos="281" idx="2" pvalue="2.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VKMHQGHHGANHPVKDLNSGKVEIVSMNHGFAVDAATLPKHVQETHISLFDGSNCGIRIIGKPVFSVQYHPEASP
+GPQDSHYLFQHFCDLIMNHKKIS
+				</data>
+				<hit pos="363" idx="1" pvalue="2.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P52557|CARA_BACCL" comment="" length="364">
+			<score strand="both" combined_pvalue="1.77e-47" evalue="3.9e-45"/>
+			<seg start="1">
+				<data>
+MKRQLILEDGSFFVGERFGSLKETTGEVVFNTGMTGYQEILSDPSYCGQIVTMTYPLIGNYGINRDDFEAIRPHV
+				</data>
+				<hit pos="30" idx="0" pvalue="5.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VPEAIEMIRGILGKVPLFGICLGHQLFALACGANTEKMKFGHRGSNHPVKDLRTGKVAITSQNHGYTVTHESLSG
+				</data>
+				<hit pos="241" idx="2" pvalue="8.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TRLEVTHIALNDGTVEGLRHLDVPAFTVQYHPEASPGPEDANPLFDEFLALIREFNKKGEVIHA
+				</data>
+				<hit pos="324" idx="1" pvalue="1.3e-19" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P25993|CARA_BACSU" comment="" length="364">
+			<score strand="both" combined_pvalue="1.77e-47" evalue="3.9e-45"/>
+			<seg start="1">
+				<data>
+MKRRLVLENGAVFEGEAFGSLEHNMGEVVFNTGMTGYQEILSDPSYCGQIVTLTYPLIGNYGINRDDFESITPFV
+				</data>
+				<hit pos="30" idx="0" pvalue="5.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VPEAIEMIKGVLGKVPLFGICLGHQLFALACGANTEKMKFGHRGSNHPVKELATGKVALTSQNHGYTVSSISKTE
+				</data>
+				<hit pos="241" idx="2" pvalue="8.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+LEVTHIAINDDTIEGLKHKTLPAFTVQYHPEASPGPEDANHLFDRFIEMIETTEKEGEAVCQNA
+				</data>
+				<hit pos="322" idx="1" pvalue="1.3e-19" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9JVZ6|CARA_NEIMA" comment="" length="377">
+			<score strand="both" combined_pvalue="1.80e-47" evalue="3.9e-45"/>
+			<seg start="1">
+				<data>
+MSTPALLVLADGSVFHGTSIGYEGSTSGEVVFNTSMTGYQEILTDPSYCKQIVTLTYPHIGNTGTNAEDEESRSV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LALNPDGVFLSNGPGDPEPCTYAIEAVQKLMESGKPIFGICLGHQLISLAIGAKTLKMRFSHHGANHPVQDLDSG
+				</data>
+				<hit pos="261" idx="2" pvalue="8.4e-19" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+KVVITSQNHGFAVDADTLPANARITHKSLFDNTLQGIELTDKPVFCFQGHPEASPGPQDVGYLFDKFIGNMKAAK
+				</data>
+				<hit pos="343" idx="1" pvalue="5.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9JXX4|CARA_NEIMB" comment="" length="377">
+			<score strand="both" combined_pvalue="1.80e-47" evalue="3.9e-45"/>
+			<seg start="1">
+				<data>
+MSTPALLVLADGSVFHGTSIGYEGSTSGEVVFNTSMTGYQEILTDPSYCKQIVTLTYPHIGNTGTNAEDEESRSV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LALNPDGVFLSNGPGDPEPCTYAIKAVQKLIESGKPIFGICLGHQLISLAIGAKTLKMRFSHHGANHPVQDLDSG
+				</data>
+				<hit pos="261" idx="2" pvalue="8.4e-19" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+KVVITSQNHGFAVDADTLPANARITHKSLFDNTLQGIELTDKPVFCFQGHPEASPGPQDVGYLFDKFIGNMKAAK
+				</data>
+				<hit pos="343" idx="1" pvalue="5.4e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P58896|CARA_XANCP" comment="" length="375">
+			<score strand="both" combined_pvalue="1.92e-47" evalue="4.2e-45"/>
+			<seg start="1">
+				<data>
+MTQPAILVLEDGTVFEGESVGANGLSVGEVVFNTAMTGYQEVLTDPSYARQMVTLTYPHIGNTGFNDQDDEAKQV
+				</data>
+				<hit pos="32" idx="0" pvalue="2.9e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AMQPDGVFLSNGPGDPEPCDYAISAIQELIAKKVPTFGICLGHQLLALAAGAKTVKMATGHHGANHPVQDLDGGR
+				</data>
+				<hit pos="260" idx="2" pvalue="1.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VMITSQNHGFAVDETTLPANVRVTHRSLFDGTNQGIALTDAPAFSFQGHPEASPGPRDVGPLFDRFVASMAEAKS
+				</data>
+				<hit pos="342" idx="1" pvalue="1.3e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q87EB9|CARA_XYLFT" comment="" length="374">
+			<score strand="both" combined_pvalue="2.07e-47" evalue="4.5e-45"/>
+			<seg start="1">
+				<data>
+MTEHAILVLEDGTVFEGDAVGANGLSVGEVVFNTALTGYQEILTDPSYAYQLVTLTYPHIGNTGCTDQDDEANKV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ALCPDGVFLSNGPGDPEPCDYAVAAIKTFIMRRVPIFGICLGHQLLAQAVGARVVKMSHGHHGANHPVQDLRSGR
+				</data>
+				<hit pos="260" idx="2" pvalue="8.4e-19" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VMITSQNHGFAVDEATLPNNVRVTHRSLFDGTNQGIELLDVPAFSFQGHPEASPGPHDVDVLFDRFITMMAAQS
+				</data>
+				<hit pos="342" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P58895|CARA_XANAC" comment="" length="391">
+			<score strand="both" combined_pvalue="2.19e-47" evalue="4.8e-45"/>
+			<seg start="1">
+				<data>
+MTQPAILVLEDGTVFEGESVGANGLSVGEVVFNTAMTGYQEVLTDPSYARQMVTLTYPHIGNTGFTDQDDEARKI
+				</data>
+				<hit pos="32" idx="0" pvalue="2.9e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GCDVTVVPARTPVAEVLALQPDGVFLSNGPGDPEPCDYAIDAIKELIAQKVPTFGICLGHQLLALAAGAKTLKMT
+				</data>
+				<hit pos="277" idx="2" pvalue="1.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TGHHGANHPVQDLDGGRVMITSQNHGFAVDESTLPANVRVTHRSLFDGTNQGIALTDAPAFSFQGHPEASPGPRD
+				</data>
+				<hit pos="359" idx="1" pvalue="1.3e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A1UTE8|CARA_BARBK" comment="" length="399">
+			<score strand="both" combined_pvalue="2.22e-47" evalue="4.9e-45"/>
+			<seg start="1">
+				<data>
+MTKTTLSSDPWSIKKPTALLVLADGTVIEGEGIGAIGIVEAEVCFNTAITGYEEILTDPSYTGQIINFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="6.1e-19" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AQGARITVVPAHTSVQEILAMKPDGIFLSNGPGDPNATAEYAVPMIKTFIECNIPLFGICLGHQLLALAVGAKTI
+				</data>
+				<hit pos="280" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KMHQGHHGANHPVKNLITEKVEITSMNHGFTVDSTSLPQYVEETHISLFDSTNCGIQIIGKPAFSVQYHPEASPG
+PQDSHYLFQRFHDLIVNYREQSNK
+				</data>
+				<hit pos="362" idx="1" pvalue="8.7e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5SLL3|CARA_THET8" comment="" length="391">
+			<score strand="both" combined_pvalue="2.51e-47" evalue="5.5e-45"/>
+			<seg start="1">
+				<data>
+MAGVKERAVLVLEDGTVYHGYAFGARGKTVGEVVFNTAQTGYQEIMTDPSYHGQIVVMTYPHQGNYGVNVYDMQS
+				</data>
+				<hit pos="35" idx="0" pvalue="2.4e-19" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+IMALEPHGLLISNGPGDPTMPRYAHETIWKLMGLLPTFGICLGHQLLALAAGGRTFKMKFGHRGANHPVKNLQTG
+				</data>
+				<hit pos="261" idx="2" pvalue="1.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KIEITSQNHGYAVDIDSLKDFRPTHVNLNDGTLEGMAHARYPVFSVQYHPEAAPGPHDALYLFRRFLEEVEAFHG
+				</data>
+				<hit pos="342" idx="1" pvalue="1.9e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q72GZ0|CARA_THET2" comment="" length="391">
+			<score strand="both" combined_pvalue="2.51e-47" evalue="5.5e-45"/>
+			<seg start="1">
+				<data>
+MAGVKERAVLVLEDGTVYHGYAFGARGKTVGEVVFNTAQTGYQEIMTDPSYHGQIVVMTYPHQGNYGVNVYDMQS
+				</data>
+				<hit pos="35" idx="0" pvalue="2.4e-19" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+IMALEPHGLLISNGPGDPTMPRYAHETIWKLMGLLPTFGICLGHQLLALAAGGRTFKMKFGHRGANHPVKNLQTG
+				</data>
+				<hit pos="261" idx="2" pvalue="1.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KIEITSQNHGYAVDIDSLKDFRPTHVNLNDGTLEGMAHARYPVFSVQYHPEAAPGPHDALYLFRRFLEEVEAFHG
+				</data>
+				<hit pos="342" idx="1" pvalue="1.9e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q88DU5|CARA_PSEPK" comment="" length="378">
+			<score strand="both" combined_pvalue="2.84e-47" evalue="6.2e-45"/>
+			<seg start="1">
+				<data>
+MTKPAILALADGSIFRGEAIGADGQTVGEVVFNTAMTGYQEILTDPSYAQQIVTLTYPHIGNTGTTPEDAESSRV
+				</data>
+				<hit pos="32" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+SEVLALNPDGVFLSNGPGDPEPCDYAIQAIKEILETEIPVFGICLGHQLLALASGAKTVKMGHGHHGANHPVQDL
+				</data>
+				<hit pos="264" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTGVVMITSQNHGFAVDEATLPGNVRAIHKSLFDGTLQGIERTDKSAFSFQGHPEASPGPTDVAPLFDRFTDAMA
+				</data>
+				<hit pos="346" idx="1" pvalue="1.4e-17" match=" ++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A5VRM1|CARA_BRUO2" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B2S6U9|CARA_BRUA1" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|C0REC2|CARA_BRUMB" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q2YM22|CARA_BRUA2" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q57C28|CARA_BRUAB" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8YIB8|CARA_BRUME" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B0CHS0|CARA_BRUSI" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPESEQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A9M6F1|CARA_BRUC2" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8FZJ8|CARA_BRUSU" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTPKTAPWTVQKRTAVLVLADGTVIEGKGLGATGAVEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGEYAVPTIGKLVETGIPLFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIRERKGQAPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A6WZJ5|CARA_BRUA4" comment="" length="407">
+			<score strand="both" combined_pvalue="4.94e-47" evalue="1.1e-44"/>
+			<seg start="1">
+				<data>
+MTETTSKTAPWTVEKRTAILVLADGTVIEGKGLGAIGAIEAEVVFNTALTGYEEILTDPSYAGQIVTFTFPHIGN
+				</data>
+				<hit pos="45" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TGLGAKVTVLPATATAEDVLAHNPDGVFLSNGPGDPAATGAYAVPTIKKLVETDLPVFGICLGHQMLALALGGRT
+				</data>
+				<hit pos="281" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EKMHQGHHGANHPVKDYTTGKVEIVSMNHGFAVDSDSLPENVEETHVSLFDGTNCGLRVVGKPVFSVQHHPEASP
+GPQDSHYLFRRFINLIREKKGETPLPEREQAA
+				</data>
+				<hit pos="363" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P74587|CARA_SYNY3" comment="" length="384">
+			<score strand="both" combined_pvalue="5.39e-47" evalue="1.2e-44"/>
+			<seg start="1">
+				<data>
+MPIAAAKPALLVLADGTPYPGWSFGADGTTVGEVVFNTGMTGYQEVMTDPSYCGQIVTFTYPELGNTGVNAEDEE
+				</data>
+				<hit pos="36" idx="0" pvalue="3.7e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TSAAEILQYNPDGIFLSNGPGDPSAVEEGIVTTKELLAAKKPMFGICMGHQVLGLSLGAETFKLKFGHRGLNQPC
+				</data>
+				<hit pos="267" idx="2" pvalue="4.0e-17" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GLEQQVEITSQNHGFAVTEGSLAEEVEITHFNLNDKTVAGLRHKELPFFSVQYHPEASPGPHDADYLFEKFVKLM
+				</data>
+				<hit pos="347" idx="1" pvalue="1.1e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P57245|CARA_BUCAI" comment="" length="387">
+			<score strand="both" combined_pvalue="6.25e-47" evalue="1.4e-44"/>
+			<seg start="1">
+				<data>
+MEGVLSQLAVLVLEDGTKFHGRAIGAKGITVGEVVFNTSITGYQEIITDPSYSHQIVTLTHPHIGNVGTNSNDEE
+				</data>
+				<hit pos="36" idx="0" pvalue="1.0e-19" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ITDPKTVLNLSPDGIFLSNGPGDPRPCDYAIHAIQYFLKTNIPIFGICLGHQLLALASGAKIVKMKFGHHGGNHP
+				</data>
+				<hit pos="268" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VKDIKNNRVIITSQNHSFTVDTENLPNNIEITHSSLFDGTLQGLSLTNKSAFSFQGHPEASPGPHDASYLFDYFI
+				</data>
+				<hit pos="350" idx="1" pvalue="8.0e-19" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9K9V8|CARA_HALH5" comment="" length="362">
+			<score strand="both" combined_pvalue="6.26e-47" evalue="1.4e-44"/>
+			<seg start="1">
+				<data>
+MKRQLILEDGSVFVGKGFGSDREMSGEVVFNTGMTGYQEMLSDPSYCGQIVTLTYPLIGNYGINRDDFESMNPAI
+				</data>
+				<hit pos="30" idx="0" pvalue="2.4e-19" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VSEGVEMIRNLLGKVPLFGICLGHQLFALACGAKTEKLRFGHRGSNHPVRERSTGLIEITAQNHGYTVTEGSLVN
+				</data>
+				<hit pos="241" idx="2" pvalue="8.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TDLIVTHEAVNDGTIEGLAHKVHPAFSVQYHPEASPGPEDSNVLFDRFIKLMESNKHRALTV
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-20" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q89DR8|CARA_BRADU" comment="" length="396">
+			<score strand="both" combined_pvalue="6.36e-47" evalue="1.4e-44"/>
+			<seg start="1">
+				<data>
+MTQHDNDPAWPDHKPTALLVLADGTVLEGFGLGAEGHAVGEVCFNTAMTGYEEILTDPSYAGQLITFTFPHIGNV
+				</data>
+				<hit pos="44" idx="0" pvalue="1.0e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVGCKVTVVPATTSAEDILAMKPDGVFLSNGPGDPAATGKYAVPVIRDVIKSGTPTFGICLGHQMLGLAVGAKTK
+				</data>
+				<hit pos="280" idx="2" pvalue="1.5e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KMHQGHHGANHPVKDETTGKVEITSMNHGFAVDEKTLPKGATQTHISLFDGSNCGIQLDGKPVFSVQYHPEASPG
+PRDSHYLFQRFAELMRQKKSA
+				</data>
+				<hit pos="362" idx="1" pvalue="1.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q87WP3|CARA_PSESM" comment="" length="378">
+			<score strand="both" combined_pvalue="6.51e-47" evalue="1.4e-44"/>
+			<seg start="1">
+				<data>
+MTKPAILALADGSIFRGEAIGADGQTVGEVVFNTAMTGYQEILTDPSYAQQIVTLTYPHIGNTGTTPEDAESDRV
+				</data>
+				<hit pos="32" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+SEVLAYKPDGVFLSNGPGDPEPCDYAIKAIKQVLETEVPVFGICLGHQLLALAAGAKTVKMGHGHHGANHPVQDL
+				</data>
+				<hit pos="264" idx="2" pvalue="5.9e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTGVVMITSQNHGFAVDESTLPGNVRAIHKSLFDGTLQGIELTDKSAFSFQGHPEASPGPNDVAPLFDRFIDAMA
+				</data>
+				<hit pos="346" idx="1" pvalue="8.8e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9CKV3|CARA_PASMU" comment="" length="385">
+			<score strand="both" combined_pvalue="8.25e-47" evalue="1.8e-44"/>
+			<seg start="1">
+				<data>
+MSEPAILVLADGSVFHGTSIGAKGHTVGEVVFNTAMTGYQEILTDPSYFRQIVTLTYPHIGNTGTNLEDCEANHV
+				</data>
+				<hit pos="32" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ALNPDGIFLSNGPGDPEPCDYAISAIQTLLASKKPIFGICLGHQLLGLAAGGKTKKMAFGHHGANHPVQDLNTQK
+				</data>
+				<hit pos="260" idx="2" pvalue="7.1e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VFITSQNHGFEVDEASLPSHVRVTHRSLFDNSVQGIELSDQSAFSFQGHPEASPGPNDVAYLFDKFINEMRKANL
+				</data>
+				<hit pos="342" idx="1" pvalue="8.8e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8K9Z6|CARA_BUCAP" comment="" length="385">
+			<score strand="both" combined_pvalue="1.65e-46" evalue="3.6e-44"/>
+			<seg start="1">
+				<data>
+MEDALGQLAVLVLEDGTRFHGRSIGAKGTTVGEVVFNTSITGYQEIITDPSYSHQIVTLTHPHIGNIGTNCNDEE
+				</data>
+				<hit pos="36" idx="0" pvalue="1.0e-19" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+KTDPKIALNLNPDGIFLSNGPGDPRPCDYAIHAIQCFLKKNIPIFGICLGHQLLALASGANIIKMKFGHHGGNHP
+				</data>
+				<hit pos="268" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VKEIKTNRVIITSQNHSFTVDAKNMPNNIAITHSSLFDGTLQGLCLTDKLAFSFQGHPEASPGPHDASSLFDHFI
+				</data>
+				<hit pos="350" idx="1" pvalue="2.2e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9JP87|CARA_RUBGI" comment="" length="384">
+			<score strand="both" combined_pvalue="2.41e-46" evalue="5.3e-44"/>
+			<seg start="1">
+				<data>
+MLPVLPPALLALADGTTFLGTSIGAPGRTVGEVVFNTALTGYQEILTDPSYCRQIVTLTYPHIGNVGVNEEDVEA
+				</data>
+				<hit pos="35" idx="0" pvalue="1.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PARTPAAEVFKLKPDGVFLSNGPGDPEPCDYAIAAAREIIDAGVPTFGICLGHQIMALASGAKTFKMKFGHHGAN
+				</data>
+				<hit pos="270" idx="2" pvalue="9.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HPVKDLDSGRVSITSQNHGFAVDEKTLGANLRPTHVSLFDGTLQGLARTDRPAFCFQGHPEASPGPHDIGYLFDR
+				</data>
+				<hit pos="352" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8DUP4|CARA_STRMU" comment="" length="362">
+			<score strand="both" combined_pvalue="2.42e-46" evalue="5.3e-44"/>
+			<seg start="1">
+				<data>
+MGKRLLILEDGTIFEGQAFGADLDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLVGNYGINRDDYESIKPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPEALEMIRGVQGKIPIFGICMGHQLFSLANGASTYKMKFGHRGFNHAVREIATGRIDFTSQNHGYAVSRDNLP
+				</data>
+				<hit pos="242" idx="2" pvalue="4.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EELIITHEEINDKSIEGVRHRYYPAFSVQYHPDAAPGPHDASYLFDEFLELIDAFQLEKASK
+				</data>
+				<hit pos="324" idx="1" pvalue="4.5e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B2URJ0|CARA_AKKM8" comment="" length="372">
+			<score strand="both" combined_pvalue="2.44e-46" evalue="5.3e-44"/>
+			<seg start="1">
+				<data>
+MRAILALEDGSVFIGSHFGATGTEVGEACFNTSMTGYQEVLTDPSYSGQIVTMTYPLIGNYGVNPEDGESGKAQV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.6e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VFLSNGPGDPATLTDIHREVAALIGKVPMFGICLGHQIISHALGAKTFKLKFGHRGANHPVKDLKTGKISITSQN
+				</data>
+				<hit pos="253" idx="2" pvalue="8.1e-18" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HGFAVDPDTVPDDVEITLINLNDNTVEGIAHRTLPVFSVQYHPEAAPGPRDPQYLFRDFRKMIAASKRQHAR
+				</data>
+				<hit pos="335" idx="1" pvalue="6.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9CF80|CARA_LACLA" comment="" length="357">
+			<score strand="both" combined_pvalue="2.65e-46" evalue="5.8e-44"/>
+			<seg start="1">
+				<data>
+MSKRLLILEDGTIFEGESLGANLDVTGELVFNTGMTGYQESITDQSYNGQILTFTYPIVGNYGVNRDDYESIHPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPEAIEMIKEIQGKIPIFGICLGHQLFSLANGAKTYKMKFGHRGFNHAVREIATGRIDFTSQNHGYAVSSENLP
+				</data>
+				<hit pos="242" idx="2" pvalue="1.9e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EDLMITHVEINDDSVEGVRHKHFPAFSVQFHPDAAPGPHDASYLFDDFMDLMDNFKK
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9L4N5|CARA_LACLM" comment="" length="357">
+			<score strand="both" combined_pvalue="2.65e-46" evalue="5.8e-44"/>
+			<seg start="1">
+				<data>
+MSKRLLILEDGTIFEGEALGANLDVTGELVFNTGMTGYQESITDQSYNGQILTFTYPIVGNYGVNRDDYESIHPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPEAIEMIKEVQGKIPIFGICLGHQLFSLANGATTYKMKFGHRGFNHAVREVATGRIDFTSQNHGYAVSSENLP
+				</data>
+				<hit pos="242" idx="2" pvalue="1.9e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EDLMITHVEINDNSVEGVRHKYFPAFSVQFHPDAAPGPHDASYLFDDFMDLMDNFKK
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O50235|CARA_ZYMMO" comment="" length="374">
+			<score strand="both" combined_pvalue="2.71e-46" evalue="5.9e-44"/>
+			<seg start="1">
+				<data>
+MVLADGQMIWGRGFGATGAKVGEVCFHTAMTGYEEIMTDPSFASQIINFTFPHIGNVGANREDVEAKTLHALGCI
+				</data>
+				<hit pos="26" idx="0" pvalue="4.2e-17" match="+ ++++++++++++++ "/>
+			</seg>
+			<seg start="226">
+				<data>
+KPDGVFLSNGPGDPAATAEYAVPVIRQLLDIKMPIFGICLGHQLLALAVGATTYKMHQGHRGANHPVKRLDDSKV
+				</data>
+				<hit pos="259" idx="2" pvalue="2.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EITSMNHGFAVATDSLPEQARPTHLSLFDGSLAGLELTDRPAFSVQYHPEASPGPQDSYYLFTKFIDLIAKERP
+				</data>
+				<hit pos="341" idx="1" pvalue="8.7e-22" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8UDF7|CARA_AGRFC" comment="" length="401">
+			<score strand="both" combined_pvalue="3.07e-46" evalue="6.7e-44"/>
+			<seg start="1">
+				<data>
+MTETAPWTTRKPTAMLVLADGTVIEGTGIGATGKVQAEVCFNTALTGYEEILTDPSYLGQIVTFTFPHIGNVGTN
+				</data>
+				<hit pos="41" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LDCKVTVVPAQTSAEDILALKPDGVFLSNGPGDPAATGEYAVPVIQNLIKSELPIFGICLGHQMLGLAVGAKTEK
+				</data>
+				<hit pos="279" idx="2" pvalue="3.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+MHQGHHGANHPVKDFTTGKVEIVSMNHGFAVDTKSLPEGVEETHTSLFDGTNCGLRIVGKPVFSVQHHPEASPGP
+QDSHYLFRRFVNLLRENKGEAALAER
+				</data>
+				<hit pos="361" idx="1" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7VP66|CARA_HAEDU" comment="" length="389">
+			<score strand="both" combined_pvalue="3.27e-46" evalue="7.2e-44"/>
+			<seg start="1">
+				<data>
+MFNPAILVLADGSTFYGKSIGYQAVSAYSIGEVVFNTAMTGYQEILTDPSYAKQIVTLTYPHIGNTGTNDEDNES
+				</data>
+				<hit pos="35" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ITVVPAQTSAEDILALNPDGIFLSNGPGDPEPCTYAIQSIRQLLNTQKPIFGICLGHQLLGLAVGAKTRKMAFGH
+				</data>
+				<hit pos="274" idx="2" pvalue="1.3e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HGANHPVQDLKTEHVLITSQNHGFEIDEYSLPENVIVTHRSLFDNSVQGIELTNQVAFSFQGHPEANPGPQDVAY
+				</data>
+				<hit pos="356" idx="1" pvalue="1.9e-17" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q97FT2|CARA_CLOAB" comment="" length="351">
+			<score strand="both" combined_pvalue="5.03e-46" evalue="1.1e-43"/>
+			<seg start="1">
+				<data>
+MKGIIYLEDGTVFYGTGFGKEGNEFGEIVFNTSMTGYQEILTDPSYAGQIINMTYPLIGNYGVNESVNQSKCVYA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+IPEAIENVKKLIGKRPMFGICLGHQIIALASGGNTYKLKYGHRGGNHGIYDVQRDKAYITAQNHGYAVDEESVLE
+				</data>
+				<hit pos="241" idx="2" pvalue="2.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+NGMIITHRNLNDGTVEGMKHKSIPLFSVQFHPEGAPGPTDTTYLFDQFVNL
+				</data>
+				<hit pos="324" idx="1" pvalue="6.4e-17" match="+ ++++++++ ++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P63733|CARA_STRPN" comment="" length="359">
+			<score strand="both" combined_pvalue="5.45e-46" evalue="1.2e-43"/>
+			<seg start="1">
+				<data>
+MTKRILVLEDGTVFEGKAFGADIDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLVGNYGINRDDYESIIPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPQALDMIRGVQGKIPIFGICMGHQLFAMANGAKTYKMKFGHRGFNHAVREIATGRVDFTSQNHGYAVSREDLP
+				</data>
+				<hit pos="242" idx="2" pvalue="9.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EHLIITHEEINDKSVEGVRHRYQPAFSVQYHPDAAPGPHDASYLFDEFIEMMEVFKQSN
+				</data>
+				<hit pos="324" idx="1" pvalue="4.5e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P63734|CARA_STRR6" comment="" length="359">
+			<score strand="both" combined_pvalue="5.45e-46" evalue="1.2e-43"/>
+			<seg start="1">
+				<data>
+MTKRILVLEDGTVFEGKAFGADIDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLVGNYGINRDDYESIIPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPQALDMIRGVQGKIPIFGICMGHQLFAMANGAKTYKMKFGHRGFNHAVREIATGRVDFTSQNHGYAVSREDLP
+				</data>
+				<hit pos="242" idx="2" pvalue="9.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EHLIITHEEINDKSVEGVRHRYQPAFSVQYHPDAAPGPHDASYLFDEFIEMMEVFKQSN
+				</data>
+				<hit pos="324" idx="1" pvalue="4.5e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P58894|CARA_STRP8" comment="" length="360">
+			<score strand="both" combined_pvalue="5.90e-46" evalue="1.3e-43"/>
+			<seg start="1">
+				<data>
+MTKRLLILEDGTIFEGEPFGADIDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLIGNYGINRDDYESISPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DLPEALDMIRGVQGKIPIFGICMGHQLFSLANGAKTCKMTFGHRGFNHAVREIATGRIDFTSQNHGYAVERSSLP
+				</data>
+				<hit pos="242" idx="2" pvalue="4.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTLMVTHEDINDKTVEGVKHRDFPAFSVQFHPDAAPGPHDASYLFDEFLEMIDSWRCTSK
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P0DA12|CARA_STRP3" comment="" length="360">
+			<score strand="both" combined_pvalue="5.90e-46" evalue="1.3e-43"/>
+			<seg start="1">
+				<data>
+MTKRLLILEDGTIFEGEPFGADIDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLIGNYGINRDDYESISPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DLPEALDMIRGVQGKIPIFGICMGHQLFSLANGAKTCKMTFGHRGFNHAVREIATGRIDFTSQNHGYAVERSSLP
+				</data>
+				<hit pos="242" idx="2" pvalue="4.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTLMVTHEDINDKTVEGVKHRDFPAFSVQFHPDAAPGPHDASYLFDEFLEMIDSWRCTSK
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P0DA13|CARA_STRPQ" comment="" length="360">
+			<score strand="both" combined_pvalue="5.90e-46" evalue="1.3e-43"/>
+			<seg start="1">
+				<data>
+MTKRLLILEDGTIFEGEPFGADIDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLIGNYGINRDDYESISPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DLPEALDMIRGVQGKIPIFGICMGHQLFSLANGAKTCKMTFGHRGFNHAVREIATGRIDFTSQNHGYAVERSSLP
+				</data>
+				<hit pos="242" idx="2" pvalue="4.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTLMVTHEDINDKTVEGVKHRDFPAFSVQFHPDAAPGPHDASYLFDEFLEMIDSWRCTSK
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P63735|CARA_STRP1" comment="" length="360">
+			<score strand="both" combined_pvalue="5.90e-46" evalue="1.3e-43"/>
+			<seg start="1">
+				<data>
+MTKRLLILEDGTIFEGEPFGADIDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLIGNYGINRDDYESISPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DLPEALDMIRGVQGKIPIFGICMGHQLFSLANGAKTCKMTFGHRGFNHAVREIATGRIDFTSQNHGYAVERSSLP
+				</data>
+				<hit pos="242" idx="2" pvalue="4.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTLMVTHEDINDKTVEGVKHRDFPAFSVQFHPDAAPGPHDASYLFDEFLEMIDSWRCTSK
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5XCR8|CARA_STRP6" comment="" length="360">
+			<score strand="both" combined_pvalue="5.90e-46" evalue="1.3e-43"/>
+			<seg start="1">
+				<data>
+MTKRLLILEDGTIFEGEPFGADIDVTGEIVFNTGMTGYQESITDQSYNGQILTFTYPLIGNYGINRDDYESISPT
+				</data>
+				<hit pos="31" idx="0" pvalue="4.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DLPEALDMIRGVQGKIPIFGICMGHQLFSLANGAKTCKMTFGHRGFNHAVREIATGRIDFTSQNHGYAVERSSLP
+				</data>
+				<hit pos="242" idx="2" pvalue="4.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTLMVTHEDINDKTVEGVKHRDFPAFSVQFHPDAAPGPHDASYLFDEFLEMIDSWRCTSK
+				</data>
+				<hit pos="324" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7U7F9|CARA_PARMW" comment="" length="383">
+			<score strand="both" combined_pvalue="6.81e-46" evalue="1.5e-43"/>
+			<seg start="1">
+				<data>
+MPHPSSRQAHLVLADGTVLTGDAFGHRGSVVGEVVFNTGMTGYQEVLTDPSYAGQLVTFTYPELGNTGVNGDDQE
+				</data>
+				<hit pos="36" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LDTVMSHQPEGVFLSNGPGDPAAVDSGIDLARSLLERANLPLFGICLGHQILGLALGGKTFKLGYGHRGLNHPCG
+				</data>
+				<hit pos="266" idx="2" pvalue="1.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TSGQVEITSQNHGFAISADSLPEPMVEVTHLNLNDRTVAAFQHRHQPVFGIQYHPEASPGPHDADHHFGRFVALM
+				</data>
+				<hit pos="347" idx="1" pvalue="5.6e-18" match="+++  ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A5GTM5|CARA_SYNR3" comment="" length="382">
+			<score strand="both" combined_pvalue="1.06e-45" evalue="2.3e-43"/>
+			<seg start="1">
+				<data>
+MDGLLVLADGTVFRGQGFGAKGTAIGEVVFNTGMSGYQEVITDPSYTGQLITFTYPELGNTGVNQEDLEADTPAV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-19" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LKPDGVFLSNGPGDPSAVGSGIALAKQLLSDPALPMFGICLGHQILGLALGGSTFKLGYGHRGLNHPCGGSGLVE
+				</data>
+				<hit pos="260" idx="2" pvalue="1.9e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ITSQNHGFALDANSLDPQRVAVTHHNLNDRTVAGLELRDQPVFGVQYHPEASPGPHDADHHFARFINLMASRRNA
+				</data>
+				<hit pos="341" idx="1" pvalue="1.5e-19" match="+++ +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q71YI0|CARA_LISMF" comment="" length="363">
+			<score strand="both" combined_pvalue="1.10e-45" evalue="2.4e-43"/>
+			<seg start="1">
+				<data>
+MTKRILMLEDGNYFIGDAIGSEKETIGEVVFNTGMTGYQETITDPSYYGQIITFTYPLVGNYGVNRDDFESINPA
+				</data>
+				<hit pos="31" idx="0" pvalue="4.3e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPEALEMIRGIQGKLPLFGICLGHQLFALANGADTFKLKFGHRGANHPVKELATGRVDFTAQNHGYAVEKDSLI
+				</data>
+				<hit pos="242" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GTDLKVTHIELNDETVEGLAHKEYPAYTVQYHPEANPGPSDVNYLFDEFMEMMNGKEEGELHA
+				</data>
+				<hit pos="325" idx="1" pvalue="8.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8Y664|CARA_LISMO" comment="" length="363">
+			<score strand="both" combined_pvalue="1.10e-45" evalue="2.4e-43"/>
+			<seg start="1">
+				<data>
+MTKRILMLEDGNYFIGDAIGSEKETIGEVVFNTGMTGYQETITDPSYYGQIITFTYPLVGNYGVNRDDFESINPA
+				</data>
+				<hit pos="31" idx="0" pvalue="4.3e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPEALEMIRGIQGKLPLFGICLGHQLFALANGADTFKLKFGHRGANHPVKELATGRVDFTAQNHGYAVEKDSLI
+				</data>
+				<hit pos="242" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GTDLKVTHIELNDETVEGLAHKEYPAYTVQYHPEANPGPSDVNYLFDEFMEMMNGKEEGELHA
+				</data>
+				<hit pos="325" idx="1" pvalue="8.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q50983|CARA_NEIGO" comment="" length="377">
+			<score strand="both" combined_pvalue="1.61e-45" evalue="3.5e-43"/>
+			<seg start="1">
+				<data>
+MNTPALLVLADGSVFHGTSIGYEGSASGEVVFNTSMTGYQEILTDPSYCKQIVTLTYPHIGNTGTNAEDEESRSV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LALNPDGVFLSNGPGDPEPCTYGIEAVQKLMESGKPIFGICLGHQLISLAIGAKTLKMRFSHHGANHPVQDLDSG
+				</data>
+				<hit pos="261" idx="2" pvalue="8.4e-19" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+KVVITSQNHGFAVDADTLPANARITHKSLFDNTLQGIELTDKPVSCFQGHPEASPGPQDVGYLSDKFIGNMKAAK
+				</data>
+				<hit pos="343" idx="1" pvalue="5.2e-17" match="++ ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P38099|CARA_STUST" comment="" length="384">
+			<score strand="both" combined_pvalue="1.65e-45" evalue="3.6e-43"/>
+			<seg start="1">
+				<data>
+MTKPATTPAILALADGSIFRGESIGADGQTIGEVVFNTAMTGYQEILTDPSYAKQIVTLTYPHVGNTGTTPQDAE
+				</data>
+				<hit pos="36" idx="0" pvalue="3.9e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+QTPASEALALNPDGIFLANGPGDPEPCDYAIRAIQEVLETDIPVFGICLGHQLLALASGAITVKMPSGHHGANHP
+				</data>
+				<hit pos="268" idx="2" pvalue="1.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VQDLETGVVMITSQNHGFCADEASLPANLRATHKSLFDGTLQGIERTDKVAFGFQGHPEASPGPCDVAPLFDRFI
+				</data>
+				<hit pos="350" idx="1" pvalue="8.1e-16" match=" ++ +++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q49WY3|CARA_STAS1" comment="" length="366">
+			<score strand="both" combined_pvalue="1.73e-45" evalue="3.8e-43"/>
+			<seg start="1">
+				<data>
+MLKKRYLVLEDGSYYEGYPIGSDQLTLGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFEALVP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EEVHVAVEMIKGILGKIPFFGICLGHQLFALSQGATSFKMKFGHRGANHPVKDLKTGKIALTSQNHGYAIDKASL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KNTDLEVTHIAINDDTVEGLRHKSLPAFSVQYHPEACPGPSDSNYLFDEFIDMINEYKTKELTNNA
+				</data>
+				<hit pos="326" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P63729|CARA_STAAM" comment="" length="366">
+			<score strand="both" combined_pvalue="1.73e-45" evalue="3.8e-43"/>
+			<seg start="1">
+				<data>
+MQSKRYLVLEDGSFYEGYRLGSDNLTVGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLVP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EVVECAIPMIQGILGKIPFFGICLGHQLFALSQGASSFKMKFGHRGANHPVKNLETGKVDITSQNHGYAIDIDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KSTDLEVTHLALNDGTVEGLKHKTLPAFSVQYHPEANPGPSDSNYLFDDFVAMMTNFKEKERHINA
+				</data>
+				<hit pos="326" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P63730|CARA_STAAW" comment="" length="366">
+			<score strand="both" combined_pvalue="1.73e-45" evalue="3.8e-43"/>
+			<seg start="1">
+				<data>
+MQSKRYLVLEDGSFYEGYRLGSDNLTVGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLVP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EVVECAIPMIQGILGKIPFFGICLGHQLFALSQGASSFKMKFGHRGANHPVKNLETGKVDITSQNHGYAIDIDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KSTDLEVTHLALNDGTVEGLKHKTLPAFSVQYHPEANPGPSDSNYLFDDFVAMMTNFKEKERHINA
+				</data>
+				<hit pos="326" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P99147|CARA_STAAN" comment="" length="366">
+			<score strand="both" combined_pvalue="1.73e-45" evalue="3.8e-43"/>
+			<seg start="1">
+				<data>
+MQSKRYLVLEDGSFYEGYRLGSDNLTVGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLVP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EVVECAIPMIQGILGKIPFFGICLGHQLFALSQGASSFKMKFGHRGANHPVKNLETGKVDITSQNHGYAIDIDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KSTDLEVTHLALNDGTVEGLKHKTLPAFSVQYHPEANPGPSDSNYLFDDFVAMMTNFKEKERHINA
+				</data>
+				<hit pos="326" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5HGN0|CARA_STAAC" comment="" length="366">
+			<score strand="both" combined_pvalue="1.73e-45" evalue="3.8e-43"/>
+			<seg start="1">
+				<data>
+MQSKRYLVLEDGSFYEGYRLGSDNLTVGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLVP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EVVECAIPMIQGILGKIPFFGICLGHQLFALSQGASSFKMKFGHRGANHPVKNLETGKVDITSQNHGYAIDIDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KSTDLEVTHLALNDGTVEGLKHKTLPAFSVQYHPEANPGPSDSNYLFDDFVAMMTNFKEKERHINA
+				</data>
+				<hit pos="326" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6GA11|CARA_STAAS" comment="" length="366">
+			<score strand="both" combined_pvalue="1.73e-45" evalue="3.8e-43"/>
+			<seg start="1">
+				<data>
+MQSKRYLVLEDGSFYEGYRLGSDNLTVGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLVP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EVVECAIPMIQGILGKIPFFGICLGHQLFALSQGASSFKMKFGHRGANHPVKNLETGKVDITSQNHGYAIDIDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KSTDLEVTHLALNDGTVEGLKHKTLPAFSVQYHPEANPGPSDSNYLFDDFVAMMTNFKEKERHINA
+				</data>
+				<hit pos="326" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6GHN3|CARA_STAAR" comment="" length="366">
+			<score strand="both" combined_pvalue="1.73e-45" evalue="3.8e-43"/>
+			<seg start="1">
+				<data>
+MQSKRYLVLEDGSFYEGYRLGSDNLTVGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLVP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EVVECAILMIQGILGKIPFFGICLGHQLFALSQGASSFKMKFGHRGANHPVKNLETGKVDITSQNHGYAIDIDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KSTDLEVTHLALNDGTVEGLKHKTLPAFSVQYHPEANPGPSDSNYLFDDFVAMMTNFKEKERHINA
+				</data>
+				<hit pos="326" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P51201|CARA_PORPU" comment="" length="384">
+			<score strand="both" combined_pvalue="2.02e-45" evalue="4.4e-43"/>
+			<seg start="1">
+				<data>
+MIKKIPAILVLEDGTYYKGWSFQADQSIVTIGEVVFNTGMTGYQEIITDPSYFQQIVTFTYPEIGNTGINSEDIE
+				</data>
+				<hit pos="36" idx="0" pvalue="1.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TPTQDILSCKPDGILLSNGPGDPSAVNYGIKTVKELLNQNIPIFGICMGHQILNLALEAKTFKLKFGHRGINHPS
+				</data>
+				<hit pos="267" idx="2" pvalue="8.4e-17" match="++++++++++++ +++ "/>
+			</seg>
+			<seg start="301">
+				<data>
+GLKQQVEITSQNHGFAVDLQSVLKLSLQVTHFNLNDITVAGTGHSRSPYFSVQYHPESSPGPHDADYLFEYFIEI
+				</data>
+				<hit pos="348" idx="1" pvalue="6.2e-20" match="+ +++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5HPY9|CARA_STAEQ" comment="" length="366">
+			<score strand="both" combined_pvalue="2.09e-45" evalue="4.6e-43"/>
+			<seg start="1">
+				<data>
+MLEKRYLVLEDGSYYEGYRLGSDDLSIGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLTP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DEVDVALDMIRGILGKIPFFGICLGHQLFALSQGATSFKMKFGHRGANHPVKDLRTGKIDITSQNHGYSIDRDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KNTDLEVTHIALNDGTVEGLRHKELPAFSVQYHPEARPGPSDSNYLFDEFITMMKDFKEKERQINA
+				</data>
+				<hit pos="326" idx="1" pvalue="6.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q4L5Q4|CARA_STAHJ" comment="" length="366">
+			<score strand="both" combined_pvalue="2.09e-45" evalue="4.6e-43"/>
+			<seg start="1">
+				<data>
+MLERRYLVLEDGTYYEGYKLGSNDLSVGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFEALTP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVVEVAIEMIKGILGKIPFFGICLGHQLFALSQGGTSFKMKFGHRGANHPVKDLRSGKVDITSQNHGYAIDKNSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VNTDLEVTHIALNDGTVEGLRHKTLPAFSVQYHPEARPGPSDSNYLFDEFMTMMKEFKEKEQTANA
+				</data>
+				<hit pos="326" idx="1" pvalue="6.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8CPJ5|CARA_STAES" comment="" length="366">
+			<score strand="both" combined_pvalue="2.09e-45" evalue="4.6e-43"/>
+			<seg start="1">
+				<data>
+MLEKRYLVLEDGSYYEGYRLGSDDLSIGEIVFNTAMTGYQETISDPSYTGQIITFTYPLIGNYGINRDDFESLTP
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DEVDVALDMIRGILGKIPFFGICLGHQLFALSQGATSFKMKFGHRGANHPVKDLRTGKIDITSQNHGYSIDCDSL
+				</data>
+				<hit pos="243" idx="2" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KNTDLEVTHIALNDGTVEGLRHKELPAFSVQYHPEARPGPSDSNYLFDEFIAMMKDFKEKERQINA
+				</data>
+				<hit pos="326" idx="1" pvalue="6.2e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6HES7|CARA_BACHK" comment="" length="365">
+			<score strand="both" combined_pvalue="2.47e-45" evalue="5.4e-43"/>
+			<seg start="1">
+				<data>
+MKRQLILEDGTVLIGTGFGGEIEKSGEVVFTTGMTGYQETLSDPSYCGQIVTFTYPLIGNYGINRDDFESIHPSV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PEAIEMLKDIIGKVPLFGICLGHQLFALASGANTSKLKFGHRGLNHPVKNIATGKVAITSQNHGYAVEEESVENT
+				</data>
+				<hit pos="240" idx="2" pvalue="5.9e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ELEITHVALNDGTVEGLRHKKFPAFTVQYHPEASAGPEDANDLFEDFLTMIENFKKEGEELCQNA
+				</data>
+				<hit pos="323" idx="1" pvalue="1.3e-18" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q81WF1|CARA_BACAN" comment="" length="365">
+			<score strand="both" combined_pvalue="2.47e-45" evalue="5.4e-43"/>
+			<seg start="1">
+				<data>
+MKRQLILEDGTVLIGTGFGGEIEKSGEVVFTTGMTGYQETLSDPSYCGQIVTFTYPLIGNYGINRDDFESIHPSV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PEAIEMLKDIIGKVPLFGICLGHQLFALASGANTSKLKFGHRGLNHPVKNIATGKVAITSQNHGYAVEEESVENT
+				</data>
+				<hit pos="240" idx="2" pvalue="5.9e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ELEITHVALNDGTVEGLRHKKFPAFTVQYHPEASAGPEDANDLFEDFLTMIENFKKEGEELCQNA
+				</data>
+				<hit pos="323" idx="1" pvalue="1.3e-18" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q636D9|CARA_BACCZ" comment="" length="365">
+			<score strand="both" combined_pvalue="2.47e-45" evalue="5.4e-43"/>
+			<seg start="1">
+				<data>
+MKRQLILEDGTVLIGTGFGGEIEKSGEVVFTTGMTGYQETLSDPSYCGQIVTFTYPLIGNYGINRDDFESIHPSV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PEAIEMLKDIIGKVPLFGICLGHQLFALASGANTSKLKFGHRGLNHPVKNIATGKVAITSQNHGYAVEEESVENT
+				</data>
+				<hit pos="240" idx="2" pvalue="5.9e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ELEITHVALNDGTVEGLRHKKFPAFTVQYHPEASAGPEDANDLFEDFLTMIENFKKEGEELCQNA
+				</data>
+				<hit pos="323" idx="1" pvalue="1.3e-18" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q819S2|CARA_BACCR" comment="" length="365">
+			<score strand="both" combined_pvalue="2.47e-45" evalue="5.4e-43"/>
+			<seg start="1">
+				<data>
+MKRQLILEDGTVLIGTGFGGEIEKSGEVVFTTGMTGYQETLSDPSYCGQIVTFTYPLIGNYGINRDDFESIHPSV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PEAIEMLKDIIGKVPLFGICLGHQLFALASGANTSKLKFGHRGLNHPVKNLATGKVAITSQNHGYAVEEESVENT
+				</data>
+				<hit pos="240" idx="2" pvalue="5.9e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DLEITHVALNDGTVEGLRHKKFPAFTVQYHPEASAGPEDANDLFEDFLTMIENFKKEGEELCQNA
+				</data>
+				<hit pos="323" idx="1" pvalue="1.3e-18" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q732I2|CARA_BACC1" comment="" length="365">
+			<score strand="both" combined_pvalue="2.47e-45" evalue="5.4e-43"/>
+			<seg start="1">
+				<data>
+MKRQLILEDGTVLIGTGFGGEIEKSGEVVFTTGMTGYQETLSDPSYCGQIVTFTYPLIGNYGINRDDFESIHPSV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PEAIEMLKDIIGKVPLFGICLGHQLFALASGANTSKLKFGHRGLNHPVKNLATGKVAITSQNHGYAVEEESVENT
+				</data>
+				<hit pos="240" idx="2" pvalue="5.9e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ELEITHVALNDGTVEGLRHKKFPAFTVQYHPEASAGPEDANDLFEDFLTMIENFKKEGEELCQNA
+				</data>
+				<hit pos="323" idx="1" pvalue="1.3e-18" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9PEC2|CARA_XYLFA" comment="" length="374">
+			<score strand="both" combined_pvalue="2.87e-45" evalue="6.3e-43"/>
+			<seg start="1">
+				<data>
+MTEPAILVLEDGTVFEGDAVGANGLSVGEVVFNTSLTGYQEVLTDPSYAYQLVTLTYPHIGNTGCTDQDDEANKV
+				</data>
+				<hit pos="32" idx="0" pvalue="3.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ALCPDGVFLSNGPGDPEPCDYAVAAIKTFIMRRVPIFGICLGHQLLAQTVGAKVVKMRHGHHGANHPVQDLRSGR
+				</data>
+				<hit pos="260" idx="2" pvalue="4.9e-17" match="+++++++++++++  ++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VMITSQNHGFAVDEATLPSNVRVTHRSLFDGTNQGIELLDVPAFSFQGHPEASPGPHDVDVLFDRFITMMAAQS
+				</data>
+				<hit pos="342" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B4S5S1|CARA_PROA2" comment="" length="371">
+			<score strand="both" combined_pvalue="3.19e-45" evalue="7e-43"/>
+			<seg start="1">
+				<data>
+MQQTPAKLVLENGSVYTGYAFGHIGETGGEVVFNTALTGYQEIVTDPSYAGQMVVMTYPLIGNYGVNQSDAESQK
+				</data>
+				<hit pos="33" idx="0" pvalue="3.7e-19" match="+++++++++++ +++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GPGDPFAVTYAIDNIKKLAEHNTQQKPVPLFGICLGHQLMSLAFGAKTYKLKFGHHGSNHPVKNLKSSSIEITSQ
+				</data>
+				<hit pos="254" idx="2" pvalue="1.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+NHGFAVAMESLPESLEMTHLNLYDQTVEGVRHKKLPCFSVQYHPEAAPGPHDSHYLFEQFTAMMDQAKENV
+				</data>
+				<hit pos="336" idx="1" pvalue="1.6e-20" match="+ +++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q1XDT6|CARA_NEOYE" comment="" length="384">
+			<score strand="both" combined_pvalue="3.72e-45" evalue="8.2e-43"/>
+			<seg start="1">
+				<data>
+MMKRIPAILVLEDGAYYKGWSFQQDKQEITIGEVVFNTGMTGYQEIITDPSYFHQIVAFTYPEIGNTGINNQDIE
+				</data>
+				<hit pos="36" idx="0" pvalue="1.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+TPLKDILAYQPDGILLSNGPGDPSAVHYGIQTVTNLLDYNVPIFGICMGHQILNLALKAKTFKLKFGHRGINHPS
+				</data>
+				<hit pos="267" idx="2" pvalue="1.6e-16" match="++++++++++++ +++ "/>
+			</seg>
+			<seg start="301">
+				<data>
+GLNQQVEITSQNHGFAVELTSVFESPVRVTHFNLNDTTIAGTGHNQSPYFSVQYHPESSPGPHDADYLFESFIEI
+				</data>
+				<hit pos="348" idx="1" pvalue="6.2e-20" match="+ +++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8XZ85|CARA_RALN1" comment="" length="378">
+			<score strand="both" combined_pvalue="7.48e-45" evalue="1.6e-42"/>
+			<seg start="1">
+				<data>
+MLPSFPPAILALADGTVFRGYSIGAAGHTIGEVVFNTAITGYQEILTDPSYSRQIVTLTYPHIGNVGVNREDVEA
+				</data>
+				<hit pos="35" idx="0" pvalue="7.0e-20" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DALAYNPDGVFLSNGPGDPQPCDYAIAATKDFIERRIPTFGICLGHQIMGLAVGGKTLKMKTGHHGANHPVKDLQ
+				</data>
+				<hit pos="263" idx="2" pvalue="7.1e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DGRVIITSQNHGFAVDPESLPANARVTHVSLFDGTLQGFELTDRPAFCFQGHPEASPGPHDIGYLFDRFTAAMAE
+				</data>
+				<hit pos="345" idx="1" pvalue="5.1e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O66727|CARA_AQUAE" comment="" length="371">
+			<score strand="both" combined_pvalue="1.09e-44" evalue="2.4e-42"/>
+			<seg start="1">
+				<data>
+MRKTAILALEDGSYFVGYSFGAEGETGGELVFNTSMTGYQEILTDPSYKGQIVVMTYTQIGNYGVNDEDIESKSV
+				</data>
+				<hit pos="32" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+KINPDAIFLSNGPGDPERVISGIRLTREYMEKKPIMGICLGCQIIGLALGGKTYKLKFGHHGGNHPVKDLRTGKI
+				</data>
+				<hit pos="259" idx="2" pvalue="1.0e-16" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EITAQNHNFAIDPESLPEDVEVTHLNLLDNTVEGIKHKHLPIFAVQYHPENSPGPHDSYYLFKEFVKMAQG
+				</data>
+				<hit pos="341" idx="1" pvalue="3.1e-18" match="+++ ++++++ ++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9KXR5|CARA_STRCO" comment="" length="380">
+			<score strand="both" combined_pvalue="1.36e-44" evalue="3e-42"/>
+			<seg start="1">
+				<data>
+MTTSTRGAHRTPAVLVLEDGRIFRGRAYGAVGATFGEAVFSTGMTGYQETLTDPSYHRQVVVMTAPHVGNTGIND
+				</data>
+				<hit pos="40" idx="0" pvalue="5.5e-20" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VEPDGVFFSNGPGDPATADHPVSVMQGVLERGTPLFGICFGNQILGRALGFGTFKLKYGHRGINQPVQDRTTGKV
+				</data>
+				<hit pos="259" idx="2" pvalue="4.4e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EVTAHNHGFAVDAPLDQVSDTPYGRAEVSHVCLNDNVVEGLQLLDRPAFSVQYHPEAAAGPHDAAYLFDRFVNLM
+				</data>
+				<hit pos="347" idx="1" pvalue="1.9e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q827Q8|CARA_STRAW" comment="" length="380">
+			<score strand="both" combined_pvalue="1.36e-44" evalue="3e-42"/>
+			<seg start="1">
+				<data>
+MTTSTRGAAKVPAVLVLEDGRTFRGRAYGAVGVTFGEAVFSTGMTGYQETLTDPSYHRQVVVMTAPHVGNTGVND
+				</data>
+				<hit pos="40" idx="0" pvalue="5.5e-20" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VNPDGVFFSNGPGDPATADGPVAVMREVLARKTPLFGICFGNQILGRALGFGTYKLKYGHRGINQPVQDRTTGKV
+				</data>
+				<hit pos="259" idx="2" pvalue="4.4e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EVTAHNHGFAVDAPLDQVSDTPYGRAEVSHVCLNDNVVEGLQLLDQPAFSVQYHPEAAAGPHDAAYLFDRFVSLM
+				</data>
+				<hit pos="347" idx="1" pvalue="1.9e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q0BY73|CARA_HYPNA" comment="" length="386">
+			<score strand="both" combined_pvalue="1.73e-44" evalue="3.8e-42"/>
+			<seg start="1">
+				<data>
+MDSATGALALEDGTIFAGFGAGAAGIKVGELCFNTAITGYQEILTDPSYASQLVLFTFPHIGNVGANAEDHEEST
+				</data>
+				<hit pos="33" idx="0" pvalue="7.0e-20" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GNVSAEEVLALKPDGIVFANGPGDPAATFERSGEMIKTLVASGLPILGICLGHQLLGLALGAKTKKMAQGHHGAN
+				</data>
+				<hit pos="270" idx="2" pvalue="1.3e-18" match="++ ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HPVKDLATGKVEIVSMNHGFTVDPDTLPPGVEESHRSLFDGTNSGLAVKGKPIISVQHHPEASPGPQDSFYLFTR
+				</data>
+				<hit pos="352" idx="1" pvalue="6.1e-19" match="++ ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8RBK1|CARA_CALS4" comment="" length="356">
+			<score strand="both" combined_pvalue="1.75e-44" evalue="3.8e-42"/>
+			<seg start="1">
+				<data>
+MKGYLKLEDGSIFEGELISKNKKGYGEVVFTTGMTGYQEAITDPSYAGQIVVMTYPLIGNYGINKYDFQSEKPHI
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-19" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+KHFIGMKPVLGICLGHQIIALALGCNTVKMKFGHRGANQPVKDLLTNKDYITSQNHGYAVEEESIDKDKITVTHI
+				</data>
+				<hit pos="233" idx="2" pvalue="5.6e-18" match="++ ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+NLNDGTVEGIMHKFLPVFSVQYHPEACPGPRDSTDIFDKFMDIVMVYKRRFYFAEV
+				</data>
+				<hit pos="316" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6CIQ1|CARA_KLULA" comment="" length="409">
+			<score strand="both" combined_pvalue="2.91e-44" evalue="6.4e-42"/>
+			<seg start="1">
+				<data>
+MPNFKSTAPKAKFAIYNNSNPDSESGFVEFQGYSFGAPVSCSGEAVFTTSLVGYPESMTDPSYKGQILVFTQPLI
+				</data>
+				<hit pos="47" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DYPITSVANQFDGIFISNGPGDPVQCMESTVPELKKLLETNTLQDLPIFGICLGHQLLALASGGKTIKLGYGNRA
+				</data>
+				<hit pos="272" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HNIPALDLTTGQCHITSQNHGYAVDVDTLPESGFKPFFQNLNDKSNEGMIHVSRPIFSTQFHPEAKGGPRDSAVL
+				</data>
+				<hit pos="355" idx="1" pvalue="1.2e-17" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q92AH2|CARA_LISIN" comment="" length="363">
+			<score strand="both" combined_pvalue="4.37e-44" evalue="9.6e-42"/>
+			<seg start="1">
+				<data>
+MTKRILMLEDGNYFIGDAIGSEKETIGEVVFNTGMTGYQETITDPSYYGQIITFTYPLVGNYGVNRDDFESINPA
+				</data>
+				<hit pos="31" idx="0" pvalue="4.3e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DVPEALEMIRGIQGKLPLFGICLGHQLFALANGADTFKLKFGHRGANHPVKELATGRVDFTAQNHGYAVEKESLI
+				</data>
+				<hit pos="242" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GTDLKVTHIELNDETVEGLAHKEYQAYTVQYHPEANPGPSDVNYLFDEFMEMMNVKEEGELHA
+				</data>
+				<hit pos="325" idx="1" pvalue="3.7e-16" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6FQ30|CARA_CANGA" comment="" length="392">
+			<score strand="both" combined_pvalue="4.77e-44" evalue="1e-41"/>
+			<seg start="1">
+				<data>
+MSQATFEIKNGPSFSGYSFGADKSISGEAVFTTSLVGYPESMTDPSYRGQILVFTQPLIGNYGVPSMEARDEYNL
+				</data>
+				<hit pos="31" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GPGNPETCHETIENLKELLANEDLQQLPIFGICLGHQLLALASGGKTHKLQYGNRAHNIPAMDLTTGQCHITSQN
+				</data>
+				<hit pos="253" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HGYAVDPQTLPQEEWKPYFINLNDQSNEGMIHTTRPIFSTQFHPEAKGGPLDTMPLFDKFFNNIECYKTHLSQSS
+				</data>
+				<hit pos="336" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B3DQ31|CARA_BIFLD" comment="" length="407">
+			<score strand="both" combined_pvalue="5.03e-44" evalue="1.1e-41"/>
+			<seg start="1">
+				<data>
+MSQNESGTIAIPMYDKDDAVLVLEDGQVYVGEPYGALGETTGEIVFATGMTGYQETLTDPSYDRQIVVQTFPHIG
+				</data>
+				<hit pos="46" idx="0" pvalue="1.9e-19" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+RGCRVHVVPSTITFAEIENLNPDGVFFSNGPGDPEQAGPEIELLRQVLDAGYPFFGICFGNQLLGRALGFGTYKL
+				</data>
+				<hit pos="278" idx="2" pvalue="4.0e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KFGHRGINQPVKDLTTGKVEVTAHNHGFAVDAPIGKQVDAPFENGKYGKVFVSHIDLNDDVVEGLQCVDIPAFSV
+QYHPEAAAGPHDAAYLFDRFCELMKNNSKEGK
+				</data>
+				<hit pos="371" idx="1" pvalue="1.9e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8G816|CARA_BIFLO" comment="" length="407">
+			<score strand="both" combined_pvalue="5.03e-44" evalue="1.1e-41"/>
+			<seg start="1">
+				<data>
+MSQNESGTIAIPMYDKDDAVLVLEDGQVYVGKPYGALGETTGEIVFATGMTGYQETLTDPSYDRQIVVQTFPHIG
+				</data>
+				<hit pos="46" idx="0" pvalue="1.9e-19" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+RGCRVHVVPSTITFAEIENLNPDGVFFSNGPGDPEQAGPEIELLRQVLDAGYPFFGICFGNQLLGRALGFGTYKL
+				</data>
+				<hit pos="278" idx="2" pvalue="4.0e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KFGHRGINQPVKDLTTGKVEVTAHNHGFAVDAPIGKQVDAPFENGKYGKVFVSHIDLNDDVVEGLQCVDIPAFSV
+QYHPEAAAGPHDAAYLFDRFCELMKNNSKEGK
+				</data>
+				<hit pos="371" idx="1" pvalue="1.9e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B7GPW1|CARA_BIFLS" comment="" length="407">
+			<score strand="both" combined_pvalue="5.03e-44" evalue="1.1e-41"/>
+			<seg start="1">
+				<data>
+MSQNESGTIAIPMYDKDDAVLVLEDGQVYVGEPYGALGETTGEIVFATGMTGYQETLTDPSYDRQIVVQTFPHIG
+				</data>
+				<hit pos="46" idx="0" pvalue="1.9e-19" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+RGCRVHVVPSTITFAEIESLNPDGVFFSNGPGDPEQAGPEIELLRQVLDAGYPFFGICFGNQLLGRALGFGTFKL
+				</data>
+				<hit pos="278" idx="2" pvalue="4.0e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+KFGHRGINQPVKDLTTGKVEVTAHNHGFAVDAPIGKQVDAPFENGKYGKVFVSHIDLNDDVVEGLQCVDIPAFSV
+QYHPEAAAGPHDAAYLFDRFCELMKNNSKEGK
+				</data>
+				<hit pos="371" idx="1" pvalue="1.9e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P07258|CARA_YEAST" comment="" length="411">
+			<score strand="both" combined_pvalue="5.52e-44" evalue="1.2e-41"/>
+			<seg start="1">
+				<data>
+MSSAATKATFCIQNGPSFEGISFGANKSVAGETVFTTSLVGYPESMTDPSYRGQILVFTQPLIGNYGVPSGEARD
+				</data>
+				<hit pos="35" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GIFLSNGPGNPELCQATISNVRELLNNPVYDCIPIFGICLGHQLLALASGASTHKLKYGNRAHNIPAMDLTTGQC
+				</data>
+				<hit pos="259" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HITSQNHGYAVDPETLPKDQWKPYFVNLNDKSNEGMIHLQRPIFSTQFHPEAKGGPLDTAILFDKFFDNIEKYQL
+				</data>
+				<hit pos="342" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7UGJ6|CARA_RHOBA" comment="" length="389">
+			<score strand="both" combined_pvalue="5.88e-44" evalue="1.3e-41"/>
+			<seg start="1">
+				<data>
+MMSSPAKAAKLALEDGTVYTGTSLGAEGETTGEVVFNTSMTGYQEILTDPSYRGQLVTMTYPEMGNYGINSIDLE
+				</data>
+				<hit pos="36" idx="0" pvalue="1.2e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+IVPGNASADDILKMDPDGVFLSNGPGDPEPLTYAHKAIGELLGQVPVFGICLGHQLLSVACGAKTFKLKFGHRGA
+				</data>
+				<hit pos="271" idx="2" pvalue="1.8e-17" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+NQPVLDLETGKVEITSQNHGFAVDDQGLPDCLEVTHRNLNDDTIAGVRHKDTGAFAVQYHPEAAAGPHDSHYLFS
+				</data>
+				<hit pos="353" idx="1" pvalue="8.5e-17" match=" ++ +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P77885|CARA_LACPL" comment="" length="364">
+			<score strand="both" combined_pvalue="5.99e-44" evalue="1.3e-41"/>
+			<seg start="1">
+				<data>
+MKRYLVLEDGTIYPGTGFGATTATVGELVFNTGMSGYQESITDQSYNGEILMFTYPLIGNYGINRDDHESIKPTC
+				</data>
+				<hit pos="30" idx="0" pvalue="5.0e-19" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GALEMIREVEKHVPLFGICLGHQLFALANGADTFKMKFGHRGFNHPVREIATGRIDFTSQNHGYAVDRDSLAQTD
+				</data>
+				<hit pos="239" idx="2" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+LLITHEEINDGTVEGLRHRDYAAFSVQYHPDAAPGPHDADHIFDEFIDLMAANQATQKGSQFNA
+				</data>
+				<hit pos="322" idx="1" pvalue="4.5e-18" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q1MPN3|CARA_LAWIP" comment="" length="376">
+			<score strand="both" combined_pvalue="6.13e-44" evalue="1.3e-41"/>
+			<seg start="1">
+				<data>
+MKALLALEDGFILEGQSINGHCESSGEVIFNTGMTGYQEILTDPSYYGQMVCMTWPLIGNYGINKEDMESEKIHV
+				</data>
+				<hit pos="30" idx="0" pvalue="2.7e-22" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VKASGAKAIFLSNGPGDPGTLIDEIQIIRELMEYYPIAGICLGHQLLGHAVGGTTRKLTFGHHGSNHPIKNLATG
+				</data>
+				<hit pos="261" idx="2" pvalue="3.5e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HIEISSQNHGFCVNFESNNDIEVTHINLNDNTLEGFIHKTKPILAVQHHPEASPGPMDSQYFFTRFKEVVLLKLG
+				</data>
+				<hit pos="342" idx="1" pvalue="2.3e-17" match="++  +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6BJG4|CARA_DEBHA" comment="" length="429">
+			<score strand="both" combined_pvalue="6.30e-44" evalue="1.4e-41"/>
+			<seg start="1">
+				<data>
+MIRVIQPPLIASKQLFRRYLATGGTFTNKTSQLDRATLTIKDGPVFSGYSFGANKNISGEAVFTTSLVGYPESMT
+DPSYKGQILCFTQPLIGNYGVPSSTLKDEFNLLKHMESPSVQCIGIVVADVALEYSHWTAVESLQQWCQRSGVAA
+				</data>
+				<hit pos="63" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AKENILRCLVERGASLTVFPYNYPIDKIANKFDGIFISNGPGDPTHCSSTTENLAKTMEKYHDLPIFGICLGHQL
+LALASGARTIKMKYGNRAHNIPALDLTTGKCHITSQNHGYSVDAETLDSDWEPYFTNLNDLSNEGMKHKSRPIFS
+TQFHPEAKGGPLDTAFLFDKFFENIEQYRATNGLNLGNVDDSLLVDILPKGRVL
+				</data>
+				<hit pos="290" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+				<hit pos="372" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5AML6|CARA_CANAL" comment="" length="430">
+			<score strand="both" combined_pvalue="6.34e-44" evalue="1.4e-41"/>
+			<seg start="1">
+				<data>
+MLSATKRYLATAAAAAATNTTTTSKAFTNTTSQLGRATLTIKDGPVFNGYSFGANRNVSGEAVFTTSLVGYPESM
+TDPSYRGQILCFTQPLIGNYGVPSSTAKDQFNLLKYMESPKVQCIGIVVADAALEYSHWTAVESLQQWCKRSGVA
+				</data>
+				<hit pos="64" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GAKENILRCLVERGASLTVFPYDYPIDKIANKFDGIFISNGPGDPTHCSTTVNNLKKIITNHQDLPIFGICLGHQ
+LLALASGAKTIKLKYGNRAHNIPAIDLITGNCHITSQNHGYAVDANTLSENWQPYFTNLNDLSNEGMIHKYQPIF
+STQFHPEAKGGPLDTSFLFDKFFDNINVYKKSNGLNLPPVENSLLVDILPKERVE
+				</data>
+				<hit pos="291" idx="2" pvalue="2.2e-21" match="+++++++++++++++++"/>
+				<hit pos="373" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8XHB2|CARA_CLOPE" comment="" length="349">
+			<score strand="both" combined_pvalue="7.77e-44" evalue="1.7e-41"/>
+			<seg start="1">
+				<data>
+MKAKLILENGVVFEGKAFGYLKECVGEVVFNTGMTGYQEVLTDPSYYGQIVTMTYPLIGNYGINLEDLESKEPKV
+				</data>
+				<hit pos="30" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GEAVNEIKKIVGKKPIVGICLGHQLLALTLGGETKKLKFGHRGCNHPVKDLINNRVHITSQNHGYYVATLPENME
+				</data>
+				<hit pos="240" idx="2" pvalue="2.1e-16" match="++ +++++++++++ ++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ITHVSMNDGTVEGMKHKELPIFSVQFHPEACPGPKDSEYIFDEFMKYAL
+				</data>
+				<hit pos="320" idx="1" pvalue="7.0e-19" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8D3H7|CARA_WIGBR" comment="" length="376">
+			<score strand="both" combined_pvalue="8.24e-44" evalue="1.8e-41"/>
+			<seg start="1">
+				<data>
+MENILLNKALLILEDGTKFYGNSIGAKGTSIGEVIFNTSITGYQEIITDPSYFNQIVAFTYPHIGNIGIEINNNE
+				</data>
+				<hit pos="36" idx="0" pvalue="1.0e-19" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NPDGILLSNGPGNPEIYKYAIRNIQCLLETKIPIFGICLGHQLLAIANGAKILKMKFGHHGSNHPVKDLETNKII
+				</data>
+				<hit pos="258" idx="2" pvalue="4.1e-19" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ITSQNHDFAIDKSTLSKNIIITHISMFDQTLQGIKLINKPVFSFQGHPESSPGPKDALFLFKNFINLVKDYRLNK
+				</data>
+				<hit pos="340" idx="1" pvalue="7.0e-18" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A2R9B9|CARA_ASPNC" comment="" length="453">
+			<score strand="both" combined_pvalue="9.67e-44" evalue="2.1e-41"/>
+			<seg start="1">
+				<data>
+MFARVFKAMPARAPAFTSVNASIQSRFMATVRQGRPATERATFTIRDGPIFHGKSFGARSNISGEAVFTTSLVGY
+PESLTDPSYRGQILVFTQPLIGNYGVPSAERDQHGLLKYFESPNLQAAGVVVADVAEQYSHWTAVESLGEWCARE
+				</data>
+				<hit pos="68" idx="0" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVKENILRSLVSRGASITVFPFDYPIHKVAHHFDGVFISNGPGDPTHCQDTVYHLRRLMETSQVPIFGICLGHQL
+LALANGARTIKLKYGNRAHNIPALDTTTGRCHITSQNHGYAVDASTLPSDWKPYFVNLNDSSNEGMIHKTRPIFS
+TQFHPEAKGGPLDSSYLFDIYLDSVVKYKNHQLAFHPNRNTVPSPLLVDLLAKERVGVQPTIGMQNVAAAAAAAV
+				</data>
+				<hit pos="290" idx="2" pvalue="3.8e-21" match="+++++++++++++++++"/>
+				<hit pos="372" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P63731|CARA_STRA3" comment="" length="358">
+			<score strand="both" combined_pvalue="9.84e-44" evalue="2.2e-41"/>
+			<seg start="1">
+				<data>
+MKRLLLLEDGSVFEGEAFGADVETSGEIVFSTGMTGYQESITDQSYNGQIITFTYPLIGNYGINRDDYESIRPTC
+				</data>
+				<hit pos="30" idx="0" pvalue="7.5e-19" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LPNALQMIQEIQGKIPIFGICMGHQLFAKANGAKTYKMTFGHRGFNHAVRHLQTGQVDFTSQNHGYAVSREDFPE
+				</data>
+				<hit pos="241" idx="2" pvalue="4.9e-18" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ALFITHEEINDKTVEGVRHKYYPAFSVQFHPDAAPGPHDTSYLFDEFINMIDDFQQKS
+				</data>
+				<hit pos="323" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P63732|CARA_STRA5" comment="" length="358">
+			<score strand="both" combined_pvalue="9.84e-44" evalue="2.2e-41"/>
+			<seg start="1">
+				<data>
+MKRLLLLEDGSVFEGEAFGADVETSGEIVFSTGMTGYQESITDQSYNGQIITFTYPLIGNYGINRDDYESIRPTC
+				</data>
+				<hit pos="30" idx="0" pvalue="7.5e-19" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LPNALQMIQEIQGKIPIFGICMGHQLFAKANGAKTYKMTFGHRGFNHAVRHLQTGQVDFTSQNHGYAVSREDFPE
+				</data>
+				<hit pos="241" idx="2" pvalue="4.9e-18" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ALFITHEEINDKTVEGVRHKYYPAFSVQFHPDAAPGPHDTSYLFDEFINMIDDFQQKS
+				</data>
+				<hit pos="323" idx="1" pvalue="1.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A4SXM1|CARA_POLAQ" comment="" length="397">
+			<score strand="both" combined_pvalue="1.06e-43" evalue="2.3e-41"/>
+			<seg start="1">
+				<data>
+MSPLLPSFPFAVLALADGSIFHGFSIGAPGETTGEVVFNTALTGYQEIITDPSYCSQIVTLTYPHIGNVGVNAQD
+				</data>
+				<hit pos="38" idx="0" pvalue="3.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ERGCELTVVPAQTSAAEVLAMQPDGVFLSNGPGDPEPCDYAIAAAKEIIEAGVPTFGICLGHQIMGLAAGAKTLK
+				</data>
+				<hit pos="279" idx="2" pvalue="4.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+MKFGHHGANHPVKDLDTGRVAITSQNHGFAVDASTLPANVRVTHVSLFDGSLQGLAWKDKPAICFQGHPEASPGP
+HDVSYLFDRFMELMNAAKKEGK
+				</data>
+				<hit pos="361" idx="1" pvalue="1.7e-18" match="++ ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O27079|CARA_METTH" comment="" length="356">
+			<score strand="both" combined_pvalue="1.06e-43" evalue="2.3e-41"/>
+			<seg start="1">
+				<data>
+MFKEAKLALEDGTIIRGEAFGSETVKTGEVVFATGMTGYVESLTDPSYRGQILMPTYPLQGNYGVTEEWYQSDGI
+				</data>
+				<hit pos="32" idx="0" pvalue="2.0e-18" match="+ ++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GDPTRVRDAIDTVKALSERLPIFGICLGQQIIALAFGARIYKMKFGHRGVNQPVKDLRSGTVSITSQNHGFTVDP
+				</data>
+				<hit pos="246" idx="2" pvalue="1.0e-17" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DSVKGTDIEITQLNLNDGTPEGIEHRELPVFSVQYHPEAGPGPHDTVNIFDRLWMF
+				</data>
+				<hit pos="329" idx="1" pvalue="2.2e-20" match="+++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|C4XRH8|CARA_SOLM1" comment="" length="375">
+			<score strand="both" combined_pvalue="1.14e-43" evalue="2.5e-41"/>
+			<seg start="1">
+				<data>
+MKAILALEDGTLFHGHTFTGEGSAGGEVIFNTGMTGYQEVLTDPSYTGQMVCMTYPHVGNYGINPEDIESAHIRV
+				</data>
+				<hit pos="30" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+RKLGPDAVFLSPGPGDPAALTDLVHTTSLLVNEYPLAGICLGHQLLGLALGGRTFKLKFGHHGLNHPVKDLQTGR
+				</data>
+				<hit pos="260" idx="2" pvalue="3.3e-18" match="++ ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+IEISSQNHGFCVDIESLSDVELTHVNLNDNTLEGFAHKKKPVIAIQYHPEAAPGPHDSRYFFSRFRNLVRKETGK
+				</data>
+				<hit pos="341" idx="1" pvalue="5.2e-17" match="++   ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6C9Y4|CARA_YARLI" comment="" length="448">
+			<score strand="both" combined_pvalue="1.79e-43" evalue="3.9e-41"/>
+			<seg start="1">
+				<data>
+MFKNIARLASMARSAPRTTASFQTRFMATTASGTASASATPATFTLQNGPVFTGRSFGANRVVSGEAVFSTGMVG
+YPESMTDPSYRGQILVFTQPLIGNYGVPSGKETDPFGLIKYFESPHIQCIGIVVADAALKYSHWTAVESLGEWCK
+				</data>
+				<hit pos="69" idx="0" pvalue="1.4e-18" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AVIDCGVKENILRSLVSRGASITVFPYEYPINDIAHHFDGIFISNGPGDPTHCQQTVLNLRDIMYEKPELSELPI
+FGICLGHQLLALAAGAKTVKLKYGNRAHNIPALDLTTGQCHITSQNHGYAVDVNTLPAEFKPYFINLNDQSNEGM
+				</data>
+				<hit pos="299" idx="2" pvalue="1.2e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+IHTEKPIFSTQFHPEAKGGPLDTSILFDKYLGQVHQYRAARKSGVDTRPNKLLVDLLPKQRIGVEIDAWDYVQ
+				</data>
+				<hit pos="381" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q4WU09|CARA_ASPFU" comment="" length="453">
+			<score strand="both" combined_pvalue="2.96e-43" evalue="6.5e-41"/>
+			<seg start="1">
+				<data>
+MFARVFKAMPARASALTSVNASIPARFMATVRQQRPAHERATFTIRDGPIFHGKSFGARTNISGEAVFTTSLVGY
+PESLTDPSYRGQILVFTQPLIGNYGVPSAERDEHGLLKYFESPNLQAAGVVVADVAEQYSHWTAVESLGEWCARE
+				</data>
+				<hit pos="68" idx="0" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVKENILRSLVSRGAGITVFPFDYPIHKVAHHFDGVFISNGPGDPTHCQETTYHLRRLMETSQVPIFGICLGHQL
+LALAAGARTIKLKYGNRAHNIPALDLSTGRCHITSQNHGYAVDASTLPSDWKPYFVNLNDSSNEGMIHKSRPIFS
+TQFHPEAKGGPLDSSYLFDIYIDSVKKYKASQAAFYPQRDSLPSPLLVDLLAKERVGVQPTIGMQNIAAAATAAA
+				</data>
+				<hit pos="290" idx="2" pvalue="1.2e-20" match="+++++++++++++++++"/>
+				<hit pos="372" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A1CZ92|CARA_NEOFI" comment="" length="453">
+			<score strand="both" combined_pvalue="2.96e-43" evalue="6.5e-41"/>
+			<seg start="1">
+				<data>
+MFARVFKAMPARASALTSVNASIQARFMATVRQQRTAHERATFTIRDGPIFHGKSFGARTNISGEAVFTTSLVGY
+PESLTDPSYRGQILVFTQPLIGNYGVPSAERDQHGLLKYFESPNLQAAGVVVADVAEQYSHWTAVESLGEWCARE
+				</data>
+				<hit pos="68" idx="0" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVKENILRSLVSRGASITVFPFDYPIHKVAHHFDGVFISNGPGDPTHCQETTYHLRRLMETSQVPIFGICLGHQL
+LALAAGARTIKLKYGNRAHNIPALDLSTGRCHITSQNHGYAVDASTLPSDWKPYFVNLNDSSNEGMIHKSRPIFS
+TQFHPEAKGGPLDSSYLFDIYIDSVKKYKASQAAFHPQRDSLPSPLLVDLLAKERVGVQPTIGMQNIAAAATAAA
+				</data>
+				<hit pos="290" idx="2" pvalue="1.2e-20" match="+++++++++++++++++"/>
+				<hit pos="372" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5BB37|CARA_EMENI" comment="" length="454">
+			<score strand="both" combined_pvalue="2.98e-43" evalue="6.5e-41"/>
+			<seg start="1">
+				<data>
+MMFSRFFKAVPARAPAFSSPLPVYQARTMATVRNQRPVERATFTIRDGPIFHGKSFGARTTISGEAVFTTSLVGY
+PESLTDPSYRGQILVFTQPLIGNYGVPSTERDRHGLLKYFESPNLQAAGVVVADVAEQYSHWTAVQSLGEWCARE
+				</data>
+				<hit pos="68" idx="0" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVKENILRSLVSRGASITVFPFDYPIHKVAHHFDGVFISNGPGDPTHCQDTTYHLRRLMETSQVPIFGICLGHQL
+LALAAGARTVKLKYGNRAHNIPALDLTTGRCHITSQNHGYAVDASTLPSDWKPYFVNLNDSSNEGMIHKSRPIFS
+TQFHPEAKGGPLDSSYLFDIYIDSVKKYKNSQLAFHPSRETIPSPLLVDLLPKERVDVAPTIGMQNVAAAAAAAA
+				</data>
+				<hit pos="290" idx="2" pvalue="1.2e-20" match="+++++++++++++++++"/>
+				<hit pos="372" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A1CA18|CARA_ASPCL" comment="" length="455">
+			<score strand="both" combined_pvalue="3.00e-43" evalue="6.6e-41"/>
+			<seg start="1">
+				<data>
+MFARFCKAIPAKGRAFPSVNASIQSRLMATVRNQRVPHERATFTIRDGPIFHGKSFGARTNISGEAVFTTSLVGY
+PESLTDPSYRGQILVFTQPLIGNYGVPSAERDQHGLLKYFESPHLQAAGVVVADVAEQYSHWTAVESLGEWCARE
+				</data>
+				<hit pos="68" idx="0" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVKENILRSLVSRGASITVFPFDYPIHKVAHHFDGVFISNGPGDPTHCQDTTYHLRRLMETSQVPIFGICLGHQL
+LALAAGARTIKLKYGNRAHNIPALDMSTGRCHITSQNHGYAVDVDTLPSDWKPYFVNLNDSSNEGMIHKSRPIFS
+TQFHPEAKGGPLDSSYLFDIYIDSVRKYKANQAAFHPQRDSIPSPLLVDLLAKERVGVQPTIGMQNVQAAAAAAA
+				</data>
+				<hit pos="290" idx="2" pvalue="1.2e-20" match="+++++++++++++++++"/>
+				<hit pos="372" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8RG87|CARA_FUSNN" comment="" length="358">
+			<score strand="both" combined_pvalue="3.71e-43" evalue="8.1e-41"/>
+			<seg start="1">
+				<data>
+MYNRQLILEDGTVYKGYAFGADVENVGEVVFNTSMTGYQEILSDPSYNGQIVTLTYPLIGNYGINRDDFESMKPC
+				</data>
+				<hit pos="31" idx="0" pvalue="3.1e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DAKESIEMIKGIINKVTIFGICMGHQLVSLACGAKTYKLKFGHRGGNHPVKNILTGRVDITSQNHGYAVDIDSLN
+				</data>
+				<hit pos="242" idx="2" pvalue="5.6e-16" match=" ++++++++++ +++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DTDLELTHIAINDRSCEGVRHKKYPVFTVQFHPEAAAGPHDTSYLFDEFIKNIDNNMK
+				</data>
+				<hit pos="325" idx="1" pvalue="9.1e-19" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A1VA26|CARA_NITV4" comment="" length="375">
+			<score strand="both" combined_pvalue="6.47e-43" evalue="1.4e-40"/>
+			<seg start="1">
+				<data>
+MRALLALEDGFVLEGRSFTGPGETGGEAIFNTGMTGYQEVLTDPSYAGQMVCMTYPLVGNYGVTREDMESGKVHV
+				</data>
+				<hit pos="30" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AAVGAQAVFLSNGPGDPATLKDEIAEIAKLAQTYPTAGICLGHQLLGHALGGRTMKLKFGHHGCNHPVKDLTTGR
+				</data>
+				<hit pos="260" idx="2" pvalue="4.4e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+IEISSQNHGFCVDIDSLTDVEITHVNLNDGTLEGFAHKTKPVIAVQHHPEASPGPNDSRYFFARFRNMVREAAGC
+				</data>
+				<hit pos="341" idx="1" pvalue="2.3e-17" match="++  +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q726J4|CARA_NITV2" comment="" length="375">
+			<score strand="both" combined_pvalue="6.47e-43" evalue="1.4e-40"/>
+			<seg start="1">
+				<data>
+MRALLALEDGFVLEGRSFTGPGETGGEAIFNTGMTGYQEVLTDPSYAGQMVCMTYPLVGNYGVTREDMESGKVHV
+				</data>
+				<hit pos="30" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AAVGAQAVFLSNGPGDPATLKDEIAEIAKLAQTYPTAGICLGHQLLGHALGGRTMKLKFGHHGCNHPVKDLTTGR
+				</data>
+				<hit pos="260" idx="2" pvalue="4.4e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+IEISSQNHGFCVDIDSLTDVEITHVNLNDGTLEGFAHKTKPVIAVQHHPEASPGPNDSRYFFARFRNMVREAAGC
+				</data>
+				<hit pos="341" idx="1" pvalue="2.3e-17" match="++  +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7VHS5|CARA_HELHP" comment="" length="378">
+			<score strand="both" combined_pvalue="7.63e-43" evalue="1.7e-40"/>
+			<seg start="1">
+				<data>
+MSILKEAYLYFANGLFFKAQSFGSDGTFVGEVVFNTSMSGYQEVITDPSYSGQFIVFSMPEIGIVGVNNQDSESP
+				</data>
+				<hit pos="34" idx="0" pvalue="8.0e-20" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+EILSRFKAGEIQGVFLSNGPGDPLVLHNEIEQIKQLIQSDIPIFGICLGHQLLSIAHGFPTYKLKFGHHGSNHPI
+				</data>
+				<hit pos="267" idx="2" pvalue="1.6e-17" match="+++++++++++++ + +"/>
+			</seg>
+			<seg start="301">
+				<data>
+KNLQSGAVEITAQNHNYCVPESIAQIATITHRNLFDNTIEGVRYKDKPIFSVQHHPEASPGPREARILFEEFAKL
+				</data>
+				<hit pos="348" idx="1" pvalue="2.2e-18" match="++++++++++++++++ "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8KZA0|CARA_NITV9" comment="" length="376">
+			<score strand="both" combined_pvalue="7.68e-43" evalue="1.7e-40"/>
+			<seg start="1">
+				<data>
+MRAFLALEDGFVLEGRSFTGRGESGGEVIFNTGMTGYQEVLTDPSYAGQMVCMTYPLIGNYGVTAEDMESGKVHV
+				</data>
+				<hit pos="30" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VAASGAEAVFLSNGPGDPATLTDEVREIRVMTERMPVAGICLGHQLLGHALGGTTHKLKFGHHGCNHPVKDLVTG
+				</data>
+				<hit pos="261" idx="2" pvalue="2.5e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HIEISSQNHGFCVDIESVPDVEITHVNLNDGTLEGFAHKTRPILAVQHHPEASPGPTDSRYFFARFRGMVREAVG
+				</data>
+				<hit pos="342" idx="1" pvalue="4.7e-17" match="++  +++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q2U913|CARA_ASPOR" comment="" length="450">
+			<score strand="both" combined_pvalue="1.08e-42" evalue="2.4e-40"/>
+			<seg start="1">
+				<data>
+MFAARLFKAMPARASAFPSVNASIQSRFMATVRNGRVAHERATFTIRDGPIFHGKSFGARSNISGEAVFTTSLVG
+YPESLTDPSYRGQILVFTQPLIGNYGVPSAEKDQHGLLKYFESPHLQAAGVVVADVAEQYSHWTAVQSLGEWCAR
+				</data>
+				<hit pos="69" idx="0" pvalue="2.2e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+CGVKENILRSLVSRGASITVFPYDYPIHKVAHHFDGVFISNGPGDPTHCQETAYHLRRLMETSQVPIFGICLGHQ
+LLALAIGARTIKLKYGNRAHNIPALDMSTGRCHITSQNHGYAVDASTLPSDWKPYFVNLNDSSNEGMIHKTRPIF
+STQFHPEAKGGPLDSSYLFDIYLDSVRKYKASQSAFHPTRDSLPSPLLVDLLAKERVGVQPTIGMQNVAAAAAAA
+				</data>
+				<hit pos="291" idx="2" pvalue="4.6e-20" match="+++++++++++++++ +"/>
+				<hit pos="373" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q67Q55|CARA_SYMTH" comment="" length="363">
+			<score strand="both" combined_pvalue="1.25e-42" evalue="2.7e-40"/>
+			<seg start="1">
+				<data>
+MEDGTLFAGAGFGAPAVQAGEVVFNTGMTGYQEVVTDPSYYGQIVVMTYPLIGNYGVTAADGESRQPWIRGLVVK
+				</data>
+				<hit pos="24" idx="0" pvalue="1.0e-19" match="+++++++++++ +++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VPEAVEMVRGLLSQGDLPIFGICLGHQIAALALGATTYKLPYGHRGANHPVKELATGRIHITSQNHGYAVAAESL
+				</data>
+				<hit pos="243" idx="2" pvalue="7.4e-19" match="+++++++++++ +++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+PPEVEVTHVSLHDGTVEGLAHRRLPLFTVQYHPEACPGPRENRYLFDRFLALVDRSAVSTRTA
+				</data>
+				<hit pos="325" idx="1" pvalue="7.0e-17" match="+ ++++++++++++++ "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q58425|CARA_METJA" comment="" length="354">
+			<score strand="both" combined_pvalue="2.18e-42" evalue="4.8e-40"/>
+			<seg start="1">
+				<data>
+MEAVLILEDGTILKGKGFGAEKEVFGELVFTTVMTGYVEVLTDPSYKGQIVMMTYPLEGNYGVKKDWFESDGIKA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-17" match="+++ ++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LKEVIKNIKNLIGVVPITGICLGNQLLSLAFGGETYKMKFGHRGGNQPVKDLKTQKVYITSQNHGFAVRKESLPD
+				</data>
+				<hit pos="241" idx="2" pvalue="6.1e-17" match="++ ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DVEVSFINLNDMTVEGIRHKDLPIFSVQFHPEARPGPHDTMFLFDEMIKLKDRK
+				</data>
+				<hit pos="323" idx="1" pvalue="1.4e-20" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|C6C0A9|CARA_MARSD" comment="" length="374">
+			<score strand="both" combined_pvalue="2.56e-42" evalue="5.6e-40"/>
+			<seg start="1">
+				<data>
+MKAILALEDGTYFEGTSFTGPGESGGEAIFNTGMTGYQEVLTDPSYTGQMVCMTYPLIGNYGITKEDIESAKVHV
+				</data>
+				<hit pos="30" idx="0" pvalue="2.4e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ALEPDAIFLSNGPGDPAVLDQAVKNAKSYCEDLPVAGICLGHQILGQALGGKAFKLKFGHHGCNHPVMDMESKKI
+				</data>
+				<hit pos="259" idx="2" pvalue="4.9e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EISSQNHGFCVDISDCSDLKITHKNLNDETLEGFAHKTKPIIAIQFHPEAAPGPHDSCYFFARFRNLVKDATGK
+				</data>
+				<hit pos="340" idx="1" pvalue="8.5e-17" match="++   ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B8IZS6|CARA_DESDA" comment="" length="376">
+			<score strand="both" combined_pvalue="4.14e-42" evalue="9.1e-40"/>
+			<seg start="1">
+				<data>
+MKALLVLEDGFTLEGKSFTGDFETGGEVIFTTGMTGYQEILTDPSYYGQMVCMTYPLIGNYGTCREDMESAGVHC
+				</data>
+				<hit pos="30" idx="0" pvalue="3.7e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AKASGAKGVFLSNGPGDPATLTSEIALVRELIHMLPVTGICLGHQLIGHALGARTEKLKFGHHGCNHPVKDLTTG
+				</data>
+				<hit pos="261" idx="2" pvalue="8.4e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+RIEISSQNHGFHVVLDDVDDVEATHVNLNDQTLEGLRHKTLPVMSLQYHPEAAAGPHDGEYLFNRFRKIIGESAG
+				</data>
+				<hit pos="342" idx="1" pvalue="5.2e-17" match="++ + ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q741H2|CARA_MYCPA" comment="" length="373">
+			<score strand="both" combined_pvalue="4.88e-42" evalue="1.1e-39"/>
+			<seg start="1">
+				<data>
+MSGKAQLVLEDGRVFTGTAFGAIGQTLGEAVFSTGMSGYQETLTDPSYHRQIVVATAPQIGNTGWNGEDAESRGD
+				</data>
+				<hit pos="32" idx="0" pvalue="5.5e-19" match="+ +++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+FLSNGPGDPATADHIVAVTREVLGAGIPLFGICFGNQILGRALGLSTYKMVFGHRGINIPVIDHATGRVAVTAQN
+				</data>
+				<hit pos="253" idx="2" pvalue="4.4e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HGFALQGEAGQSFDTPFGAAVVSHTCANDGVVEGVKLADGRAFSVQYHPEAAAGPHDANYLFDQFIELMEGDR
+				</data>
+				<hit pos="341" idx="1" pvalue="8.0e-19" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9CCR3|CARA_MYCLE" comment="" length="375">
+			<score strand="both" combined_pvalue="4.96e-42" evalue="1.1e-39"/>
+			<seg start="1">
+				<data>
+MSKALLVLEDGRVFTGMPFGAIGQTLGEAVFSTGMSGYQETLTDPSYHRQIVVATAPQIGNTGWNDQDGESRDDR
+				</data>
+				<hit pos="31" idx="0" pvalue="5.5e-19" match="+ +++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GLFLSNGPGDPATADHVVALTREVLNAGIPLFGICFGNQILGRALGLSTYKMVFGHRGINIPVIDHATGRVAVTA
+				</data>
+				<hit pos="255" idx="2" pvalue="4.4e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+QNHGFALEGEAGQSFDTPFGSAVVSHTCANDGVVEGVKLADGRAFSVQYHPEAAAGPHDAEYLFDSFVELMAAQR
+				</data>
+				<hit pos="343" idx="1" pvalue="8.0e-19" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P9WPK4|CARA_MYCTO" comment="" length="376">
+			<score strand="both" combined_pvalue="5.00e-42" evalue="1.1e-39"/>
+			<seg start="1">
+				<data>
+MSKAVLVLEDGRVFTGRPFGATGQALGEAVFSTGMSGYQETLTDPSYHRQIVVATAPQIGNTGWNGEDSESRGER
+				</data>
+				<hit pos="31" idx="0" pvalue="5.5e-19" match="+ +++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVFLSNGPGDPATADHVVALTREVLGAGIPLFGICFGNQILGRALGLSTYKMVFGHRGINIPVVDHATGRVAVTA
+				</data>
+				<hit pos="255" idx="2" pvalue="4.4e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+QNHGFALQGEAGQSFATPFGPAVVSHTCANDGVVEGVKLVDGRAFSVQYHPEAAAGPHDAEYLFDQFVELMAGEG
+				</data>
+				<hit pos="343" idx="1" pvalue="8.0e-19" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P9WPK5|CARA_MYCTU" comment="" length="376">
+			<score strand="both" combined_pvalue="5.00e-42" evalue="1.1e-39"/>
+			<seg start="1">
+				<data>
+MSKAVLVLEDGRVFTGRPFGATGQALGEAVFSTGMSGYQETLTDPSYHRQIVVATAPQIGNTGWNGEDSESRGER
+				</data>
+				<hit pos="31" idx="0" pvalue="5.5e-19" match="+ +++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVFLSNGPGDPATADHVVALTREVLGAGIPLFGICFGNQILGRALGLSTYKMVFGHRGINIPVVDHATGRVAVTA
+				</data>
+				<hit pos="255" idx="2" pvalue="4.4e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+QNHGFALQGEAGQSFATPFGPAVVSHTCANDGVVEGVKLVDGRAFSVQYHPEAAAGPHDAEYLFDQFVELMAGEG
+				</data>
+				<hit pos="343" idx="1" pvalue="8.0e-19" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7U055|CARA_MYCBO" comment="" length="376">
+			<score strand="both" combined_pvalue="5.00e-42" evalue="1.1e-39"/>
+			<seg start="1">
+				<data>
+MSKAVLVLEDGRVFTGRPFGATGQALGEAVFSTGMSGYQETLTDPSYHRQIVVATAPQIGNTGWNGEDSESRGER
+				</data>
+				<hit pos="31" idx="0" pvalue="5.5e-19" match="+ +++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GVFLSNGPGDPATADHVVALTREVLGAGIPLFGICFGNQILGRALGLSTYKMVFGHRGINIPVVDHATGRVAVTA
+				</data>
+				<hit pos="255" idx="2" pvalue="4.4e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+QNHGFALQGEAGQSFATPFGPAVVSHTCANDGVVEGVKLVDGRAFSVQYHPEAAAGPHDAEYLFDQFVELMAGEG
+				</data>
+				<hit pos="343" idx="1" pvalue="8.0e-19" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B1XUM3|CARA_POLNS" comment="" length="398">
+			<score strand="both" combined_pvalue="5.97e-42" evalue="1.3e-39"/>
+			<seg start="1">
+				<data>
+MSPLLPSFPPAVLALADGSIFPGYSIGAPGETTGEVVFNTALTGYQEIITDPSYSRQIVTLTYPHIGNVGVNAQD
+				</data>
+				<hit pos="38" idx="0" pvalue="3.8e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ERGCQLTVVPAQTTAAEVLAMNPDGVFFSNGPGDPGPCDYAIAAAKEIIEKGVPTFGICLGHQIMGLAAGAKTLK
+				</data>
+				<hit pos="279" idx="2" pvalue="4.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+MKFGHHGANHPVKDLDTGRVAITSQNHGFAVDANTLPDNIRVTHVSLFDGSLQGLAWKDKPELCFQGHPEASPGP
+HDIAYLFDRFVELMNAASKKEGE
+				</data>
+				<hit pos="361" idx="1" pvalue="1.0e-16" match="+  ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P22572|CARA_NEUCR" comment="" length="453">
+			<score strand="both" combined_pvalue="7.27e-42" evalue="1.6e-39"/>
+			<seg start="76">
+				<data>
+ISGEAVFTTSLVGYPESMTDPSYRGQILVFTQPLIGNYGVPSNERDEFNLLKYFESPHIQCAGIVVSDVATQYSH
+				</data>
+				<hit pos="82" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+SPIPIMGICLGHQLLALAVGAKTIKLKYGNRAHNIPALDLTTGQCHITSQNHGYAVDISTLPSDFKEYFVNLNDG
+				</data>
+				<hit pos="304" idx="2" pvalue="5.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+SNEGMMHKTRPIFSTQFHPEAKGGPMDSSYLFDKYMENVELFKSNSQVYRDNRPTQFMIDILSKERVGVEPTPLS
+				</data>
+				<hit pos="386" idx="1" pvalue="9.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q2H132|CARA_CHAGB" comment="" length="461">
+			<score strand="both" combined_pvalue="7.66e-42" evalue="1.7e-39"/>
+			<seg start="76">
+				<data>
+AFGANSNISGEAVFTTSLVGYPESMTDPSYRGQILVFTQPLIGNYGVPSNQRDEYGLLKYFESPHIQCAGVVVAD
+				</data>
+				<hit pos="89" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+LGRLMETSSVPIMGICLGHQLLALAVGAQTIKLKYGNRAHNIPALDLTTGQCHITSQNHGYAVDASTLPSEFKEY
+				</data>
+				<hit pos="311" idx="2" pvalue="5.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+FVNLNDGSNEGMMHKTRPIFSTQFHPEAKGGPMDSSYLFDKYLENVQMYKDNSKVYRDNRPSQLMIDILSKERVG
+				</data>
+				<hit pos="393" idx="1" pvalue="9.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8F6R2|CARA_LEPIN" comment="" length="362">
+			<score strand="both" combined_pvalue="1.27e-41" evalue="2.8e-39"/>
+			<seg start="1">
+				<data>
+MKAFLVLDNGTIFEGESFGYETESVGEIVFNTSMAGYQEILTDPSYCNQIITLTYPMIGNYGIHPDNMESSKIQA
+				</data>
+				<hit pos="30" idx="0" pvalue="3.4e-20" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GDPAPLDYAIASTQKIMEKRYPLFGICLGHQIIGLSLGKKTEKMKFGHRGGNQPVKNLETGQVEITSQNHGFAVI
+				</data>
+				<hit pos="247" idx="2" pvalue="4.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DDQKQDEPISFLNLNDHTVEGILKSGYPLLTVQYHPESAPGPNDSRYLFQKFYDLVEKTKKG
+				</data>
+				<hit pos="328" idx="1" pvalue="3.4e-16" match="+  ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q72PK5|CARA_LEPIC" comment="" length="363">
+			<score strand="both" combined_pvalue="1.28e-41" evalue="2.8e-39"/>
+			<seg start="1">
+				<data>
+MMKAFLVLDNGTIFEGESFGYETESVGEIVFNTSMAGYQEILTDPSYCNQIITLTYPMIGNYGIHPDNMESSKIQ
+				</data>
+				<hit pos="31" idx="0" pvalue="3.4e-20" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PGDPAPLDYAIASTQKIMEKRYPLFGICLGHQIIGLSLGKKTEKMKFGHRGGNQPVKNLETGQVEITSQNHGFAV
+				</data>
+				<hit pos="248" idx="2" pvalue="4.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+IDDQKQDEPISFLNLNDHTVEGILKSGYPLLTVQYHPESAPGPNDSRYLFQKFYDLVEKTKKG
+				</data>
+				<hit pos="329" idx="1" pvalue="3.4e-16" match="+  ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q04R57|CARA_LEPBJ" comment="" length="363">
+			<score strand="both" combined_pvalue="1.28e-41" evalue="2.8e-39"/>
+			<seg start="1">
+				<data>
+MKAFLVLDNGMILEGESFGYESESVGEIVFNTSMAGYQEILTDPSYCNQIITLTYPMIGNYGIHPDNMESSKIQA
+				</data>
+				<hit pos="30" idx="0" pvalue="3.4e-20" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GDPAPLDYAIDATRKIMEKGYPLFGICLGHQIIGLSLGKKTEKMKFGHRGGNQPVKNLSTGQVEITSQNHGFAVI
+				</data>
+				<hit pos="247" idx="2" pvalue="4.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DDGKSSEPVSFLNLNDNTVEGILKSGYPLLTVQYHPESAPGPNDSRYLFQKFYDLVETTKRGK
+				</data>
+				<hit pos="328" idx="1" pvalue="3.4e-16" match="+  ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q04ZG6|CARA_LEPBL" comment="" length="363">
+			<score strand="both" combined_pvalue="1.28e-41" evalue="2.8e-39"/>
+			<seg start="1">
+				<data>
+MKAFLVLDNGMILEGESFGYESESVGEIVFNTSMAGYQEILTDPSYCNQIITLTYPMIGNYGIHPDNMESSKIQA
+				</data>
+				<hit pos="30" idx="0" pvalue="3.4e-20" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GDPAPLDYAIDATRKIMEKGYPLFGICLGHQIIGLSLGKKTEKMKFGHRGGNQPVKNLSTGQVEITSQNHGFAVI
+				</data>
+				<hit pos="247" idx="2" pvalue="4.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DDGKSSEPVSFLNLNDNTVEGILKSGYPLLTVQYHPESAPGPNDSRYLFQKFYDLVETTKRGK
+				</data>
+				<hit pos="328" idx="1" pvalue="3.4e-16" match="+  ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O08317|CARX_LACPL" comment="" length="355">
+			<score strand="both" combined_pvalue="1.33e-41" evalue="2.9e-39"/>
+			<seg start="1">
+				<data>
+MNKYLTLADGTQWIGTAIGDCQLEAAGRIVFNTGMTGYQETLTDPSYLNQMIAFTYPLIGNYGIDPTVAQAPTIG
+				</data>
+				<hit pos="31" idx="0" pvalue="1.6e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ATIRQLAQRYPLAGICLGHQLIALAYGAQTYQLSFGHHGLNHPVQACADGRIIMTSQNHDYAVDPASIKGTPLIV
+				</data>
+				<hit pos="236" idx="2" pvalue="2.3e-17" match="++ ++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+THTELNDGSIEGLRLPHQAVMSVQFHPEAHPGPQEAGQFFDDFLLTIQKEAVVNA
+				</data>
+				<hit pos="319" idx="1" pvalue="1.7e-15" match=" + ++++++++ ++++ "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A6VHH7|CARA_METM7" comment="" length="366">
+			<score strand="both" combined_pvalue="2.09e-41" evalue="4.6e-39"/>
+			<seg start="1">
+				<data>
+MYGILVLEDGTIIRGDGFGAEAEVLGELVFNTSMTGYVEILTDPSYKGQIITMTYPLEGNYGVEKEWFESDGIKA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.7e-20" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NMLETVDTVKNLIGTLPVTGICLGHQLITIALGGKTYKLKFGHRGGNQPVKDIESGKVYITSQNHGFATDDKIVP
+				</data>
+				<hit pos="242" idx="2" pvalue="3.5e-16" match="++ +++++++++  +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+AGSELMHMNLNDDTVEGIRKIESEDIKNTVWSVQYHPEAGPGPHDARFLFDEMVELGIKFKAEKAY
+				</data>
+				<hit pos="329" idx="1" pvalue="1.5e-17" match=" ++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A4G0Y3|CARA_METM5" comment="" length="366">
+			<score strand="both" combined_pvalue="2.09e-41" evalue="4.6e-39"/>
+			<seg start="1">
+				<data>
+MYGILVLEDGTIIRGDGFGAETEVLGELVFNTSMTGYVEILTDPSYKGQIVTMTYPLEGNYGVEKEWFESDGIKA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.7e-20" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NMAETVETVKNLIGTLPVTGICLGHQLITIALGGKTYKLKFGHRGGNQPVKDIDSGKVYITSQNHGFATDDKIVP
+				</data>
+				<hit pos="242" idx="2" pvalue="3.5e-16" match="++ +++++++++  +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EGSELMHMNLNDDTVEGIRKIESNDLKNTVWSVQYHPEAGPGPHDARFLFDEMVELGIKFKAEKAN
+				</data>
+				<hit pos="329" idx="1" pvalue="1.5e-17" match=" ++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9LVW7|CARA_ARATH" comment="" length="430">
+			<score strand="both" combined_pvalue="2.98e-41" evalue="6.5e-39"/>
+			<seg start="76">
+				<data>
+PGTRIAELVFNTSLTGYQEILTDPSYAGQFVLMTNPQIGNTGVNPDDEESGQCFLTGLVIRNLSISTSNWRCTKT
+				</data>
+				<hit pos="85" idx="0" pvalue="7.5e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+AVETVKELLGKVPVYGICMGHQLLGQALGGKTFKMKFGHHGGNHPVRNNRTGQVEISAQNHNYAVDPASLPGGVE
+				</data>
+				<hit pos="313" idx="2" pvalue="9.3e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="376">
+				<data>
+VTHVNLNDGSCAGLSFPEMNVMSLQYHPEASPGPHDSDNAFREFIELMKRSKQSS
+				</data>
+				<hit pos="395" idx="1" pvalue="1.1e-16" match=" + + ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6LWW5|CARA_METMP" comment="" length="366">
+			<score strand="both" combined_pvalue="3.06e-41" evalue="6.7e-39"/>
+			<seg start="1">
+				<data>
+MYGILVLEDGTIIRGEGFGAETEVLGELVFNTSMTGYVEILTDPSYKGQIITMTYPLEGNYGVEKEWFESDGIKA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.7e-20" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NMSETVETVKNLIGMLPVTGICLGHQIITIALGGKTYKLKFGHRGGNQPVKDVESGKVYITSQNHGFATDDKIVP
+				</data>
+				<hit pos="242" idx="2" pvalue="5.1e-16" match="++ +++++++++  +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+AGSELMHMNLNDDTVEGIRKLESSDLKNTVWSVQYHPEAGPGPHDARFLFDEMVELGIKFKAEKAN
+				</data>
+				<hit pos="329" idx="1" pvalue="1.5e-17" match=" ++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A9A972|CARA_METM6" comment="" length="366">
+			<score strand="both" combined_pvalue="3.06e-41" evalue="6.7e-39"/>
+			<seg start="1">
+				<data>
+MYGILVLEDGTIIRGDGFGAETEVLGELVFNTSMTGYVEILTDPSYKGQIVTMTYPLEGNYGVEKEWFESDGIKA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.7e-20" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NMAETVDTVKNLIGTLPVTGICLGHQIITIALGGKTYKLKFGHRGGNQPVKDIESGKVYITSQNHGFATDDCVVP
+				</data>
+				<hit pos="242" idx="2" pvalue="5.1e-16" match="++ +++++++++  +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TGSELMHMNLNDDTVEGIRKIESEDLKNTVWSVQYHPEAGPGPHDARFLFDEMVELGIKFKAEKAN
+				</data>
+				<hit pos="329" idx="1" pvalue="1.5e-17" match=" ++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q1DUF5|CARA_COCIM" comment="" length="468">
+			<score strand="both" combined_pvalue="3.74e-41" evalue="8.2e-39"/>
+			<seg start="1">
+				<data>
+MFSKALKSFPPRANWAMKPQVLQARFMASVAKGTPKPNSAIFAPERATFTIRDGPVFHGKSFGAKKNISGEAVFT
+TSLVGYPESLSDPSYRGQILVFTQPLIGNYGVPSAEKDENGLLKYFESPSLQAVGVVVADVAEKYSHWTAVESLS
+				</data>
+				<hit pos="74" idx="0" pvalue="9.3e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VAVIDCGVKENILRSLVHRGASITVFPYDFPIQKVAHHFDGVFISNGPGDPTHCQKTVHNLRKLMEVSQLPIMGI
+CLGHQLLALAAGARTIKLKYGNRAHNIPALDLTTGRCHITSQNHGYAVDASTLPSDWKPYFVNLNDSSNEGMIHK
+				</data>
+				<hit pos="296" idx="2" pvalue="3.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+TRPIFSTQFHPEAKGGPLDSSYLFDIYLDSVQKYKQSQAAFQPGRDSRPSPLLADLLGNERVGVQTTIGTQSTPE
+SVAPVLETPISPTMAAAA
+				</data>
+				<hit pos="378" idx="1" pvalue="2.3e-17" match="+++++++++++++++ +"/>
+				<hit pos="441" idx="1" pvalue="9.1e-05" match="    ++  +++ +    "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P87183|CARA_HYPVI" comment="" length="453">
+			<score strand="both" combined_pvalue="5.45e-41" evalue="1.2e-38"/>
+			<seg start="76">
+				<data>
+ISGEAVFTTSLVGYPESMTDPSYRGQILVFTQPLIGNYGVPSNERDEYNLLKYFESPHIQCAGVVVSDVALNYSH
+				</data>
+				<hit pos="82" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+SSIPIMGICLGHQLLAMAVGAKTIKMKYGNRAHNIPALDLTTGQCHITSQNHGYAVDASTLPNDFKEYFVNLNDG
+				</data>
+				<hit pos="304" idx="2" pvalue="4.3e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+SNEGMMHRTRPIFSTQFHPEAKGGPMDSSYLFEKYLENVRAAKSAQRVYKDNRPSQYVLDVLSKERVGVEPVPLV
+				</data>
+				<hit pos="386" idx="1" pvalue="9.8e-18" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6YV23|CARA_ORYSJ" comment="" length="446">
+			<score strand="both" combined_pvalue="7.97e-41" evalue="1.7e-38"/>
+			<seg start="76">
+				<data>
+DARLVLEDGSVWKAKSFGASGTQVGEVVFNTSLTGYQEILTDPSYAGQFVLMTNPHIGNTGVNPDDEESNRCFLA
+				</data>
+				<hit pos="104" idx="0" pvalue="7.5e-21" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+PDGVFFSNGPGDPAAVPYAVKTVQEIIGKVPVFGICMGHQLIGQALGGKTFKMKFGHHGGNHPVCDLRSGRVDIS
+				</data>
+				<hit pos="331" idx="2" pvalue="8.1e-18" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="376">
+				<data>
+AQNHNYAVDPESLPEGVKVTHINLNDNSCAGLQYPKMKLLSLQYHPESSPGPHDSDLAFGEFIEMMKNNRL
+				</data>
+				<hit pos="413" idx="1" pvalue="3.2e-15" match="   + ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P58893|CARA_CORGL" comment="" length="393">
+			<score strand="both" combined_pvalue="8.62e-41" evalue="1.9e-38"/>
+			<seg start="1">
+				<data>
+MSKDTTTYQGVTEIGSVPAYLVLADGRTFTGFGFGAIGTTLGEAVFTTAMTGYQETMTDPSYHRQIVVATAPQIG
+				</data>
+				<hit pos="4" idx="0" pvalue="6.4e-06" match=" ++   +  ++ + + +"/>
+				<hit pos="46" idx="0" pvalue="2.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+ETPFEDIKQYNPSGVFISNGPGDPAAADVMVDIVREVLEADIPFFGICFGNQILGRAFGMETYKLKFGHRGINVP
+				</data>
+				<hit pos="268" idx="2" pvalue="1.1e-16" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VKNHITGKIDITAQNHGFALKGEAGQEFETDFGTAIVTHTCLNDGVVEGIALKSGRAYSVQYHPEAAAGPNDASP
+				</data>
+				<hit pos="356" idx="1" pvalue="1.0e-16" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8FT41|CARA_COREF" comment="" length="400">
+			<score strand="both" combined_pvalue="9.10e-41" evalue="2e-38"/>
+			<seg start="1">
+				<data>
+MSNETNANSTDSRQGVTNIGSVPAYLVLADGRTFKGFGFGAIGTTLGEAVFTTAMTGYQETMTDPSYHRQIVVAT
+				</data>
+				<hit pos="51" idx="0" pvalue="2.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VIVPAETPFEEIKQYNPSGVFISNGPGDPAAADIMVNIVREVLAADIPFFGICFGNQILGRAFGMETYKLKFGHR
+				</data>
+				<hit pos="273" idx="2" pvalue="1.1e-16" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GINVPVKNHITGKIDITAQNHGFALKGEAGQEFETDFGTAVVTHTCLNDGVVEGVALKSGRAYSVQYHPEAAAGP
+NDASPLFDQFVALMDEDSENQKEEA
+				</data>
+				<hit pos="361" idx="1" pvalue="1.0e-16" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A6UQN4|CARA_METVS" comment="" length="369">
+			<score strand="both" combined_pvalue="9.57e-41" evalue="2.1e-38"/>
+			<seg start="1">
+				<data>
+MYGILVLEDGTIIRGKGFGAEAEVLGELVFNTSMTGYVEILTDPSYNGQIVTMTYPLEGNYGVDKRWFESEGIKA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.7e-20" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+KMLETANTVKNLFGKLPVTGICLGHQIITIALGGKTYKLKFGHRGGNQPVKDSSTGKVYITSQNHGFATDMSNVP
+				</data>
+				<hit pos="242" idx="2" pvalue="5.1e-16" match="++ +++++++++  +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+EGSILSHVNLNDDTVEGISKIMDSDNVKGVVWSVQHHPEAGPGPHDAMFLFDDMVALGMKFKQEKTSKR
+				</data>
+				<hit pos="330" idx="1" pvalue="4.7e-17" match=" ++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q0AMR3|CARA_MARMM" comment="" length="390">
+			<score strand="both" combined_pvalue="1.94e-40" evalue="4.2e-38"/>
+			<seg start="1">
+				<data>
+MTSTPTPTPTGALALADGSVFLGHGTGATGIALGEVCFNTAMTGHQEILADPSYAGQVVCFTFPHVGNVGANGED
+				</data>
+				<hit pos="38" idx="0" pvalue="1.4e-17" match="+++++++ ++++ ++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AVLPGKASIDDIKALNPDGVVVSNGPGDPAETGKYALPTIKAVLDANIPTLGICLGHQMLALAIGAKTAKMPQGH
+				</data>
+				<hit pos="274" idx="2" pvalue="1.6e-17" match="++ ++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+HGANHPVKNHETGQVEIVSMNHGFAVDGTTLPANAAETHVSLFDGSNSGFKLTDKPVWAVQHHPEASPGPQDSFG
+				</data>
+				<hit pos="356" idx="1" pvalue="3.1e-18" match="+++ +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9ZJY9|CARA_HELPJ" comment="" length="375">
+			<score strand="both" combined_pvalue="2.06e-40" evalue="4.5e-38"/>
+			<seg start="1">
+				<data>
+MVSLYLENGLFLQAQSFGASGTQVGELVFNTSMSGYQEVISDPSYKGQFVVFSMPEIGVVGANPKDDESFFSCAG
+				</data>
+				<hit pos="29" idx="0" pvalue="5.0e-19" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AYEKKEISGIFLSNGPGDPLSLQQEIGEIKRLINAKIPMFGICLGHQLLSIAQGYPTYKLKFGHHGSNHPVKNLE
+				</data>
+				<hit pos="263" idx="2" pvalue="4.3e-18" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TNAVEITAQNHNYCVPEEIEEIATITHRNLFDNTIEGVRYKNAPIISVQHHPESSPGPKESHYIFKEFVGLLEGF
+				</data>
+				<hit pos="344" idx="1" pvalue="4.1e-16" match="++ ++++++++++++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q17VI1|CARA_HELAH" comment="" length="379">
+			<score strand="both" combined_pvalue="2.13e-40" evalue="4.7e-38"/>
+			<seg start="1">
+				<data>
+MVSLYLENGLFLQVQSFGASGTQVGELVFNTSMSGYQEVISDPSYKGQFVIFSMPEIGVVGANSKDDESFFSSAG
+				</data>
+				<hit pos="29" idx="0" pvalue="5.0e-19" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AYEKKEIHGIFLSNGPGDPLSLQQEIGEIKQLIGAKIPMFGICLGHQLLSIAQGYPTYKLKFGHHGSNHPVKNLE
+				</data>
+				<hit pos="263" idx="2" pvalue="4.3e-18" match="+++++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TNAVEITAQNHNYCVPEAIEKIATITHRNLFDNTIEGVHYKNAPIISVQHHPESSPGPKESHYIFKEFVKLLENF
+				</data>
+				<hit pos="344" idx="1" pvalue="4.1e-16" match="++ ++++++++++++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q6NH15|CARA_CORDI" comment="" length="379">
+			<score strand="both" combined_pvalue="2.76e-40" evalue="6e-38"/>
+			<seg start="1">
+				<data>
+MTSQDRSEAVLVLADGRIFKGESFGAEGATLGEAVFTTAMSGYQETMTDPSYHRQIVVATAPQIGNTGWNDEDGE
+				</data>
+				<hit pos="36" idx="0" pvalue="2.9e-19" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="76">
+				<data>
+SHGDKIWVAGLVIRDLSTAVSNWRAKRSLEDEMREQNIVGISGVDTRAIVRHLRNFGSVAAGIFSGEAAKQPHDE
+				</data>
+				<hit pos="133" idx="1" pvalue="6.5e-05" match=" +    +  +++  +++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NPDGVFVSNGPGDPATADVMVGIVQEILAQKIPFFGICFGNQILGRALGMNTYKMKFGHRGINVPVLNHLTGKID
+				</data>
+				<hit pos="258" idx="2" pvalue="6.1e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+ITAQNHGFALEGTALEQFDTPFGPAHVTHTCLNDDTVEGVALVNGLAYSVQYHPEAAAGPHDANPLFDQFVELIQ
+				</data>
+				<hit pos="346" idx="1" pvalue="6.4e-17" match=" ++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8U086|CARA_PYRFU" comment="" length="371">
+			<score strand="both" combined_pvalue="3.88e-40" evalue="8.5e-38"/>
+			<seg start="1">
+				<data>
+MGVHKKGYLVLEDGSVIEGKAFGAETIRYGEVVFTTAMVGYPESLTDPSYKGQILIATNPLMGTYGVSSKSLKEH
+				</data>
+				<hit pos="34" idx="0" pvalue="4.1e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NADGIFISNGPGNPTLLKEVAKRIRKAFNEEIPMMGICLGQQLLALADGAEIYKLKYGHRGINKPVKDLESGKAF
+				</data>
+				<hit pos="258" idx="2" pvalue="3.5e-16" match="++++++++ ++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+VTTQNHGYAIVPESLNEFKVWMVNLDDNSVEGIKHESLPIIATQYHPEASPGPWDSLWVFDEFVKILEGRK
+				</data>
+				<hit pos="339" idx="1" pvalue="1.2e-17" match="++  +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O28995|CARA_ARCFU" comment="" length="358">
+			<score strand="both" combined_pvalue="4.67e-40" evalue="1e-37"/>
+			<seg start="1">
+				<data>
+MKAALALEDGTYLEGKAFGAERGGLGEIVFCTSMTGYVEALTDPSYKGQILMMTYPLIGNYGVNREDFESDGVKV
+				</data>
+				<hit pos="30" idx="0" pvalue="3.5e-18" match="+ ++++++ + ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PARVKPTIETIRKLAGQIPMAGICLGHQLTALALGAKTFKLKFGHHGSNQPVKDFETGRVFISSQNHNFAVDTKT
+				</data>
+				<hit pos="244" idx="2" pvalue="3.2e-17" match="++ ++++++++ +++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+LPKEFEVTQINLNDHTVEGMVHKDFPLITVQYHPEAGPGPHDTYFFFDRYVDMLREYR
+				</data>
+				<hit pos="326" idx="1" pvalue="2.1e-17" match="+  ++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P54324|CARX_GEOSE" comment="" length="354">
+			<score strand="both" combined_pvalue="5.38e-40" evalue="1.2e-37"/>
+			<seg start="1">
+				<data>
+MKAYLHVASGKTFSGELAAPLEEKVSGEIVFFTGMTGYQEVLTDPSYKNQIIVFTYPLIGNYGINENDFESKRPH
+				</data>
+				<hit pos="31" idx="0" pvalue="1.9e-19" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AIRQLIDRYPTLAICLGHQLVALATGRIRKKLRFGHRGANQPVWDAVKQNVMMTSQNHSYVVKEGSLVGKPFDIR
+				</data>
+				<hit pos="235" idx="2" pvalue="1.8e-14" match="++  +++++++ +++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+FINVNDGSVEGIVHRHKPILSVQYHPEAHPGPHDTGYIFDEFLQTVFKGENVYA
+				</data>
+				<hit pos="318" idx="1" pvalue="8.0e-19" match="++ ++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P36838|CARX_BACSU" comment="" length="353">
+			<score strand="both" combined_pvalue="5.70e-40" evalue="1.2e-37"/>
+			<seg start="1">
+				<data>
+MEGYLVLEDGTSFSGELDGHENCTGEAVFFTGMTGYQEVLTDPSYKGQIIVFTYPLIGNYGINEKDFESKKPQVK
+				</data>
+				<hit pos="29" idx="0" pvalue="1.9e-19" match="+ +++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+SIISRFPTLGICLGHQLIALAFGGNTFKLPFGHRGANHPVIDRKTKRVFMTSQNHSYVVDEQSINEEELTIRFHH
+				</data>
+				<hit pos="232" idx="2" pvalue="1.3e-17" match="++ ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+VNDTSVEGLAHKKLPVMSVQFHPEAHPGPAESEWIFDDYLKNVIPARREIAHA
+				</data>
+				<hit pos="315" idx="1" pvalue="1.2e-15" match="++ ++++++++ +++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O19886|CARA_CYACA" comment="" length="399">
+			<score strand="both" combined_pvalue="6.00e-40" evalue="1.3e-37"/>
+			<seg start="1">
+				<data>
+MEKFKLLKLGKPATLLLEDGTVFRGKSFSNPQTVTGEIVFNTGMTGYQEIFTDPSYNEQLVVLTYPEIGNTGTNL
+				</data>
+				<hit pos="40" idx="0" pvalue="6.3e-20" match="+++++++++++ +++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LRYLKSFECEVIIVNYKSTYQQVMKFHPDGIVISNGPGDPAKINRVVVRVNKFINKKIPILGICLGHQILARCFE
+				</data>
+				<hit pos="284" idx="2" pvalue="2.5e-15" match="++ +++++++++++ + "/>
+			</seg>
+			<seg start="301">
+				<data>
+AKTFKLKFGHRGLNHPVGINKRMEITSQNHGFAVNFEFLKSNKFYANHLNLNDGTLAGISSQNFPLISVQYHPEG
+SPGPHDSNYLFKYWVYIIYKSKSS
+				</data>
+				<hit pos="365" idx="1" pvalue="1.4e-17" match="+  +++++++ ++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8TY15|CARA_METKA" comment="" length="361">
+			<score strand="both" combined_pvalue="6.73e-40" evalue="1.5e-37"/>
+			<seg start="1">
+				<data>
+MRAALALEDGTIVHGELFGSPREAEGEVVFNTSHTGFQEALTDPSYRGQILIMTFPMQGNYGILPEVGESDRVQV
+				</data>
+				<hit pos="30" idx="0" pvalue="4.9e-17" match="++++ ++ ++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PGDPKRVRETVETVRELIGQVPLMGICLGNQILGLAEGGDTFKLKFGHRGANQPVKDLDKDRVYITSQNHGFALD
+				</data>
+				<hit pos="247" idx="2" pvalue="3.8e-16" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+PDSLRDTPLRVRWVNVNDGTVEGVVHTDAPAFSVQFHPEAGPGPWDTKWVFDEFLAMCREH
+				</data>
+				<hit pos="330" idx="1" pvalue="1.8e-19" match="+++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q0U5H7|CARA_PHANO" comment="" length="476">
+			<score strand="both" combined_pvalue="9.54e-40" evalue="2.1e-37"/>
+			<seg start="76">
+				<data>
+VFTTSLVGYPESMTDPSYRGQILVFTQPLIGNYGVPSSARDEHGLLRYFESPNIQASGIVVQDYALKHSHWTAVE
+				</data>
+				<hit pos="77" idx="0" pvalue="2.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+DMHVALIDCGVKENILRSLVSRGASVTCFPFDYPIHKVAHHFDGVFISNGPGDPTHCTSTVYNLRKLFETSQLPV
+MGICMGHQLIALAAGAKTIKLKYGNRAHNIPALDLTTGKCHITSQNHGYAVDPTTLTSEWKEYFTNLNDQSNEGL
+				</data>
+				<hit pos="299" idx="2" pvalue="4.9e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+IHASRPIFSAQFHPEAKGGPMDSSYLFDKYIQNVQRYKDHQSSFSEKSNKPSPLLVDLLSKERVGVHPAQPDFEM
+				</data>
+				<hit pos="381" idx="1" pvalue="1.4e-16" match="++++ ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B2RQC6|PYR1_MOUSE" comment="" length="2225">
+			<score strand="both" combined_pvalue="1.19e-39" evalue="2.6e-37"/>
+			<seg start="1">
+				<data>
+MAALVLEDGSVLQGRPFGAAVSTAGEVVFQTGMVGYPEALTDPSYKAQILVLTYPLIGNYGIPSDEEDEFGLSKW
+				</data>
+				<hit pos="29" idx="0" pvalue="2.2e-18" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PASYPGVVSTLSRVLSEPNPRPVFGICLGHQLLALAIGAKTYKMRYGNRGHNQPCLLVGTGRCFLTSQNHGFAVD
+				</data>
+				<hit pos="247" idx="2" pvalue="1.6e-19" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+ADSLPAGWAPLFTNANDCSNEGIVHDSLPFFSVQFHPEHRAGPSDMELLFDVFLETVREAAAGNIGGQTVRERLA
+				</data>
+				<hit pos="329" idx="1" pvalue="6.4e-17" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="1201">
+				<data>
+LQLIAKDDQLKVIECNVRVSRSFPFVSKTLGVDLVALATRIIMGEKVEPVGLMTGSGVVGVKVPQFSFSRLAGAD
+				</data>
+				<hit pos="1224" idx="2" pvalue="5.2e-05" match="++    ++  + +++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P08955|PYR1_MESAU" comment="" length="2225">
+			<score strand="both" combined_pvalue="1.19e-39" evalue="2.6e-37"/>
+			<seg start="1">
+				<data>
+MAALVLEDGSVLQGRPFGAAVSTAGEVVFQTGMVGYPEALTDPSYKAQILVLTYPLIGNYGIPSDEEDEFGLSKW
+				</data>
+				<hit pos="29" idx="0" pvalue="2.2e-18" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PASYPGVVATLNRVLSEPNPRPVFGICLGHQLLALAIGAKTYKMRYGNRGHNQPCLLVGTGRCFLTSQNHGFAVD
+				</data>
+				<hit pos="247" idx="2" pvalue="1.6e-19" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+ADSLPAGWTPLFTNANDCSNEGIVHDSLPFFSVQFHPEHRAGPSDMELLFDVFLETVREAVAGNPGGQTVKERLV
+				</data>
+				<hit pos="329" idx="1" pvalue="6.4e-17" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="1201">
+				<data>
+LQLIAKDDQLKVIECNVRVSRSFPFVSKTLGVDLVALATRIIMGEKVEPIGLMTGSGVVGVKVPQFSFSRLAGAD
+				</data>
+				<hit pos="1224" idx="2" pvalue="5.2e-05" match="++    ++  + +++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q752N9|CARA_EREGS" comment="" length="399">
+			<score strand="both" combined_pvalue="1.81e-39" evalue="4e-37"/>
+			<seg start="1">
+				<data>
+MTSDEAKKARFCLHGGPSYEGYSFGAPVSVGGEVVFTTSLVGYPDSMTDPSYKGQILVFTQPLIGNYGVPDGSVR
+				</data>
+				<hit pos="36" idx="0" pvalue="6.7e-17" match="+++++++++ +++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+FDGVFISNGPGDPIHYRNSTVANLRRLLQDPDLQQVPIFGICMGHQLLALAAGASTVKMKYGNRAHNIPALDLST
+				</data>
+				<hit pos="262" idx="2" pvalue="4.6e-20" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+GQCHITSQNHGYAVDAATLPRDEFVPLFVNLNDKSNEGIIHVSRPIYSTQFHPEGKGGPMDCSFLFDEYVERMRC
+				</data>
+				<hit pos="345" idx="1" pvalue="2.2e-15" match="++++++++++ ++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P27708|PYR1_HUMAN" comment="" length="2225">
+			<score strand="both" combined_pvalue="2.52e-39" evalue="5.5e-37"/>
+			<seg start="1">
+				<data>
+MAALVLEDGSVLRGQPFGAAVSTAGEVVFQTGMVGYPEALTDPSYKAQILVLTYPLIGNYGIPPDEMDEFGLCKW
+				</data>
+				<hit pos="29" idx="0" pvalue="2.2e-18" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PASYPSVVSTLSRVLSEPNPRPVFGICLGHQLLALAIGAKTYKMRYGNRGHNQPCLLVGSGRCFLTSQNHGFAVE
+				</data>
+				<hit pos="247" idx="2" pvalue="1.6e-19" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+TDSLPADWAPLFTNANDGSNEGIVHNSLPFFSVQFHPEHQAGPSDMELLFDIFLETVKEATAGNPGGQTVRERLT
+				</data>
+				<hit pos="329" idx="1" pvalue="1.4e-16" match="++++++++++  +++++"/>
+			</seg>
+			<seg start="1201">
+				<data>
+LQLIAKDDQLKVIECNVRVSRSFPFVSKTLGVDLVALATRVIMGEEVEPVGLMTGSGVVGVKVPQFSFSRLAGAD
+				</data>
+				<hit pos="1224" idx="2" pvalue="5.2e-05" match="++    ++  + +++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O25835|CARA_HELPY" comment="" length="375">
+			<score strand="both" combined_pvalue="3.05e-39" evalue="6.7e-37"/>
+			<seg start="1">
+				<data>
+MVSLYLENGLFLQAQSFGASGTQAGELVFNTSMSGYQEVISDPSYKGQFVVFSMPEIGVVGANSKDDESFFSCAG
+				</data>
+				<hit pos="29" idx="0" pvalue="5.0e-19" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+AYEKKEISGIFLSNGPGDPLSLQQEIGEIKQLINAKIPMLGICLGHQLLSIAQGYPTYKLKFGHHGSNHPVKNLK
+				</data>
+				<hit pos="263" idx="2" pvalue="6.8e-17" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TNAVEITAQNHNYCVPEDIEEIAIITHRNLFDNTIEGVRYKNAPIISVQHHPESSPGPKESHYIFKEFVELLKDF
+				</data>
+				<hit pos="344" idx="1" pvalue="4.1e-16" match="++ ++++++++++++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q7S8A6|PYR1_NEUCR" comment="" length="1832">
+			<score strand="both" combined_pvalue="3.36e-39" evalue="7.4e-37"/>
+			<seg start="1">
+				<data>
+MAATVYRPATAPIADAPCEGLVCLELEDGSAYQGYSFGAPKSIAGELVFQTGMVGYPESVTDPSYRGQILVITFP
+				</data>
+				<hit pos="49" idx="0" pvalue="7.8e-18" match="+++++++++++ +++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NLRILCLDVGMKYNQLRCFIKRGVEVLVCPWDYDFSKEEYDGLFISNGPGDPKVMDTTVEHISAALQKNNTPIFG
+ICLGHQLLARAAGAKTVKLKFGNRGHNIPCTSMVTGKCHITSQNHGYAVDATTLPTGWQELFINANDGSNEGIMH
+				</data>
+				<hit pos="297" idx="2" pvalue="1.6e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+VDRPHFSVQFHPESTPGPRDTEFLFDVFIQTVAKCTTDNTLLQKGVEFPGGTTEENERLHPRVDVKKVLVLGSGG
+				</data>
+				<hit pos="379" idx="1" pvalue="9.4e-17" match="+ +++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q59968|CARA_SACS2" comment="" length="367">
+			<score strand="both" combined_pvalue="4.44e-39" evalue="9.7e-37"/>
+			<seg start="1">
+				<data>
+MKLENKKGYLYLEDGTFIEGYSFGAKGIKVGEVVFTTSMNGYVESLTDPSYKGQILIITHPLVGNYGVPEKKYEQ
+				</data>
+				<hit pos="35" idx="0" pvalue="2.9e-18" match="+++++ ++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VFSNGPGNPNLLENQIKTFSELVEYKIPILGICLGHQIATLALGGKIKKMKFGHRAINKPVIESNSNKCYISTHN
+				</data>
+				<hit pos="253" idx="2" pvalue="1.3e-16" match="++ ++++++++  ++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+HGYGIISKNDIPPNTKIWFYNPDDYTIEGLIHEKLPIITTQFHPEARPGPWDTTWVFDKFRTMVTGK
+				</data>
+				<hit pos="336" idx="1" pvalue="5.8e-17" match="++ ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q09794|PYR1_SCHPO" comment="" length="2244">
+			<score strand="both" combined_pvalue="1.20e-38" evalue="2.6e-36"/>
+			<seg start="76">
+				<data>
+ADHSVSGELVFQTGMVGYPESLTDPSYRGQILVFTFPTVGNYGVPDRRILDEISGLPKYFESNQIHVAAIIISSY
+				</data>
+				<hit pos="86" idx="0" pvalue="6.8e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+YDGLFISNGPGDPSLMDLVVDRVKRVLESKTVPVFGICFGHQIMARAAGASTTKMKFGNRGHNIPCTCMISGRCY
+				</data>
+				<hit pos="333" idx="2" pvalue="1.8e-17" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+ITSQNHGYAVDASSLSNGWKELFVNANDGSNEGIYNTEYPFFSVQFHPESTPGPRDTEFLFDVFIDVVKRSADAK
+				</data>
+				<hit pos="415" idx="1" pvalue="1.9e-17" match="+++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P07259|PYR1_YEAST" comment="" length="2214">
+			<score strand="both" combined_pvalue="1.30e-38" evalue="2.9e-36"/>
+			<seg start="1">
+				<data>
+MATIAPTAPITPPMESTGDRLVTLELKDGTVLQGYSFGAEKSVAGELVFQTGMVGYPESVTDPSYEGQILVITYP
+				</data>
+				<hit pos="49" idx="0" pvalue="7.8e-18" match="+++++++++++ +++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VLRILAIDVGMKYNQIRCFIKRGVELKVVPWNYDFTKEDYDGLFISNGPGDPSVLDDLSQRLSNVLEAKKTPVFG
+ICLGHQLIARAAGASTLKLKFGNRGHNIPCTSTISGRCYITSQNHGFAVDVDTLTSGWKPLFVNANDDSNEGIYH
+				</data>
+				<hit pos="297" idx="2" pvalue="1.3e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+SELPYFSVQFHPESTPGPRDTEFLFDVFIQAVKEFKYTQVLKPIAFPGGLLEDNVKAHPRIEAKKVLVLGSGGLS
+				</data>
+				<hit pos="379" idx="1" pvalue="2.6e-17" match="+ +++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O93937|PYR1_EMENI" comment="" length="2275">
+			<score strand="both" combined_pvalue="1.36e-38" evalue="3e-36"/>
+			<seg start="76">
+				<data>
+GAEKSVAGELVFQTGMVGYPESITDPSYRGQILVITFPLVGNYGVPSRETMDELLKTLPKHFESTEIHIAALVVA
+				</data>
+				<hit pos="87" idx="0" pvalue="1.4e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+AGKDYDGLFVSNGPGDPATMTTTVNNLAKTMQEARTPIFGICLGHQLIARSVGAQTLKMKFGNRGHNIPCTSLVT
+				</data>
+				<hit pos="337" idx="2" pvalue="7.1e-18" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="376">
+				<data>
+GKCHITSQNHGYAVDSSTLPSDWQELFVNANDGSNEGIRHVSRPYFSVQFHPESTPGPRDTEYLFDVFINAIKDT
+				</data>
+				<hit pos="419" idx="1" pvalue="2.6e-17" match="+ +++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q91437|PYR1_SQUAC" comment="" length="2242">
+			<score strand="both" combined_pvalue="1.46e-38" evalue="3.2e-36"/>
+			<seg start="1">
+				<data>
+MATLFLDDGSSFKGRLFGASSTVSGEVVFQTGMVGYPEALTDPSYLSQILVLTYPLIGNYGIPKDEEDEHGLSKW
+				</data>
+				<hit pos="29" idx="0" pvalue="2.2e-18" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PEYCQQTINNVKKAISEEKPKPLFGICLGHQILSLAIGAKTYKMKYGNRGHNQPCIHEGTQRCFYTSQNHGFAVE
+				</data>
+				<hit pos="247" idx="2" pvalue="1.1e-18" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+PCSLPRDWSVLFTNANDQSNEGIIHNSKPLFSVQFHPEHKAGPTDLVDLFDIFLECARDVKLGVNLDKTVKGRVI
+				</data>
+				<hit pos="329" idx="1" pvalue="1.1e-16" match="+ ++++++++ ++++ +"/>
+			</seg>
+			<seg start="1201">
+				<data>
+TGPFNLQLIAKDDQLKVIECNVRVSRSFPFVSKTLGVDMIALATKVIMGEEVEPVGLMTGTGVVGVKVPQFSFSR
+				</data>
+				<hit pos="1229" idx="2" pvalue="1.6e-05" match="++    ++  +++++  "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9HK16|CARA_THEAC" comment="" length="348">
+			<score strand="both" combined_pvalue="1.48e-38" evalue="3.2e-36"/>
+			<seg start="1">
+				<data>
+MKRYLITSDGTVIAGYGYGSPVTGYGELVFTTSMTGYLESMTDPSYVGQILVFASPTIANYELRKGVMESDRVKV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.4e-18" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+VNFLKRNIGVKPIFGICFGLQIIALAYGSKTYKMKFGHRGSNHAVTDGNRIYVTTHNHGYAVDPDTVRDFHVRER
+				</data>
+				<hit pos="237" idx="2" pvalue="3.8e-16" match="++++++++ ++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+DINDGTIEMIEDGMMMAVQYHPEASPGPHDTRWFFSEMRRRTEDAAKG
+				</data>
+				<hit pos="314" idx="1" pvalue="1.7e-16" match="    +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9PMG8|CARA_CAMJE" comment="" length="372">
+			<score strand="both" combined_pvalue="1.62e-38" evalue="3.5e-36"/>
+			<seg start="1">
+				<data>
+MKAYIYLENDIFLSAKAFGKSGTFFGELVFNTSLTGYQEIISDPSYAGQFIVFSMPEIGIVGTNENDNESKEIFA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.7e-19" match="+++++++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+LYKKGEIQGVFLSNGPGEPRILKQEIAEIKKLAEAKIPMLGICLGHQLLSNAFGYETYKMKFGQHGANHPVINLD
+				</data>
+				<hit pos="263" idx="2" pvalue="3.5e-16" match="++ ++++++++++ +++"/>
+			</seg>
+			<seg start="301">
+				<data>
+TKTVEITAQNHNYNVPEELAQVAHITHRNLFGDNVEGVRYKDYPIISVQHHPESSSGPHESKYIFKEFMNLM
+				</data>
+				<hit pos="344" idx="1" pvalue="1.3e-15" match="++ +++++++++ +++ "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q970U8|CARA_SULTO" comment="" length="372">
+			<score strand="both" combined_pvalue="3.34e-38" evalue="7.3e-36"/>
+			<seg start="1">
+				<data>
+MTLYCKRGYKGYLYLEDGTLIEGCGFGAKGIRAGEVVFTTSMNGYPESLTDPSYRGQILVITHPLVGNYGVPEKQ
+				</data>
+				<hit pos="38" idx="0" pvalue="1.0e-18" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+PKGVVFGNGPGNPNLLQEVIENFKELTEYKIPILGICLGHQVATLAMGGKVNKMKFGHRAINKPVIDISSNKCYI
+				</data>
+				<hit pos="257" idx="2" pvalue="2.7e-15" match="++ +++++++   ++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+TTHNHGYGILSKEDLPPNSKLWFINPDDGTIEGWIHEKLPIITTQFHPEARPGPWDVTWVFDKFKKMVSRNA
+				</data>
+				<hit pos="340" idx="1" pvalue="5.8e-17" match="++ ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q18990|PYR1_CAEEL" comment="" length="2198">
+			<score strand="both" combined_pvalue="4.67e-38" evalue="1e-35"/>
+			<seg start="1">
+				<data>
+MRATLHLEDGSTFVGSIYGATKSVVGEIVFQTGMVGYVESLTDPSYAKQLLTLTYPLIGNYGVPSAEILDQFKLP
+				</data>
+				<hit pos="30" idx="0" pvalue="2.0e-18" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+GPGDPEICAPLVDRLAKVIARGDKPIFGICLGHQILSRAIGAKTYKLKYGNRGHNQPCTHYATGRCYITSQNHGY
+				</data>
+				<hit pos="250" idx="2" pvalue="2.2e-18" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+AVDPDSLPADWKALFTNENDKTNEGIVHSSKPFFSVQFHPEHTAGPTDCEFLFDVFADSVRQAKSGTFMNVDQEL
+				</data>
+				<hit pos="332" idx="1" pvalue="2.2e-16" match="++++++++++  +++ +"/>
+			</seg>
+			<seg start="1576">
+				<data>
+STLKMDNISDWAKHLSAFPANRPIVCHAEKQTLAAILCMAQMANRAVHIAHVATADEINLVKEAKQRGWNVTCEV
+				</data>
+				<hit pos="1607" idx="2" pvalue="9.7e-05" match=" +  +    ++  +++ "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q97AJ4|CARA_THEVO" comment="" length="345">
+			<score strand="both" combined_pvalue="5.59e-38" evalue="1.2e-35"/>
+			<seg start="1">
+				<data>
+MKKYLVMEDGTVLSGQGYGSYKEAYGELVFTTSMTGYLETLTDPSYVGQMLVFASPTIANYALEMGKMESNGVKV
+				</data>
+				<hit pos="30" idx="0" pvalue="1.4e-18" match="++++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+IKFLSHNIGVKPLFGICFGLQAISLAYGAKTYKMKFGHRGSNHAVTDGTHSYVTTHNHGYAVDGSTVKDFKVIGW
+				</data>
+				<hit pos="237" idx="2" pvalue="1.8e-14" match="++++++++ + ++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+DANDGTVEIIEGDDMFAVQFHPEASPGPHDTRWFFGEMKRRIGYA
+				</data>
+				<hit pos="314" idx="1" pvalue="1.4e-17" match="  + +++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9K8V6|CARX_HALH5" comment="" length="359">
+			<score strand="both" combined_pvalue="8.44e-38" evalue="1.8e-35"/>
+			<seg start="1">
+				<data>
+MKAYLVLATGETFAGEIANAKEDVYGEVVFFTGMTGYQEVLSDPSFKGQLVVFTYPLIGNYGINASDFESKEPQA
+				</data>
+				<hit pos="30" idx="0" pvalue="3.3e-17" match="+ ++++++++++++++ "/>
+			</seg>
+			<seg start="226">
+				<data>
+RLPTIYRLASTYPSLGICLGHQLLALAFGADTEKLRFGHRGANQPVINLKSNRVYMTSQNHSYVVKEDSLQRTDW
+				</data>
+				<hit pos="238" idx="2" pvalue="5.5e-17" match="+  ++++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DATFKNINDGSIEGLTHKYLPIQTVQFHPEAHPGPSDSDEIFHSFIDDVAAKGREKTYA
+				</data>
+				<hit pos="321" idx="1" pvalue="2.6e-16" match="++ ++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|O60060|CARA_SCHPO" comment="" length="415">
+			<score strand="both" combined_pvalue="1.54e-37" evalue="3.4e-35"/>
+			<seg start="1">
+				<data>
+MLRFLKPFPLRFGKRFYSKVPPVTNHERILPKQPSFPTAPAQNEIATLTIRNGPIFHGTSFGANRNVSGEAVFTT
+SPVGYVESLTDPSYKQQILIFTQPLIGNYGVPDCKKRDENGLLRHFESPHIQCAGVVVNDYATKYSHWTAVESLG
+				</data>
+				<hit pos="73" idx="0" pvalue="6.2e-17" match="++++ +++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+IAVIDCGVKENILRSLVSRGASVTVFPFDYPIQNVASNYDGIFLTNGPGDPTHLTKTVNNLRELMNTYNGPIMGI
+CMGHQLLALSTGAKTIKLKYGNRGHNIPALDIASGNCHITSQNHGYAVDASTLPAEWKATWTNLNDQSNEGIAHV
+				</data>
+				<hit pos="296" idx="2" pvalue="4.4e-17" match="+++++++++++++++ +"/>
+			</seg>
+			<seg start="376">
+				<data>
+SRPISSVQFHPEARGGPMDTFYLFDNYIKEAIKYQKSRTA
+				</data>
+				<hit pos="378" idx="1" pvalue="2.0e-16" match="++ ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|A4YI77|CARA_METS5" comment="" length="372">
+			<score strand="both" combined_pvalue="4.03e-37" evalue="8.8e-35"/>
+			<seg start="1">
+				<data>
+MTYCKRGTEGLIYLEDGTLLRGCGFGAKGVRYGEVVFTTAMNGYPESMTDPSYRGQILIITHPLVGNYGVPNPIV
+				</data>
+				<hit pos="37" idx="0" pvalue="2.0e-18" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+KGIVFGNGPGNPNILKDLVKNFSAVMEYKLPTLGICLGHQVATLALGGNVRKMKFGHRAINKPVTDISNNKCYIS
+				</data>
+				<hit pos="256" idx="2" pvalue="2.5e-15" match="++ +++++++   ++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+THNHGYGVYKEDIPPDTQIWFVNPDDGVVEGLIHKRLPLITTQFHPEARPGPNDTTWVFQKFKKMVIKDEGN
+				</data>
+				<hit pos="338" idx="1" pvalue="4.1e-16" match="+  ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q4J8E9|CARA_SULAC" comment="" length="371">
+			<score strand="both" combined_pvalue="4.17e-37" evalue="9.1e-35"/>
+			<seg start="1">
+				<data>
+MDYYNNDTPGYVYLEDGTLMKGIGFGAKGIRVGEIVFTTSMNGYPESLTDPSYKGQILVITHPLIGNYGVPEKNY
+				</data>
+				<hit pos="37" idx="0" pvalue="1.0e-18" match="+++++ +++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+KGLLFSNGPGNPNLLTDLVKNFREIIEYNLPTLGICLGHQIATMALGGKVKKMKFGHRAINKPVIDTTTGKSYIT
+				</data>
+				<hit pos="256" idx="2" pvalue="1.6e-15" match="++ ++++++++  ++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+THNHGYAILSKQDVPIHTRVWFYNPDDGTVEGWIHEKYNIITTQFHPEARPGPWDVTWVFDKFKKMVVGDA
+				</data>
+				<hit pos="339" idx="1" pvalue="1.3e-15" match=" + ++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8TNY3|CARA_METAC" comment="" length="368">
+			<score strand="both" combined_pvalue="5.79e-37" evalue="1.3e-34"/>
+			<seg start="1">
+				<data>
+MKAVLGLEDGTVIRGTGFGAEGTACGELVFTTQFTGYEEALTDPSYKGQILMFTYPLIGNYGVSGERFQSDNIHA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-16" match="+++  +++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+FISNGPGDPEKATDAINAVKAFAGTIPVAGICFGHQIISLAMGARTYKLKFGHRGGNQPVKDLIENKIFISSQNH
+				</data>
+				<hit pos="252" idx="2" pvalue="2.3e-16" match="++ ++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+GYAVDADSLEGTGLYVKYLNANDKTVEGVSHKDLDIFSVQFHPEAQAGPMDTEETFFGKVVKVLGGDL
+				</data>
+				<hit pos="335" idx="1" pvalue="1.1e-16" match=" ++++++++++ +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8Q0U4|CARA_METMA" comment="" length="368">
+			<score strand="both" combined_pvalue="1.19e-36" evalue="2.6e-34"/>
+			<seg start="1">
+				<data>
+MKAVLGLEDGTVIKGTGFGAEGTACGELVFTTQFTGYEEALTDPSYKGQILMFTYPLIGNYGVSGERFQSDNIHA
+				</data>
+				<hit pos="30" idx="0" pvalue="1.2e-16" match="+++  +++++ ++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+FISNGPGDPEKATDAINAVKAFAGTIPVAGICFGHQIISLAMGARTYKLKFGHRGGNQPVKDLIENKIFISSQNH
+				</data>
+				<hit pos="252" idx="2" pvalue="2.3e-16" match="++ ++++++++++++ +"/>
+			</seg>
+			<seg start="301">
+				<data>
+GYAVDADSLEGTGLYVKYLNANDKTVEGVSHKDLDIFSVQFHPEAQAGPLDTEETFFGKVVKVLGGGL
+				</data>
+				<hit pos="335" idx="1" pvalue="2.4e-16" match=" ++++++++++ +++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|B0R6F1|CARA_HALS3" comment="" length="353">
+			<score strand="both" combined_pvalue="1.58e-36" evalue="3.5e-34"/>
+			<seg start="1">
+				<data>
+MSDAYLALETGDVVEATARAPGMARGELVFTTAYTGYEESLTDPSYEAQVLTFAYPLIGNYGVRPERTESDRVHP
+				</data>
+				<hit pos="30" idx="0" pvalue="6.0e-18" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+HLVDEYIGTVPIAGICLGQQIVARALGGDTEKMDFGHRGVNQPVLDHDSGRVVMTTQNHGYTVADPGDLTVTQVN
+				</data>
+				<hit pos="236" idx="2" pvalue="1.4e-15" match="++ +++++ ++ +++++"/>
+				<hit pos="277" idx="1" pvalue="1.9e-05" match=" + +++ +    + + +"/>
+			</seg>
+			<seg start="301">
+				<data>
+VNDGTPEALDSAPLDVLTRQYHPEANPGPHDTRGFFDDVLAMADASYTPATAD
+				</data>
+				<hit pos="315" idx="1" pvalue="1.1e-15" match=" + + ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9HP42|CARA_HALSA" comment="" length="353">
+			<score strand="both" combined_pvalue="1.58e-36" evalue="3.5e-34"/>
+			<seg start="1">
+				<data>
+MSDAYLALETGDVVEATARAPGMARGELVFTTAYTGYEESLTDPSYEAQVLTFAYPLIGNYGVRPERTESDRVHP
+				</data>
+				<hit pos="30" idx="0" pvalue="6.0e-18" match="++++ ++++++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+HLVDEYIGTVPIAGICLGQQIVARALGGDTEKMDFGHRGVNQPVLDHDSGRVVMTTQNHGYTVADPGDLTVTQVN
+				</data>
+				<hit pos="236" idx="2" pvalue="1.4e-15" match="++ +++++ ++ +++++"/>
+				<hit pos="277" idx="1" pvalue="1.9e-05" match=" + +++ +    + + +"/>
+			</seg>
+			<seg start="301">
+				<data>
+VNDGTPEALDSAPLDVLTRQYHPEANPGPHDTRGFFDDVLAMADASYTPATAD
+				</data>
+				<hit pos="315" idx="1" pvalue="1.1e-15" match=" + + ++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8ZY49|CARA_PYRAE" comment="" length="346">
+			<score strand="both" combined_pvalue="1.60e-36" evalue="3.5e-34"/>
+			<seg start="1">
+				<data>
+MEDGSVFAGRLIGAEKIAVGEVVFTTSVVGYPQTLTDPSYKGQIITFTMPLIGNYGVSEDQLESDGIKAEGVVLF
+				</data>
+				<hit pos="24" idx="0" pvalue="8.2e-16" match="++++ ++++ +++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+YVEYKKPLMGICLGHQVIAMALGAGIYKLKFGHRASNKPVRDIRFTGRTYITTHNHGYAVDPRGTDLKVWAVQPD
+				</data>
+				<hit pos="232" idx="2" pvalue="1.1e-16" match="++++++++++ ++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+DGTVEGLYHERLPILTTQWHPEASPGPQDTRWVFDKFLKLVERHGH
+				</data>
+				<hit pos="313" idx="1" pvalue="1.1e-16" match="++ +++ ++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P05990|PYR1_DROME" comment="" length="2224">
+			<score strand="both" combined_pvalue="1.26e-35" evalue="2.8e-33"/>
+			<seg start="1">
+				<data>
+MASTDCYLALEDGTVLPGYSFGYVPSENESKVGFGGEVVFQTGMVGYTEALTDRSYSGQILVLTYPLIGNYGVPA
+				</data>
+				<hit pos="40" idx="0" pvalue="7.1e-16" match="++++++++ + +++ ++"/>
+			</seg>
+			<seg start="226">
+				<data>
+RLEDEQFDALFLSNGPGNPESCDQIVQQVRKVIEEGQKPVFGICLGHQLLAKAIGCSTYKMKYGNRGHNLPCLHR
+				</data>
+				<hit pos="264" idx="2" pvalue="7.1e-18" match="+++++++++++++ + +"/>
+			</seg>
+			<seg start="301">
+				<data>
+ATGRCLMTSQNHGYAVDLEQLPDGWSELFVNANDGTNEGIVHASKPYFSVQFHPEHHAGPQDTEFLFDVFMESIQ
+				</data>
+				<hit pos="346" idx="1" pvalue="5.8e-17" match="+ ++++++++  +++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P20054|PYR1_DICDI" comment="" length="2225">
+			<score strand="both" combined_pvalue="2.19e-33" evalue="4.8e-31"/>
+			<seg start="1">
+				<data>
+MDILNRKKGCLVLEDGTKLSGYSFGSERSVAGECVFSTGMVGYNESISDPSYTGQILVFSFPLIGNYGVPSFRER
+				</data>
+				<hit pos="36" idx="0" pvalue="7.3e-17" match="+ ++++++ ++++++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+YDVVANESINDYDGVFISNGPGDPSLCGKAIENIRKVLALPVAKAVFGVCMGNQLLGLAAGAQTHKMAFGNRGLN
+				</data>
+				<hit pos="270" idx="2" pvalue="1.1e-14" match=" +++ ++++++++++++"/>
+			</seg>
+			<seg start="301">
+				<data>
+QPCVDQISGRCHITSQNHGFVIDSNSLPAGSGWKTYFINANDASNEGIYHESKPWFSVQFHPEAMAGPTDTEYLF
+				</data>
+				<hit pos="354" idx="1" pvalue="7.0e-17" match="+ +++++++++ +++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q91293|CPSM_AQUCT" comment="" length="1496">
+			<score strand="both" combined_pvalue="8.33e-32" evalue="1.8e-29"/>
+			<seg start="1">
+				<data>
+MTRILSVFKTAKTGVLNAAAHRYRGFSKAGVRLMSVKAQTANLVLEDGTKIKGYSFGHPASVAGEVIFNTGLGGY
+VEAVTDPSYHGQILTLTNPIIGNGGAPDTKARDAYGLMKYIESENIQASGLLVLDYSHEYSHWGAVKSLSEWLHE
+				</data>
+				<hit pos="68" idx="0" pvalue="2.3e-16" match="+++++ ++ +  +++++"/>
+			</seg>
+			<seg start="226">
+				<data>
+NIIRQLVKRGAEVHLVPWNHDFSQMEYDGLLITSGPGNPELAKPLIQNLKKVFQSDRPEPIFGICKGNEIAALAA
+GGKTYRLPMANRGQNQPVMITLNGQAFITAQNHAYAVDNNSLPAGWKPLFVNINDQSNEGIMHETKPIFTSQFHP
+EANPGPVDTEFLFDVYMSLIKKGKGTTLTSVMPKPALQSKRIDVAKVLILGSGGLSIGQAGEFDYSGSQAVKAMK
+				</data>
+				<hit pos="285" idx="2" pvalue="4.2e-14" match="++++++ ++ + +++++"/>
+				<hit pos="367" idx="1" pvalue="8.1e-16" match="++++ ++++++++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q8C196|CPSM_MOUSE" comment="" length="1500">
+			<score strand="both" combined_pvalue="4.15e-31" evalue="9.1e-29"/>
+			<seg start="1">
+				<data>
+MTRILTACKVVKTLKSGFGFANVTTKRQWDFSRPGIRLLSVKAKTAHIVLEDGTKMKGYSFGHPSSVAGEVVFNT
+GLGGYPEALTDPAYKGQILTMANPIIGNGGAPDTTARDELGLNKYMESDGIKVAGLLVLNYSNDYNHWLATKSLG
+				</data>
+				<hit pos="73" idx="0" pvalue="2.1e-16" match="+++++ ++++ ++++ +"/>
+			</seg>
+			<seg start="226">
+				<data>
+GIKNNVIRLLVKRGAEVHLVPWNHDFTQMEYDGLLIAGGPGNPALAQPLIQNVKKILESDRKEPLFGISTGNIIT
+GLAAGAKSYKMSMANRGQNQPVLNITNRQAFITAQNHGYALDNTLPAGWKPLFVNVNDQTNEGIMHESKPFFAVQ
+FHPEVSPGPTDTEYLFDSFFSLIKKGKGTTITSVLPKPALVASRVEVSKVLILGSGGLSIGQAGEFDYSGSQAVK
+				</data>
+				<hit pos="289" idx="2" pvalue="1.7e-12" match="+++++  ++ + +++++"/>
+				<hit pos="370" idx="1" pvalue="1.1e-16" match="+++ ++++++ ++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P07756|CPSM_RAT" comment="" length="1500">
+			<score strand="both" combined_pvalue="3.26e-30" evalue="7.1e-28"/>
+			<seg start="1">
+				<data>
+MTRILTACKVVKTLKSGFGLANVTSKRQWDFSRPGIRLLSVKAQTAHIVLEDGTKMKGYSFGHPSSVAGEVVFNT
+GLGGYSEALTDPAYKGQILTMANPIIGNGGAPDTTARDELGLNKYMESDGIKVAGLLVLNYSHDYNHWLATKSLG
+				</data>
+				<hit pos="73" idx="0" pvalue="1.8e-15" match="+++++ ++ + ++++ +"/>
+			</seg>
+			<seg start="226">
+				<data>
+GIKNNVIRLLVKRGAEVHLVPWNHDFTQMDYDGLLIAGGPGNPALAQPLIQNVKKILESDRKEPLFGISTGNIIT
+GLAAGAKSYKMSMANRGQNQPVLNITNRQAFITAQNHGYALDNTLPAGWKPLFVNVNDQTNEGIMHESKPFFAVQ
+FHPEVSPGPTDTEYLFDSFFSLIKKGKGTTITSVLPKPALVASRVEVSKVLILGSGGLSIGQAGEFDYSGSQAVK
+				</data>
+				<hit pos="289" idx="2" pvalue="1.7e-12" match="+++++  ++ + +++++"/>
+				<hit pos="370" idx="1" pvalue="1.1e-16" match="+++ ++++++ ++++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P31327|CPSM_HUMAN" comment="" length="1500">
+			<score strand="both" combined_pvalue="3.15e-29" evalue="6.9e-27"/>
+			<seg start="1">
+				<data>
+MTRILTAFKVVRTLKTGFGFTNVTAHQKWKFSRPGIRLLSVKAQTAHIVLEDGTKMKGYSFGHPSSVAGEVVFNT
+GLGGYPEAITDPAYKGQILTMANPIIGNGGAPDTTALDELGLSKYLESNGIKVSGLLVLDYSKDYNHWLATKSLG
+				</data>
+				<hit pos="73" idx="0" pvalue="3.6e-16" match="+++++ ++++ ++++ +"/>
+			</seg>
+			<seg start="226">
+				<data>
+GIKNNVIRLLVKRGAEVHLVPWNHDFTKMEYDGILIAGGPGNPALAEPLIQNVRKILESDRKEPLFGISTGNLIT
+GLAAGAKTYKMSMANRGQNQPVLNITNKQAFITAQNHGYALDNTLPAGWKPLFVNVNDQTNEGIMHESKPFFAVQ
+FHPEVTPGPIDTEYLFDSFFSLIKKGKATTITSVLPKPALVASRVEVSKVLILGSGGLSIGQAGEFDYSGSQAVK
+				</data>
+				<hit pos="289" idx="2" pvalue="2.6e-12" match="+++++  ++ + +++++"/>
+				<hit pos="370" idx="1" pvalue="3.7e-15" match="+++ ++++++  +++ +"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="1CS0_B" comment="" length="111">
+			<score strand="both" combined_pvalue="4.51e-17" evalue="9.9e-15"/>
+			<seg start="76">
+				<data>
+KPAFSFQGHPEASPGPHDAAPLFDHFIELIEQYRKT
+				</data>
+				<hit pos="77" idx="1" pvalue="5.3e-21" match="+++++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9YGB2|TRPG_THEKO" comment="" length="192">
+			<score strand="both" combined_pvalue="4.35e-14" evalue="9.5e-12"/>
+			<seg start="1">
+				<data>
+MIVLVNNRDSFVWNLAEYASLFDRVKVVPNTITVGELRRLDPDGVIISPGPGHPLERREVGNSPEIVLEAGVPIL
+GVCLGHQIIATAFGGKVGRVKPRHGKASPVKHDGKGVLRGIKNPLTAGRYHSLAVLEVPREFDVSAVSLDDNVVM
+				</data>
+				<hit pos="73" idx="2" pvalue="4.7e-15" match="++ + ++++++++ +++"/>
+			</seg>
+			<seg start="151">
+				<data>
+GIRHRKLPIEGLQFHPESVLTEWERKEGLRIIKNFVEMSRNG
+				</data>
+				<hit pos="158" idx="1" pvalue="6.0e-07" match="++   ++++++    + "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P26922|TRPG_AZOBR" comment="" length="196">
+			<score strand="both" combined_pvalue="5.17e-12" evalue="1.1e-09"/>
+			<seg start="1">
+				<data>
+MLLLIDNYDSFTYNLVHYLGELGAELDVRRNDSLTVEEAMALRPEGIVLSPGPCDPDKAGICLPLIDAAAKAAVP
+LMGVCLGHQAIGQPFGGTVVRAPVPMHGKVDRMFHQGRGVLKDLPSPFRATRYHSLIVERATLPACLEVTGETED
+				</data>
+				<hit pos="75" idx="2" pvalue="3.8e-13" match="++++ +++++ ++  ++"/>
+			</seg>
+			<seg start="151">
+				<data>
+GLIMALSHRELPIHGVQFHPESIESEHGHKILENFLNTTRRLETAA
+				</data>
+				<hit pos="162" idx="1" pvalue="9.7e-07" match="++  +++++++    + "/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q08654|TRPGD_THEMA" comment="" length="589">
+			<score strand="both" combined_pvalue="5.83e-12" evalue="1.3e-09"/>
+			<seg start="76">
+				<data>
+FRNDEITIEEIERKNPTHIVISPGPGRPEEAGISVDVVRHFSGKVPILGVCLGHQVIGYAFGGKIVHAKRILHGK
+				</data>
+				<hit pos="121" idx="2" pvalue="3.0e-14" match="++ + +++++ ++ +++"/>
+			</seg>
+			<seg start="151">
+				<data>
+TSKIVHNGKGVFSGVKNPLVATRYHSLVVEEASLPEVLEITAKSDDGEIMGLQHKEHPTFGVQFHPESVLTEEGK
+				</data>
+				<hit pos="208" idx="1" pvalue="1.1e-06" match="+ + +++++++      "/>
+			</seg>
+		</sequence>
+	</sequences>
+	<runtime host="admin1-OptiPlex-Tower-Plus-7010" when="Mon Aug 25 20:10:01 2025" cycles="87393" seconds="0.087"/>
+</mast>

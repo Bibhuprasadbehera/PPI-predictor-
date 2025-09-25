@@ -1,0 +1,600 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.5.7 (Release date: Wed Jun 19 13:59:04 2024 -0700)
+
+	For further information on how to interpret these results please access https://meme-suite.org/meme.
+	To get a copy of the MAST software please access https://meme-suite.org.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE 1AVO_D_hseq.fasta (peptide)
+	Last updated on Sun Aug 24 22:00:04 2025
+	Database contains 19 sequences, 4577 residues
+
+	MOTIFS meme.xml (peptide)
+	MOTIF ID                ALT ID WIDTH BEST POSSIBLE MATCH
+	----- ----------------- ------ ----- -------------------
+	    1 WLQLLIPRIEDGNNFGV MEME-1    17 WIQHQIPRIEDGNNFGV
+	    2 HVGDYRQLVHELDEAEY MEME-2    17 HVMDYRQTVHERDEAEY
+	    3 SFLTQISKYFSERGDAV MEME-3    17 GFHTQISKYFSTRGDAV
+	    4 RNAYAVLYDIILKNFEK MEME-4    17 RNFYATLYHMILKNFEK
+
+	PAIRWISE MOTIF CORRELATIONS:
+	MOTIF     1     2     3
+	----- ----- ----- -----
+	   2   0.16
+	   3   0.19  0.16
+	   4   0.17  0.20  0.23
+	No overly similar pairs (correlation > 0.60) found.
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.073 C 0.018 D 0.052 E 0.062 F 0.040 G 0.069 H 0.022 I 0.056 K 0.058 
+	L 0.092 M 0.023 N 0.046 P 0.051 Q 0.041 R 0.052 S 0.074 T 0.059 V 0.064 
+	W 0.013 Y 0.033 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 19 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+1AVO_D                                                              4e-68    140
+sp|Q06323|PSME1_HUMAN                                             4.8e-67    249
+sp|P58238|PSME1_MACFA                                             4.8e-67    249
+sp|Q64L94|PSME1_PIG                                               4.8e-67    249
+sp|Q4U5R3|PSME1_BOVIN                                             4.8e-67    249
+sp|P97371|PSME1_MOUSE                                             4.8e-67    249
+sp|Q63797|PSME1_RAT                                               3.8e-66    249
+sp|Q9UL46|PSME2_HUMAN                                               3e-61    239
+sp|P97372|PSME2_MOUSE                                               3e-61    239
+sp|Q63798|PSME2_RAT                                               1.8e-60    238
+sp|Q5E9G3|PSME2_BOVIN                                             1.8e-60    239
+sp|Q863Z0|PSME2_PIG                                                 3e-60    239
+sp|Q5F3J5|PSME3_CHICK                                             5.4e-59    254
+sp|P61289|PSME3_HUMAN                                             5.4e-59    254
+sp|P61290|PSME3_MOUSE                                             5.4e-59    254
+sp|P61291|PSME3_PIG                                               5.4e-59    254
+sp|Q4R4V3|PSME3_MACFA                                             5.4e-59    254
+sp|Q5RFD3|PSME3_PONAB                                             5.4e-59    254
+sp|Q967U1|PSME_DICDI                                              7.5e-32    225
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [n]  occurrence of motif `n' with p-value less than 0.0001.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+1AVO_D                                4e-68  31-[1]-18-[3]-7-[2]-10-[4]-6
+sp|Q06323|PSME1_HUMAN               4.8e-67  133-[1]-18-[3]-7-[2]-10-[4]-13
+sp|P58238|PSME1_MACFA               4.8e-67  133-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q64L94|PSME1_PIG                 4.8e-67  133-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q4U5R3|PSME1_BOVIN               4.8e-67  133-[1]-18-[3]-7-[2]-10-[4]-13
+sp|P97371|PSME1_MOUSE               4.8e-67  133-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q63797|PSME1_RAT                 3.8e-66  133-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q9UL46|PSME2_HUMAN                 3e-61  123-[1]-18-[3]-7-[2]-10-[4]-13
+sp|P97372|PSME2_MOUSE                 3e-61  123-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q63798|PSME2_RAT                 1.8e-60  122-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q5E9G3|PSME2_BOVIN               1.8e-60  123-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q863Z0|PSME2_PIG                   3e-60  123-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q5F3J5|PSME3_CHICK               5.4e-59  138-[1]-18-[3]-7-[2]-10-[4]-13
+sp|P61289|PSME3_HUMAN               5.4e-59  138-[1]-18-[3]-7-[2]-10-[4]-13
+sp|P61290|PSME3_MOUSE               5.4e-59  138-[1]-18-[3]-7-[2]-10-[4]-13
+sp|P61291|PSME3_PIG                 5.4e-59  138-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q4R4V3|PSME3_MACFA               5.4e-59  138-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q5RFD3|PSME3_PONAB               5.4e-59  138-[1]-18-[3]-7-[2]-10-[4]-13
+sp|Q967U1|PSME_DICDI                7.5e-32  109-[1]-18-[3]-7-[2]-10-[4]-13
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence,
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif, and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+1AVO_D
+  LENGTH = 140  COMBINED P-VALUE = 2.13e-69  E-VALUE =    4e-68
+  DIAGRAM: 31-[1]-18-[3]-7-[2]-10-[4]-6
+
+                                    [1]                                [3]
+                                    5.4e-22                            7.3e-22
+                                    WIQHQIPRIEDGNNFGV                  GFHTQISKY
+                                    +++++++++++++++++                  +++++++++
+1    AVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGVAVQEKVFELMTSLHTKLEGFHTQISKY
+
+                    [2]                        [4]
+                    1.2e-21                    2.2e-20
+     FSTRGDAV       HVMDYRQTVHERDEAEY          RNFYATLYHMILKNFEK
+     ++++++++       +++++++++++++++++          +++++++++++++++++
+76   FSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAVLYDIILKNFEKLKKPRG
+
+
+sp|Q06323|PSME1_HUMAN
+  LENGTH = 249  COMBINED P-VALUE = 2.54e-68  E-VALUE =  4.8e-67
+  DIAGRAM: 133-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                               [1]
+                                                               5.4e-22
+                                                               WIQHQIPRIEDGNNFGV
+                                                               +++++++++++++++++
+76   ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+
+                       [3]                     [2]                        [4]
+                       7.3e-22                 1.2e-21                    2.2e-2
+                       GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYAT
+                       +++++++++++++++++       +++++++++++++++++          ++++++
+151  AVQEKVFELMTSLHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+
+     
+     0
+     LYHMILKNFEK
+     +++++++++++
+226  LYDIILKNFEKLKKPRGETKGMIY
+
+
+sp|P58238|PSME1_MACFA
+  LENGTH = 249  COMBINED P-VALUE = 2.54e-68  E-VALUE =  4.8e-67
+  DIAGRAM: 133-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                               [1]
+                                                               5.4e-22
+                                                               WIQHQIPRIEDGNNFGV
+                                                               +++++++++++++++++
+76   ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKILVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+
+                       [3]                     [2]                        [4]
+                       7.3e-22                 1.2e-21                    2.2e-2
+                       GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYAT
+                       +++++++++++++++++       +++++++++++++++++          ++++++
+151  AVQEKVFELMTSLHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+
+     
+     0
+     LYHMILKNFEK
+     +++++++++++
+226  LYDIILKNFEKLKKPRGETKGMIY
+
+
+sp|Q64L94|PSME1_PIG
+  LENGTH = 249  COMBINED P-VALUE = 2.54e-68  E-VALUE =  4.8e-67
+  DIAGRAM: 133-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                               [1]
+                                                               5.4e-22
+                                                               WIQHQIPRIEDGNNFGV
+                                                               +++++++++++++++++
+76   ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+
+                       [3]                     [2]                        [4]
+                       7.3e-22                 1.2e-21                    2.2e-2
+                       GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYAT
+                       +++++++++++++++++       +++++++++++++++++          ++++++
+151  AVQEKVFELMTALHTKLEGFHTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+
+     
+     0
+     LYHMILKNFEK
+     +++++++++++
+226  LYDIILKNFEKLKKPRGETKGMIY
+
+
+sp|Q4U5R3|PSME1_BOVIN
+  LENGTH = 249  COMBINED P-VALUE = 2.54e-68  E-VALUE =  4.8e-67
+  DIAGRAM: 133-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                               [1]
+                                                               5.4e-22
+                                                               WIQHQIPRIEDGNNFGV
+                                                               +++++++++++++++++
+76   ERRKQQEKEDKDEKKKGEDEDKGPPCGPVGCNEKIVVLLQRVKPEIKDVIEKLNLVTTWLQLQIPRIEDGNNFGV
+
+                       [3]                     [2]                        [4]
+                       7.3e-22                 1.2e-21                    2.2e-2
+                       GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYAT
+                       +++++++++++++++++       +++++++++++++++++          ++++++
+151  AVQEKVFELMTALHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+
+     
+     0
+     LYHMILKNFEK
+     +++++++++++
+226  LYDIILKNFEKLKKPRGETKGMIY
+
+
+sp|P97371|PSME1_MOUSE
+  LENGTH = 249  COMBINED P-VALUE = 2.54e-68  E-VALUE =  4.8e-67
+  DIAGRAM: 133-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                               [1]
+                                                               5.4e-22
+                                                               WIQHQIPRIEDGNNFGV
+                                                               +++++++++++++++++
+76   ERKKQQEKEEKEEKKKGDEDDKGPPCGPVNCNEKIVVLLQRLKPEIKDVTEQLNLVTTWLQLQIPRIEDGNNFGV
+
+                       [3]                     [2]                        [4]
+                       7.3e-22                 1.2e-21                    2.2e-2
+                       GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYAT
+                       +++++++++++++++++       +++++++++++++++++          ++++++
+151  AVQEKVFELMTNLHTKLEGFHTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYQEIRLMVMEIRNAYAV
+
+     
+     0
+     LYHMILKNFEK
+     +++++++++++
+226  LYDIILKNFEKLKKPRGETKGMIY
+
+
+sp|Q63797|PSME1_RAT
+  LENGTH = 249  COMBINED P-VALUE = 1.99e-67  E-VALUE =  3.8e-66
+  DIAGRAM: 133-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                               [1]
+                                                               5.4e-22
+                                                               WIQHQIPRIEDGNNFGV
+                                                               +++++++++++++++++
+76   ERKKQQEKEEKDEKKKGDEDDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+
+                       [3]                     [2]                        [4]
+                       6.0e-21                 1.2e-21                    2.2e-2
+                       GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYAT
+                       +++++++++++++++++       +++++++++++++++++          ++++++
+151  AVQAKVFELMTSLHTKLEGFQTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYQEIRLMVMEIRNAYAV
+
+     
+     0
+     LYHMILKNFEK
+     +++++++++++
+226  LYDIILKNFEKLKKPRGETKGMIY
+
+
+sp|Q9UL46|PSME2_HUMAN
+  LENGTH = 239  COMBINED P-VALUE = 1.61e-62  E-VALUE =    3e-61
+  DIAGRAM: 123-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                     [1]
+                                                     5.2e-21
+                                                     WIQHQIPRIEDGNNFGV
+                                                     +++++++++++++++++
+76   DEMETDKQEKKEVHKCGFLPGNEKVLSLLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+
+             [3]                     [2]                        [4]
+             2.3e-19                 4.5e-21                    1.8e-18
+             GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYATLYHMILKNFE
+             +++++++++++++++++       +++++++++++++++++          ++++++++++++++++
+151  NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAAYGELRAMVLDLRAFYAELYHIISSNLE
+
+     
+     
+     K
+     +
+226  KIVNPKGEEKPSMY
+
+
+sp|P97372|PSME2_MOUSE
+  LENGTH = 239  COMBINED P-VALUE = 1.61e-62  E-VALUE =    3e-61
+  DIAGRAM: 123-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                     [1]
+                                                     5.2e-21
+                                                     WIQHQIPRIEDGNNFGV
+                                                     +++++++++++++++++
+76   DEMETDKQEKKEVPKCGYLPGNEKLLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+
+             [3]                     [2]                        [4]
+             2.3e-19                 4.5e-21                    1.8e-18
+             GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYATLYHMILKNFE
+             +++++++++++++++++       +++++++++++++++++          ++++++++++++++++
+151  NAVKTKVEAFQTTISKYFSERGDAVAKASKDTHVMDYRALVHERDEAAYGALRAMVLDLRAFYAELYHIISSNLE
+
+     
+     
+     K
+     +
+226  KIVNPKGEEKPSMY
+
+
+sp|Q63798|PSME2_RAT
+  LENGTH = 238  COMBINED P-VALUE = 9.26e-62  E-VALUE =  1.8e-60
+  DIAGRAM: 122-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                    [1]
+                                                    5.2e-21
+                                                    WIQHQIPRIEDGNNFGV
+                                                    +++++++++++++++++
+76   DEMETEQEKKEVPKCGFLPGNEKLLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERVN
+
+            [3]                     [2]                        [4]
+            1.4e-18                 4.5e-21                    1.8e-18
+            GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYATLYHMILKNFEK
+            +++++++++++++++++       +++++++++++++++++          +++++++++++++++++
+151  AVKTKVEAFQTAISKYFSERGDAVAKASKDTHVMDYRALVHERDEAAYGALRAMVLDLRAFYAELHHIISSNLEK
+
+
+sp|Q5E9G3|PSME2_BOVIN
+  LENGTH = 239  COMBINED P-VALUE = 9.59e-62  E-VALUE =  1.8e-60
+  DIAGRAM: 123-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                     [1]
+                                                     5.2e-21
+                                                     WIQHQIPRIEDGNNFGV
+                                                     +++++++++++++++++
+76   DEMETDKQEKKEVPKCGFLPGNEKVLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+
+             [3]                     [2]                        [4]
+             2.3e-19                 2.8e-20                    1.8e-18
+             GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYATLYHMILKNFE
+             +++++++++++++++++       +++++++++++++++ +          ++++++++++++++++
+151  NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAVYGDLRAMVLDLRAFYAELYHIISSNLE
+
+     
+     
+     K
+     +
+226  KIVNPKGEEKPSMY
+
+
+sp|Q863Z0|PSME2_PIG
+  LENGTH = 239  COMBINED P-VALUE = 1.59e-61  E-VALUE =    3e-60
+  DIAGRAM: 123-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                     [1]
+                                                     5.2e-21
+                                                     WIQHQIPRIEDGNNFGV
+                                                     +++++++++++++++++
+76   DEMETDKQEKKEVPKCGFLPGNEKILALLGLVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAVQEKVLERV
+
+             [3]                     [2]                        [4]
+             2.3e-19                 4.7e-20                    1.8e-18
+             GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYATLYHMILKNFE
+             +++++++++++++++++       +++++++++++++++++          ++++++++++++++++
+151  NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAAHGELRAMVLDLRAFYAELYHIISSNLE
+
+     
+     
+     K
+     +
+226  KIVDPKGEEKPSMY
+
+
+sp|Q5F3J5|PSME3_CHICK
+  LENGTH = 254  COMBINED P-VALUE = 2.84e-60  E-VALUE =  5.4e-59
+  DIAGRAM: 138-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                                    [1]
+                                                                    9.3e-22
+                                                                    WIQHQIPRIEDG
+                                                                    ++++++++++++
+76   HDGLDGPNMKKRKLEDREETFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+
+                            [3]                     [2]                        [
+                            1.2e-16                 9.3e-20                    1
+     NNFGV                  GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          R
+     +++++                  +++++++++++++++++       +++++++++++++++++          +
+151  NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+
+     4]
+     .4e-19
+     NFYATLYHMILKNFEK
+     ++++++++++++++++
+226  NQYVTLHDMILKNIEKIKRPRSSNAETLY
+
+
+sp|P61289|PSME3_HUMAN
+  LENGTH = 254  COMBINED P-VALUE = 2.84e-60  E-VALUE =  5.4e-59
+  DIAGRAM: 138-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                                    [1]
+                                                                    9.3e-22
+                                                                    WIQHQIPRIEDG
+                                                                    ++++++++++++
+76   HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+
+                            [3]                     [2]                        [
+                            1.2e-16                 9.3e-20                    1
+     NNFGV                  GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          R
+     +++++                  +++++++++++++++++       +++++++++++++++++          +
+151  NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+
+     4]
+     .4e-19
+     NFYATLYHMILKNFEK
+     ++++++++++++++++
+226  NQYVTLHDMILKNIEKIKRPRSSNAETLY
+
+
+sp|P61290|PSME3_MOUSE
+  LENGTH = 254  COMBINED P-VALUE = 2.84e-60  E-VALUE =  5.4e-59
+  DIAGRAM: 138-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                                    [1]
+                                                                    9.3e-22
+                                                                    WIQHQIPRIEDG
+                                                                    ++++++++++++
+76   HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+
+                            [3]                     [2]                        [
+                            1.2e-16                 9.3e-20                    1
+     NNFGV                  GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          R
+     +++++                  +++++++++++++++++       +++++++++++++++++          +
+151  NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+
+     4]
+     .4e-19
+     NFYATLYHMILKNFEK
+     ++++++++++++++++
+226  NQYVTLHDMILKNIEKIKRPRSSNAETLY
+
+
+sp|P61291|PSME3_PIG
+  LENGTH = 254  COMBINED P-VALUE = 2.84e-60  E-VALUE =  5.4e-59
+  DIAGRAM: 138-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                                    [1]
+                                                                    9.3e-22
+                                                                    WIQHQIPRIEDG
+                                                                    ++++++++++++
+76   HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+
+                            [3]                     [2]                        [
+                            1.2e-16                 9.3e-20                    1
+     NNFGV                  GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          R
+     +++++                  +++++++++++++++++       +++++++++++++++++          +
+151  NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+
+     4]
+     .4e-19
+     NFYATLYHMILKNFEK
+     ++++++++++++++++
+226  NQYVTLHDMILKNIEKIKRPRSSNAETLY
+
+
+sp|Q4R4V3|PSME3_MACFA
+  LENGTH = 254  COMBINED P-VALUE = 2.84e-60  E-VALUE =  5.4e-59
+  DIAGRAM: 138-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                                    [1]
+                                                                    9.3e-22
+                                                                    WIQHQIPRIEDG
+                                                                    ++++++++++++
+76   HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+
+                            [3]                     [2]                        [
+                            1.2e-16                 9.3e-20                    1
+     NNFGV                  GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          R
+     +++++                  +++++++++++++++++       +++++++++++++++++          +
+151  NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+
+     4]
+     .4e-19
+     NFYATLYHMILKNFEK
+     ++++++++++++++++
+226  NQYVTLHDMILKNIEKIKRPRSSNAETLY
+
+
+sp|Q5RFD3|PSME3_PONAB
+  LENGTH = 254  COMBINED P-VALUE = 2.84e-60  E-VALUE =  5.4e-59
+  DIAGRAM: 138-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                                                    [1]
+                                                                    9.3e-22
+                                                                    WIQHQIPRIEDG
+                                                                    ++++++++++++
+76   HDGLDGPTYKKRRLDDCEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+
+                            [3]                     [2]                        [
+                            1.2e-16                 9.3e-20                    1
+     NNFGV                  GFHTQISKYFSTRGDAV       HVMDYRQTVHERDEAEY          R
+     +++++                  +++++++++++++++++       +++++++++++++++++          +
+151  NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+
+     4]
+     .4e-19
+     NFYATLYHMILKNFEK
+     ++++++++++++++++
+226  NQYVTLHDMILKNIEKIKRPRSSNAETLY
+
+
+sp|Q967U1|PSME_DICDI
+  LENGTH = 225  COMBINED P-VALUE = 3.94e-33  E-VALUE =  7.5e-32
+  DIAGRAM: 109-[1]-18-[3]-7-[2]-10-[4]-13
+
+                                       [1]                                [3]
+                                       6.9e-20                            3.9e-1
+                                       WIQHQIPRIEDGNNFGV                  GFHTQI
+                                       ++ ++++++++++++++                  + +++
+76   IEDLIKTNRVIMETHQKFKKAYIELIETFSVIRGWISLNIPRIEDGNNFGVDVQEDIITQITKLEEVYTSLLDGS
+
+                       [2]                        [4]
+     1                 1.0e-05                    6.6e-13
+     SKYFSTRGDAV       HVMDYRQTVHERDEAEY          RNFYATLYHMILKNFEK
+      ++++++++++         + ++      ++++            +++++ ++ + +++ +
+151  ESYFASRASLVKKILKHKDIEAYRYSLAQVDEKEFTRFSFSYFDLANNYATTYSLIVKNFAKLETPRPTNASNIY
+
+********************************************************************************
+
+
+CPU: admin1-OptiPlex-Tower-Plus-7010
+Time 0.017 secs.
+
+mast -nostatus -oc /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1AVO_D_motifs /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1AVO_D_motifs/meme.xml /media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_2/1AVO_D_hseq.fasta

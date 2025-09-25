@@ -1,0 +1,26 @@
+2025-09-25 22:47:10,198 - INFO - Loaded 10 samples
+2025-09-25 22:47:15,978 - INFO - Epoch 1/20, Train Loss: 0.369760
+2025-09-25 22:47:16,390 - INFO - Epoch 1/20, Validation Loss: 0.333241
+2025-09-25 22:47:19,865 - INFO - Epoch 2/20, Train Loss: 0.363577
+2025-09-25 22:47:20,271 - INFO - Epoch 2/20, Validation Loss: 0.326583
+2025-09-25 22:47:23,825 - INFO - Epoch 3/20, Train Loss: 0.356205
+2025-09-25 22:47:24,247 - INFO - Epoch 3/20, Validation Loss: 0.315896
+2025-09-25 22:47:27,835 - INFO - Epoch 4/20, Train Loss: 0.343341
+2025-09-25 22:47:28,216 - INFO - Epoch 4/20, Validation Loss: 0.298323
+2025-09-25 22:47:31,799 - INFO - Epoch 5/20, Train Loss: 0.321040
+2025-09-25 22:47:32,176 - INFO - Epoch 5/20, Validation Loss: 0.270068
+2025-09-25 22:47:35,695 - INFO - Epoch 6/20, Train Loss: 0.286552
+2025-09-25 22:47:36,165 - INFO - Epoch 6/20, Validation Loss: 0.228765
+2025-09-25 22:47:39,550 - INFO - Epoch 7/20, Train Loss: 0.237060
+2025-09-25 22:47:39,967 - INFO - Epoch 7/20, Validation Loss: 0.173628
+2025-09-25 22:47:43,512 - INFO - Epoch 8/20, Train Loss: 0.174370
+2025-09-25 22:47:43,915 - INFO - Epoch 8/20, Validation Loss: 0.109787
+2025-09-25 22:47:47,769 - INFO - Epoch 9/20, Train Loss: 0.106602
+2025-09-25 22:47:48,188 - INFO - Epoch 9/20, Validation Loss: 0.053257
+2025-09-25 22:47:52,267 - INFO - Epoch 10/20, Train Loss: 0.049609
+2025-09-25 22:47:52,693 - INFO - Epoch 10/20, Validation Loss: 0.020068
+2025-09-25 22:47:57,041 - INFO - Epoch 11/20, Train Loss: 0.017088
+2025-09-25 22:47:57,448 - INFO - Epoch 11/20, Validation Loss: 0.009404
+2025-09-25 22:48:01,891 - INFO - Epoch 12/20, Train Loss: 0.004780
+2025-09-25 22:48:02,405 - INFO - Epoch 12/20, Validation Loss: 0.008579
+2025-09-25 22:48:07,295 - INFO - Epoch 13/20, Train Loss: 0.001901

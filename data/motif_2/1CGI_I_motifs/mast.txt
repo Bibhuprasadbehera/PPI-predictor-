@@ -1,0 +1,4075 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.5.7 (Release date: Wed Jun 19 13:59:04 2024 -0700)
+
+	For further information on how to interpret these results please access https://meme-suite.org/meme.
+	To get a copy of the MAST software please access https://meme-suite.org.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE 1CGI_I_hseq.fasta (peptide)
+	Last updated on Sun Aug 24 22:00:06 2025
+	Database contains 247 sequences, 34636 residues
+
+	MOTIFS meme.xml (peptide)
+	MOTIF ID              ALT ID WIDTH BEST POSSIBLE MATCH
+	----- --------------- ------ ----- -------------------
+	    1 RPLCGSDNKTYGNKC MEME-1    15 MPLCGSDNKTYGNKC
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.073 C 0.018 D 0.052 E 0.062 F 0.040 G 0.069 H 0.022 I 0.056 K 0.058 
+	L 0.092 M 0.023 N 0.046 P 0.051 Q 0.041 R 0.052 S 0.074 T 0.059 V 0.064 
+	W 0.013 Y 0.033 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 247 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+sp|P52253|IOVO_SCYNO                                              8.5e-17     52
+sp|P68129|IOVO_CYGAT                                              8.9e-17     54
+sp|P68130|IOVO_CYGOL                                              8.9e-17     54
+sp|P68131|IOVO_OXYJA                                              8.9e-17     54
+sp|P68132|IOVO_OXYVI                                              8.9e-17     54
+sp|P67889|IOVO_DENAR                                              8.9e-17     54
+sp|P67890|IOVO_DENAC                                              8.9e-17     54
+sp|P67891|IOVO_DENAU                                              8.9e-17     54
+sp|P67892|IOVO_DENBI                                              8.9e-17     54
+sp|P05571|IOVO_COSCO                                              8.9e-17     54
+sp|P68393|IOVO_BRACA                                              8.9e-17     54
+sp|P68394|IOVO_ANSCA                                              8.9e-17     54
+sp|P68144|IOVO_AIXGA                                              8.9e-17     54
+sp|P68145|IOVO_AIXSP                                              8.9e-17     54
+sp|P68148|IOVO_ALOAE                                              8.9e-17     54
+sp|P68149|IOVO_ANACA                                              8.9e-17     54
+sp|P68150|IOVO_ANAPL                                              8.9e-17     54
+sp|P68151|IOVO_CHLPI                                              8.9e-17     54
+sp|P68152|IOVO_CYACY                                              8.9e-17     54
+sp|P68153|IOVO_LOPSP                                              8.9e-17     54
+sp|P68154|IOVO_LOPCU                                              8.9e-17     54
+sp|P68155|IOVO_NEOJU                                              8.9e-17     54
+sp|P68156|IOVO_SARME                                              8.9e-17     54
+sp|P68157|IOVO_TADRA                                              8.9e-17     54
+sp|P68391|IOVO_AYTAM                                              8.9e-17     54
+sp|P68392|IOVO_NETRU                                              8.9e-17     54
+sp|P05569|IOVO_DENEY                                              8.9e-17     54
+sp|P52246|IOVO_GUIGU                                              8.9e-17     54
+sp|P05575|IOVO_CERNO                                              8.9e-17     54
+sp|P05615|IOVO_GEOCA                                              8.9e-17     54
+sp|P52244|IOVO_COLMD                                              2.5e-16     54
+sp|P52243|IOVO_CORAL                                              2.5e-16     54
+sp|P52269|IOVO_SYRMI                                              6.5e-16     54
+sp|P52263|IOVO_PAVMU                                              6.5e-16     54
+sp|P05605|IOVO_SYRRE                                              6.8e-16     56
+sp|P68470|IOVO_PHACO                                              6.8e-16     56
+sp|P68471|IOVO_PHAVE                                              6.8e-16     56
+sp|P67944|IOVO_TYMCU                                              6.8e-16     56
+sp|P67945|IOVO_CENUR                                              6.8e-16     56
+sp|P67946|IOVO_TRABL                                              6.8e-16     56
+sp|P67947|IOVO_TRACA                                              6.8e-16     56
+sp|P67948|IOVO_TRASA                                              6.8e-16     56
+sp|P67949|IOVO_TRATE                                              6.8e-16     56
+sp|P67950|IOVO_LOPIM                                              6.8e-16     56
+sp|P67951|IOVO_CROAU                                              6.8e-16     56
+sp|P67952|IOVO_CROMA                                              6.8e-16     56
+sp|P67953|IOVO_LOPED                                              6.8e-16     56
+sp|P67954|IOVO_LOPNY                                              6.8e-16     56
+sp|P67955|IOVO_LOPSW                                              6.8e-16     56
+sp|P67956|IOVO_PUCMA                                              6.8e-16     56
+sp|P67957|IOVO_CATWA                                              6.8e-16     56
+sp|P67958|IOVO_SYREL                                              6.8e-16     56
+sp|P67959|IOVO_SYRHU                                              6.8e-16     56
+sp|P67960|IOVO_SYRSO                                              6.8e-16     56
+sp|P67961|IOVO_LAGLU                                              6.8e-16     56
+sp|P52245|IOVO_CROCS                                              6.8e-16     56
+sp|P68436|IOVO_MELOE                                              6.8e-16     56
+sp|P05599|IOVO_PERPE                                              6.8e-16     56
+sp|P68127|IOVO_CHRPC                                              6.8e-16     56
+sp|P68128|IOVO_CHRAM                                              6.8e-16     56
+sp|P05585|IOVO_BONUM                                              6.8e-16     56
+sp|P52261|IOVO_LOPBU                                              6.8e-16     56
+sp|P05609|IOVO_PAVCR                                              6.8e-16     56
+sp|P52258|IOVO_AFRCO                                              6.8e-16     56
+sp|P05598|IOVO_FRAPO                                              6.8e-16     56
+sp|P52267|IOVO_GALVA                                              6.8e-16     56
+sp|P68389|IOVO_ANSAN                                              7.1e-16     54
+sp|P68437|IOVO_ANSIN                                              7.1e-16     54
+sp|P52249|IOVO_OPIHO                                              7.1e-16     54
+sp|P05600|IOVO_COTDE                                              1.4e-15     52
+sp|P05601|IOVO_ARBTO                                              1.4e-15     53
+sp|P68390|IOVO_MELGA                                              2.8e-15    185
+sp|P01005|IOVO_CHICK                                              3.2e-15    210
+sp|P68468|IOVO_NUMME                                              3.6e-15     54
+sp|P68469|IOVO_ACRVU                                              3.6e-15     54
+sp|P67887|IOVO_CHACH                                              3.6e-15     54
+sp|P67888|IOVO_CHATO                                              3.6e-15     54
+sp|P05567|IOVO_ANSSE                                              3.6e-15     54
+sp|P52262|IOVO_LOPLE                                              3.8e-15     56
+sp|P05563|IOVO_SPHHU                                              5.3e-15     54
+sp|P67942|IOVO_RHEAM                                              5.3e-15     54
+sp|P67943|IOVO_RHEPE                                              5.3e-15     54
+sp|P05564|IOVO_PHASU                                              5.3e-15     54
+sp|P05565|IOVO_ANHNO                                              5.3e-15     54
+sp|P05579|IOVO_CIRAE                                              5.3e-15     54
+sp|P67940|IOVO_LEUAL                                              5.3e-15     54
+sp|P67941|IOVO_PYGAD                                              5.3e-15     54
+sp|P68374|IOVO_GYPCO                                              5.3e-15     54
+sp|P68375|IOVO_POLRA                                              5.3e-15     54
+sp|P68376|IOVO_AQUAU                                              5.3e-15     54
+sp|P68377|IOVO_NECMO                                              5.3e-15     54
+sp|P52268|IOVO_HALAL                                              5.3e-15     54
+sp|P05577|IOVO_HALIN                                              5.3e-15     54
+sp|P68384|IOVO_VANSP                                              5.3e-15     54
+sp|P68385|IOVO_LARMA                                              5.3e-15     54
+sp|P68386|IOVO_CHRRI                                              5.3e-15     54
+sp|P05557|IOVO_STRCA                                              5.3e-15     54
+sp|P52264|IOVO_PODST                                              5.3e-15     54
+sp|P20846|IOVO_VULGR                                              5.3e-15     54
+sp|P52259|IOVO_BAMTH                                              5.5e-15     56
+sp|P68387|IOVO_CALCC                                              6.8e-15     56
+sp|P68388|IOVO_CALGM                                              6.8e-15     56
+sp|P05589|IOVO_CALSC                                              6.8e-15     56
+sp|P05566|IOVO_NYCNY                                                9e-15     54
+sp|P01003|IOVO_COTJA                                                1e-14    186
+sp|P68146|IOVO_ALECH                                              1.1e-14     54
+sp|P68147|IOVO_ALERU                                              1.1e-14     54
+sp|P05595|IOVO_PELCO                                              1.7e-14     53
+sp|P05594|IOVO_PTEAF                                              1.7e-14     53
+sp|P05596|IOVO_PTEER                                              1.8e-14     56
+sp|P05570|IOVO_DENVD                                              2.4e-14     54
+sp|P52260|IOVO_GUTPU                                              2.8e-14     54
+sp|P05587|IOVO_OREPI                                              6.2e-14     56
+sp|P67895|IOVO_PENJC                                              6.2e-14     56
+sp|P67896|IOVO_PENSU                                              6.2e-14     56
+sp|P05584|IOVO_PIPPP                                              6.2e-14     56
+sp|P68380|IOVO_GRUJA                                              6.8e-14     54
+sp|P68381|IOVO_ANTVI                                              6.8e-14     54
+sp|P68382|IOVO_ANTVP                                              6.8e-14     54
+sp|P68383|IOVO_BUGCA                                              6.8e-14     54
+sp|P52239|IOVO_BALPA                                              6.8e-14     54
+sp|P52256|IOVO_TURME                                              6.8e-14     54
+sp|P05617|IOVO_DACNO                                                8e-14     55
+sp|P52250|IOVO_POLNP                                              8.4e-14     51
+sp|P62336|IOVO_CASBE                                                9e-14     54
+sp|P62337|IOVO_CASCA                                                9e-14     54
+sp|P0DKM9|TU11_LOPAL                                              1.2e-13     45
+sp|P52265|IOVO_CARPF                                              1.4e-13     54
+sp|P52254|IOVO_TINMA                                              1.5e-13     51
+sp|P05562|IOVO_EUDEL                                              1.5e-13     51
+sp|P52251|IOVO_RHYFU                                              1.5e-13     51
+sp|P05581|IOVO_LEIOC                                              1.6e-13     54
+sp|P05580|IOVO_MEGFR                                              1.6e-13     54
+sp|P05616|IOVO_CARRE                                              1.6e-13     54
+sp|P05591|IOVO_COLVI                                              2.2e-13     56
+sp|P0DKT5|TU91_GEMLI                                              2.2e-13     70
+sp|P05592|IOVO_CYRMO                                              2.5e-13     56
+sp|P05582|IOVO_ORTVE                                              2.5e-13     56
+sp|P67893|IOVO_LOPDI                                              3.7e-13     56
+sp|P67894|IOVO_LOPIG                                              3.7e-13     56
+sp|P05561|IOVO_NOTCI                                              4.2e-13     51
+sp|P52248|IOVO_NOTPE                                              4.2e-13     51
+sp|P0DKM8|TU91_IOTCI                                              4.3e-13     47
+sp|P05560|IOVO_DRONO                                              4.4e-13    207
+sp|P05608|IOVO_ARGAR                                              5.2e-13     54
+sp|Q6IE47|ISK6_RAT                                                5.4e-13    105
+sp|Q8BT20|ISK6_MOUSE                                              5.4e-13    105
+sp|P52241|IOVO_AEPAR                                              5.9e-13     54
+sp|P0DKT3|TU93_GEMSP                                              6.4e-13     70
+sp|P0DKT2|TU92_GEMSO                                              6.4e-13     70
+sp|P52252|IOVO_ROLRO                                                7e-13     56
+sp|P52242|IOVO_HAEME                                              7.6e-13     54
+sp|P68378|IOVO_FULAT                                              7.6e-13     54
+sp|P68379|IOVO_GALCH                                              7.6e-13     54
+sp|P52266|IOVO_GALAS                                              7.6e-13     54
+sp|P05588|IOVO_CALSP                                              1.1e-12     56
+sp|P05597|IOVO_FRAFR                                              1.2e-12     53
+sp|P01002|IPSG_CANLF                                              1.3e-12    115
+sp|P08479|IPSG_VULVU                                              1.3e-12    115
+sp|P0DKT1|TU92_POLAB                                              1.5e-12     70
+sp|P0DKM7|TU91_IOTOL                                              1.9e-12     70
+sp|P05607|IOVO_POLBI                                              3.4e-12     53
+sp|P01001|ISK6_BOVIN                                              5.8e-12     80
+sp|Q6UWN8|ISK6_HUMAN                                              5.8e-12     80
+sp|P00998|ISK1_PIG                                                5.8e-12     56
+sp|P09656|ISK1L_RAT                                               6.4e-12     79
+sp|P04542|ISK1_CANLF                                              8.3e-12     57
+sp|P16895|IELA_ANESU                                              1.1e-11     48
+1CGI_I                                                            1.7e-11     56
+sp|Q6IE51|ISK7_RAT                                                  2e-11     74
+sp|P85000|ISK1L_CHICK                                             2.9e-11     55
+sp|P09036|ISK1_MOUSE                                                3e-11     80
+sp|P81262|IPSG_PANUN                                              3.6e-11    122
+sp|P81482|IPSG_MARMT                                              3.6e-11    122
+sp|P81481|IPSG_MUSLU                                                4e-11    122
+sp|P08481|IPSG_PANLE                                              4.1e-11    112
+sp|P00996|ISK1_BOVIN                                              4.1e-11     79
+sp|P81634|ISK1_HORSE                                                5e-11     56
+sp|P0DKT4|TU92_IOTCI                                                6e-11     70
+sp|P00997|ISK1_SHEEP                                              6.1e-11     56
+sp|Q9D256|ISK12_MOUSE                                               7e-11     87
+sp|P34953|ISK2_MACFA                                              7.9e-11     81
+sp|P08480|IPSG_FELCA                                              9.3e-11    111
+sp|P00995|ISK1_HUMAN                                                1e-10     79
+sp|P11706|ISK1_ANGAN                                              1.3e-10     61
+sp|Q8BMY7|ISK2_MOUSE                                              1.3e-10     86
+sp|P58062|ISK7_HUMAN                                              1.4e-10     85
+sp|P20155|ISK2_HUMAN                                              1.7e-10     84
+sp|P16226|IPSG_MELME                                              1.9e-10    122
+sp|P83039|ICHY_CAIMO                                                3e-10     65
+sp|P80424|LDTI_HIRME                                                3e-10     46
+sp|Q6PQG3|EPI10_PHYIN                                               3e-10    224
+sp|P31514|FST_SHEEP                                               3.1e-10    337
+sp|D0NJ41|EPI10_PHYIT                                             3.1e-10    228
+sp|Q90844|FST_CHICK                                               3.2e-10    343
+sp|P50291|FST_BOVIN                                               3.2e-10    344
+sp|P21674|FST_RAT                                                 3.2e-10    344
+sp|P47931|FST_MOUSE                                               3.2e-10    344
+sp|O62650|FST_HORSE                                               3.2e-10    344
+sp|P10669|FST_PIG                                                 3.2e-10    344
+sp|P19883|FST_HUMAN                                               3.2e-10    344
+sp|P84755|IPK2_CENMR                                              3.4e-10     50
+sp|O96790|DPGN_DIPMA                                              3.6e-10    351
+sp|Q5DT21|ISK9_HUMAN                                              3.8e-10     86
+sp|P82968|MCPI_MELCP                                                4e-10    197
+sp|P31696|AGRIN_CHICK                                             4.4e-10   2081
+sp|P81635|ISK1_MONDO                                              5.6e-10     55
+sp|Q9PSM2|ISK1_STRCA                                              6.3e-10     69
+sp|P10184|IOV7_CHICK                                              7.3e-10    517
+sp|Q6IE49|ISK2_RAT                                                7.5e-10     86
+sp|Q9YHV4|FSTA_DANRE                                                1e-09    322
+sp|Q8CAC8|ISK10_MOUSE                                             1.3e-09    162
+sp|P83578|IKP1_PHYSA                                              2.6e-09     58
+sp|P09865|IBD3_HIRME                                              3.9e-09     56
+sp|Q91590|TEFF1_XENLA                                             4.5e-09    370
+sp|Q6PFE7|TEFF1_MOUSE                                             4.5e-09    372
+sp|Q9QYV1|TEFF1_RAT                                               4.5e-09    373
+sp|Q8IYR6|TEFF1_HUMAN                                             4.6e-09    380
+sp|Q06684|THBI_RHOPR                                              5.3e-09    103
+sp|P22074|CALT_CAVPO                                              7.4e-09     45
+sp|P09655|ISK1_RAT                                                7.8e-09     79
+sp|P00999|IACA_PIG                                                9.4e-09     65
+sp|A5YT95|FST_BUBBU                                               1.1e-08    344
+sp|A2ASQ1|AGRIN_MOUSE                                             1.4e-08   1950
+sp|P25304|AGRIN_RAT                                               1.4e-08   1959
+sp|O00468|AGRIN_HUMAN                                             1.5e-08   2068
+sp|P26461|IACS_PIG                                                1.5e-08     97
+sp|Q9QYM9|TEFF2_MOUSE                                             1.6e-08    374
+sp|Q17QD6|TEFF2_BOVIN                                             1.6e-08    374
+sp|Q9UIK5|TEFF2_HUMAN                                             1.6e-08    374
+sp|P37109|ISK4_PIG                                                1.7e-08     86
+sp|P01000|IAC1_BOVIN                                                4e-08     63
+sp|Q6IE38|ISK14_HUMAN                                             4.9e-08     97
+sp|O60575|ISK4_HUMAN                                              5.9e-08     86
+sp|O35679|ISK4_MOUSE                                              6.4e-08     86
+sp|Q90404|AGRIN_DIPOM                                             6.5e-08   1328
+sp|Q9NQ38|ISK5_HUMAN                                              9.7e-08   1064
+sp|Q6IE46|ISK14_RAT                                               1.5e-07     98
+sp|P86987|IMSP6_RUDPH                                             1.6e-07    183
+sp|Q1W4C9|ISK13_HUMAN                                             2.9e-07     94
+sp|P83579|IKP2_PHYSA                                                9e-07     58
+sp|P31515|FST_XENLA                                                 3e-06    341
+sp|A0A3G5BID2|KAZL2_DOLGE                                         6.8e-06    202
+sp|A0A1D5PUP4|RECK_CHICK                                            8e-06    963
+sp|O95980|RECK_HUMAN                                              8.1e-06    971
+sp|O97176|ESM1_DROME                                              9.3e-05    156
+sp|B4QW11|ESM1_DROSI                                              9.3e-05    156
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [n]  occurrence of motif `n' with p-value less than 0.0001.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+sp|P52253|IOVO_SCYNO                8.5e-17  16-[1]-21
+sp|P68129|IOVO_CYGAT                8.9e-17  18-[1]-21
+sp|P68130|IOVO_CYGOL                8.9e-17  18-[1]-21
+sp|P68131|IOVO_OXYJA                8.9e-17  18-[1]-21
+sp|P68132|IOVO_OXYVI                8.9e-17  18-[1]-21
+sp|P67889|IOVO_DENAR                8.9e-17  18-[1]-21
+sp|P67890|IOVO_DENAC                8.9e-17  18-[1]-21
+sp|P67891|IOVO_DENAU                8.9e-17  18-[1]-21
+sp|P67892|IOVO_DENBI                8.9e-17  18-[1]-21
+sp|P05571|IOVO_COSCO                8.9e-17  18-[1]-21
+sp|P68393|IOVO_BRACA                8.9e-17  18-[1]-21
+sp|P68394|IOVO_ANSCA                8.9e-17  18-[1]-21
+sp|P68144|IOVO_AIXGA                8.9e-17  18-[1]-21
+sp|P68145|IOVO_AIXSP                8.9e-17  18-[1]-21
+sp|P68148|IOVO_ALOAE                8.9e-17  18-[1]-21
+sp|P68149|IOVO_ANACA                8.9e-17  18-[1]-21
+sp|P68150|IOVO_ANAPL                8.9e-17  18-[1]-21
+sp|P68151|IOVO_CHLPI                8.9e-17  18-[1]-21
+sp|P68152|IOVO_CYACY                8.9e-17  18-[1]-21
+sp|P68153|IOVO_LOPSP                8.9e-17  18-[1]-21
+sp|P68154|IOVO_LOPCU                8.9e-17  18-[1]-21
+sp|P68155|IOVO_NEOJU                8.9e-17  18-[1]-21
+sp|P68156|IOVO_SARME                8.9e-17  18-[1]-21
+sp|P68157|IOVO_TADRA                8.9e-17  18-[1]-21
+sp|P68391|IOVO_AYTAM                8.9e-17  18-[1]-21
+sp|P68392|IOVO_NETRU                8.9e-17  18-[1]-21
+sp|P05569|IOVO_DENEY                8.9e-17  18-[1]-21
+sp|P52246|IOVO_GUIGU                8.9e-17  18-[1]-21
+sp|P05575|IOVO_CERNO                8.9e-17  18-[1]-21
+sp|P05615|IOVO_GEOCA                8.9e-17  18-[1]-21
+sp|P52244|IOVO_COLMD                2.5e-16  18-[1]-21
+sp|P52243|IOVO_CORAL                2.5e-16  18-[1]-21
+sp|P52269|IOVO_SYRMI                6.5e-16  18-[1]-21
+sp|P52263|IOVO_PAVMU                6.5e-16  18-[1]-21
+sp|P05605|IOVO_SYRRE                6.8e-16  20-[1]-21
+sp|P68470|IOVO_PHACO                6.8e-16  20-[1]-21
+sp|P68471|IOVO_PHAVE                6.8e-16  20-[1]-21
+sp|P67944|IOVO_TYMCU                6.8e-16  20-[1]-21
+sp|P67945|IOVO_CENUR                6.8e-16  20-[1]-21
+sp|P67946|IOVO_TRABL                6.8e-16  20-[1]-21
+sp|P67947|IOVO_TRACA                6.8e-16  20-[1]-21
+sp|P67948|IOVO_TRASA                6.8e-16  20-[1]-21
+sp|P67949|IOVO_TRATE                6.8e-16  20-[1]-21
+sp|P67950|IOVO_LOPIM                6.8e-16  20-[1]-21
+sp|P67951|IOVO_CROAU                6.8e-16  20-[1]-21
+sp|P67952|IOVO_CROMA                6.8e-16  20-[1]-21
+sp|P67953|IOVO_LOPED                6.8e-16  20-[1]-21
+sp|P67954|IOVO_LOPNY                6.8e-16  20-[1]-21
+sp|P67955|IOVO_LOPSW                6.8e-16  20-[1]-21
+sp|P67956|IOVO_PUCMA                6.8e-16  20-[1]-21
+sp|P67957|IOVO_CATWA                6.8e-16  20-[1]-21
+sp|P67958|IOVO_SYREL                6.8e-16  20-[1]-21
+sp|P67959|IOVO_SYRHU                6.8e-16  20-[1]-21
+sp|P67960|IOVO_SYRSO                6.8e-16  20-[1]-21
+sp|P67961|IOVO_LAGLU                6.8e-16  20-[1]-21
+sp|P52245|IOVO_CROCS                6.8e-16  20-[1]-21
+sp|P68436|IOVO_MELOE                6.8e-16  20-[1]-21
+sp|P05599|IOVO_PERPE                6.8e-16  20-[1]-21
+sp|P68127|IOVO_CHRPC                6.8e-16  20-[1]-21
+sp|P68128|IOVO_CHRAM                6.8e-16  20-[1]-21
+sp|P05585|IOVO_BONUM                6.8e-16  20-[1]-21
+sp|P52261|IOVO_LOPBU                6.8e-16  20-[1]-21
+sp|P05609|IOVO_PAVCR                6.8e-16  20-[1]-21
+sp|P52258|IOVO_AFRCO                6.8e-16  20-[1]-21
+sp|P05598|IOVO_FRAPO                6.8e-16  20-[1]-21
+sp|P52267|IOVO_GALVA                6.8e-16  20-[1]-21
+sp|P68389|IOVO_ANSAN                7.1e-16  18-[1]-21
+sp|P68437|IOVO_ANSIN                7.1e-16  18-[1]-21
+sp|P52249|IOVO_OPIHO                7.1e-16  18-[1]-21
+sp|P05600|IOVO_COTDE                1.4e-15  16-[1]-21
+sp|P05601|IOVO_ARBTO                1.4e-15  17-[1]-21
+sp|P68390|IOVO_MELGA                2.8e-15  26-[1]-49-[1]-44-[1]-21
+sp|P01005|IOVO_CHICK                3.2e-15  50-[1]-50-[1]-44-[1]-21
+sp|P68468|IOVO_NUMME                3.6e-15  18-[1]-21
+sp|P68469|IOVO_ACRVU                3.6e-15  18-[1]-21
+sp|P67887|IOVO_CHACH                3.6e-15  18-[1]-21
+sp|P67888|IOVO_CHATO                3.6e-15  18-[1]-21
+sp|P05567|IOVO_ANSSE                3.6e-15  18-[1]-21
+sp|P52262|IOVO_LOPLE                3.8e-15  20-[1]-21
+sp|P05563|IOVO_SPHHU                5.3e-15  18-[1]-21
+sp|P67942|IOVO_RHEAM                5.3e-15  18-[1]-21
+sp|P67943|IOVO_RHEPE                5.3e-15  18-[1]-21
+sp|P05564|IOVO_PHASU                5.3e-15  18-[1]-21
+sp|P05565|IOVO_ANHNO                5.3e-15  18-[1]-21
+sp|P05579|IOVO_CIRAE                5.3e-15  18-[1]-21
+sp|P67940|IOVO_LEUAL                5.3e-15  18-[1]-21
+sp|P67941|IOVO_PYGAD                5.3e-15  18-[1]-21
+sp|P68374|IOVO_GYPCO                5.3e-15  18-[1]-21
+sp|P68375|IOVO_POLRA                5.3e-15  18-[1]-21
+sp|P68376|IOVO_AQUAU                5.3e-15  18-[1]-21
+sp|P68377|IOVO_NECMO                5.3e-15  18-[1]-21
+sp|P52268|IOVO_HALAL                5.3e-15  18-[1]-21
+sp|P05577|IOVO_HALIN                5.3e-15  18-[1]-21
+sp|P68384|IOVO_VANSP                5.3e-15  18-[1]-21
+sp|P68385|IOVO_LARMA                5.3e-15  18-[1]-21
+sp|P68386|IOVO_CHRRI                5.3e-15  18-[1]-21
+sp|P05557|IOVO_STRCA                5.3e-15  18-[1]-21
+sp|P52264|IOVO_PODST                5.3e-15  18-[1]-21
+sp|P20846|IOVO_VULGR                5.3e-15  18-[1]-21
+sp|P52259|IOVO_BAMTH                5.5e-15  20-[1]-21
+sp|P68387|IOVO_CALCC                6.8e-15  20-[1]-21
+sp|P68388|IOVO_CALGM                6.8e-15  20-[1]-21
+sp|P05589|IOVO_CALSC                6.8e-15  20-[1]-21
+sp|P05566|IOVO_NYCNY                  9e-15  18-[1]-21
+sp|P01003|IOVO_COTJA                  1e-14  26-[1]-50-[1]-44-[1]-21
+sp|P68146|IOVO_ALECH                1.1e-14  18-[1]-21
+sp|P68147|IOVO_ALERU                1.1e-14  18-[1]-21
+sp|P05595|IOVO_PELCO                1.7e-14  17-[1]-21
+sp|P05594|IOVO_PTEAF                1.7e-14  17-[1]-21
+sp|P05596|IOVO_PTEER                1.8e-14  20-[1]-21
+sp|P05570|IOVO_DENVD                2.4e-14  18-[1]-21
+sp|P52260|IOVO_GUTPU                2.8e-14  18-[1]-21
+sp|P05587|IOVO_OREPI                6.2e-14  20-[1]-21
+sp|P67895|IOVO_PENJC                6.2e-14  20-[1]-21
+sp|P67896|IOVO_PENSU                6.2e-14  20-[1]-21
+sp|P05584|IOVO_PIPPP                6.2e-14  20-[1]-21
+sp|P68380|IOVO_GRUJA                6.8e-14  18-[1]-21
+sp|P68381|IOVO_ANTVI                6.8e-14  18-[1]-21
+sp|P68382|IOVO_ANTVP                6.8e-14  18-[1]-21
+sp|P68383|IOVO_BUGCA                6.8e-14  18-[1]-21
+sp|P52239|IOVO_BALPA                6.8e-14  18-[1]-21
+sp|P52256|IOVO_TURME                6.8e-14  18-[1]-21
+sp|P05617|IOVO_DACNO                  8e-14  19-[1]-21
+sp|P52250|IOVO_POLNP                8.4e-14  15-[1]-21
+sp|P62336|IOVO_CASBE                  9e-14  18-[1]-21
+sp|P62337|IOVO_CASCA                  9e-14  18-[1]-21
+sp|P0DKM9|TU11_LOPAL                1.2e-13  9-[1]-21
+sp|P52265|IOVO_CARPF                1.4e-13  18-[1]-21
+sp|P52254|IOVO_TINMA                1.5e-13  17-[1]-19
+sp|P05562|IOVO_EUDEL                1.5e-13  17-[1]-19
+sp|P52251|IOVO_RHYFU                1.5e-13  17-[1]-19
+sp|P05581|IOVO_LEIOC                1.6e-13  18-[1]-21
+sp|P05580|IOVO_MEGFR                1.6e-13  18-[1]-21
+sp|P05616|IOVO_CARRE                1.6e-13  18-[1]-21
+sp|P05591|IOVO_COLVI                2.2e-13  20-[1]-21
+sp|P0DKT5|TU91_GEMLI                2.2e-13  34-[1]-21
+sp|P05592|IOVO_CYRMO                2.5e-13  20-[1]-21
+sp|P05582|IOVO_ORTVE                2.5e-13  20-[1]-21
+sp|P67893|IOVO_LOPDI                3.7e-13  20-[1]-21
+sp|P67894|IOVO_LOPIG                3.7e-13  20-[1]-21
+sp|P05561|IOVO_NOTCI                4.2e-13  17-[1]-19
+sp|P52248|IOVO_NOTPE                4.2e-13  17-[1]-19
+sp|P0DKM8|TU91_IOTCI                4.3e-13  9-[1]-23
+sp|P05560|IOVO_DRONO                4.4e-13  49-[1]-50-[1]-42-[1]-21
+sp|P05608|IOVO_ARGAR                5.2e-13  18-[1]-21
+sp|Q6IE47|ISK6_RAT                  5.4e-13  69-[1]-21
+sp|Q8BT20|ISK6_MOUSE                5.4e-13  69-[1]-21
+sp|P52241|IOVO_AEPAR                5.9e-13  18-[1]-21
+sp|P0DKT3|TU93_GEMSP                6.4e-13  34-[1]-21
+sp|P0DKT2|TU92_GEMSO                6.4e-13  34-[1]-21
+sp|P52252|IOVO_ROLRO                  7e-13  20-[1]-21
+sp|P52242|IOVO_HAEME                7.6e-13  18-[1]-21
+sp|P68378|IOVO_FULAT                7.6e-13  18-[1]-21
+sp|P68379|IOVO_GALCH                7.6e-13  18-[1]-21
+sp|P52266|IOVO_GALAS                7.6e-13  18-[1]-21
+sp|P05588|IOVO_CALSP                1.1e-12  20-[1]-21
+sp|P05597|IOVO_FRAFR                1.2e-12  17-[1]-21
+sp|P01002|IPSG_CANLF                1.3e-12  28-[1]-36-[1]-21
+sp|P08479|IPSG_VULVU                1.3e-12  28-[1]-36-[1]-21
+sp|P0DKT1|TU92_POLAB                1.5e-12  34-[1]-21
+sp|P0DKM7|TU91_IOTOL                1.9e-12  34-[1]-21
+sp|P05607|IOVO_POLBI                3.4e-12  17-[1]-21
+sp|P01001|ISK6_BOVIN                5.8e-12  44-[1]-21
+sp|Q6UWN8|ISK6_HUMAN                5.8e-12  44-[1]-21
+sp|P00998|ISK1_PIG                  5.8e-12  20-[1]-21
+sp|P09656|ISK1L_RAT                 6.4e-12  43-[1]-21
+sp|P04542|ISK1_CANLF                8.3e-12  21-[1]-21
+sp|P16895|IELA_ANESU                1.1e-11  12-[1]-21
+1CGI_I                              1.7e-11  20-[1]-21
+sp|Q6IE51|ISK7_RAT                    2e-11  38-[1]-21
+sp|P85000|ISK1L_CHICK               2.9e-11  19-[1]-21
+sp|P09036|ISK1_MOUSE                  3e-11  44-[1]-21
+sp|P81262|IPSG_PANUN                3.6e-11  32-[1]-36-[1]-24
+sp|P81482|IPSG_MARMT                3.6e-11  32-[1]-36-[1]-24
+sp|P81481|IPSG_MUSLU                  4e-11  32-[1]-36-[1]-24
+sp|P08481|IPSG_PANLE                4.1e-11  24-[1]-36-[1]-22
+sp|P00996|ISK1_BOVIN                4.1e-11  43-[1]-21
+sp|P81634|ISK1_HORSE                  5e-11  20-[1]-21
+sp|P0DKT4|TU92_IOTCI                  6e-11  34-[1]-21
+sp|P00997|ISK1_SHEEP                6.1e-11  20-[1]-21
+sp|Q9D256|ISK12_MOUSE                 7e-11  50-[1]-22
+sp|P34953|ISK2_MACFA                7.9e-11  45-[1]-21
+sp|P08480|IPSG_FELCA                9.3e-11  24-[1]-36-[1]-21
+sp|P00995|ISK1_HUMAN                  1e-10  43-[1]-21
+sp|P11706|ISK1_ANGAN                1.3e-10  25-[1]-21
+sp|Q8BMY7|ISK2_MOUSE                1.3e-10  50-[1]-21
+sp|P58062|ISK7_HUMAN                1.4e-10  49-[1]-21
+sp|P20155|ISK2_HUMAN                1.7e-10  48-[1]-21
+sp|P16226|IPSG_MELME                1.9e-10  32-[1]-36-[1]-24
+sp|P83039|ICHY_CAIMO                  3e-10  26-[1]-24
+sp|P80424|LDTI_HIRME                  3e-10  10-[1]-21
+sp|Q6PQG3|EPI10_PHYIN                 3e-10  34-[1]-55-[1]-52-[1]-38
+sp|P31514|FST_SHEEP                 3.1e-10  121-[1]-60-[1]-62-[1]-49
+sp|D0NJ41|EPI10_PHYIT               3.1e-10  34-[1]-55-[1]-52-[1]-42
+sp|Q90844|FST_CHICK                 3.2e-10  127-[1]-60-[1]-62-[1]-49
+sp|P50291|FST_BOVIN                 3.2e-10  128-[1]-60-[1]-62-[1]-49
+sp|P21674|FST_RAT                   3.2e-10  128-[1]-60-[1]-62-[1]-49
+sp|P47931|FST_MOUSE                 3.2e-10  128-[1]-60-[1]-62-[1]-49
+sp|O62650|FST_HORSE                 3.2e-10  128-[1]-60-[1]-62-[1]-49
+sp|P10669|FST_PIG                   3.2e-10  128-[1]-60-[1]-62-[1]-49
+sp|P19883|FST_HUMAN                 3.2e-10  128-[1]-60-[1]-62-[1]-49
+sp|P84755|IPK2_CENMR                3.4e-10  14-[1]-21
+sp|O96790|DPGN_DIPMA                3.6e-10  31-[1]-38-[1]-44-[1]-38-[1]-41-[1]-42-[1]-27
+sp|Q5DT21|ISK9_HUMAN                3.8e-10  50-[1]-21
+sp|P82968|MCPI_MELCP                  4e-10  9-[1]-33-[1]-33-[1]-77
+sp|P31696|AGRIN_CHICK               4.4e-10  208-[1]-60-[1]-57-[1]-56-[1]-59-[1]-50-[1]-50-[1]-70-[1]-203-[1]-1133
+sp|P81635|ISK1_MONDO                5.6e-10  19-[1]-21
+sp|Q9PSM2|ISK1_STRCA                6.3e-10  27-[1]-27
+sp|P10184|IOV7_CHICK                7.3e-10  94-[1]-50-[1]-51-[1]-51-[1]-50-[1]-51-[1]-44-[1]-21
+sp|Q6IE49|ISK2_RAT                  7.5e-10  50-[1]-21
+sp|Q9YHV4|FSTA_DANRE                  1e-09  131-[1]-60-[1]-62-[1]-24
+sp|Q8CAC8|ISK10_MOUSE               1.3e-09  49-[1]-62-[1]-21
+sp|P83578|IKP1_PHYSA                2.6e-09  18-[1]-25
+sp|P09865|IBD3_HIRME                3.9e-09  10-[1]-31
+sp|Q91590|TEFF1_XENLA               4.5e-09  97-[1]-77-[1]-166
+sp|Q6PFE7|TEFF1_MOUSE               4.5e-09  99-[1]-77-[1]-166
+sp|Q9QYV1|TEFF1_RAT                 4.5e-09  100-[1]-77-[1]-166
+sp|Q8IYR6|TEFF1_HUMAN               4.6e-09  107-[1]-77-[1]-166
+sp|Q06684|THBI_RHOPR                5.3e-09  12-[1]-38-[1]-23
+sp|P22074|CALT_CAVPO                7.4e-09  28-[1]-2
+sp|P09655|ISK1_RAT                  7.8e-09  43-[1]-21
+sp|P00999|IACA_PIG                  9.4e-09  21-[1]-29
+sp|A5YT95|FST_BUBBU                 1.1e-08  128-[1]-60-[1]-62-[1]-49
+sp|A2ASQ1|AGRIN_MOUSE               1.4e-08  101-[1]-60-[1]-57-[1]-57-[1]-58-[1]-50-[1]-50-[1]-71-[1]-204-[1]-1107
+sp|P25304|AGRIN_RAT                 1.4e-08  101-[1]-60-[1]-57-[1]-57-[1]-58-[1]-50-[1]-50-[1]-71-[1]-204-[1]-1116
+sp|O00468|AGRIN_HUMAN               1.5e-08  206-[1]-60-[1]-57-[1]-57-[1]-58-[1]-50-[1]-50-[1]-71-[1]-204-[1]-1120
+sp|P26461|IACS_PIG                  1.5e-08  52-[1]-30
+sp|Q9QYM9|TEFF2_MOUSE               1.6e-08  99-[1]-77-[1]-168
+sp|Q17QD6|TEFF2_BOVIN               1.6e-08  99-[1]-77-[1]-168
+sp|Q9UIK5|TEFF2_HUMAN               1.6e-08  99-[1]-77-[1]-168
+sp|P37109|ISK4_PIG                  1.7e-08  50-[1]-21
+sp|P01000|IAC1_BOVIN                  4e-08  25-[1]-23
+sp|Q6IE38|ISK14_HUMAN               4.9e-08  61-[1]-21
+sp|O60575|ISK4_HUMAN                5.9e-08  50-[1]-21
+sp|O35679|ISK4_MOUSE                6.4e-08  50-[1]-21
+sp|Q90404|AGRIN_DIPOM               6.5e-08  3-[1]-201-[1]-1094
+sp|Q9NQ38|ISK5_HUMAN                9.7e-08  48-[1]-52-[1]-49-[1]-49-[1]-57-[1]-55-[1]-55-[1]-44-[1]-56-[1]-50-[1]-60-[1]-52-[1]-60-[1]-52-[1]-61-[1]-39
+sp|Q6IE46|ISK14_RAT                 1.5e-07  62-[1]-21
+sp|P86987|IMSP6_RUDPH               1.6e-07  37-[1]-97-[1]-19
+sp|Q1W4C9|ISK13_HUMAN               2.9e-07  57-[1]-22
+sp|P83579|IKP2_PHYSA                  9e-07  18-[1]-25
+sp|P31515|FST_XENLA                   3e-06  128-[1]-60-[1]-62-[1]-46
+sp|A0A3G5BID2|KAZL2_DOLGE           6.8e-06  37-[1]-47-[1]-48-[1]-25
+sp|A0A1D5PUP4|RECK_CHICK              8e-06  633-[1]-66-[1]-22-[1]-197
+sp|O95980|RECK_HUMAN                8.1e-06  639-[1]-66-[1]-22-[1]-199
+sp|O97176|ESM1_DROME                9.3e-05  37-[1]-58-[1]-31
+sp|B4QW11|ESM1_DROSI                9.3e-05  37-[1]-58-[1]-31
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence,
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif, and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+sp|P52253|IOVO_SCYNO
+  LENGTH = 52  COMBINED P-VALUE = 3.43e-19  E-VALUE =  8.5e-17
+  DIAGRAM: 16-[1]-21
+
+                     [1]
+                     9.0e-21
+                     MPLCGSDNKTYGNKC
+                     +++++++++++++++
+1    TVDCSDYPKPVCTLEEMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68129|IOVO_CYGAT
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68130|IOVO_CYGOL
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68131|IOVO_OXYJA
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68132|IOVO_OXYVI
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67889|IOVO_DENAR
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTLEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67890|IOVO_DENAC
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTLEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67891|IOVO_DENAU
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTLEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67892|IOVO_DENBI
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTLEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P05571|IOVO_COSCO
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68393|IOVO_BRACA
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTVEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68394|IOVO_ANSCA
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTVEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68144|IOVO_AIXGA
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68145|IOVO_AIXSP
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68148|IOVO_ALOAE
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68149|IOVO_ANACA
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68150|IOVO_ANAPL
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68151|IOVO_CHLPI
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68152|IOVO_CYACY
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68153|IOVO_LOPSP
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68154|IOVO_LOPCU
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68155|IOVO_NEOJU
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68156|IOVO_SARME
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68157|IOVO_TADRA
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68391|IOVO_AYTAM
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVNCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P68392|IOVO_NETRU
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVNCSGYPKPACTMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGEC
+
+
+sp|P05569|IOVO_DENEY
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPRPDCTLEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52246|IOVO_GUIGU
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    ITTVDCSDYPKPVCSLEYMPLCGSDNKTYGNKCNFCNAVADSNGTLTLSHFGKC
+
+
+sp|P05575|IOVO_CERNO
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACRMEYMPLCGSDNKTYGNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P05615|IOVO_GEOCA
+  LENGTH = 54  COMBINED P-VALUE = 3.61e-19  E-VALUE =  8.9e-17
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.0e-21
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IASVNCSDYPKPVCSLLYMPLCGSDNKTYGNKCNFCNAVADSNGTLTLSHFGKC
+
+
+sp|P52244|IOVO_COLMD
+  LENGTH = 54  COMBINED P-VALUE = 9.98e-19  E-VALUE =  2.5e-16
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       2.5e-20
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IVTVDCSDYPKPVCTLDYMPLCGSDNKTYSNKCNFCNAVVDSNGTITLSHFGRC
+
+
+sp|P52243|IOVO_CORAL
+  LENGTH = 54  COMBINED P-VALUE = 9.98e-19  E-VALUE =  2.5e-16
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       2.5e-20
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IVTVDCSDYPRPVCTLDYMPLCGSDNKTYSNKCNFCNAVVDSNGTITLSHFGRC
+
+
+sp|P52269|IOVO_SYRMI
+  LENGTH = 54  COMBINED P-VALUE = 2.62e-18  E-VALUE =  6.5e-16
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.6e-20
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    AVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSRFGKC
+
+
+sp|P52263|IOVO_PAVMU
+  LENGTH = 54  COMBINED P-VALUE = 2.62e-18  E-VALUE =  6.5e-16
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.6e-20
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    AVSVDCSEYPKPACTLEHRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05605|IOVO_SYRRE
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSRFGEC
+
+
+sp|P68470|IOVO_PHACO
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLNRFGQC
+
+
+sp|P68471|IOVO_PHAVE
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLNRFGQC
+
+
+sp|P67944|IOVO_TYMCU
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67945|IOVO_CENUR
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67946|IOVO_TRABL
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67947|IOVO_TRACA
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67948|IOVO_TRASA
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67949|IOVO_TRATE
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67950|IOVO_LOPIM
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67951|IOVO_CROAU
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67952|IOVO_CROMA
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67953|IOVO_LOPED
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67954|IOVO_LOPNY
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67955|IOVO_LOPSW
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67956|IOVO_PUCMA
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67957|IOVO_CATWA
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67958|IOVO_SYREL
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67959|IOVO_SYRHU
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67960|IOVO_SYRSO
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67961|IOVO_LAGLU
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P52245|IOVO_CROCS
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTLEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P68436|IOVO_MELOE
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTLEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05599|IOVO_PERPE
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCDFCNAVVESNGTLTLNHFGKC
+
+
+sp|P68127|IOVO_CHRPC
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLNHFGKC
+
+
+sp|P68128|IOVO_CHRAM
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLNHFGKC
+
+
+sp|P05585|IOVO_BONUM
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLNLSHFGTC
+
+
+sp|P52261|IOVO_LOPBU
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPTCTMEYRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05609|IOVO_PAVCR
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTLEHRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P52258|IOVO_AFRCO
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTMEQRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05598|IOVO_FRAPO
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LPAVSVDCSEYPKPDCTTEERPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P52267|IOVO_GALVA
+  LENGTH = 56  COMBINED P-VALUE = 2.75e-18  E-VALUE =  6.8e-16
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-20
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPDCAAEDRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P68389|IOVO_ANSAN
+  LENGTH = 54  COMBINED P-VALUE = 2.89e-18  E-VALUE =  7.1e-16
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       7.2e-20
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTVEYMPLCGSDNKTYDNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68437|IOVO_ANSIN
+  LENGTH = 54  COMBINED P-VALUE = 2.89e-18  E-VALUE =  7.1e-16
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       7.2e-20
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTVEYMPLCGSDNKTYDNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52249|IOVO_OPIHO
+  LENGTH = 54  COMBINED P-VALUE = 2.89e-18  E-VALUE =  7.1e-16
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       7.2e-20
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    TATVDCSDYPKPACLLEYMPLCGSDNKTYDNKCSFCNAVVDSNGTLSLSHFGKC
+
+
+sp|P05600|IOVO_COTDE
+  LENGTH = 52  COMBINED P-VALUE = 5.60e-18  E-VALUE =  1.4e-15
+  DIAGRAM: 16-[1]-21
+
+                     [1]
+                     1.5e-19
+                     MPLCGSDNKTYGNKC
+                     +++++++++++++++
+1    SVDCSEYPKPACPKDYRPVCGSDNKTYGNKCNFCNAVVESNGTLTLNRFGKC
+
+
+sp|P05601|IOVO_ARBTO
+  LENGTH = 53  COMBINED P-VALUE = 5.74e-18  E-VALUE =  1.4e-15
+  DIAGRAM: 17-[1]-21
+
+                      [1]
+                      1.5e-19
+                      MPLCGSDNKTYGNKC
+                      +++++++++++++++
+1    VSVDCSDYPMPACTMEYRPVCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P68390|IOVO_MELGA
+  LENGTH = 185  COMBINED P-VALUE = 1.12e-17  E-VALUE =  2.8e-15
+  DIAGRAM: 26-[1]-49-[1]-44-[1]-21
+
+                               [1]
+                               7.9e-08
+                               MPLCGSDNKTYGNKC
+                               ++++++++ + +
+1    VEVDCSRFPNTTNEEGKDVLVCTEDLRPICGTDGVTHSECLLCAYNIEYGTNISKEHDGECREAVPMDCSRYPNT
+
+                    [1]                                                        [
+                    4.3e-15                                                    6
+                    MPLCGSDNKTYGNKC                                            M
+                    ++++++++ ++++++                                            +
+76   TSEEGKVMILCNKALNPVCGTDGVTYDNECVLCAHNLEQGTSVGKKHDGECRKELAAVSVDCSEYPKPACTLEYR
+
+     1]
+     .6e-20
+     PLCGSDNKTYGNKC
+     ++++++++++++++
+151  PLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P01005|IOVO_CHICK
+  LENGTH = 210  COMBINED P-VALUE = 1.28e-17  E-VALUE =  3.2e-15
+  DIAGRAM: 50-[1]-50-[1]-44-[1]-21
+
+                                                       [1]
+                                                       5.3e-13
+                                                       MPLCGSDNKTYGNKC
+                                                       ++++++++ ++ + +
+1    MAMAGVFVLFSFVLCGFLPDAAFGAEVDCSRFPNATDKEGKDVLVCNKDLRPICGTDGVTYTNDCLLCAYSIEFG
+
+                                             [1]
+                                             4.3e-15
+                                             MPLCGSDNKTYGNKC
+                                             ++++++++ ++++++
+76   TNISKEHDGECKETVPMNCSSYANTTSEDGKVMVLCNRAFNPVCGTDGVTYDNECLLCAHKVEQGASVDKRHDGG
+
+                             [1]
+                             6.6e-20
+                             MPLCGSDNKTYGNKC
+                             +++++++++++++++
+151  CRKELAAVSVDCSEYPKPDCTAEDRPLCGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P68468|IOVO_NUMME
+  LENGTH = 54  COMBINED P-VALUE = 1.47e-17  E-VALUE =  3.6e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       3.7e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    LAAVDCSEYPKPACTMEYRPLCGSDNKTYDNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P68469|IOVO_ACRVU
+  LENGTH = 54  COMBINED P-VALUE = 1.47e-17  E-VALUE =  3.6e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       3.7e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    LAAVDCSEYPKPACTMEYRPLCGSDNKTYDNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67887|IOVO_CHACH
+  LENGTH = 54  COMBINED P-VALUE = 1.47e-17  E-VALUE =  3.6e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       3.7e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTLEYMPLCGSDNQTYSNKCSFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67888|IOVO_CHATO
+  LENGTH = 54  COMBINED P-VALUE = 1.47e-17  E-VALUE =  3.6e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       3.7e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSDYPKPACTLEYMPLCGSDNQTYSNKCSFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P05567|IOVO_ANSSE
+  LENGTH = 54  COMBINED P-VALUE = 1.47e-17  E-VALUE =  3.6e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       3.7e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSEYPKPACTLEYMPLCGSDNQTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52262|IOVO_LOPLE
+  LENGTH = 56  COMBINED P-VALUE = 1.55e-17  E-VALUE =  3.8e-15
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         3.7e-19
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPACTIEYRPLCGSDNKTYDNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05563|IOVO_SPHHU
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATIDCSDYPKPVCSLEYMPLCGSDSKTYSNKCNFCNAVVDSNGTLILSHFGKC
+
+
+sp|P67942|IOVO_RHEAM
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    FATVDCSDHPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67943|IOVO_RHEPE
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    FATVDCSDHPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05564|IOVO_PHASU
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCNFCNAVADSNGTLTLSHFGKC
+
+
+sp|P05565|IOVO_ANHNO
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IASVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P05579|IOVO_CIRAE
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IAIVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCDFCNAFVDSNGTLSLSHFGKC
+
+
+sp|P67940|IOVO_LEUAL
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67941|IOVO_PYGAD
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68374|IOVO_GYPCO
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IAIVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68375|IOVO_POLRA
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IAIVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68376|IOVO_AQUAU
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IAIVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68377|IOVO_NECMO
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IAIVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52268|IOVO_HALAL
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    ITIVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P05577|IOVO_HALIN
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    ITIVDCSDYPKPVCSLEYMPLCGSDSKTYSNKCDFCNAVVDSNGTLNLSHFGKC
+
+
+sp|P68384|IOVO_VANSP
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPKPACSLDYMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFEKC
+
+
+sp|P68385|IOVO_LARMA
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPKPACSLDYMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFEKC
+
+
+sp|P68386|IOVO_CHRRI
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPKPACSLDYMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFEKC
+
+
+sp|P05557|IOVO_STRCA
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    FATVDCSDYPKPVCPLDYMPLCGSDSKTYSNKCNFCNAVVESSGTLTLRHFGKC
+
+
+sp|P52264|IOVO_PODST
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPQPVCMGDYMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLNHFGKC
+
+
+sp|P20846|IOVO_VULGR
+  LENGTH = 54  COMBINED P-VALUE = 2.14e-17  E-VALUE =  5.3e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IATVDCSDYPKPVCSLEDMPLCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52259|IOVO_BAMTH
+  LENGTH = 56  COMBINED P-VALUE = 2.24e-17  E-VALUE =  5.5e-15
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         5.3e-19
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    LAAVSVDCSEYPKPECTAEERPICGSDNKTYGNKCNFCNAVVESNGTLTLRNFGKC
+
+
+sp|P68387|IOVO_CALCC
+  LENGTH = 56  COMBINED P-VALUE = 2.76e-17  E-VALUE =  6.8e-15
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-19
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    FAAVSVDCSEYPKPACTLEYRPLCGSDNKTYANKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P68388|IOVO_CALGM
+  LENGTH = 56  COMBINED P-VALUE = 2.76e-17  E-VALUE =  6.8e-15
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-19
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    FAAVSVDCSEYPKPACTLEYRPLCGSDNKTYANKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05589|IOVO_CALSC
+  LENGTH = 56  COMBINED P-VALUE = 2.76e-17  E-VALUE =  6.8e-15
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.6e-19
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    FAAVSVDCSEYPKPDCTLEYRPLCGSDNKTYANKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05566|IOVO_NYCNY
+  LENGTH = 54  COMBINED P-VALUE = 3.66e-17  E-VALUE =    9e-15
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.1e-19
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    IVTVDCSDYPKPVCSPENMPVCGSDSKTYSNKCDFCNAVADSNGTLTLSHFGKC
+
+
+sp|P01003|IOVO_COTJA
+  LENGTH = 186  COMBINED P-VALUE = 4.07e-17  E-VALUE =    1e-14
+  DIAGRAM: 26-[1]-50-[1]-44-[1]-21
+
+                               [1]
+                               1.6e-11
+                               MPLCGSDNKTYGNKC
+                               + ++++++ ++  ++
+1    VEVDCSRFPNTTNEEGKDEVVCPDELRLICGTDGVTYNHECMLCFYNKEYGTNISKEQDGECGETVPMDCSRYPN
+
+                     [1]
+                     8.0e-12
+                     MPLCGSDNKTYGNKC
+                       ++++++ ++++++
+76   TTSEDGKVTILCTKDFSFVCGTDGVTYDNECMLCAHNVVQGTSVGKKHDGECRKELAAVSVDCSEYPKPACPKDY
+
+     [1]
+     2.4e-19
+     MPLCGSDNKTYGNKC
+     +++++++++++++++
+151  RPVCGSDNKTYSNKCNFCNAVVESNGTLTLNHFGKC
+
+
+sp|P68146|IOVO_ALECH
+  LENGTH = 54  COMBINED P-VALUE = 4.41e-17  E-VALUE =  1.1e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       1.1e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    LAAVDCSEYPKPACTLEYRPLCGSDSKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P68147|IOVO_ALERU
+  LENGTH = 54  COMBINED P-VALUE = 4.41e-17  E-VALUE =  1.1e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       1.1e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    LAAVDCSEYPKPACTLEYRPLCGSDSKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05595|IOVO_PELCO
+  LENGTH = 53  COMBINED P-VALUE = 6.93e-17  E-VALUE =  1.7e-14
+  DIAGRAM: 17-[1]-21
+
+                      [1]
+                      1.8e-18
+                      MPLCGSDNKTYGNKC
+                      +++++++++++++++
+1    VSVDCSEYPKPGCTMEYRPVCGSDNITYGNKCNFCNAVVKSNGTLTLSHFGKC
+
+
+sp|P05594|IOVO_PTEAF
+  LENGTH = 53  COMBINED P-VALUE = 6.93e-17  E-VALUE =  1.7e-14
+  DIAGRAM: 17-[1]-21
+
+                      [1]
+                      1.8e-18
+                      MPLCGSDNKTYGNKC
+                      +++++++++++++++
+1    VSVDCSEYPKPACTMEYRPVCGSDNITYGNKCNFCNAVVKSNGTLTLSHFGKC
+
+
+sp|P05596|IOVO_PTEER
+  LENGTH = 56  COMBINED P-VALUE = 7.47e-17  E-VALUE =  1.8e-14
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         1.8e-18
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    PAAVSVDCSEYPKPACTMEYRPVCGSDNITYGNKCNFCNAVVKSNGTLTLSHFGKC
+
+
+sp|P05570|IOVO_DENVD
+  LENGTH = 54  COMBINED P-VALUE = 9.68e-17  E-VALUE =  2.4e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       2.4e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++ +
+1    VATVDCSDYPKPACTLEYMPLCGSDNKTYGNRCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52260|IOVO_GUTPU
+  LENGTH = 54  COMBINED P-VALUE = 1.13e-16  E-VALUE =  2.8e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       2.8e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    LAAVDCSEYPKPACTMEHRPLCGSDNQTYDNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05587|IOVO_OREPI
+  LENGTH = 56  COMBINED P-VALUE = 2.51e-16  E-VALUE =  6.2e-14
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.0e-18
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    FAAVSVDCSEYPKPACTLEYRPLCGSDSKTYANKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67895|IOVO_PENJC
+  LENGTH = 56  COMBINED P-VALUE = 2.51e-16  E-VALUE =  6.2e-14
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.0e-18
+                         MPLCGSDNKTYGNKC
+                          ++++++++++++++
+1    FAPVNVDCSDHPKPACLQEQKPLCGSDNKTYDNKCSFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67896|IOVO_PENSU
+  LENGTH = 56  COMBINED P-VALUE = 2.51e-16  E-VALUE =  6.2e-14
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.0e-18
+                         MPLCGSDNKTYGNKC
+                          ++++++++++++++
+1    FAPVNVDCSDHPKPACLQEQKPLCGSDNKTYDNKCSFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P05584|IOVO_PIPPP
+  LENGTH = 56  COMBINED P-VALUE = 2.51e-16  E-VALUE =  6.2e-14
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.0e-18
+                         MPLCGSDNKTYGNKC
+                          ++++++++++++++
+1    LAPVNVDCSDHPKPACLQEQKPLCGSDNKTYDNKCSFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68380|IOVO_GRUJA
+  LENGTH = 54  COMBINED P-VALUE = 2.75e-16  E-VALUE =  6.8e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.9e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    TATVDCSDYPKPACTLEYMPFCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68381|IOVO_ANTVI
+  LENGTH = 54  COMBINED P-VALUE = 2.75e-16  E-VALUE =  6.8e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.9e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    TATVDCSDYPKPACTLEYMPFCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68382|IOVO_ANTVP
+  LENGTH = 54  COMBINED P-VALUE = 2.75e-16  E-VALUE =  6.8e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.9e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    TATVDCSDYPKPACTLEYMPFCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P68383|IOVO_BUGCA
+  LENGTH = 54  COMBINED P-VALUE = 2.75e-16  E-VALUE =  6.8e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.9e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    TATVDCSDYPKPACTLEYMPFCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52239|IOVO_BALPA
+  LENGTH = 54  COMBINED P-VALUE = 2.75e-16  E-VALUE =  6.8e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.9e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    TAMVDCSDYPKPACTLEYMPFCGSDSKTYSNKCNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52256|IOVO_TURME
+  LENGTH = 54  COMBINED P-VALUE = 2.75e-16  E-VALUE =  6.8e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.9e-18
+                       MPLCGSDNKTYGNKC
+                       ++++++++ ++++++
+1    IVTVDCSDYPKPVCTLDYMPLCGSDNTTYSNKCNFCNAVVDSNGTITLSHFGKC
+
+
+sp|P05617|IOVO_DACNO
+  LENGTH = 55  COMBINED P-VALUE = 3.26e-16  E-VALUE =    8e-14
+  DIAGRAM: 19-[1]-21
+
+                        [1]
+                        7.9e-18
+                        MPLCGSDNKTYGNKC
+                        +++++++++++++++
+1    IATQVDCSEHPKPACTLDYRPICGSDSKTYSNKCDFCNAVMDSNGTLTLSHFGKC
+
+
+sp|P52250|IOVO_POLNP
+  LENGTH = 51  COMBINED P-VALUE = 3.39e-16  E-VALUE =  8.4e-14
+  DIAGRAM: 15-[1]-21
+
+                    [1]
+                    9.2e-18
+                    MPLCGSDNKTYGNKC
+                    +++++++++++++++
+1    VDCSEYPQPACTTERRPVCGSNNKTYSNKCNFCNAVVKSNGTLTVSHFGKC
+
+
+sp|P62336|IOVO_CASBE
+  LENGTH = 54  COMBINED P-VALUE = 3.66e-16  E-VALUE =    9e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.2e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++ +++
+1    FATVDCSEYPKPVCSPEYMPLCGSDSKTYNNKCDFCSAVVESNGTLTLGHFGKC
+
+
+sp|P62337|IOVO_CASCA
+  LENGTH = 54  COMBINED P-VALUE = 3.66e-16  E-VALUE =    9e-14
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       9.2e-18
+                       MPLCGSDNKTYGNKC
+                       +++++++++++ +++
+1    FATVDCSEYPKPVCSPEYMPLCGSDSKTYNNKCDFCSAVVESNGTLTLGHFGKC
+
+
+sp|P0DKM9|TU11_LOPAL
+  LENGTH = 45  COMBINED P-VALUE = 5.00e-16  E-VALUE =  1.2e-13
+  DIAGRAM: 9-[1]-21
+
+              [1]
+              1.6e-17
+              MPLCGSDNKTYGNKC
+              +++++++++++++++
+1    CMTICTMEYWPVCGSDGKTYPNKCHLTSTACTSQKDITVLHEGKC
+
+
+sp|P52265|IOVO_CARPF
+  LENGTH = 54  COMBINED P-VALUE = 5.56e-16  E-VALUE =  1.4e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       1.4e-17
+                       MPLCGSDNKTYGNKC
+                       +++++++++++++++
+1    VATVDCSEYPKPVCSLEYMPLCGSDSQTYSNECNFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P52254|IOVO_TINMA
+  LENGTH = 51  COMBINED P-VALUE = 5.97e-16  E-VALUE =  1.5e-13
+  DIAGRAM: 17-[1]-19
+
+                      [1]
+                      1.6e-17
+                      MPLCGSDNKTYGNKC
+                       ++++++++++++++
+1    VTVDCSGYPKPACTAEYFPLCGSDNQTYSNKCAFCNAAVEKNVTLGHFGEC
+
+
+sp|P05562|IOVO_EUDEL
+  LENGTH = 51  COMBINED P-VALUE = 5.97e-16  E-VALUE =  1.5e-13
+  DIAGRAM: 17-[1]-19
+
+                      [1]
+                      1.6e-17
+                      MPLCGSDNKTYGNKC
+                       ++++++++++++++
+1    VSIDCSGYPKPACTLEFFPLCGSDNQTYSNKCAFCNAAVEKNVTLNHIGEC
+
+
+sp|P52251|IOVO_RHYFU
+  LENGTH = 51  COMBINED P-VALUE = 5.97e-16  E-VALUE =  1.5e-13
+  DIAGRAM: 17-[1]-19
+
+                      [1]
+                      1.6e-17
+                      MPLCGSDNKTYGNKC
+                       ++++++++++++++
+1    VTVDCSGYPKPDCTLESFPLCGSDNQTYSNKCAFCNAAVERNVTLRHLGEC
+
+
+sp|P05581|IOVO_LEIOC
+  LENGTH = 54  COMBINED P-VALUE = 6.46e-16  E-VALUE =  1.6e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       1.6e-17
+                       MPLCGSDNKTYGNKC
+                        ++++++++++++++
+1    VVTVDCSGYPTHACTLELKPLCGSDNQTYSNKCGFCNAVAQSNGTLTLSHFGKC
+
+
+sp|P05580|IOVO_MEGFR
+  LENGTH = 54  COMBINED P-VALUE = 6.46e-16  E-VALUE =  1.6e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       1.6e-17
+                       MPLCGSDNKTYGNKC
+                        ++++++++++++++
+1    LVTVDCSDYPKPSCTLEDKPLCGSDNQTYSNKCSFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P05616|IOVO_CARRE
+  LENGTH = 54  COMBINED P-VALUE = 6.46e-16  E-VALUE =  1.6e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       1.6e-17
+                       MPLCGSDNKTYGNKC
+                       +++++++++++ +++
+1    IATVDCSDYPKPVCTLEDMPLCGSDNITYHNKCYFCNAVAHSNGTLTFSHFGKC
+
+
+sp|P05591|IOVO_COLVI
+  LENGTH = 56  COMBINED P-VALUE = 8.87e-16  E-VALUE =  2.2e-13
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         2.1e-17
+                         MPLCGSDNKTYGNKC
+                         +++++++++++ +++
+1    FAAVSVDCSEYPKPACMSEYRPLCGSDNKTYVNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P0DKT5|TU91_GEMLI
+  LENGTH = 70  COMBINED P-VALUE = 9.04e-16  E-VALUE =  2.2e-13
+  DIAGRAM: 34-[1]-21
+
+                                       [1]
+                                       1.6e-17
+                                       MPLCGSDNKTYGNKC
+                                       +++++++++++++++
+1    MKVYCLLLVFLVGLVSQAHGRLDKRCMTVCTMEYWPVCGSDGKTYPNKCHLTSTACTSQKDITVLHVGKC
+
+
+sp|P05592|IOVO_CYRMO
+  LENGTH = 56  COMBINED P-VALUE = 1.01e-15  E-VALUE =  2.5e-13
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         2.4e-17
+                         MPLCGSDNKTYGNKC
+                          ++++++++++++++
+1    FAAVSVDCSEYPKPACTLEYVPICGSDNKTYGNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05582|IOVO_ORTVE
+  LENGTH = 56  COMBINED P-VALUE = 1.01e-15  E-VALUE =  2.5e-13
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         2.4e-17
+                         MPLCGSDNKTYGNKC
+                          ++++++++++++++
+1    FAPVNVDCSDHPKPACLQEQKPICGSDNKTYDNKCSFCNAVVDSNGTLTLSHFGKC
+
+
+sp|P67893|IOVO_LOPDI
+  LENGTH = 56  COMBINED P-VALUE = 1.49e-15  E-VALUE =  3.7e-13
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         3.5e-17
+                         MPLCGSDNKTYGNKC
+                         +++++++++ +++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKSYDNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P67894|IOVO_LOPIG
+  LENGTH = 56  COMBINED P-VALUE = 1.49e-15  E-VALUE =  3.7e-13
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         3.5e-17
+                         MPLCGSDNKTYGNKC
+                         +++++++++ +++++
+1    LAAVSVDCSEYPKPACTMEYRPLCGSDNKSYDNKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05561|IOVO_NOTCI
+  LENGTH = 51  COMBINED P-VALUE = 1.72e-15  E-VALUE =  4.2e-13
+  DIAGRAM: 17-[1]-19
+
+                      [1]
+                      4.6e-17
+                      MPLCGSDNKTYGNKC
+                       ++++++++++++++
+1    VTVDCSGYPKPACTLEYFPLCGSDNQTYANKCAFCNAVVEKNVTLRHLGKC
+
+
+sp|P52248|IOVO_NOTPE
+  LENGTH = 51  COMBINED P-VALUE = 1.72e-15  E-VALUE =  4.2e-13
+  DIAGRAM: 17-[1]-19
+
+                      [1]
+                      4.6e-17
+                      MPLCGSDNKTYGNKC
+                       ++++++++++++++
+1    VTVDCSGYPKPACTLEYFPLCGSDNQTYANKCTFCNAVVEKNVTLNHLGEC
+
+
+sp|P0DKM8|TU91_IOTCI
+  LENGTH = 47  COMBINED P-VALUE = 1.74e-15  E-VALUE =  4.3e-13
+  DIAGRAM: 9-[1]-23
+
+              [1]
+              5.3e-17
+              MPLCGSDNKTYGNKC
+              +++++++++++++++
+1    CLSVCSMEYWPVCGSDGKTYPNECHLTSEACMSNTDITVAHVGKCDQ
+
+
+sp|P05560|IOVO_DRONO
+  LENGTH = 207  COMBINED P-VALUE = 1.77e-15  E-VALUE =  4.4e-13
+  DIAGRAM: 49-[1]-50-[1]-42-[1]-21
+
+                                                      [1]
+                                                      3.8e-14
+                                                      MPLCGSDNKTYGNKC
+                                                      ++++++++ ++++ +
+1    MTMASVLVLLSLVLCCFPDTAFGVEVDCSKYPNTTNEDGKEVLLCPKILNPICGSDGVTYSNDCLLCAYNIEYGA
+
+                                            [1]
+                                            2.1e-14
+                                            MPLCGSDNKTYGNKC
+                                             +++++++ ++++++
+76   NVSKDHDGECKEAVPIDCSKYANATNEEGKEVPLCTKILSPVCGTDGVTYSNECLLCAHNIEQGTSVGKKYDGEC
+
+                          [1]
+                          9.2e-18
+                          MPLCGSDNKTYGNKC
+                          +++++++++++ +++
+151  KKEFATVDCSDYPKPVCSLEYMPLCGSDSKTYNNKCDFCNAVVESNGTLTLGHFGKC
+
+
+sp|P05608|IOVO_ARGAR
+  LENGTH = 54  COMBINED P-VALUE = 2.10e-15  E-VALUE =  5.2e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       5.3e-17
+                       MPLCGSDNKTYGNKC
+                       +++++++++ +++++
+1    LAAVDCSEHPKPACTLEDRPLCGSDNKIYSNKCDFCNAVLESNGTLTLSHFGKC
+
+
+sp|Q6IE47|ISK6_RAT
+  LENGTH = 105  COMBINED P-VALUE = 2.19e-15  E-VALUE =  5.4e-13
+  DIAGRAM: 69-[1]-21
+
+                                                                          [1]
+                                                                          2.4e-1
+                                                                          MPLCGS
+                                                                          ++++++
+1    MKVAGVFLLLSLALLCFFSGEFSQGGQDKRGWITRSEGRFPGKGVLRHRLFQINCGEFRDPKVFCTRESDPLCGS
+
+     
+     7
+     DNKTYGNKC
+     +++++++++
+76   DGQTYGNKCAFCKALEKSSGKINLKHRGKC
+
+
+sp|Q8BT20|ISK6_MOUSE
+  LENGTH = 105  COMBINED P-VALUE = 2.19e-15  E-VALUE =  5.4e-13
+  DIAGRAM: 69-[1]-21
+
+                                                                          [1]
+                                                                          2.4e-1
+                                                                          MPLCGS
+                                                                          ++++++
+1    MKVAGVFLLLSLALLCFFSGAFSQGGQDKRGWITRSEGRFPGKGVLRHRLFQINCGEFRDPKVFCTRESDPLCGS
+
+     
+     7
+     DNKTYGNKC
+     +++++++++
+76   DGQTYGNKCAFCKALEKSSGKINLKHRGKC
+
+
+sp|P52241|IOVO_AEPAR
+  LENGTH = 54  COMBINED P-VALUE = 2.39e-15  E-VALUE =  5.9e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       6.0e-17
+                       MPLCGSDNKTYGNKC
+                        ++++++++++++++
+1    VVIVDCSDYPTHGCTLELKPICGSDNQTYSNKCGFCNAVAQSNGTLTLSHFGKC
+
+
+sp|P0DKT3|TU93_GEMSP
+  LENGTH = 70  COMBINED P-VALUE = 2.60e-15  E-VALUE =  6.4e-13
+  DIAGRAM: 34-[1]-21
+
+                                       [1]
+                                       4.6e-17
+                                       MPLCGSDNKTYGNKC
+                                       +++++++++++++++
+1    MKVYCLLLVLLVGLVSQAHGQLDKKCQMVCTFDYRPVCGSDGRTYPNKCTLTSTACMSQRSITVFHDGEC
+
+
+sp|P0DKT2|TU92_GEMSO
+  LENGTH = 70  COMBINED P-VALUE = 2.60e-15  E-VALUE =  6.4e-13
+  DIAGRAM: 34-[1]-21
+
+                                       [1]
+                                       4.6e-17
+                                       MPLCGSDNKTYGNKC
+                                       +++++++++++++++
+1    MKVYCLLLVLLVGLVSQAHGQLDKKCQMVCTMDYRPVCGSDGRTYPNKCTLTSTACMSQRSITVFHDGEC
+
+
+sp|P52252|IOVO_ROLRO
+  LENGTH = 56  COMBINED P-VALUE = 2.84e-15  E-VALUE =    7e-13
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         6.8e-17
+                         MPLCGSDNKTYGNKC
+                         ++++++++ ++++++
+1    LAAVNVDCSGYPKPACTMESRPICGSDNTTYSNKCNFCNAVVESNGTLTLSYPGVC
+
+
+sp|P52242|IOVO_HAEME
+  LENGTH = 54  COMBINED P-VALUE = 3.08e-15  E-VALUE =  7.6e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       7.7e-17
+                       MPLCGSDNKTYGNKC
+                       ++++++++ ++ +++
+1    IVAVDCSDYPKPVCSLDYMPLCGSDNTTYNNKCIFCNAVVDSNGTITLSHFGKC
+
+
+sp|P68378|IOVO_FULAT
+  LENGTH = 54  COMBINED P-VALUE = 3.08e-15  E-VALUE =  7.6e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       7.7e-17
+                       MPLCGSDNKTYGNKC
+                        ++++++++++++++
+1    TATVDCSGYPQPACSLEYVPFCGSDNKTYSNKCDFCNAVADSNGTLTLSHFGKC
+
+
+sp|P68379|IOVO_GALCH
+  LENGTH = 54  COMBINED P-VALUE = 3.08e-15  E-VALUE =  7.6e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       7.7e-17
+                       MPLCGSDNKTYGNKC
+                        ++++++++++++++
+1    TATVDCSGYPQPACSLEYVPFCGSDNKTYSNKCDFCNAVADSNGTLTLSHFGKC
+
+
+sp|P52266|IOVO_GALAS
+  LENGTH = 54  COMBINED P-VALUE = 3.08e-15  E-VALUE =  7.6e-13
+  DIAGRAM: 18-[1]-21
+
+                       [1]
+                       7.7e-17
+                       MPLCGSDNKTYGNKC
+                        ++++++++++++++
+1    TATVDCSGYPQSACPQDYVPFCGSDNKTYSNKCNFCNAVADSNGTLTLSHFGKC
+
+
+sp|P05588|IOVO_CALSP
+  LENGTH = 56  COMBINED P-VALUE = 4.64e-15  E-VALUE =  1.1e-12
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         1.1e-16
+                         MPLCGSDNKTYGNKC
+                         ++++++++++++ ++
+1    FAAVSVDCSEYPKPDCTLEYRPLCGSDNKTYASKCNFCNAVVESNGTLTLSHFGKC
+
+
+sp|P05597|IOVO_FRAFR
+  LENGTH = 53  COMBINED P-VALUE = 4.86e-15  E-VALUE =  1.2e-12
+  DIAGRAM: 17-[1]-21
+
+                      [1]
+                      1.2e-16
+                      MPLCGSDNKTYGNKC
+                       ++++++++++++++
+1    VSVDCSGYPKPECTAEETPLCGSDNKTYRNKCNFCNAVVESNGTLTLRHFGKC
+
+
+sp|P01002|IPSG_CANLF
+  LENGTH = 115  COMBINED P-VALUE = 5.31e-15  E-VALUE =  1.3e-12
+  DIAGRAM: 28-[1]-36-[1]-21
+
+                                 [1]
+                                 5.9e-15
+                                 MPLCGSDNKTYGNKC
+                                  ++++++ +++++++
+1    GPPPAIGREVDCSNYKGKGSQIACPRLHQPICGTDHKTYSNECMFCALTLNKKFEVRKLQDTACDIECTEYSDMC
+
+         [1]
+         5.3e-17
+         MPLCGSDNKTYGNKC
+         +++++++++ +++++
+76   TMDYRPLCGSDGKNYSNKCSFCNAVKKSRGTIFLAKHGEC
+
+
+sp|P08479|IPSG_VULVU
+  LENGTH = 115  COMBINED P-VALUE = 5.31e-15  E-VALUE =  1.3e-12
+  DIAGRAM: 28-[1]-36-[1]-21
+
+                                 [1]
+                                 7.4e-14
+                                 MPLCGSDNKTYGNKC
+                                  ++++++  ++++++
+1    DPPPAIGREVDCSSYKGKGSQIACPRHLQPICGTDHNTYSNECMFCALTLNKEFEVRKLQDTACDIECTEYSDMC
+
+         [1]
+         5.3e-17
+         MPLCGSDNKTYGNKC
+         +++++++++ +++++
+76   TMDYRPLCGSDGKNYSNKCIFCNAVVRSRGTIFLAKHGEC
+
+
+sp|P0DKT1|TU92_POLAB
+  LENGTH = 70  COMBINED P-VALUE = 6.19e-15  E-VALUE =  1.5e-12
+  DIAGRAM: 34-[1]-21
+
+                                       [1]
+                                       1.1e-16
+                                       MPLCGSDNKTYGNKC
+                                       +++++++++++++ +
+1    MKVYCLLVVLLVGLVSQTQGQLDKKCNMACTLDYRPVCGSDGKTYPNRCALTSTACESQQSITVLHDGEC
+
+
+sp|P0DKM7|TU91_IOTOL
+  LENGTH = 70  COMBINED P-VALUE = 7.84e-15  E-VALUE =  1.9e-12
+  DIAGRAM: 34-[1]-21
+
+                                       [1]
+                                       1.4e-16
+                                       MPLCGSDNKTYGNKC
+                                        ++++++++++++++
+1    MKVYCLLLVLLVGLVSQAHGKPTKRCLSVCSAEYEPVCGSDGKTYANKCHLMTEACWSPTSITLVHEGKC
+
+
+sp|P05607|IOVO_POLBI
+  LENGTH = 53  COMBINED P-VALUE = 1.38e-14  E-VALUE =  3.4e-12
+  DIAGRAM: 17-[1]-21
+
+                      [1]
+                      3.6e-16
+                      MPLCGSDNKTYGNKC
+                      ++++++++ ++++++
+1    VSVDCSEYPQPTCTTEHRPVCGSNNETYGNKCNFCNAVVKSNGTLTVSHFGKC
+
+
+sp|P01001|ISK6_BOVIN
+  LENGTH = 80  COMBINED P-VALUE = 2.34e-14  E-VALUE =  5.8e-12
+  DIAGRAM: 44-[1]-21
+
+                                                 [1]
+                                                 3.6e-16
+                                                 MPLCGSDNKTYGNKC
+                                                 ++ ++++++++++++
+1    MKTSGVFLLLSLALFCFFSGVFGQGAQVDCAEFKDPKVYCTRESNPHCGSDGQTYGNKCAFCKAVMKSGGKINLK
+
+
+sp|Q6UWN8|ISK6_HUMAN
+  LENGTH = 80  COMBINED P-VALUE = 2.34e-14  E-VALUE =  5.8e-12
+  DIAGRAM: 44-[1]-21
+
+                                                 [1]
+                                                 3.6e-16
+                                                 MPLCGSDNKTYGNKC
+                                                 ++ ++++++++++++
+1    MKLSGMFLLLSLALFCFLTGVFSQGGQVDCGEFQDPKVYCTRESNPHCGSDGQTYGNKCAFCKAIVKSGGKISLK
+
+
+sp|P00998|ISK1_PIG
+  LENGTH = 56  COMBINED P-VALUE = 2.34e-14  E-VALUE =  5.8e-12
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         5.6e-16
+                         MPLCGSDNKTYGNKC
+                         +++++++++++++++
+1    TSPQREATCTSEVSGCPKIYNPVCGTDGITYSNECVLCSENKKRQTPVLIQKSGPC
+
+
+sp|P09656|ISK1L_RAT
+  LENGTH = 79  COMBINED P-VALUE = 2.59e-14  E-VALUE =  6.4e-12
+  DIAGRAM: 43-[1]-21
+
+                                                [1]
+                                                4.0e-16
+                                                MPLCGSDNKTYGNKC
+                                                +++++++++++++++
+1    MKVAIIFLLSALALLNLAGNTTAKVIGKKANCPNTLVGCPRDYDPVCGTDGKTYANECILCFENRKFGTSIRIQR
+
+
+sp|P04542|ISK1_CANLF
+  LENGTH = 57  COMBINED P-VALUE = 3.36e-14  E-VALUE =  8.3e-12
+  DIAGRAM: 21-[1]-21
+
+                          [1]
+                          7.8e-16
+                          MPLCGSDNKTYGNKC
+                          +++++++++++++++
+1    NNMLQRQANCNLKVNGCNKIYNPICGSDGITYANECLLCLENKKRQTSILVEKSGPC
+
+
+sp|P16895|IELA_ANESU
+  LENGTH = 48  COMBINED P-VALUE = 4.59e-14  E-VALUE =  1.1e-11
+  DIAGRAM: 12-[1]-21
+
+                 [1]
+                 1.4e-15
+                 MPLCGSDNKTYGNKC
+                 +++++++++++++ +
+1    KPDCPLICTMQYDPVCGSDGITYGNACMLLGASCRSDTPIELVHKGRC
+
+
+1CGI_I
+  LENGTH = 56  COMBINED P-VALUE = 7.04e-14  E-VALUE =  1.7e-11
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         1.7e-15
+                         MPLCGSDNKTYGNKC
+                         ++++++++ ++++++
+1    DSLGREAKCYNELNGCTYEYRPVCGTDGDTYPNECVLCFENRKRQTSILIQKSGPC
+
+
+sp|Q6IE51|ISK7_RAT
+  LENGTH = 74  COMBINED P-VALUE = 8.10e-14  E-VALUE =    2e-11
+  DIAGRAM: 38-[1]-21
+
+                                           [1]
+                                           1.4e-15
+                                           MPLCGSDNKTYGNKC
+                                            ++++++ +++++++
+1    MKLLGGLLLLFTATCLCNVDCDIYKKYPVVAIPCPIENIPVCGSDYITYGNKCKLCTEILRSNGKIQFLHEGHC
+
+
+sp|P85000|ISK1L_CHICK
+  LENGTH = 55  COMBINED P-VALUE = 1.17e-13  E-VALUE =  2.9e-11
+  DIAGRAM: 19-[1]-21
+
+                        [1]
+                        2.8e-15
+                        MPLCGSDNKTYGNKC
+                         ++++++++++++++
+1    SIPPACDKYSRLPGCPRDYSPVCGTDGKTYPNECVLCLSNSEENKNVQIYKSGMC
+
+
+sp|P09036|ISK1_MOUSE
+  LENGTH = 80  COMBINED P-VALUE = 1.23e-13  E-VALUE =    3e-11
+  DIAGRAM: 44-[1]-21
+
+                                                 [1]
+                                                 1.9e-15
+                                                 MPLCGSDNKTYGNKC
+                                                 +++++++++++++++
+1    MKVAVIFLLSALALLSLAGNTFSAKVTGKEASCHDAVAGCPRIYDPVCGTDGITYANECVLCFENRKRIEPVLIR
+
+
+sp|P81262|IPSG_PANUN
+  LENGTH = 122  COMBINED P-VALUE = 1.46e-13  E-VALUE =  3.6e-11
+  DIAGRAM: 32-[1]-36-[1]-24
+
+                                     [1]
+                                     1.4e-15
+                                     MPLCGSDNKTYGNKC
+                                     +++++++ +++++++
+1    APPPVGDQAGGRKVDCFKYNTKGSAFACTRHERPVCGTDHRTYSNECMFCMLTQNKGFGVRILQDNECDIECTQY
+
+             [1]
+             1.5e-15
+             MPLCGSDNKTYGNKC
+              ++++++++ +++++
+76   SDMCTMEYLPLCGSDGKNYSNKCLFCNAVMGSRGALFLAKHGQCQSP
+
+
+sp|P81482|IPSG_MARMT
+  LENGTH = 122  COMBINED P-VALUE = 1.46e-13  E-VALUE =  3.6e-11
+  DIAGRAM: 32-[1]-36-[1]-24
+
+                                     [1]
+                                     1.4e-15
+                                     MPLCGSDNKTYGNKC
+                                     +++++++ +++++++
+1    APPPVGDQAGGRKVDCFKYNTTGSAFACTRHERPVCGTDHRTYSNECMFCMLTQNKGFGVRILQDNECDIECTQY
+
+             [1]
+             1.5e-15
+             MPLCGSDNKTYGNKC
+              ++++++++ +++++
+76   SDMCTMEYLPLCGSDGKNYSNKCLFCNAVMGSRGALFLAKHGQCQSP
+
+
+sp|P81481|IPSG_MUSLU
+  LENGTH = 122  COMBINED P-VALUE = 1.62e-13  E-VALUE =    4e-11
+  DIAGRAM: 32-[1]-36-[1]-24
+
+                                     [1]
+                                     1.9e-14
+                                     MPLCGSDNKTYGNKC
+                                      ++++++ +++++++
+1    APPPVGDQAGGRKVDCFKYNTTGSEFACSRKWQPVCGTDHRTYSNECMFCMLTQNKRFPVRILQDNKCDIECPQY
+
+             [1]
+             1.5e-15
+             MPLCGSDNKTYGNKC
+              ++++++++ +++++
+76   SDMCTMDYLPLCGSDGKNYSNKCLFCNAVLRSRGALFLAKHGQCQSP
+
+
+sp|P08481|IPSG_PANLE
+  LENGTH = 112  COMBINED P-VALUE = 1.64e-13  E-VALUE =  4.1e-11
+  DIAGRAM: 24-[1]-36-[1]-22
+
+                             [1]
+                             2.4e-14
+                             MPLCGSDNKTYGNKC
+                              ++++ + +++++++
+1    ASPPEVNCSQYNRKGSGIACSKQLKPICGIDHKTYSNECMFCLLNQNKQFQIRKLYDDKCQIECTNYSAICTMEY
+
+     [1]
+     1.7e-15
+     MPLCGSDNKTYGNKC
+      ++++++++ +++++
+76   FPLCGSDGKVYSNKCSFCNEVVKRRGTLFLAKYGQCK
+
+
+sp|P00996|ISK1_BOVIN
+  LENGTH = 79  COMBINED P-VALUE = 1.67e-13  E-VALUE =  4.1e-11
+  DIAGRAM: 43-[1]-21
+
+                                                [1]
+                                                2.6e-15
+                                                MPLCGSDNKTYGNKC
+                                                ++++++++ ++++++
+1    MKVASIFLLTALVLMSLSGNSGANILGREAKCTNEVNGCPRIYNPVCGTDGVTYSNECLLCMENKERQTPVLIQK
+
+
+sp|P81634|ISK1_HORSE
+  LENGTH = 56  COMBINED P-VALUE = 2.01e-13  E-VALUE =    5e-11
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         4.8e-15
+                         MPLCGSDNKTYGNKC
+                         ++++++++ ++++++
+1    DSLGREAKCNNNAGGCTKIYNPVCGTDGNTYPNECMLCVENQKRQMPVLIQRSGPC
+
+
+sp|P0DKT4|TU92_IOTCI
+  LENGTH = 70  COMBINED P-VALUE = 2.42e-13  E-VALUE =    6e-11
+  DIAGRAM: 34-[1]-21
+
+                                       [1]
+                                       4.3e-15
+                                       MPLCGSDNKTYGNKC
+                                        +++++++ ++++++
+1    MKVYCLLLVLLVGLVSQAQGQLDKKCQTMCTMEYLPVCGSDGTTYPNKCTLTSTACVNQMDITVLHNGEC
+
+
+sp|P00997|ISK1_SHEEP
+  LENGTH = 56  COMBINED P-VALUE = 2.47e-13  E-VALUE =  6.1e-11
+  DIAGRAM: 20-[1]-21
+
+                         [1]
+                         5.9e-15
+                         MPLCGSDNKTYGNKC
+                         ++++++++ ++++++
+1    NILGREAKCTNEVNGCPRIYNPVCGTDGVTYANECLLCMENKERQTPVLIQKSGPC
+
+
+sp|Q9D256|ISK12_MOUSE
+  LENGTH = 87  COMBINED P-VALUE = 2.84e-13  E-VALUE =    7e-11
+  DIAGRAM: 50-[1]-22
+
+                                                       [1]
+                                                       3.9e-15
+                                                       MPLCGSDNKTYGNKC
+                                                        ++++++++++ + +
+1    MKPAGAFLLLISLACLFLSVDAVSQGGFQAFCSNYEKTLAPDGKSCPKTHKPVCGTDGKTYQNRCAFCQTAMERS
+
+
+sp|P34953|ISK2_MACFA
+  LENGTH = 81  COMBINED P-VALUE = 3.21e-13  E-VALUE =  7.9e-11
+  DIAGRAM: 45-[1]-21
+
+                                                  [1]
+                                                  4.8e-15
+                                                  MPLCGSDNKTYGNKC
+                                                  +++++++ +++++++
+1    MALAVLRLALLLLAVTFAGPLFRRFSKYKTPFCARYQLPGCPRDFNPVCGTDMITYPNECTLCMKIRESGQNIKI
+
+
+sp|P08480|IPSG_FELCA
+  LENGTH = 111  COMBINED P-VALUE = 3.78e-13  E-VALUE =  9.3e-11
+  DIAGRAM: 24-[1]-36-[1]-21
+
+                             [1]
+                             2.4e-14
+                             MPLCGSDNKTYGNKC
+                              ++++ + +++++++
+1    ASPPEVNCSQYNRKGSGITCSKEWKPICGIDHKTYSNECMFCQLNQNKRFQLRKLHDNKCQIECTNYSAICTMEY
+
+     [1]
+     3.9e-15
+     MPLCGSDNKTYGNKC
+      ++++++++ +++++
+76   FPLCGSDGQEYSNKCLFCNEVVKRRGTLFLAKYGQC
+
+
+sp|P00995|ISK1_HUMAN
+  LENGTH = 79  COMBINED P-VALUE = 4.23e-13  E-VALUE =    1e-10
+  DIAGRAM: 43-[1]-21
+
+                                                [1]
+                                                6.5e-15
+                                                MPLCGSDNKTYGNKC
+                                                ++++++++ ++++++
+1    MKVTGIFLLSALALLSLSGNTGADSLGREAKCYNELNGCTKIYDPVCGTDGNTYPNECVLCFENRKRQTSILIQK
+
+
+sp|P11706|ISK1_ANGAN
+  LENGTH = 61  COMBINED P-VALUE = 5.07e-13  E-VALUE =  1.3e-10
+  DIAGRAM: 25-[1]-21
+
+                              [1]
+                              1.1e-14
+                              MPLCGSDNKTYGNKC
+                               +++++++ ++++++
+1    EEKSGLYRKPSCGEMSAMHACPMNFAPVCGTDGNTYPNECSLCFQRQNTKTDILITKDDRC
+
+
+sp|Q8BMY7|ISK2_MOUSE
+  LENGTH = 86  COMBINED P-VALUE = 5.19e-13  E-VALUE =  1.3e-10
+  DIAGRAM: 50-[1]-21
+
+                                                       [1]
+                                                       7.2e-15
+                                                       MPLCGSDNKTYGNKC
+                                                       +++++++  ++++++
+1    MLRLVLLLLVTDFAASHETLDSSDSQIMKRSQFRTPDCGHFDFPACPRNLNPVCGTDMNTYSNECTLCMKIREDG
+
+
+sp|P58062|ISK7_HUMAN
+  LENGTH = 85  COMBINED P-VALUE = 5.66e-13  E-VALUE =  1.4e-10
+  DIAGRAM: 49-[1]-21
+
+                                                      [1]
+                                                      8.0e-15
+                                                      MPLCGSDNKTYGNKC
+                                                       ++++++ +++++++
+1    MKITGGLLLLCTVVYFCSSSEAASLSPKKVDCSIYKKYPVVAIPCPITYLPVCGSDYITYGNECHLCTESLKSNG
+
+
+sp|P20155|ISK2_HUMAN
+  LENGTH = 84  COMBINED P-VALUE = 6.83e-13  E-VALUE =  1.7e-10
+  DIAGRAM: 48-[1]-21
+
+                                                     [1]
+                                                     9.8e-15
+                                                     MPLCGSDNKTYGNKC
+                                                     +++++++  ++++++
+1    MALSVLRLALLLLAVTFAASLIPQFGLFSKYRTPNCSQYRLPGCPRHFNPVCGSDMSTYANECTLCMKIREGGHN
+
+
+sp|P16226|IPSG_MELME
+  LENGTH = 122  COMBINED P-VALUE = 7.78e-13  E-VALUE =  1.9e-10
+  DIAGRAM: 32-[1]-36-[1]-24
+
+                                     [1]
+                                     7.2e-15
+                                     MPLCGSDNKTYGNKC
+                                     +++++++ +++++++
+1    APPPVGDQAGGRKVNCSKYNAKGSQFACSRHLDPVCGTDHRTYSNECMFCMLTQNKRFSVRILQDNNCDIECTQY
+
+             [1]
+             2.1e-14
+             MPLCGSDNKTYGNKC
+              +++++++  +++++
+76   SDMCTMDYLPLCGSDGNNYSNKCLFCNAVLRSRGALFLAKHGQCESP
+
+
+sp|P83039|ICHY_CAIMO
+  LENGTH = 65  COMBINED P-VALUE = 1.21e-12  E-VALUE =    3e-10
+  DIAGRAM: 26-[1]-24
+
+                               [1]
+                               2.4e-14
+                               MPLCGSDNKTYGNKC
+                                +++++++ ++++++
+1    ELDEGNGLRRPVCGEMAELLACPLVNLPVCGTDGNTYANECLLCVQKMKTRQDIRILNNGRCRDT
+
+
+sp|P80424|LDTI_HIRME
+  LENGTH = 46  COMBINED P-VALUE = 1.22e-12  E-VALUE =    3e-10
+  DIAGRAM: 10-[1]-21
+
+               [1]
+               3.8e-14
+               MPLCGSDNKTYGNKC
+                ++++++++++++ +
+1    KKVCACPKILKPVCGSDGRTYANSCIARCNGVSIKSEGSCPTGILN
+
+
+sp|Q6PQG3|EPI10_PHYIN
+  LENGTH = 224  COMBINED P-VALUE = 1.23e-12  E-VALUE =    3e-10
+  DIAGRAM: 34-[1]-55-[1]-52-[1]-38
+
+                                       [1]
+                                       4.4e-13
+                                       MPLCGSDNKTYGNKC
+                                        +++++++ ++++ +
+1    MKSAFTLSLALVAVTATISAAADDNCSFGCLDVYKPVCGSNGETYSNSCYLRLASCKSNNGITEAGDGECASTPA
+
+                                  [1]
+                                  2.9e-07
+                                  MPLCGSDNKTYGNKC
+                                  +++   +++ +++ +
+76   SSATPSPVTSSTGSTSGTVGCPDMCLDVYDPVSDENGKEYSNQCYMEMAKCKGTGYDDNKRSGNPGISTLDAERK
+
+                          [1]
+                          5.9e-15
+                          MPLCGSDNKTYGNKC
+                           +++++++ ++++++
+151  LAFAPGYQGPPCGDMLCPDNYAPVCGSDGETYPNECDLGITSCNHPEQNITMVGEGPCPSQEQQQQQQQQQQKL
+
+
+sp|P31514|FST_SHEEP
+  LENGTH = 337  COMBINED P-VALUE = 1.26e-12  E-VALUE =  3.1e-10
+  DIAGRAM: 121-[1]-60-[1]-62-[1]-49
+
+                                                   [1]
+                                                   3.9e-15
+                                                   MPLCGSDNKTYGNKC
+                                                    ++++ +++++++++
+76   GGAPNCIPCKETCENVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARCKEQPELE
+
+                                                   [1]
+                                                   6.3e-10
+                                                   MPLCGSDNKTYGNKC
+                                                     +++ ++ +++  +
+151  VQYQGKCKKTCRDVFCPGSSTCVVDQTNNAYCVTCNRICPEPTSSEQYLCGNDGVTYPSACHLRKATCLLGRSIG
+
+                                                     [1]
+                                                     1.0e-11
+                                                     MPLCGSDNKTYGNKC
+                                                      +++ +++ +++ ++
+226  LAYEGKCIKAKSCEDIQCTGGKKCLWDFKVGRGRCSLCGELCPESKSEEPVCASDNATYASECAMKEAACSSGVL
+
+
+sp|D0NJ41|EPI10_PHYIT
+  LENGTH = 228  COMBINED P-VALUE = 1.26e-12  E-VALUE =  3.1e-10
+  DIAGRAM: 34-[1]-55-[1]-52-[1]-42
+
+                                       [1]
+                                       4.4e-13
+                                       MPLCGSDNKTYGNKC
+                                        +++++++ ++++ +
+1    MKSAFTLSLALVAVTATISAAADDNCSFGCLDVYKPVCGSNGETYSNSCYLRLASCKSNNGITEAGDGECASTPA
+
+                                  [1]
+                                  2.9e-07
+                                  MPLCGSDNKTYGNKC
+                                  +++   +++ +++ +
+76   SSATPSPVTSSTGSTSGTVGCPDMCLDVYDPVSDENGKEYSNQCYMEMAKCKGTGYDDNKRSGNPGISTLDAERK
+
+                          [1]
+                          5.9e-15
+                          MPLCGSDNKTYGNKC
+                           +++++++ ++++++
+151  LAFAPGYQGPPCGDMLCPDNYAPVCGSDGETYPNECDLGITSCNHPEQNITMVGEGTLPVTGAATATATATAEVV
+
+
+sp|Q90844|FST_CHICK
+  LENGTH = 343  COMBINED P-VALUE = 1.28e-12  E-VALUE =  3.2e-10
+  DIAGRAM: 127-[1]-60-[1]-62-[1]-49
+
+                                                         [1]
+                                                         3.9e-15
+                                                         MPLCGSDNKTYGNKC
+                                                          ++++ +++++++++
+76   KWMIFNGGAPNCIPCKETCENVDCGPGKKCKMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARCK
+
+                                                         [1]
+                                                         2.4e-10
+                                                         MPLCGSDNKTYGNKC
+                                                           +++ ++++++  +
+151  EQPELEVQYQGKCKKTCRDVLCPGSSTCVVDQTNNAYCVTCNRICPEPTSPEQYLCGNDGITYASACHLRKATCL
+
+                                                           [1]
+                                                           6.6e-11
+                                                           MPLCGSDNKTYGNKC
+                                                             ++ +++ +++ ++
+226  LGRSIGLAYEGKCIKAKSCEDIQCSAGKKCLWDFKVGRGRCALCDELCPESKSDEAVCASDNTTYPSECAMKEAA
+
+
+sp|P50291|FST_BOVIN
+  LENGTH = 344  COMBINED P-VALUE = 1.29e-12  E-VALUE =  3.2e-10
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-49
+
+                                                          [1]
+                                                          3.9e-15
+                                                          MPLCGSDNKTYGNKC
+                                                           ++++ +++++++++
+76   FKWMIFNGGAPNCIPCKETCENVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARC
+
+                                                          [1]
+                                                          6.3e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++ +++  +
+151  KEQPELQVQYQGKCKKTCRDVFCPGSSTCVVDQTNNAYCVTCNRICPEPTSSEQYLCGNDGVTYPSACHLRKATC
+
+                                                            [1]
+                                                            1.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             +++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCDDIQCTGGKKCLWDFKVGRGRCSLCGELCPESKSEEPVCASDNATYASECAMKEA
+
+
+sp|P21674|FST_RAT
+  LENGTH = 344  COMBINED P-VALUE = 1.29e-12  E-VALUE =  3.2e-10
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-49
+
+                                                          [1]
+                                                          3.9e-15
+                                                          MPLCGSDNKTYGNKC
+                                                           ++++ +++++++++
+76   FKWMIFNGGAPNCIPCKETCENVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARC
+
+                                                          [1]
+                                                          5.1e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++ +++  +
+151  KEQPELEVQYQGKCKKTCRDVFCPGSSTCVVDQTNNAYCVTCNRICPEPSSSEQSLCGNDGVTYSSACHLRKATC
+
+                                                            [1]
+                                                            1.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             +++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCEDIQCGGGKKCLWDFKVGRGRCSLCDELCPDSKSDEPVCASDNATYASECAMKEA
+
+
+sp|P47931|FST_MOUSE
+  LENGTH = 344  COMBINED P-VALUE = 1.29e-12  E-VALUE =  3.2e-10
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-49
+
+                                                          [1]
+                                                          3.9e-15
+                                                          MPLCGSDNKTYGNKC
+                                                           ++++ +++++++++
+76   FKWMIFNGGAPNCIPCKETCENVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARC
+
+                                                          [1]
+                                                          3.6e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++ +++  +
+151  KEQPELEVQYQGKCKKTCRDVFCPGSSTCVVDQTNNAYCVTCNRICPEPSSSEQYLCGNDGVTYSSACHLRKATC
+
+                                                            [1]
+                                                            1.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             +++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCEDIQCGGGKKCLWDSKVGRGRCSLCDELCPDSKSDEPVCASDNATYASECAMKEA
+
+
+sp|O62650|FST_HORSE
+  LENGTH = 344  COMBINED P-VALUE = 1.29e-12  E-VALUE =  3.2e-10
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-49
+
+                                                          [1]
+                                                          3.9e-15
+                                                          MPLCGSDNKTYGNKC
+                                                           ++++ +++++++++
+76   FKWMIFNGGAPNCIPCKETCDNVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARC
+
+                                                          [1]
+                                                          3.6e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++ +++  +
+151  KEQPELEVQYQGKCKKTCRDVNCPGSSTCVVDQTNNAYCVTCNRICPEPTSSEQYLCGNDGVTYSSACHLRKATC
+
+                                                            [1]
+                                                            1.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             +++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCEDIQCTGGKKCLWDFKVGRGRCSLCDELCPDSKSEEPVCASDNATYASECAMKEA
+
+
+sp|P10669|FST_PIG
+  LENGTH = 344  COMBINED P-VALUE = 1.29e-12  E-VALUE =  3.2e-10
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-49
+
+                                                          [1]
+                                                          3.9e-15
+                                                          MPLCGSDNKTYGNKC
+                                                           ++++ +++++++++
+76   FKWMIFNGGAPNCIPCKETCENVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARC
+
+                                                          [1]
+                                                          3.6e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++ +++  +
+151  KEQPELEVQYQGKCKKTCRDVFCPGSSTCVVDQTNNAYCVTCNRICPEPTSSEQYLCGNDGVTYSSACHLRKATC
+
+                                                            [1]
+                                                            1.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             +++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCEDIQCTGGKKCLWDFKVGRGRCSLCDELCPESKSEEPVCASDNATYASECAMKEA
+
+
+sp|P19883|FST_HUMAN
+  LENGTH = 344  COMBINED P-VALUE = 1.29e-12  E-VALUE =  3.2e-10
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-49
+
+                                                          [1]
+                                                          3.9e-15
+                                                          MPLCGSDNKTYGNKC
+                                                           ++++ +++++++++
+76   FKWMIFNGGAPNCIPCKETCENVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGPVCGLDGKTYRNECALLKARC
+
+                                                          [1]
+                                                          3.6e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++ +++  +
+151  KEQPELEVQYQGRCKKTCRDVFCPGSSTCVVDQTNNAYCVTCNRICPEPASSEQYLCGNDGVTYSSACHLRKATC
+
+                                                            [1]
+                                                            1.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             +++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCEDIQCTGGKKCLWDFKVGRGRCSLCDELCPDSKSDEPVCASDNATYASECAMKEA
+
+
+sp|P84755|IPK2_CENMR
+  LENGTH = 50  COMBINED P-VALUE = 1.38e-12  E-VALUE =  3.4e-10
+  DIAGRAM: 14-[1]-21
+
+                   [1]
+                   3.8e-14
+                   MPLCGSDNKTYGNKC
+                    +++++++ ++++ +
+1    AEDCVGRKACTREWYPVCGSDGVTYSNPCNFSAQQEQCDPNITIAHMGEC
+
+
+sp|O96790|DPGN_DIPMA
+  LENGTH = 351  COMBINED P-VALUE = 1.46e-12  E-VALUE =  3.6e-10
+  DIAGRAM: 31-[1]-38-[1]-44-[1]-38-[1]-41-[1]-42-[1]-27
+
+                                    [1]
+                                    9.6e-13
+                                    MPLCGSDNKTYGNKC
+                                      ++++++ ++++ +
+1    LIKELVNMVIQHAEEEEVKELKNPCECPRALHRVCGSDGNTYSNPCMLNCAKHEGNPDLVQVHKGPCDEHDHDFE
+
+              [1]                                                        [1]
+              2.7e-09                                                    9.6e-13
+              MPLCGSDNKTYGNKC                                            MPLCGSD
+               ++++ + +++ + +                                              +++++
+76   DPCKCDNKFEPVCGDDQITYLNLCHLECATFTTSPGVEVAYEGECHAETTNAMEVLFQGNPCECPRALHRVCGSD
+
+                                                   [1]
+                                                   2.1e-10
+     NKTYGNKC                                      MPLCGSDNKTYGNKC
+     + ++++ +                                       ++++ + +++++ +
+151  GNTYSNPCMLTCAKHEGNPDLVQVHEGPCDEHDHDFEDTCQCDDTFQPVCGDDEITYRNLCHLECATFTTSPGVE
+
+                                [1]
+                                4.8e-13
+                                MPLCGSDNKTYGNKC
+                                 ++++++++++++ +
+226  VKHEGECHPETKVNQLILKSCMCPKIYKPVCGTDGRTYPNICVLKCHISSNPGLGLAHLGECKVAVLAKETGEVR
+
+              [1]
+              4.3e-15
+              MPLCGSDNKTYGNKC
+              +++++++++++++ +
+301  NPCNCFRNFNPVCGTDGKTYGNLCMLGCAAETKVPGLKLLHNGRCLPKEQL
+
+
+sp|Q5DT21|ISK9_HUMAN
+  LENGTH = 86  COMBINED P-VALUE = 1.55e-12  E-VALUE =  3.8e-10
+  DIAGRAM: 50-[1]-21
+
+                                                       [1]
+                                                       2.1e-14
+                                                       MPLCGSDNKTYGNKC
+                                                       +++++++++++ + +
+1    MRATAIVLLLALTLATMFSIECAKQTKQMVDCSHYKKLPPGQQRFCHHMYDPICGSDGKTYKNDCFFCSKVKKTD
+
+
+sp|P82968|MCPI_MELCP
+  LENGTH = 197  COMBINED P-VALUE = 1.61e-12  E-VALUE =    4e-10
+  DIAGRAM: 9-[1]-33-[1]-33-[1]-77
+
+              [1]                                             [1]
+              8.8e-15                                         5.8e-13
+              MPLCGSDNKTYGNKC                                 MPLCGSDNKTYGNKC
+               +++++++++++ ++                                 ++ +++++ ++++ +
+1    CDLACSLIYAPVCGSDGKTYPSECSMEATACIDEVVITKVHDGPCETKCSAACTKEYNPQCGTDGVTYANPCTLE
+
+                                   [1]
+                                   9.7e-14
+                                   MPLCGSDNKTYGNKC
+                                   ++ ++++++++++ +
+76   YAKCKSDGEITFDHAGPCKPKCPTVCTLEYNPQCGTDGRTYGNPCQLKVAECESDGRITLDHPGECDACSLKKVV
+
+
+sp|P31696|AGRIN_CHICK
+  LENGTH = 2081  COMBINED P-VALUE = 1.80e-12  E-VALUE =  4.4e-10
+  DIAGRAM: 208-[1]-60-[1]-57-[1]-56-[1]-59-[1]-50-[1]-50-[1]-70-[1]-203-[1]-1133
+
+                                                               [1]
+                                                               3.2e-14
+                                                               MPLCGSDNKTYGNKC
+                                                                ++++++  ++++++
+151  HRKLLADKPNSYFTQTPPTPRDACRGMLCGFGAVCERSPTDPSQASCVCKKTACPVVVAPVCGSDYSTYSNECEL
+
+                                                               [1]
+                                                               5.1e-10
+                                                               MPLCGSDNKTYGNKC
+                                                                 +++++++ ++ ++
+226  EKAQCNQQRRIKVISKGPCGSKDPCAEVTCSFGSTCVRSADGQTAGCVCPASCSGVAESIVCGSDGKDYRSECDL
+
+                                                            [1]
+                                                            2.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             ++++ ++ +++ ++
+301  NKHACDKQENVFKKFDGACDPCKGILNDMNRVCRVNPRTRRVELLSRPENCPSKREPVCGDDGVTYASECVMGRT
+
+                                                        [1]
+                                                        6.3e-12
+                                                        MPLCGSDNKTYGNKC
+                                                        ++++  +++++++ +
+376  GAIRGLEIQKVRSGQCQHQDKCKDECKFNAVCLKRWHARCSCDRITCDGTYRPVCARDSRTYSNDCERQKAECHQ
+
+                                                       [1]
+                                                       8.7e-16
+                                                       MPLCGSDNKTYGNKC
+                                                       +++++++++++++ +
+451  KAAIPVKHSGPCDLGTPSPCLSVECTFGATCVVKNREPVCECQQVCQGRYDPVCGSDNRTYGNPCELNAMACVLK
+
+                                             [1]
+                                             1.8e-13
+                                             MPLCGSDNKTYGNKC
+                                              +++++++ +++ ++
+526  REIRVKHKGPCDRCGKCQFGAICEAETGRCVCPTECVPSSQPVCGTDGNTYGSECELHVRACTQQKNILVAAQGD
+
+                                   [1]
+                                   1.4e-11
+                                   MPLCGSDNKTYGNKC
+                                     ++++++ ++++ +
+601  CKSCGTTVCSFGSTCVGGQCVCPRCEQQPLAQVCGTDGLTYDNRCELRAASCQQQKSIEVAKMGPCEDECGSGGS
+
+                                             [1]
+                                             2.6e-13
+                                             MPLCGSDNKTYGNKC
+                                              ++++++  ++++++
+676  GSGDGSECEQDRCRHYGGWWDEDAEDDRCVCDFTCLAVPRSPVCGSDDVTYANECELKKTRCEKRQNLYVTSQGA
+
+                                      [1]
+                                      1.9e-10
+                                      MPLCGSDNKTYGNKC
+                                        ++++++ +++  +
+901  CEEMSCEFGATCVEVNGFAHCECPSPLCSEANMTKVCGSDGVTYGDQCQLKTIACRQGQLITVKHVGQCHESITH
+
+
+sp|P81635|ISK1_MONDO
+  LENGTH = 55  COMBINED P-VALUE = 2.29e-12  E-VALUE =  5.6e-10
+  DIAGRAM: 19-[1]-21
+
+                        [1]
+                        5.6e-14
+                        MPLCGSDNKTYGNKC
+                         +++++++ ++ +++
+1    DQGRDANCNYEFPGCPRNLEPVCGTDGNTYNNECLLCMENKKRDVPIRIQKDGPC
+
+
+sp|Q9PSM2|ISK1_STRCA
+  LENGTH = 69  COMBINED P-VALUE = 2.54e-12  E-VALUE =  6.3e-10
+  DIAGRAM: 27-[1]-27
+
+                                [1]
+                                4.6e-14
+                                MPLCGSDNKTYGNKC
+                                +++++++++ +++++
+1    EPDSAADTGTEAACSNYDLKKGCAKIFDPVCGTDNILYSNECLLCFQNLQRKTNVRIKRRGTCQEPSPR
+
+
+sp|P10184|IOV7_CHICK
+  LENGTH = 517  COMBINED P-VALUE = 2.96e-12  E-VALUE =  7.3e-10
+  DIAGRAM: 94-[1]-50-[1]-51-[1]-51-[1]-50-[1]-51-[1]-44-[1]-21
+
+                        [1]
+                        6.5e-15
+                        MPLCGSDNKTYGNKC
+                         +++++++ ++++++
+76   YASGIGKDGTSWVACPRNLKPVCGTDGSTYSNECGICLYNREHGANVEKEYDGECRPKHVTIDCSPYLQVVRDGN
+
+              [1]
+              5.9e-15
+              MPLCGSDNKTYGNKC
+               +++++++ ++++++
+151  TMVACPRILKPVCGSDSFTYDNECGICAYNAEHHTNISKLHDGECKLEIGSVDCSKYPSTVSKDGRTLVACPRIL
+
+     [1]                                                               [1]
+     5.1e-14                                                           3.2e-14
+     MPLCGSDNKTYGNKC                                                   MPLCGSDNK
+      +++++++ ++++++                                                    +++++++
+226  SPVCGTDGFTYDNECGICAHNAEQRTHVSKKHDGKCRQEIPEIDCDQYPTRKTTGGKLLVRCPRILLPVCGTDGF
+
+                                                             [1]
+                                                             2.5e-11
+     TYGNKC                                                  MPLCGSDNKTYGNKC
+     ++++++                                                    ++++++ ++++ +
+301  TYDNECGICAHNAQHGTEVKKSHDGRCKERSTPLDCTQYLSNTQNGEAITACPFILQEVCGTDGVTYSNDCSLCA
+
+                                                    [1]
+                                                    2.0e-11
+                                                    MPLCGSDNKTYGNKC
+                                                    ++++ +++ +++ ++
+376  HNIELGTSVAKKHDGRCREEVPELDCSKYKTSTLKDGRQVVACTMIYDPVCATNGVTYASECTLCAHNLEQRTNL
+
+                                    [1]
+                                    1.2e-13
+                                    MPLCGSDNKTYGNKC
+                                     + +++++ ++++ +
+451  GKRKNGRCEEDITKEHCREFQKVSPICTMEYVPHCGSDGVTYSNRCFFCNAYVQSNRTLNLVSMAAC
+
+
+sp|Q6IE49|ISK2_RAT
+  LENGTH = 86  COMBINED P-VALUE = 3.03e-12  E-VALUE =  7.5e-10
+  DIAGRAM: 50-[1]-21
+
+                                                       [1]
+                                                       4.2e-14
+                                                       MPLCGSDNKTYGNKC
+                                                        ++++++  ++++++
+1    MLRLVLLLLATDFAASDDSLDSSDSQLIKRSQFRTPDCHRFDYPVCSKHLSPVCGTDMNTYGNECTLCMKIREDG
+
+
+sp|Q9YHV4|FSTA_DANRE
+  LENGTH = 322  COMBINED P-VALUE = 4.05e-12  E-VALUE =    1e-09
+  DIAGRAM: 131-[1]-60-[1]-62-[1]-24
+
+                                                             [1]
+                                                             1.3e-14
+                                                             MPLCGSDNKTYGNKC
+                                                              +++++++++++ ++
+76   STLFRWMIFNGGAPNCIPCKETCDNVDCGPGKRCKMNRRSKPRCVCAPDCSNVTWKGPVCGSDGKTYRDECALLK
+
+                                                             [1]
+                                                             4.4e-09
+                                                             MPLCGSDNKTYGNKC
+                                                               +++ +++ ++  +
+151  SKCKGHPDLEVQYQGKCKKTCRDVLCPGSSTCVVDQTNNAYCVTCNRICPEVMSPDQYLCGNDGIVYASACHLRR
+
+                                                               [1]
+                                                               6.6e-11
+                                                               MPLCGSDNKTYGNKC
+                                                                 ++ +++ +++ ++
+226  ATCLLGRSIGVAYEGKCIKAKSCDDIHCSAGKKCLWDAKMSRGRCAVCAESCPESRSEEAVCASDNTTYPSECAM
+
+
+sp|Q8CAC8|ISK10_MOUSE
+  LENGTH = 162  COMBINED P-VALUE = 5.15e-12  E-VALUE =  1.3e-09
+  DIAGRAM: 49-[1]-62-[1]-21
+
+                                                      [1]
+                                                      7.7e-10
+                                                      MPLCGSDNKTYGNKC
+                                                       +++ + ++++ +++
+1    MKLSSLWSNAFVINVAIALYAETAFLSAPKLKIDCRPYLDSNDKCTREYHPVCSTSGKTYCNKCTFCKALRLDTM
+
+                                                        [1]
+                                                        3.5e-14
+                                                        MPLCGSDNKTYGNKC
+                                                        ++++++++ ++++++
+76   SSSLLWIKITFILALVVPFYYGTTFAFSKEARRQPDCDKYRTFPNQCTREWNPVCGTNGFTYSNECVFCNAKIAA
+
+
+sp|P83578|IKP1_PHYSA
+  LENGTH = 58  COMBINED P-VALUE = 1.06e-11  E-VALUE =  2.6e-09
+  DIAGRAM: 18-[1]-25
+
+                       [1]
+                       2.4e-13
+                       MPLCGSDNKTYGNKC
+                       +++++++ +++ +++
+1    VIEPKCYKYEGKKCPPDINPVCGTDKRTYYNECALCVFIRQSTKKADKAIKIKKWGKC
+
+
+sp|P09865|IBD3_HIRME
+  LENGTH = 56  COMBINED P-VALUE = 1.57e-11  E-VALUE =  3.9e-09
+  DIAGRAM: 10-[1]-31
+
+               [1]
+               3.7e-13
+               MPLCGSDNKTYGNKC
+                 ++++++ ++++++
+1    DTECVCTKELHRVCGSDGVTYDNECLATCHGASVAHDHACEGHEEHHVDEHGEDHD
+
+
+sp|Q91590|TEFF1_XENLA
+  LENGTH = 370  COMBINED P-VALUE = 1.81e-11  E-VALUE =  4.5e-09
+  DIAGRAM: 97-[1]-77-[1]-166
+
+                           [1]
+                           5.1e-14
+                           MPLCGSDNKTYGNKC
+                            +++++++ ++ +++
+76   GVCKEEGDVLKCICQFQCQTNYAPVCGSNGDTYQNECFLRRSACKQQKDITVVARGPCFSDIASGSGEGEYEGSG
+
+                                            [1]
+                                            5.8e-12
+                                            MPLCGSDNKTYGNKC
+                                            ++++ +++  +++ +
+151  GEVHKKHSKCGVCKFGAECDEDAGDVGCVCNIDCSGHNFNPVCATDGSSYSNPCLVREASCLRQEQIDVKHIRSC
+
+
+sp|Q6PFE7|TEFF1_MOUSE
+  LENGTH = 372  COMBINED P-VALUE = 1.82e-11  E-VALUE =  4.5e-09
+  DIAGRAM: 99-[1]-77-[1]-166
+
+                             [1]
+                             5.1e-14
+                             MPLCGSDNKTYGNKC
+                              +++++++ ++ +++
+76   YGGVCKEDGDGLKCACQFQCHTNYIPVCGSNGDTYQNECFLRRAACKHQKDITVVARGPCYSDNGSGSGEGEEEG
+
+                                              [1]
+                                              9.3e-12
+                                              MPLCGSDNKTYGNKC
+                                              ++++ +++  + + +
+151  SGAGAHRKHSKCGPCKYKAECDEDAENVGCVCNIDCSGYSFNPVCASDGSSYNNPCFVREASCIKQEQIDIRHLG
+
+
+sp|Q9QYV1|TEFF1_RAT
+  LENGTH = 373  COMBINED P-VALUE = 1.82e-11  E-VALUE =  4.5e-09
+  DIAGRAM: 100-[1]-77-[1]-166
+
+                              [1]
+                              5.1e-14
+                              MPLCGSDNKTYGNKC
+                               +++++++ ++ +++
+76   KYGGVCKEDGDGLKCACQFQCHTNYIPVCGSNGDTYQNECFLRRAACKHQKDITVVARGPCYSDNGSGSGEGEEE
+
+                                               [1]
+                                               9.3e-12
+                                               MPLCGSDNKTYGNKC
+                                               ++++ +++  + + +
+151  GSGAGAHRKHSKCGPCKYKAECDEDAENVGCVCNIDCSGYSFNPVCASDGSSYNNPCFVREASCIRQEQIDIRHL
+
+
+sp|Q8IYR6|TEFF1_HUMAN
+  LENGTH = 380  COMBINED P-VALUE = 1.86e-11  E-VALUE =  4.6e-09
+  DIAGRAM: 107-[1]-77-[1]-166
+
+                                     [1]
+                                     5.1e-14
+                                     MPLCGSDNKTYGNKC
+                                      +++++++ ++ +++
+76   VCDESSCKYGGVCKEDGDGLKCACQFQCHTNYIPVCGSNGDTYQNECFLRRAACKHQKEITVIARGPCYSDNGSG
+
+                                                      [1]
+                                                      9.3e-12
+                                                      MPLCGSDNKTYGNKC
+                                                      ++++ +++  + + +
+151  SGEGEEEGSGAEVHRKHSKCGPCKYKAECDEDAENVGCVCNIDCSGYSFNPVCASDGSSYNNPCFVREASCIKQE
+
+
+sp|Q06684|THBI_RHOPR
+  LENGTH = 103  COMBINED P-VALUE = 2.14e-11  E-VALUE =  5.3e-09
+  DIAGRAM: 12-[1]-38-[1]-23
+
+                 [1]                                                  [1]
+                 1.6e-12                                              2.4e-13
+                 MPLCGSDNKTYGNKC                                      MPLCGSDNKT
+                   ++++++ ++++ +                                       ++++++ ++
+1    EGGEPCACPHALHRVCGSDGETYSNPCTLNCAKFNGKPELVKVHDGPCEPDEDEDVCQECDGDEYKPVCGSDDIT
+
+     
+     
+     YGNKC
+     +++ +
+76   YDNNCRLECASISSSPGVELKHEGPCRT
+
+
+sp|P22074|CALT_CAVPO
+  LENGTH = 45  COMBINED P-VALUE = 2.98e-11  E-VALUE =  7.4e-09
+  DIAGRAM: 28-[1]-2
+
+                                 [1]
+                                 9.6e-13
+                                 MPLCGSDNKTYGNKC
+                                 ++++++++ ++++
+1    AFAPSKVDSDRPNCSRYVQHLYMCTKELDPVCGTDGHTYGNRSIF
+
+
+sp|P09655|ISK1_RAT
+  LENGTH = 79  COMBINED P-VALUE = 3.15e-11  E-VALUE =  7.8e-09
+  DIAGRAM: 43-[1]-21
+
+                                                [1]
+                                                4.8e-13
+                                                MPLCGSDNKTYGNKC
+                                                ++++++++++++ ++
+1    MKVAIIFLLSALALLSLAGNPPAEVNGKTPNCPKQIMGCPRIYDPVCGTNGITYPSECSLCFENRKFGTSIHIQR
+
+
+sp|P00999|IACA_PIG
+  LENGTH = 65  COMBINED P-VALUE = 3.80e-11  E-VALUE =  9.4e-09
+  DIAGRAM: 21-[1]-29
+
+                          [1]
+                          7.4e-13
+                          MPLCGSDNKTYGNKC
+                          +++++++++ +++ +
+1    TRKQPNCNVYRSHLFFCTRQMDPICGTNGKSYANPCIFCSEKGLRNQKFDFGHWGHCREYTSARS
+
+
+sp|A5YT95|FST_BUBBU
+  LENGTH = 344  COMBINED P-VALUE = 4.63e-11  E-VALUE =  1.1e-08
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-49
+
+                                                          [1]
+                                                          1.4e-13
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ +++++++++
+76   FKWMIFNGGAPNCIPCKETCENVDCGPGKKCRMNKKNKPRCVCAPDCSNITWKGLVCGLDGKTYRNECALLKARC
+
+                                                          [1]
+                                                          6.3e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++ +++  +
+151  KEQPELQVQYQGKCKKTCRDVFCPGSSTCVVDQTNNAYCVTCNRICPEPTSSEQYLCGNDGVTYPSACHLRKATC
+
+                                                            [1]
+                                                            1.0e-11
+                                                            MPLCGSDNKTYGNKC
+                                                             +++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCDDIQCTGGKKCLWDFKVGRGRCSLCGELCPESKSEEPVCASDNATYASECAMKEA
+
+
+sp|A2ASQ1|AGRIN_MOUSE
+  LENGTH = 1950  COMBINED P-VALUE = 5.56e-11  E-VALUE =  1.4e-08
+  DIAGRAM: 101-[1]-60-[1]-57-[1]-57-[1]-58-[1]-50-[1]-50-[1]-71-[1]-204-[1]-1107
+
+                               [1]
+                               2.9e-14
+                               MPLCGSDNKTYGNKC
+                                ++++++  ++++++
+76   AVCEPSVEDPGRASCVCKKNVCPAMVAPVCGSDASTYSNECELQRAQCNQQRRIRLLRQGPCGSRDPCANVTCSF
+
+                               [1]
+                               1.6e-09
+                               MPLCGSDNKTYGNKC
+                                 ++++++  ++ ++
+151  GSTCVPSADGQTASCLCPTTCFGAPDGTVCGSDGVDYPSECQLLRHACANQEHIFKKFDGPCDPCQGSMSDLNHI
+
+                            [1]
+                            1.6e-10
+                            MPLCGSDNKTYGNKC
+                             ++++ ++ ++ + +
+226  CRVNPRTRHPEMLLRPENCPAQHTPICGDDGVTYENDCVMSRIGAARGLLLQKVRSGQCQTRDQCPETCQFNSVC
+
+                         [1]
+                         2.6e-12
+                         MPLCGSDNKTYGNKC
+                         ++++  ++ ++++ +
+301  LSRRGRPHCSCDRVTCDGAYRPVCAQDGHTYDNDCWRQQAECRQQQTIPPKHQGPCDQTPSPCRGAQCAFGATCT
+
+                       [1]
+                       3.9e-12
+                       MPLCGSDNKTYGNKC
+                       ++++++++ +++  +
+376  VKNGKAVCECQRVCSGGYDPVCGSDGVTYGSVCELESMACTLGREIRVARRGPCDRCGQCRFGSLCEVETGRCVC
+
+             [1]                                                              [1
+             2.0e-13                                                          1.
+             MPLCGSDNKTYGNKC                                                  MP
+              +++++++ +++ ++                                                   +
+451  PSECVESAQPVCGSDGHTYASECELHVHACTHQISLYVASAGHCQTCGETVCTFGAVCSAGQCVCPRCEHPPPGP
+
+     ]
+     5e-11
+     LCGSDNKTYGNKC
+     ++++++ ++   +
+526  VCGSDGVTYLSACELREAACQQQVQIEEARAGPCEPAECGSGGSGSGEDNACEQELCRQHGGVWDEDSEDGPCVC
+
+              [1]
+              1.5e-12
+              MPLCGSDNKTYGNKC
+               +++++++ +++ ++
+601  DFSCQSVLKSPVCGSDGVTYSTECHLKKARCEARQELYVAAQGACRGPTLAPLLPMASPHCAQTPYGCCQDNVTA
+
+        [1]
+        4.4e-13
+        MPLCGSDNKTYGNKC
+          ++++++ ++++++
+826  ANSTKVCGSDGVTYGNECQLKTIACRQRLDISIQSLGPCRESVAPGVSPTSASMTTPRHILSRTLASPHSSLPLS
+
+
+sp|P25304|AGRIN_RAT
+  LENGTH = 1959  COMBINED P-VALUE = 5.59e-11  E-VALUE =  1.4e-08
+  DIAGRAM: 101-[1]-60-[1]-57-[1]-57-[1]-58-[1]-50-[1]-50-[1]-71-[1]-204-[1]-1116
+
+                               [1]
+                               2.9e-14
+                               MPLCGSDNKTYGNKC
+                                ++++++  ++++++
+76   AVCEPSVEDPGRASCVCKKNACPATVAPVCGSDASTYSNECELQRAQCNQQRRIRLLRQGPCGSRDPCANVTCSF
+
+                               [1]
+                               1.6e-09
+                               MPLCGSDNKTYGNKC
+                                 ++++++  ++ ++
+151  GSTCVPSADGQTASCLCPTTCFGAPDGTVCGSDGVDYPSECQLLSHACASQEHIFKKFNGPCDPCQGSMSDLNHI
+
+                            [1]
+                            1.6e-10
+                            MPLCGSDNKTYGNKC
+                             ++++ ++ ++ + +
+226  CRVNPRTRHPEMLLRPENCPAQHTPICGDDGVTYENDCVMSRIGATRGLLLQKVRSGQCQTRDQCPETCQFNSVC
+
+                         [1]
+                         7.4e-12
+                         MPLCGSDNKTYGNKC
+                         ++++  ++ ++ + +
+301  LSRRGRPHCSCDRVTCDGSYRPVCAQDGHTYNNDCWRQQAECRQQRAIPPKHQGPCDQTPSPCHGVQCAFGAVCT
+
+                       [1]
+                       3.9e-12
+                       MPLCGSDNKTYGNKC
+                       ++++++++ +++  +
+376  VKNGKAECECQRVCSGIYDPVCGSDGVTYGSVCELESMACTLGREIQVARRGPCDPCGQCRFGSLCEVETGRCVC
+
+             [1]                                                              [1
+             2.0e-13                                                          1.
+             MPLCGSDNKTYGNKC                                                  MP
+              +++++++ +++ ++                                                   +
+451  PSECVESAQPVCGSDGHTYASECELHVHACTHQISLYVASAGHCQTCGEKVCTFGAVCSAGQCVCPRCEHPPPGP
+
+     ]
+     5e-11
+     LCGSDNKTYGNKC
+     ++++++ ++   +
+526  VCGSDGVTYLSACELREAACQQQVQIEEAHAGPCEPAECGSGGSGSGEDDECEQELCRQRGGIWDEDSEDGPCVC
+
+              [1]
+              1.1e-12
+              MPLCGSDNKTYGNKC
+               +++++++ +++ ++
+601  DFSCQSVPRSPVCGSDGVTYGTECDLKKARCESQQELYVAAQGACRGPTLAPLLPVAFPHCAQTPYGCCQDNFTA
+
+        [1]
+        4.4e-13
+        MPLCGSDNKTYGNKC
+          ++++++ ++++++
+826  ANSTKVCGSDGVTYGNECQLKAIACRQRLDISTQSLGPCQESVTPGASPTSASMTTPRHILSKTLPFPHNSLPLS
+
+
+sp|O00468|AGRIN_HUMAN
+  LENGTH = 2068  COMBINED P-VALUE = 5.90e-11  E-VALUE =  1.5e-08
+  DIAGRAM: 206-[1]-60-[1]-57-[1]-57-[1]-58-[1]-50-[1]-50-[1]-71-[1]-204-[1]-1120
+
+                                                             [1]
+                                                             2.9e-14
+                                                             MPLCGSDNKTYGNKC
+                                                              ++++++  ++++++
+151  FCVEDKPGTHFTPVPPTPPDACRGMLCGFGAVCEPNAEGPGRASCVCKKSPCPSVVAPVCGSDASTYSNECELQR
+
+                                                             [1]
+                                                             2.6e-08
+                                                             MPLCGSDNKTYGNKC
+                                                               ++++++  ++ ++
+226  AQCSQQRRIRLLSRGPCGSRDPCSNVTCSFGSTCARSADGLTASCLCPATCRGAPEGTVCGSDGADYPGECQLLR
+
+                                                          [1]
+                                                          2.9e-11
+                                                          MPLCGSDNKTYGNKC
+                                                           ++++ ++ ++ + +
+301  RACARQENVFKKFDGPCDPCQGALPDPSRSCRVNPRTRRPEMLLRPESCPARQAPVCGDDGVTYENDCVMGRSGA
+
+                                                       [1]
+                                                       2.2e-11
+                                                       MPLCGSDNKTYGNKC
+                                                       ++++  ++++++  +
+376  ARGLLLQKVRSGQCQGRDQCPEPCRFNAVCLSRRGRPRCSCDRVTCDGAYRPVCAQDGRTYDSDCWRQQAECRQQ
+
+                                                     [1]
+                                                     1.8e-13
+                                                     MPLCGSDNKTYGNKC
+                                                     ++++++++ +++  +
+451  RAIPSKHQGPCDQAPSPCLGVQCAFGATCAVKNGQAACECLQACSSLYDPVCGSDGVTYGSACELEATACTLGRE
+
+                                           [1]
+                                           2.0e-13
+                                           MPLCGSDNKTYGNKC
+                                            +++++++ +++ ++
+526  IQVARKGPCDRCGQCRFGALCEAETGRCVCPSECVALAQPVCGSDGHTYPSECMLHVHACTHQISLHVASAGPCE
+
+                                 [1]
+                                 3.1e-13
+                                 MPLCGSDNKTYGNKC
+                                  +++++++ +++  +
+601  TCGDAVCAFGAVCSAGQCVCPRCEHPPPGPVCGSDGVTYGSACELREAACLQQTQIEEARAGPCEQAECGSGGSG
+
+                                            [1]
+                                            1.5e-12
+                                            MPLCGSDNKTYGNKC
+                                             +++++++ +++ ++
+676  SGEDGDCEQELCRQRGGIWDEDSEDGPCVCDFSCQSVPGSPVCGSDGVTYSTECELKKARCESQRGLYVAAQGAC
+
+                                      [1]
+                                      4.4e-13
+                                      MPLCGSDNKTYGNKC
+                                        ++++++ ++++++
+901  CAEMRCEFGARCVEESGSAHCVCPMLTCPEANATKVCGSDGVTYGNECQLKTIACRQGLQISIQSLGPCQEAVAP
+
+
+sp|P26461|IACS_PIG
+  LENGTH = 97  COMBINED P-VALUE = 6.18e-11  E-VALUE =  1.5e-08
+  DIAGRAM: 52-[1]-30
+
+                                                         [1]
+                                                         7.4e-13
+                                                         MPLCGSDNKTYGNKC
+                                                         +++++++++ +++ +
+1    MAFFSSRVRALFILVLVLPLCSETGFARSKKTRKEPDCDVYRSHLFFCTREMDPICGTNGKSYANPCIFCSEKLG
+
+
+sp|Q9QYM9|TEFF2_MOUSE
+  LENGTH = 374  COMBINED P-VALUE = 6.61e-11  E-VALUE =  1.6e-08
+  DIAGRAM: 99-[1]-77-[1]-168
+
+                             [1]
+                             1.3e-12
+                             MPLCGSDNKTYGNKC
+                              +++++++  + +++
+76   FDGECLRIGDTVTCVCQFKCNSDYVPVCGSNGESYQNECYLRQAACKQQSEILVVSEGSCATDTGSGSGDGVHEG
+
+                                              [1]
+                                              1.8e-13
+                                              MPLCGSDNKTYGNKC
+                                              ++++ ++++ +++ +
+151  SGETSQKETSTCDICQFGAECDEDAEDVWCVCNIDCSQTNFNPLCASDGKSYDNACQIKEASCQKQEKIEVMSLG
+
+
+sp|Q17QD6|TEFF2_BOVIN
+  LENGTH = 374  COMBINED P-VALUE = 6.61e-11  E-VALUE =  1.6e-08
+  DIAGRAM: 99-[1]-77-[1]-168
+
+                             [1]
+                             1.3e-12
+                             MPLCGSDNKTYGNKC
+                              +++++++  + +++
+76   FDGECLRIGDTVTCVCQFKCNSDYVPVCGSNGESYQNECYLRQAACKQQSEILVVSEGSCATDAGSGSGDGVHEG
+
+                                              [1]
+                                              1.8e-13
+                                              MPLCGSDNKTYGNKC
+                                              ++++ ++++ +++ +
+151  SGETSQKETSTCDICQFGAECDEDAEDVWCVCNIDCSQTNFNPLCASDGKSYDNACQIKEASCQKQEKIEVMSLG
+
+
+sp|Q9UIK5|TEFF2_HUMAN
+  LENGTH = 374  COMBINED P-VALUE = 6.61e-11  E-VALUE =  1.6e-08
+  DIAGRAM: 99-[1]-77-[1]-168
+
+                             [1]
+                             1.3e-12
+                             MPLCGSDNKTYGNKC
+                              +++++++  + +++
+76   FDGECLRIGDTVTCVCQFKCNNDYVPVCGSNGESYQNECYLRQAACKQQSEILVVSEGSCATDAGSGSGDGVHEG
+
+                                              [1]
+                                              1.8e-13
+                                              MPLCGSDNKTYGNKC
+                                              ++++ ++++ +++ +
+151  SGETSQKETSTCDICQFGAECDEDAEDVWCVCNIDCSQTNFNPLCASDGKSYDNACQIKEASCQKQEKIEVMSLG
+
+
+sp|P37109|ISK4_PIG
+  LENGTH = 86  COMBINED P-VALUE = 6.91e-11  E-VALUE =  1.7e-08
+  DIAGRAM: 50-[1]-21
+
+                                                       [1]
+                                                       9.6e-13
+                                                       MPLCGSDNKTYGNKC
+                                                       ++++++++ ++  ++
+1    MAVRLWVVALALAALFIVDREVPVSAEKQVFSRMPICEHMTESPDCSRIYDPVCGTDGVTYESECKLCLARIENK
+
+
+sp|P01000|IAC1_BOVIN
+  LENGTH = 63  COMBINED P-VALUE = 1.63e-10  E-VALUE =    4e-08
+  DIAGRAM: 25-[1]-23
+
+                              [1]
+                              3.3e-12
+                              MPLCGSDNKTYGNKC
+                              ++++ +  +++++++
+1    EIYFEPDFGFPPDCKVYTEACTREYNPICDSAAKTYSNECTFCNEKMNNDADIHFNHFGECEY
+
+
+sp|Q6IE38|ISK14_HUMAN
+  LENGTH = 97  COMBINED P-VALUE = 1.99e-10  E-VALUE =  4.9e-08
+  DIAGRAM: 61-[1]-21
+
+                                                                  [1]
+                                                                  2.4e-12
+                                                                  MPLCGSDNKTYGNK
+                                                                   ++++++ +++++
+1    MAKSFPVFSLLSFILIHLVLSSVSGPRHWWPPRGIIKVKCPYEKVNLSWYNGTVNPCPGLYQPICGTNFITYDNP
+
+     
+     
+     C
+     +
+76   CILCVESLKSHGRIRFYHDGKC
+
+
+sp|O60575|ISK4_HUMAN
+  LENGTH = 86  COMBINED P-VALUE = 2.39e-10  E-VALUE =  5.9e-08
+  DIAGRAM: 50-[1]-21
+
+                                                       [1]
+                                                       3.3e-12
+                                                       MPLCGSDNKTYGNKC
+                                                       + ++++++ ++ +++
+1    MAVRQWVIALALAALLVVDREVPVAAGKLPFSRMPICEHMVESPTCSQMSNLVCGTDGLTYTNECQLCLARIKTK
+
+
+sp|O35679|ISK4_MOUSE
+  LENGTH = 86  COMBINED P-VALUE = 2.59e-10  E-VALUE =  6.4e-08
+  DIAGRAM: 50-[1]-21
+
+                                                       [1]
+                                                       3.6e-12
+                                                       MPLCGSDNKTYGNKC
+                                                       + ++++++ ++ +++
+1    MAMHLWLVTLTLVPLLGMDRELMVSAGSLVFPRMPFCEHMAELPNCPQTPNLICGTDGLTYENECHLCLTRMKTM
+
+
+sp|Q90404|AGRIN_DIPOM
+  LENGTH = 1328  COMBINED P-VALUE = 2.64e-10  E-VALUE =  6.5e-08
+  DIAGRAM: 3-[1]-201-[1]-1094
+
+        [1]
+        3.1e-13
+        MPLCGSDNKTYGNKC
+         +++++++ +++ ++
+1    VPLSPVCGSDGVTYDSECALKLMRCMIQKDLHVVMLSPCKDASPSSVPELHCSRSVYGCCRDNVTAAQGVGLAGC
+
+                                                                          [1]
+                                                                          2.0e-1
+                                                                          MPLCGS
+                                                                            ++++
+151  LCSCKAGISGMKCNQCPNGSKLGPSGCDQDPSVSRTCSDLHCQYGATCVQSIGRAYCECPPSICPKNKQFKVCGS
+
+     
+     3
+     DNKTYGNKC
+     ++ ++++++
+226  DGVTYANECQLKTIACRQGSVINILHQGPCQGTTPSTGNIQTTDLTPSPKEHTNLSKIVSLETIPILKAIFPVTD
+
+
+sp|Q9NQ38|ISK5_HUMAN
+  LENGTH = 1064  COMBINED P-VALUE = 3.92e-10  E-VALUE =  9.7e-08
+  DIAGRAM: 48-[1]-52-[1]-49-[1]-49-[1]-57-[1]-55-[1]-55-[1]-44-[1]-56-[1]-50-[1]-60-[1]-52-[1]-60-[1]-52-[1]-61-[1]-39
+
+                                                     [1]
+                                                     1.6e-05
+                                                     MPLCGSDNKTYGNKC
+                                                       +   +++   +++
+1    MKIATVSVLLPLALCLIQDAASKNEDQEMCHEFQAFMKNGKLFCPQDKKFFQSLDGIMFINKCATCKMILEKEAK
+
+                                             [1]
+                                             3.7e-13
+                                             MPLCGSDNKTYGNKC
+                                               +++++++++++ +
+76   SQKRARHLARAPKATAPTELNCDDFKKGERDGDFICPDYYEAVCGTDGKTYDNRCALCAENAKTGSQIGVKSEGE
+
+                                  [1]
+                                  1.3e-09
+                                  MPLCGSDNKTYGNKC
+                                  +++ + ++++ ++++
+151  CKSSNPEQDVCSAFRPFVRDGRLGCTRENDPVLGPDGKTHGNKCAMCAELFLKEAENAKREGETRIRRNAEKDFC
+
+                       [1]
+                       7.9e-08
+                       MPLCGSDNKTYGNKC
+                       +++ + +++  ++++
+226  KEYEKQVRNGRLFCTRESDPVRGPDGRMHGNKCALCAEIFKQRFSEENSKTDQNLGKAEEKTKVKREIVKLCSQY
+
+                    [1]
+                    4.9e-07
+                    MPLCGSDNKTYGNKC
+                    +++ + +++  ++ +
+301  QNQAKNGILFCTRENDPIRGPDGKMHGNLCSMCQAYFQAENEEKKKAEARARNKRESGKATSYAELCSEYRKLVR
+
+               [1]
+               7.6e-07
+               MPLCGSDNKTYGNKC
+               +++ + +++  ++ +
+376  NGKLACTRENDPIQGPDGKVHGNTCSMCEVFFQAEEEEKKKKEGKSRNKRQSKSTASFEELCSEYRKSRKNGRLF
+
+          [1]                                                        [1]
+          1.1e-06                                                    2.2e-08
+          MPLCGSDNKTYGNKC                                            MPLCGSDNKTY
+          +++ + +++  ++ +                                            +++ + +++
+451  CTRENDPIQGPDGKMHGNTCSMCEAFFQQEERARAKAKREAAKEICSEFRDQVRNGTLICTREHNPVRGPDGKMH
+
+                                                                 [1]
+                                                                 1.6e-07
+     GNKC                                                        MPLCGSDNKTYGNKC
+     ++++                                                        +++ + +++  ++ +
+526  GNKCAMCASVFKLEEEEKKNDKEEKGKVEAEKVKREAVQELCSEYRHYVRNGRLPCTRENDPIEGLDGKIHGNTC
+
+                                                       [1]
+                                                       1.0e-09
+                                                       MPLCGSDNKTYGNKC
+                                                       +++ + ++++ ++++
+601  SMCEAFFQQEAKEKERAEPRAKVKREAEKETCDEFRRLLQNGKLFCTRENDPVRGPDGKTHGNKCAMCKAVFQKE
+
+                                                       [1]
+                                                       4.7e-08
+                                                       MPLCGSDNKTYGNKC
+                                                       +++   +++ + + +
+676  NEERKRKEEEDQRNAAGHGSSGGGGGNTQDECAEYREQMKNGRLSCTRESDPVRDADGKSYNNQCTMCKAKLERE
+
+                                               [1]
+                                               1.0e-09
+                                               MPLCGSDNKTYGNKC
+                                               +++ + ++++ ++++
+751  AERKNEYSRSRSNGTGSESGKDTCDEFRSQMKNGKLICTRESDPVRGPDGKTHGNKCTMCKEKLEREAAEKKKKE
+
+                                               [1]
+                                               1.4e-05
+                                               MPLCGSDNKTYGNKC
+                                               +++ +  ++   +++
+826  DEDRSNTGERSNTGERSNDKEDLCREFRSMQRNGKLICTRENNPVRGPYGKMHINKCAMCQSIFDREANERKKKD
+
+                                       [1]
+                                       2.5e-09
+                                       MPLCGSDNKTYGNKC
+                                       +++ + +++ + +++
+901  EEKSSSKPSNNAKDECSEFRNYIRNNELICPRENDPVHGADGKFYTNKCYMCRAVFLTEALERAKLQEKPSHVRA
+
+                                        [1]
+                                        1.2e-12
+                                        MPLCGSDNKTYGNKC
+                                         ++++ +++++ + +
+976  SQEEDSPDSFSSLDSEMCKDYRVLPRIGYLCPKDLKPVCGDDGQTYNNPCMLCHENLIRQTNTHIRSTGKCEESS
+
+
+sp|Q6IE46|ISK14_RAT
+  LENGTH = 98  COMBINED P-VALUE = 6.19e-10  E-VALUE =  1.5e-07
+  DIAGRAM: 62-[1]-21
+
+                                                                   [1]
+                                                                   7.4e-12
+                                                                   MPLCGSDNKTYGN
+                                                                    ++++++  ++++
+1    MVKYFQVLWSLLFSIMLHSMLLAAPGARVWWPTHGLIKIKCPYKKVKLSWFNKTVDPCPGLKQPICGTNFVTYDN
+
+     
+     
+     KC
+      +
+76   PCILCVESLKSGGQIRYYHTGRC
+
+
+sp|P86987|IMSP6_RUDPH
+  LENGTH = 183  COMBINED P-VALUE = 6.59e-10  E-VALUE =  1.6e-07
+  DIAGRAM: 37-[1]-97-[1]-19
+
+                                          [1]
+                                          3.9e-12
+                                          MPLCGSDNKTYGNKC
+                                          + ++ +++ ++++++
+1    MKLEIALLLLAVTVCVKGGFLQGRSGYDCRRRCGYDRRYVCSTDGTTYDNECMMKCNWAYKSCDGRCPCYRSPAP
+
+                                                                               [
+                                                                               8
+                                                                               M
+                                                                               +
+76   VVYRPKPAVVYKPRPVVNYEPASVNYEPASVNYEPAAVDYPSVPDYEPIPVYNEPAPVYYDVPVQSDCVCSKDKD
+
+     1]
+     .8e-10
+     PLCGSDNKTYGNKC
+      ++  ++ ++++++
+151  YVCTYDGETYDNECEANCDGKAKMCDGQCPCSK
+
+
+sp|Q1W4C9|ISK13_HUMAN
+  LENGTH = 94  COMBINED P-VALUE = 1.19e-09  E-VALUE =  2.9e-07
+  DIAGRAM: 57-[1]-22
+
+                                                              [1]
+                                                              1.5e-11
+                                                              MPLCGSDNKTYGNKC
+                                                               +++ +++ +  +++
+1    MAAFPHKIIFFLVCSTLTHVAFSGIFNKRDFTRWPKPRCKMYIPLDPDYNADCPNVTAPVCASNGHTFQNECFFC
+
+
+sp|P83579|IKP2_PHYSA
+  LENGTH = 58  COMBINED P-VALUE = 3.63e-09  E-VALUE =    9e-07
+  DIAGRAM: 18-[1]-25
+
+                       [1]
+                       8.2e-11
+                       MPLCGSDNKTYGNKC
+                         +++++++ + +++
+1    VIEPDCKKYEGKKCPPDIALVCGTNGREYYNECALCVFIRDSTLKADKAIKIKKWGKC
+
+
+sp|P31515|FST_XENLA
+  LENGTH = 341  COMBINED P-VALUE = 1.20e-08  E-VALUE =    3e-06
+  DIAGRAM: 128-[1]-60-[1]-62-[1]-46
+
+                                                          [1]
+                                                          3.7e-11
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ +++++  ++
+76   FKWMIFHGGAPHCIPCKETCENVDCGPGKKCKMNKKNKPRCVCAPDCSNITWKGSVCGIDGKTYKDECALLKAKC
+
+                                                          [1]
+                                                          1.1e-10
+                                                          MPLCGSDNKTYGNKC
+                                                            +++ ++++++  +
+151  KGVPELDVQYQGKCKKTCRDVLCPGSSSCVVDQTNNAYCVTCNRICPEPTSPDQYLCGNDGITYGSACHLRKATC
+
+                                                            [1]
+                                                            8.2e-11
+                                                            MPLCGSDNKTYGNKC
+                                                            + ++ +++ +++ ++
+226  LLGRSIGLAYEGKCIKAKSCEDIQCSAGKKCLWDSRVGRGRCALCDDLCGESKSDDTVCASDNTTYPSECAMKQA
+
+
+sp|A0A3G5BID2|KAZL2_DOLGE
+  LENGTH = 202  COMBINED P-VALUE = 2.75e-08  E-VALUE =  6.8e-06
+  DIAGRAM: 37-[1]-47-[1]-48-[1]-25
+
+                                          [1]
+                                          1.5e-10
+                                          MPLCGSDNKTYGNKC
+                                          +++++ +++ ++
+1    MKYFLWSAVTIFAIVNVVGAKNSDFDPRCLRACTAIYRPVCGFDGKQYRIFASECVMAFENCNLLLKSQKAFQKT
+
+                             [1]
+                             2.0e-05
+                             MPLCGSDNKTYGNKC
+                              +++++ +
+76   LMSFCQVEEDFDSDFCPEVCPLLYKPVCGSYGDIKKIFPNECELKRANCKFGEAWEKINMDICRNISFKSELIDP
+
+                 [1]
+                 7.7e-06
+                 MPLCGSDNKTYGNKC
+                 ++++  ++  +
+151  KKKCLKPCNLNWDPICAFDGEKYFTFGNRCDMEIQTCLRSEKNWTLIRKGEC
+
+
+sp|A0A1D5PUP4|RECK_CHICK
+  LENGTH = 963  COMBINED P-VALUE = 3.24e-08  E-VALUE =    8e-06
+  DIAGRAM: 633-[1]-66-[1]-22-[1]-197
+
+                                      [1]
+                                      3.4e-11
+                                      MPLCGSDNKTYGNKC
+                                       ++++ ++++++  +
+601  NLICSTRQCLTEHSSEDERQKFTGLPCNCVDQFVPVCGQNGRTYPSACIARCVGLQDNQFEFGSCISKDPCNPNP
+
+                                            [1]
+                                            5.5e-10
+                                            MPLCGSDNKTYGNKC
+                                            ++++ +++  +++ +
+676  CSKNQRCIPKKQVCLTSFGKFECSQHECVPRQLNCDQTQDPVCDTDSVEYSNVCTLYQKGKNLAYRGPCQPFCKS
+
+      [1]
+      2.8e-09
+      MPLCGSDNKTYGNKC
+       ++++ ++ +++  +
+751  VEPVCGHNGETYSSVCAAYSDRVAVDYYGHCQAVGVLSDYGFHTECAFVKCPQLSATGCKPVIAPGACCPLCAGM
+
+
+sp|O95980|RECK_HUMAN
+  LENGTH = 971  COMBINED P-VALUE = 3.26e-08  E-VALUE =  8.1e-06
+  DIAGRAM: 639-[1]-66-[1]-22-[1]-199
+
+                                            [1]
+                                            3.4e-11
+                                            MPLCGSDNKTYGNKC
+                                             ++++ ++++++  +
+601  CSCFAGNLVCSTRLCLSEHSSEDDRRTFTGLPCNCADQFVPVCGQNGRTYPSACIARCVGLQDHQFEFGSCMSKD
+
+                                                  [1]
+                                                  1.8e-07
+                                                  MPLCGSDNKTYGNKC
+                                                  ++++ ++     + +
+676  PCNPNPCQKNQRCIPKPQVCLTTFDKFGCSQYECVPRQLACDQVQDPVCDTDHMEHNNLCTLYQRGKSLSYKGPC
+
+            [1]
+            2.8e-09
+            MPLCGSDNKTYGNKC
+             ++++ ++ +++  +
+751  QPFCRATEPVCGHNGETYSSVCAAYSDRVAVDYYGDCQAVGVLSEHSSVAECASVKCPSLLAAGCKPIIPPGACC
+
+
+sp|O97176|ESM1_DROME
+  LENGTH = 156  COMBINED P-VALUE = 3.78e-07  E-VALUE =  9.3e-05
+  DIAGRAM: 37-[1]-58-[1]-31
+
+                                          [1]
+                                          2.7e-09
+                                          MPLCGSDNKTYGNKC
+                                           ++++++++
+1    MMSQTLTLCCLALVACVYGNTVSTNDTACPTFCPSIYKPVCGTDGQNFKEFASTCNLLSHNCRRERNSVQAYAAT
+
+                                        [1]
+                                        1.8e-05
+                                        MPLCGSDNKTYGNKC
+                                         +++ ++++  +
+76   DAAWCSSEFVENLHEKLGNFKLEVKECFKPCSMIYQPVCITNGKYRAELANSCLLENFNCALQVSGAQPAELFRL
+
+
+sp|B4QW11|ESM1_DROSI
+  LENGTH = 156  COMBINED P-VALUE = 3.78e-07  E-VALUE =  9.3e-05
+  DIAGRAM: 37-[1]-58-[1]-31
+
+                                          [1]
+                                          2.7e-09
+                                          MPLCGSDNKTYGNKC
+                                           ++++++++
+1    MMSQTLTLCCLGLVACVYGNTVSTNDTACPTFCPSIYKPVCGTDGQNFKEFASTCNLLSHNCRRERNSVQAYAAT
+
+                                        [1]
+                                        1.8e-05
+                                        MPLCGSDNKTYGNKC
+                                         +++ ++++  +
+76   DAAWCSSEFVENLHEKLGNFKLEVKECFKPCSMIYQPVCITNGKYRAELANSCLLENFNCALQVSGAQPAELFRL
+
+********************************************************************************
+
+
+CPU: admin1-OptiPlex-Tower-Plus-7010
+Time 0.049 secs.
+
+mast -nostatus -oc /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1CGI_I_motifs /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_2/1CGI_I_motifs/meme.xml /media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_2/1CGI_I_hseq.fasta

@@ -1,0 +1,210 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.5.7 (Release date: Wed Jun 19 13:59:04 2024 -0700)
+
+	For further information on how to interpret these results please access https://meme-suite.org/meme.
+	To get a copy of the MAST software please access https://meme-suite.org.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE 1A0O_B_hseq.fasta (peptide)
+	Last updated on Sun Aug 24 21:57:22 2025
+	Database contains 5 sequences, 3119 residues
+
+	MOTIFS meme.xml (peptide)
+	MOTIF ID              ALT ID WIDTH BEST POSSIBLE MATCH
+	----- --------------- ------ ----- -------------------
+	    1 MSIRMMPMEYVFSRY MEME-1    15 MSIRMMPMEYVFSRY
+	    2 MSMDISDFYQTFFDE MEME-2    15 MSMDISDFYQTFFDE
+
+	PAIRWISE MOTIF CORRELATIONS:
+	MOTIF     1
+	----- -----
+	   2   0.27
+	No overly similar pairs (correlation > 0.60) found.
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.073 C 0.018 D 0.052 E 0.062 F 0.040 G 0.069 H 0.022 I 0.056 K 0.058 
+	L 0.092 M 0.023 N 0.046 P 0.051 Q 0.041 R 0.052 S 0.074 T 0.059 V 0.064 
+	W 0.013 Y 0.033 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 5 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+sp|P07363|CHEA_ECOLI                                              2.4e-33    654
+sp|P09384|CHEA_SALTY                                              5.7e-33    671
+sp|P21813|CHEA_KLEAK                                              3.1e-32    652
+sp|C0LGF5|RGI5_ARATH                                                  2.8   1072
+1A0O_B                                                                4.4     70
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [n]  occurrence of motif `n' with p-value less than 0.0001.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+sp|P07363|CHEA_ECOLI                2.4e-33  [2]-306-[1]-318
+sp|P09384|CHEA_SALTY                5.7e-33  [2]-323-[1]-318
+sp|P21813|CHEA_KLEAK                3.1e-32  [2]-304-[1]-318
+sp|C0LGF5|RGI5_ARATH                    2.8  1072
+1A0O_B                                  4.4  70
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence,
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif, and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+sp|P07363|CHEA_ECOLI
+  LENGTH = 654  COMBINED P-VALUE = 4.86e-34  E-VALUE =  2.4e-33
+  DIAGRAM: [2]-306-[1]-318
+
+     [2]
+     7.2e-21
+     MSMDISDFYQTFFDE
+     +++++++++++++++
+1    MSMDISDFYQTFFDEADELLADMEQHLLVLQPEAPDAEQLNAIFRAAHSIKGGAGTFGFSVLQETTHLMENLLDE
+
+                          [1]
+                          2.0e-21
+                          MSIRMMPMEYVFSRY
+                          +++++++++++++++
+301  GDLITSMGQLQRNARDLQESVMSIRMMPMEYVFSRYPRLVRDLAGKLGKQVELTLVGSSTELDKSLIERIIDPLT
+
+
+sp|P09384|CHEA_SALTY
+  LENGTH = 671  COMBINED P-VALUE = 1.13e-33  E-VALUE =  5.7e-33
+  DIAGRAM: [2]-323-[1]-318
+
+     [2]
+     7.2e-21
+     MSMDISDFYQTFFDE
+     +++++++++++++++
+1    MSMDISDFYQTFFDEADELLADMEQHLLDLVPESPDAEQLNAIFRAAHSIKGGAGTFGFTILQETTHLMENLLDE
+
+                                           [1]
+                                           4.5e-21
+                                           MSIRMMPMEYVFSRY
+                                           +++++++++++++++
+301  TQSMLAQRSNELDPVNHGDLITSMGQLQRNARDLQESVMSIRMMPMEYVFSRFPRLVRDLAGKLGKQVELTLVGS
+
+
+sp|P21813|CHEA_KLEAK
+  LENGTH = 652  COMBINED P-VALUE = 6.16e-33  E-VALUE =  3.1e-32
+  DIAGRAM: [2]-304-[1]-318
+
+     [2]
+     9.4e-20
+     MSMDISDFYQTFFDE
+     ++++++ ++++++++
+1    MSMDISAFYQTFFDEADELLADMEQHLLELDPQAPDIEPLNAIFRAAHSIKGGAATFGFSVLQETTHLLENLLDG
+
+                        [1]
+                        2.0e-21
+                        MSIRMMPMEYVFSRY
+                        +++++++++++++++
+301  LLNSMSQLERNARDLQESVMSIRMMPMEYVFSRYPRLVRDLAGKLNKQVELTLQGSSTELDKSLIERIIDPLTHL
+
+
+sp|C0LGF5|RGI5_ARATH
+  LENGTH = 1072  COMBINED P-VALUE = 5.64e-01  E-VALUE =      2.8
+  DIAGRAM: 1072
+
+
+1A0O_B
+  LENGTH = 70  COMBINED P-VALUE = 8.83e-01  E-VALUE =      4.4
+  DIAGRAM: 70
+
+********************************************************************************
+
+
+CPU: admin1-OptiPlex-Tower-Plus-7010
+Time 0.011 secs.
+
+mast -nostatus -oc /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1A0O_B_motifs /media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1A0O_B_motifs/meme.xml /media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_1/1A0O_B_hseq.fasta

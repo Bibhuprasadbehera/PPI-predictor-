@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<mast version="5.5.7" release="Wed Jun 19 13:59:04 2024 -0700">
+	<command_line><arg>mast</arg><arg>-nostatus</arg><arg>-oc</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1AVO_C_motifs</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1AVO_C_motifs/meme.xml</arg><arg>/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_1/1AVO_C_hseq.fasta</arg></command_line>
+	<settings strand_handling="unstranded" max_correlation="0.60" remove_correlated="n" max_seq_evalue="10" adjust_hit="n" max_hit_pvalue="0.0001" max_weak_pvalue="0.0001"/>
+	<alphabet name="Protein" like="protein">
+		<letter id="A" symbol="A" name="Alanine" colour="0000CC"/>
+		<letter id="C" symbol="C" name="Cysteine" colour="0000CC"/>
+		<letter id="D" symbol="D" name="Aspartic acid" colour="FF00FF"/>
+		<letter id="E" symbol="E" name="Glutamic acid" colour="FF00FF"/>
+		<letter id="F" symbol="F" name="Phenylalanine" colour="0000CC"/>
+		<letter id="G" symbol="G" name="Glycine" colour="FFB300"/>
+		<letter id="H" symbol="H" name="Histidine" colour="FFCCCC"/>
+		<letter id="I" symbol="I" name="Isoleucine" colour="0000CC"/>
+		<letter id="K" symbol="K" name="Lysine" colour="CC0000"/>
+		<letter id="L" symbol="L" name="Leucine" colour="0000CC"/>
+		<letter id="M" symbol="M" name="Methionine" colour="0000CC"/>
+		<letter id="N" symbol="N" name="Asparagine" colour="008000"/>
+		<letter id="P" symbol="P" name="Proline" colour="FFFF00"/>
+		<letter id="Q" symbol="Q" name="Glutamine" colour="008000"/>
+		<letter id="R" symbol="R" name="Arginine" colour="CC0000"/>
+		<letter id="S" symbol="S" name="Serine" colour="008000"/>
+		<letter id="T" symbol="T" name="Threonine" colour="008000"/>
+		<letter id="V" symbol="V" name="Valine" colour="0000CC"/>
+		<letter id="W" symbol="W" name="Tryptophan" colour="0000CC"/>
+		<letter id="Y" symbol="Y" name="Tyrosine" colour="33E6CC"/>
+		<letter id="X" symbol="X" aliases="*." equals="ACDEFGHIKLMNPQRSTVWY" name="Any amino acid"/>
+		<letter id="B" symbol="B" equals="DN" name="Asparagine or Aspartic acid"/>
+		<letter id="Z" symbol="Z" equals="EQ" name="Glutamine or Glutamic acid"/>
+		<letter id="J" symbol="J" equals="IL" name="Leucine or Isoleucine"/>
+	</alphabet>
+	<background source="--nrdb--" A="0.0730919" C="0.0181455" D="0.051688" E="0.0622785" F="0.0402434" G="0.0692596" H="0.0224055" I="0.056227" K="0.058435" L="0.0916218" M="0.0230443" N="0.0460321" P="0.0506238" Q="0.0407153" R="0.0518462" S="0.073729" T="0.0593523" V="0.0642985" W="0.0133282" Y="0.0326497"/>
+	<motif_dbs>
+		<motif_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/motif_1/1AVO_C_motifs/meme.xml" last_mod_date="Mon Aug 25 19:24:31 2025">
+			<background A="0.0583145" C="0.0110031" D="0.0632157" E="0.105026" F="0.0323083" G="0.035609" H="0.0183049" I="0.0658163" K="0.0988242" L="0.112027" M="0.0218057" N="0.0421106" P="0.0524131" Q="0.0407103" R="0.0494124" S="0.0435109" T="0.0407103" V="0.073018" W="0.00515174" Y="0.0307079"/>
+		</motif_db>
+	</motif_dbs>
+	<motifs>
+		<motif db="0" id="WVQLLIPRIEDGNNF" alt="MEME-1" length="15" nsites="17" evalue="5.4e-186">
+			<pos A="-426" C="-311" D="-490" E="-553" F="-162" G="-374" H="-367" I="-482" K="-533" L="-352" M="-333" N="-430" P="-507" Q="-417" R="-407" S="-398" T="-405" V="-436" W="750" Y="-208"/>
+			<pos A="-369" C="-277" D="-711" E="-728" F="-311" G="-562" H="-605" I="215" K="-718" L="157" M="-212" N="-608" P="-643" Q="-614" R="-650" S="-528" T="-345" V="225" W="-404" Y="-493"/>
+			<pos A="-454" C="-429" D="-579" E="-442" F="-563" G="-472" H="-220" I="-610" K="-573" L="-537" M="-389" N="-456" P="-529" Q="457" R="-429" S="-443" T="-467" V="-594" W="-361" Y="-562"/>
+			<pos A="-538" C="-445" D="-699" E="-771" F="-283" G="-529" H="393" I="-358" K="-705" L="263" M="-254" N="-619" P="-637" Q="-579" R="-589" S="-567" T="-522" V="-434" W="-293" Y="-336"/>
+			<pos A="-490" C="-415" D="-696" E="-716" F="-270" G="-528" H="-505" I="-294" K="-621" L="250" M="-192" N="-616" P="-630" Q="301" R="-532" S="-545" T="-483" V="-376" W="-315" Y="-431"/>
+			<pos A="-503" C="-414" D="-698" E="-790" F="-464" G="-530" H="-596" I="388" K="-763" L="-402" M="-372" N="-651" P="-654" Q="-671" R="-667" S="-578" T="-482" V="-249" W="-461" Y="-566"/>
+			<pos A="-429" C="-478" D="-591" E="-653" F="-585" G="-455" H="-495" I="-658" K="-631" L="-635" M="-589" N="-572" P="422" Q="-533" R="-551" S="-436" T="-480" V="-612" W="-469" Y="-621"/>
+			<pos A="-346" C="-361" D="-495" E="-408" F="-516" G="-350" H="-203" I="-475" K="147" L="-452" M="-347" N="-304" P="-467" Q="-177" R="374" S="-304" T="-304" V="-452" W="-281" Y="-409"/>
+			<pos A="-503" C="-414" D="-698" E="-790" F="-464" G="-530" H="-596" I="388" K="-763" L="-402" M="-372" N="-651" P="-654" Q="-671" R="-667" S="-578" T="-482" V="-249" W="-461" Y="-566"/>
+			<pos A="-468" C="-483" D="-248" E="320" F="-570" G="-433" H="-420" I="-558" K="-639" L="-653" M="-540" N="-417" P="-642" Q="-378" R="-551" S="-475" T="-488" V="-575" W="-430" Y="-574"/>
+			<pos A="-401" C="-389" D="390" E="-294" F="-482" G="-367" H="-325" I="-538" K="-564" L="-570" M="-473" N="-188" P="-547" Q="-445" R="-475" S="-360" T="-426" V="-512" W="-346" Y="-461"/>
+			<pos A="-320" C="-389" D="-435" E="-558" F="-538" G="476" H="-415" I="-610" K="-541" L="-645" M="-506" N="-368" P="-525" Q="-501" R="-447" S="-327" T="-442" V="-556" W="-355" Y="-520"/>
+			<pos A="-452" C="-363" D="-367" E="-599" F="-460" G="-363" H="-190" I="-481" K="-517" L="-567" M="-450" N="450" P="-504" Q="-395" R="-458" S="-245" T="-337" V="-518" W="-306" Y="-455"/>
+			<pos A="-363" C="-406" D="214" E="-376" F="-525" G="-206" H="-226" I="-652" K="-415" L="-648" M="-566" N="396" P="-458" Q="-326" R="-408" S="-188" T="-291" V="-610" W="-427" Y="-439"/>
+			<pos A="-431" C="-288" D="-573" E="-635" F="487" G="-451" H="-417" I="-391" K="-636" L="-325" M="-315" N="-520" P="-519" Q="-550" R="-547" S="-390" T="-469" V="-416" W="-157" Y="-163"/>
+		</motif>
+		<motif db="0" id="PHVEDYRRLVHELDE" alt="MEME-2" length="15" nsites="17" evalue="7.1e-158">
+			<pos A="-248" C="-334" D="-470" E="-513" F="-469" G="-329" H="-382" I="-512" K="-494" L="-504" M="-441" N="-432" P="375" Q="-396" R="-426" S="-265" T="258" V="-454" W="-394" Y="-518"/>
+			<pos A="-665" C="-536" D="-658" E="-790" F="-573" G="-520" H="576" I="-805" K="-792" L="-732" M="-671" N="-542" P="-648" Q="-527" R="-593" S="-587" T="-618" V="-764" W="-446" Y="-488"/>
+			<pos A="-378" C="-344" D="-651" E="-713" F="-470" G="-489" H="-537" I="-239" K="-710" L="-438" M="-396" N="-608" P="-599" Q="-624" R="-598" S="-504" T="-397" V="372" W="-460" Y="-577"/>
+			<pos A="-236" C="-363" D="-198" E="174" F="-516" G="313" H="-326" I="-511" K="-368" L="-516" M="356" N="-286" P="-431" Q="-228" R="-376" S="-243" T="-298" V="-438" W="-427" Y="-484"/>
+			<pos A="-401" C="-389" D="390" E="-294" F="-482" G="-367" H="-325" I="-538" K="-564" L="-570" M="-473" N="-188" P="-547" Q="-445" R="-475" S="-360" T="-426" V="-512" W="-346" Y="-461"/>
+			<pos A="-662" C="-513" D="-708" E="-826" F="-271" G="-535" H="-400" I="-684" K="-783" L="-631" M="-595" N="-621" P="-660" Q="-636" R="-639" S="-601" T="-625" V="-680" W="-231" Y="500"/>
+			<pos A="-393" C="-279" D="-530" E="-594" F="-494" G="-376" H="-235" I="-502" K="-286" L="-505" M="-432" N="-386" P="-440" Q="-310" R="426" S="-371" T="-397" V="-559" W="-230" Y="-465"/>
+			<pos A="217" C="-316" D="-446" E="-384" F="-501" G="-296" H="-225" I="-481" K="-149" L="-461" M="-350" N="-296" P="-458" Q="295" R="274" S="-244" T="-273" V="-426" W="-312" Y="-414"/>
+			<pos A="-399" C="-360" D="-709" E="-749" F="-262" G="-474" H="-522" I="-257" K="-711" L="248" M="-178" N="-609" P="-608" Q="-553" R="-590" S="-454" T="300" V="-313" W="-315" Y="-446"/>
+			<pos A="-378" C="-344" D="-651" E="-713" F="-470" G="-489" H="-537" I="-239" K="-710" L="-438" M="-396" N="-608" P="-599" Q="-624" R="-598" S="-504" T="-397" V="372" W="-460" Y="-577"/>
+			<pos A="-437" C="-444" D="-557" E="-696" F="-493" G="-421" H="512" I="-713" K="-650" L="-689" M="-622" N="-464" P="-606" Q="-543" R="-555" S="-420" T="308" V="-645" W="-407" Y="-441"/>
+			<pos A="-468" C="-483" D="-248" E="320" F="-570" G="-433" H="-420" I="-558" K="-639" L="-653" M="-540" N="-417" P="-642" Q="-378" R="-551" S="-475" T="-488" V="-575" W="-430" Y="-574"/>
+			<pos A="-398" C="-319" D="-709" E="-679" F="-200" G="-525" H="-461" I="233" K="-541" L="166" M="-113" N="-567" P="-597" Q="-471" R="241" S="-485" T="-374" V="-226" W="-261" Y="-394"/>
+			<pos A="-401" C="-389" D="390" E="-294" F="-482" G="-367" H="-325" I="-538" K="-564" L="-570" M="-473" N="-188" P="-547" Q="-445" R="-475" S="-360" T="-426" V="-512" W="-346" Y="-461"/>
+			<pos A="-468" C="-483" D="-248" E="320" F="-570" G="-433" H="-420" I="-558" K="-639" L="-653" M="-540" N="-417" P="-642" Q="-378" R="-551" S="-475" T="-488" V="-575" W="-430" Y="-574"/>
+		</motif>
+	</motifs>
+	<correlations>
+		<correlation idx_a="0" idx_b="1" value="0.24"/>
+	</correlations>
+	<sequence_dbs>
+		<sequence_db source="/media/admin1/One Touch/ABJ - Hemangini/batch_1a/hseq_1/1AVO_C_hseq.fasta" last_mod_date="Sun Aug 24 21:57:24 2025" seq_count="18" residue_count="4272"/>
+	</sequence_dbs>
+	<sequences>
+		<sequence db="0" name="sp|Q06323|PSME1_HUMAN" comment="" length="249">
+			<score strand="both" combined_pvalue="5.22e-31" evalue="9.4e-30"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="2.2e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTSLHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+				</data>
+				<hit pos="192" idx="1" pvalue="5.8e-19" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P58238|PSME1_MACFA" comment="" length="249">
+			<score strand="both" combined_pvalue="5.22e-31" evalue="9.4e-30"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKILVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="2.2e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTSLHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+				</data>
+				<hit pos="192" idx="1" pvalue="5.8e-19" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q64L94|PSME1_PIG" comment="" length="249">
+			<score strand="both" combined_pvalue="5.22e-31" evalue="9.4e-30"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEDKDEKKKGEDEDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="2.2e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTALHTKLEGFHTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+				</data>
+				<hit pos="192" idx="1" pvalue="5.8e-19" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q63797|PSME1_RAT" comment="" length="249">
+			<score strand="both" combined_pvalue="5.22e-31" evalue="9.4e-30"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEEKDEKKKGDEDDKGPPCGPVNCNEKIVVLLQRLKPEIKDVIEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="2.2e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQAKVFELMTSLHTKLEGFQTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYQEIRLMVMEIRNAYAV
+				</data>
+				<hit pos="192" idx="1" pvalue="5.8e-19" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P97371|PSME1_MOUSE" comment="" length="249">
+			<score strand="both" combined_pvalue="5.22e-31" evalue="9.4e-30"/>
+			<seg start="76">
+				<data>
+ERKKQQEKEEKEEKKKGDEDDKGPPCGPVNCNEKIVVLLQRLKPEIKDVTEQLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="2.2e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTNLHTKLEGFHTQISKYFSERGDAVAKAAKQPHVGDYRQLVHELDEAEYQEIRLMVMEIRNAYAV
+				</data>
+				<hit pos="192" idx="1" pvalue="5.8e-19" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q4U5R3|PSME1_BOVIN" comment="" length="249">
+			<score strand="both" combined_pvalue="5.22e-31" evalue="9.4e-30"/>
+			<seg start="76">
+				<data>
+ERRKQQEKEDKDEKKKGEDEDKGPPCGPVGCNEKIVVLLQRVKPEIKDVIEKLNLVTTWLQLQIPRIEDGNNFGV
+				</data>
+				<hit pos="134" idx="0" pvalue="2.2e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVQEKVFELMTALHTKLEGFHTQISKYFSERGDAVTKAAKQPHVGDYRQLVHELDEAEYRDIRLMVMEIRNAYAV
+				</data>
+				<hit pos="192" idx="1" pvalue="5.8e-19" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5F3J5|PSME3_CHICK" comment="" length="254">
+			<score strand="both" combined_pvalue="3.45e-30" evalue="6.2e-29"/>
+			<seg start="76">
+				<data>
+HDGLDGPNMKKRKLEDREETFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+				</data>
+				<hit pos="139" idx="0" pvalue="1.4e-19" match="+++++++++++++++"/>
+				<hit pos="197" idx="1" pvalue="5.7e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P61289|PSME3_HUMAN" comment="" length="254">
+			<score strand="both" combined_pvalue="3.45e-30" evalue="6.2e-29"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+				</data>
+				<hit pos="139" idx="0" pvalue="1.4e-19" match="+++++++++++++++"/>
+				<hit pos="197" idx="1" pvalue="5.7e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P61290|PSME3_MOUSE" comment="" length="254">
+			<score strand="both" combined_pvalue="3.45e-30" evalue="6.2e-29"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+				</data>
+				<hit pos="139" idx="0" pvalue="1.4e-19" match="+++++++++++++++"/>
+				<hit pos="197" idx="1" pvalue="5.7e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P61291|PSME3_PIG" comment="" length="254">
+			<score strand="both" combined_pvalue="3.45e-30" evalue="6.2e-29"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+				</data>
+				<hit pos="139" idx="0" pvalue="1.4e-19" match="+++++++++++++++"/>
+				<hit pos="197" idx="1" pvalue="5.7e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q4R4V3|PSME3_MACFA" comment="" length="254">
+			<score strand="both" combined_pvalue="3.45e-30" evalue="6.2e-29"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDECEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+				</data>
+				<hit pos="139" idx="0" pvalue="1.4e-19" match="+++++++++++++++"/>
+				<hit pos="197" idx="1" pvalue="5.7e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5RFD3|PSME3_PONAB" comment="" length="254">
+			<score strand="both" combined_pvalue="3.45e-30" evalue="6.2e-29"/>
+			<seg start="76">
+				<data>
+HDGLDGPTYKKRRLDDCEEAFQGTKVFVMPNGMLKSNQQLVDIIEKVKPEIRLLIEKCNTVKMWVQLLIPRIEDG
+NNFGVSIQEETVAELRTVESEAASYLDQISRYYITRAKLVSKIAKYPHVEDYRRTVTEIDEKEYISLRLIISELR
+				</data>
+				<hit pos="139" idx="0" pvalue="1.4e-19" match="+++++++++++++++"/>
+				<hit pos="197" idx="1" pvalue="5.7e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q63798|PSME2_RAT" comment="" length="238">
+			<score strand="both" combined_pvalue="5.51e-30" evalue="9.9e-29"/>
+			<seg start="76">
+				<data>
+DEMETEQEKKEVPKCGFLPGNEKLLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERVN
+				</data>
+				<hit pos="123" idx="0" pvalue="8.6e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+AVKTKVEAFQTAISKYFSERGDAVAKASKDTHVMDYRALVHERDEAAYGALRAMVLDLRAFYAELHHIISSNLEK
+				</data>
+				<hit pos="181" idx="1" pvalue="1.8e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|P97372|PSME2_MOUSE" comment="" length="239">
+			<score strand="both" combined_pvalue="5.56e-30" evalue="1e-28"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVPKCGYLPGNEKLLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="8.6e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKDTHVMDYRALVHERDEAAYGALRAMVLDLRAFYAELYHIISSNLE
+				</data>
+				<hit pos="182" idx="1" pvalue="1.8e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q9UL46|PSME2_HUMAN" comment="" length="239">
+			<score strand="both" combined_pvalue="5.56e-30" evalue="1e-28"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVHKCGFLPGNEKVLSLLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="8.6e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAAYGELRAMVLDLRAFYAELYHIISSNLE
+				</data>
+				<hit pos="182" idx="1" pvalue="1.8e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q863Z0|PSME2_PIG" comment="" length="239">
+			<score strand="both" combined_pvalue="5.56e-30" evalue="1e-28"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVPKCGFLPGNEKILALLGLVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAVQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="8.6e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAAHGELRAMVLDLRAFYAELYHIISSNLE
+				</data>
+				<hit pos="182" idx="1" pvalue="1.8e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+		<sequence db="0" name="sp|Q5E9G3|PSME2_BOVIN" comment="" length="239">
+			<score strand="both" combined_pvalue="5.56e-30" evalue="1e-28"/>
+			<seg start="76">
+				<data>
+DEMETDKQEKKEVPKCGFLPGNEKVLALLALVKPEVWTLKEKCILVITWIQHLIPKIEDGNDFGVAIQEKVLERV
+				</data>
+				<hit pos="124" idx="0" pvalue="8.6e-19" match="+++++++++++++++"/>
+			</seg>
+			<seg start="151">
+				<data>
+NAVKTKVEAFQTTISKYFSERGDAVAKASKETHVMDYRALVHERDEAVYGDLRAMVLDLRAFYAELYHIISSNLE
+				</data>
+				<hit pos="182" idx="1" pvalue="1.8e-18" match="+++++++++++++++"/>
+			</seg>
+		</sequence>
+	</sequences>
+	<runtime host="admin1-OptiPlex-Tower-Plus-7010" when="Mon Aug 25 19:24:33 2025" cycles="12188" seconds="0.012"/>
+</mast>

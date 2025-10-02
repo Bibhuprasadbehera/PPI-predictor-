@@ -21,10 +21,23 @@ def train(config_path):
     print("Loading data...")
     full_dataset = ProteinDataset(cfg['data']['train_path'], cfg['data']['phys_prop_file'], normalize_distance=True)
     
-    # Split the dataset into training and validation
-    train_size = int(0.8 * len(full_dataset))
-    val_size = len(full_dataset) - train_size
-    train_dataset, val_dataset = random_split(full_dataset, [train_size, val_size])
+    # Split the dataset into training and validation by protein IDs to avoid data leakage
+    # Get unique protein IDs
+    protein_ids = full_dataset.data['protein_id'].unique()
+    import numpy as np
+    np.random.seed(42)  # For reproducible splits
+    np.random.shuffle(protein_ids)
+    
+    train_protein_count = int(0.8 * len(protein_ids))
+    train_protein_ids = set(protein_ids[:train_protein_count])
+    
+    # Create indices for train and validation based on protein IDs
+    train_indices = [i for i, row in full_dataset.data.iterrows() if row['protein_id'] in train_protein_ids]
+    val_indices = [i for i, row in full_dataset.data.iterrows() if row['protein_id'] not in train_protein_ids]
+    
+    from torch.utils.data import Subset
+    train_dataset = Subset(full_dataset, train_indices)
+    val_dataset = Subset(full_dataset, val_indices)
     
     train_loader = torch.utils.data.DataLoader(
         train_dataset, 

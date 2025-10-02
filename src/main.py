@@ -3,12 +3,12 @@ import argparse
 import sys
 import os
 
-# Add the src directory to the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Add the project root directory to the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.train import train
-from src.evaluate import evaluate
-from src.predict import predict
+from train import train
+from evaluate import evaluate
+from predict import SequencePredictor
 
 def main():
     parser = argparse.ArgumentParser(description="Protein Interaction Prediction")
@@ -16,6 +16,7 @@ def main():
     parser.add_argument('--config', default='config.yaml', help='Path to config file')
     parser.add_argument('--model', help='Path to model file (for evaluate and predict)')
     parser.add_argument('--sequence', help='Amino acid sequence (for predict)')
+    parser.add_argument('--sequence2', help='Second amino acid sequence for PPI prediction (for predict)')
     args = parser.parse_args()
 
     if args.action == 'train':
@@ -26,11 +27,19 @@ def main():
             return
         evaluate(args.model, args.config)
     elif args.action == 'predict':
-        if not all([args.model, args.sequence]):
+        if not args.model or not args.sequence:
             print("Please provide a model path and sequence for prediction")
             return
-        prediction = predict(args.model, args.sequence, args.config)
-        print(f"Prediction: {prediction}")
+        # Use SequencePredictor for prediction
+        predictor = SequencePredictor(args.model, args.config)
+        if args.sequence2:
+            # Predict interaction between two sequences
+            interaction_matrix, interaction_prob = predictor.predict(args.sequence, args.sequence2)
+        else:
+            # Predict intra-protein interactions for single sequence
+            interaction_matrix, interaction_prob = predictor.predict(args.sequence)
+        print(f"Prediction: Interaction matrix shape: {interaction_matrix.shape}")
+        print(f"Interaction probability range: {interaction_prob.min():.3f} - {interaction_prob.max():.3f}")
 
 if __name__ == "__main__":
     main()

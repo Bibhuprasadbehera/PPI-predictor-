@@ -90,15 +90,15 @@ class ProteinDataset(Dataset):
                     
                     if all(col in df.columns for col in required_columns):
                         try:
-                            # Aggregate features per file
+                            # Aggregate features per file - store secondary structure as array, not concatenated string
                             sequence_str = ''.join(df['aa'].astype(str).tolist())
-                            ss_str = ''.join(df['three_hot_ss'].astype(str).tolist())
+                            ss_array = df['three_hot_ss'].astype(str).tolist()  # Keep as list/array of per-residue values
                             rsa_vec = df['rsa'].astype(float).to_numpy()
                             chain = str(df['chain'].iloc[0])
                             
                             all_data.append({
                                 'aa': sequence_str,
-                                'three_hot_ss': ss_str,
+                                'three_hot_ss': ss_array,  # Store as array instead of concatenated string
                                 'rsa': rsa_vec,
                                 'chain': chain,
                                 'protein_id': protein_id
@@ -182,9 +182,15 @@ class ProteinDataset(Dataset):
                 seq_indices.append(self.aa_to_index.get(fallback, 0))
         sequence_tensor = torch.tensor(seq_indices, dtype=torch.long)
 
-        # Secondary structure tensor
-        ss_chars = str(row['three_hot_ss'])
-        ss_indices = [self.ss_to_index.get(s, 0) for s in ss_chars]
+        # Secondary structure tensor - handling both the old string format and new list format
+        ss_data = row['three_hot_ss']
+        if isinstance(ss_data, list):
+            # New format: stored as list of per-residue values
+            ss_indices = [self.ss_to_index.get(str(s), 0) for s in ss_data]
+        else:
+            # Backward compatibility: old format was string
+            ss_chars = str(ss_data)
+            ss_indices = [self.ss_to_index.get(s, 0) for s in ss_chars]
         ss_tensor = torch.tensor(ss_indices, dtype=torch.long)
 
         # RSA tensor - use per-residue values when available
@@ -270,12 +276,12 @@ class ProteinDataset(Dataset):
                 for sample in batch
             ])
             
-        # Special handling for distance matrices
+        # Special handling for distance matrices - pad (left, right, top, bottom)
         if 'distance_mat' in batch[0]:
             output['distance_mat'] = torch.stack([
                 F.pad(sample['distance_mat'], 
-                     (0, max_len - sample['distance_mat'].size(1),
-                      0, max_len - sample['distance_mat'].size(0)))
+                     (0, max_len - sample['distance_mat'].size(1),  # pad columns (left=0, right)
+                      0, max_len - sample['distance_mat'].size(0)))  # pad rows (top=0, bottom)
                 for sample in batch
             ])
             

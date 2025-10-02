@@ -197,9 +197,10 @@ class ProteinInteractionModel(nn.Module):
 
     def normalize_feature(self, feature):
         """Normalize a feature tensor to [0, 1] range"""
-        # Calculate min and max for each sequence in the batch
-        feature_min = feature.min(dim=-1, keepdim=True)[0]  # (B, 1)
-        feature_max = feature.max(dim=-1, keepdim=True)[0]  # (B, 1)
+        # Calculate min and max per sample in the batch (across sequence dimension)
+        # feature shape is (B, L) where B is batch size and L is sequence length
+        feature_min = torch.min(feature, dim=-1, keepdim=True)[0]  # (B, 1)
+        feature_max = torch.max(feature, dim=-1, keepdim=True)[0]  # (B, 1)
         range_val = feature_max - feature_min  # (B, 1)
         # Avoid division by zero
         range_val = torch.clamp(range_val, min=1e-7)

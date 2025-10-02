@@ -128,8 +128,8 @@ def create_batch_visualization(batch, num_samples=5):
         ss = secondary_structures[i].numpy()
         chain = chains[i].numpy()
 
-        # Sequence visualization (one-hot encoded)
-        axs[i, 0].imshow(np.eye(20)[seq], aspect='auto', cmap='viridis')
+        # Sequence visualization (one-hot encoded) - adjusted to match actual amino acid count in model
+        axs[i, 0].imshow(np.eye(22)[seq], aspect='auto', cmap='viridis')
         axs[i, 0].set_title(f'Sample {i+1} - Sequence')
         axs[i, 0].set_ylabel('AA Index')
         axs[i, 0].set_xlabel('Position')
@@ -156,11 +156,12 @@ def create_batch_visualization(batch, num_samples=5):
     plt.savefig('plots/batch_visualization.png')
     plt.close()
 
-    # Log batch shapes
-    logger.info(
+    # Log batch shapes (removed logging since logger is not defined)
+    # print statements used as alternative
+    print(
         f"Batch shapes - Sequences: {sequences.shape}, RSAs: {rsas.shape}, "
         f"Secondary Structures: {secondary_structures.shape}, "
         f"Physicochemical Properties: {phys_props.shape}, "
         f"Chains: {chains.shape}, Labels: {labels.shape}"
     )
-    logger.debug(f"First {num_samples} label values: {labels[:num_samples]}")
+    print(f"First {num_samples} label values: {labels[:num_samples]}")

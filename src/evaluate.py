@@ -4,6 +4,8 @@ import torch
 import numpy as np
 import seaborn as sns
 from tqdm import tqdm
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend to avoid display issues
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 from model import ProteinInteractionModel
@@ -11,6 +13,7 @@ from data_loader import ProteinDataset, visualize_batch
 from plots_evaluate import create_evaluation_plots
 from utils import calculate_metrics  # Import calculate_metrics from utils.py
 from scipy.stats import pearsonr, spearmanr
+import sys
 
 def evaluate(model_path, test_data_dir, phys_prop_file, config, max_batches=None):
     print("Loading configuration...")
@@ -139,6 +142,7 @@ def evaluate(model_path, test_data_dir, phys_prop_file, config, max_batches=None
     # Generate evaluation plots using sampled data
     if len(all_targets) > 0:
         create_evaluation_plots(all_targets, all_preds)
+        print("Evaluation plots saved to 'plots/' directory.")
     else:
         print("Warning: No data available for plots (all samples were skipped)")
 
@@ -164,3 +168,6 @@ if __name__ == '__main__':
     print("Summary of metrics:")
     for metric, value in metrics.items():
         print(f"{metric}: {value:.4f}")
+    
+    # Ensure proper exit
+    sys.exit(0)
